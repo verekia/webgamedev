@@ -1,25 +1,44 @@
 {
-  "name": "webgamedev-monorepo",
+  "name": "webgamedev.com",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "postbuild": "next-sitemap",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "dependencies": {
+    "@codesandbox/sandpack-react": "2.7.0",
+    "@codesandbox/sandpack-themes": "2.0.21",
+    "@v1v2/react": "1.1.0",
+    "next": "13.4.19",
+    "next-plausible": "3.7.0",
+    "nextra": "2.12.3",
+    "nextra-theme-docs": "2.12.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier": "2.7.1",
-    "turbo": "1.6.2"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "dependencies": {},
-  "packageManager": "pnpm@7.11.0"
+    "@types/node": "18.11.17",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
+    "@typescript-eslint/eslint-plugin": "5.47.0",
+    "cypress": "12.2.0",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.2.4",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-react": "7.31.11",
+    "next-sitemap": "4.2.3",
+    "prettier": "3.0.3",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.2.2"
+  }
 }

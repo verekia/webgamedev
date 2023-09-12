@@ -1,0 +1,169 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
+  GodotLogo,
+  JavascriptLogo,
+  KaboomLogo,
+  NeedleLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  ReactLogo,
+  R3FLogo,
+  SplineLogo,
+  ThreeLogo,
+  TresLogo,
+  UnityLogo,
+  WasmLogo,
+  WebGLLogo,
+  WebGPULogo,
+  WebXRLogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 012
+
+<SubTitleDate value="2023-03-15" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+<ThreeLogo /> [0beqz](https://twitter.com/0beqz) released his highly-anticipated postprocessing
+library for Three.js, [**Realism Effects**](https://twitter.com/0beqz/status/1632109961768476672)
+([repo](https://github.com/0beqz/realism-effects), [demo](https://realism-effects.vercel.app/)). The
+effects include SSGI (Screen-Space Global Illumination), motion blur, and TRAA (Temporal
+Reprojection
+Anti-Aliasing). <R3FLogo /> [react-postprocessing](https://github.com/pmndrs/react-postprocessing)
+integration should be coming soon.
+
+[**Self-service publishing**](https://www.unrealengine.com/en-US/blog/self-service-publishing-now-available-for-the-epic-games-store) is now available for the [Epic Games Store](https://store.epicgames.com/) ([more details](https://store.epicgames.com/en-US/news/epic-games-store-launches-self-publishing-tools-for-game-developers-and-publishers)). There is a $100 submission fee per game, and you can get an [IARC](https://en.wikipedia.org/wiki/International_Age_Rating_Coalition) rating usable in other stores. Here is a [**video walkthrough by Epic**](https://www.youtube.com/live/dV8L5pto39k?feature=share&t=544).
+
+<R3FLogo /> [Cody Bennett](https://twitter.com/Cody_J_Bennett) published
+[**preact-reconcilier**](https://twitter.com/Cody_J_Bennett/status/1632674026408558592). It
+implements [react-reconciler](https://www.npmjs.com/package/react-reconciler), which allows custom
+renderers to be shared between [Preact](https://preactjs.com/) and React. The reconciler makes it
+possible to use the React Three Fiber ecosystem including [Drei](https://github.com/pmndrs/drei)
+with Preact and [Preact Signals](https://twitter.com/Cody_J_Bennett/status/1633063536158023680).
+
+## 🛠 Tools & Updates
+
+- <R3FLogo /> [**R3F v8.12.0**](https://github.com/pmndrs/react-three-fiber/releases) – Adds `scene`
+  render prop to `Canvas` to pass a custom `THREE.Scene`.
+- <PixiLogo /> [**PixiJS v7.2.0**](https://github.com/pixijs/pixijs/releases) – Adds `HTMLText` to
+  core, a standardized `Color` class, Event Modes, Global Move Events. `@pixi/node` was moved out of
+  the main repo, and `peerDependencies` are back. PixiJS is [10 years
+  old](https://twitter.com/PixiJS/status/1633163753603702784)! 🎂
+- 🤺 [**Rapier v0.17.0**](https://github.com/dimforge/rapier/blob/13816245790b6b8b3791d80000c3350ba0a42053/CHANGELOG.md) (15 Jan. 2023) – Adds `DynamicRayCastVehicleController`, enabling and disabling rigid bodies, colliders, or joints, without having to delete them and character controller fixes. [Objectives for 2023](https://www.dimforge.com/blog/2023/01/22/the-year-2022-in-dimforge).
+- <TresLogo /> [**TresJS v1.8.0**](https://twitter.com/alvarosabu/status/1631670719955255298) – Adds
+  the possibility to set individual vector props.
+- <WebXRLogo /> [**@coconut-xr/koestlich**](https://coconut-xr.github.io/koestlich/) is a WebXR UI
+  library for <ThreeLogo /> Three.js with <R3FLogo /> React Three Fiber bindings.
+- <BabylonLogo /> [**Babylon.js v5.50.0**](https://github.com/BabylonJS/Babylon.js/releases) – Plus,
+  BabylonJS 6.0 is coming on [March 30th](https://twitter.com/babylonjs/status/1632803229057662976)
+  with a performance priority mode.
+- <ConstructLogo /> [**Construct
+  Animate**](https://www.construct.net/en/blogs/construct-official-blog-1/launching-construct-animate-1612)
+  is a new freemium browser-based animation tool
+  ([video](https://www.youtube.com/watch?v=dmTl0dyy4D4)) by
+  [Construct](https://www.construct.net/en).
+- <ThreeLogo /> [Guillaume Fradin](https://twitter.com/fradingue) released [**CAD
+  modeling**](https://twitter.com/fradingue/status/1634604273433563137)
+  ([demo](https://polygonjs.com/examples/bycategory:modeling:cadbasics)) capabilities for Three.js
+  with [**Polygonjs**](https://polygonjs.com/). Polygonjs is a procedural node-based WebGL design
+  and animation tool.
+
+Some native news: <GodotLogo /> [**Godot 4.0**](https://godotengine.org/article/godot-4-0-sets-sail/) is out ([video](https://www.youtube.com/watch?v=chXAjMQrcZk)), and 🦀 [**Bevy**](https://bevyengine.org/news/bevy-0-10/), the Rust ECS game engine hit version 0.10.
+
+## 🎬 Videos
+
+- <R3FLogo /> [**R3F react-spring animations**](https://www.youtube.com/watch?v=kOeflXVJ0cc) by
+  [Wawa Sensei](https://twitter.com/wawasensei)
+- <R3FLogo /> [**R3F Ankou scene with custom loading
+  screen**](https://www.youtube.com/watch?v=L12wIvuZTOY) by [Wawa
+  Sensei](https://twitter.com/wawasensei)
+- <KaboomLogo /> [**Fighting game tutorial with
+  Kaboom.js**](https://www.youtube.com/watch?v=TLH0taCeE6I) by [JS
+  Legend](https://twitter.com/JSLegendDev)
+- 📐 [**Basics of trig + how your computer computes sine**](https://www.youtube.com/watch?v=kkMt4lrJzs8) by [SimonDev](https://twitter.com/iced_coffee_dev)
+- <WebGPULogo /> [**WebGPU for Beginners: A Crash Course in
+  WGSL**](https://www.youtube.com/watch?v=vPEiCNjjjFU&list=PLn3eTxaOtL2Ns3wkxdyS3CiqkJuwQdZzn) by
+  [GetIntoGameDev](https://www.youtube.com/@GetIntoGameDev)
+- <WebXRLogo /> [**WebXR panel in WebXR: Developing for
+  WebXR**](https://www.youtube.com/watch?v=0QQyqRGnINs) by [jin](https://twitter.com/dankvr), with
+  [msub2](https://twitter.com/msub2official), [codefrau](https://twitter.com/codefrau),
+  [SrileXR](https://twitter.com/srilexr) and [svox](https://svox.glitch.me/)
+
+## ✍️ Articles
+
+- <R3FLogo /> [**Beautiful and mind-bending effects with WebGL Render
+  Targets**](https://blog.maximeheckel.com/posts/beautiful-and-mind-bending-effects-with-webgl-render-targets/)
+  by [Maxime Heckel](https://twitter.com/MaximeHeckel)
+- <UnityLogo /> [**Stylized Water
+  Shader**](https://alexanderameye.github.io/notes/stylized-water-shader/) by [Alexander
+  Ameye](https://twitter.com/alexanderameye)
+- <WebGLLogo /> [**WebGL Shadow
+  Maps**](https://roblouie.com/article/1034/webgl-shadow-maps-part-1-as-simple-as-possible/) (2
+  parts) by [Rob Louie](https://twitter.com/rob_louie)
+- <JavascriptLogo /> [**All JavaScript and TypeScript Features of the last 3
+  years**](https://betterprogramming.pub/all-javascript-and-typescript-features-of-the-last-3-years-629c57e73e42)
+  by Linus Schlumberger
+- <WebXRLogo /> [**Celebrating the Immersive Web in
+  2023**](https://mattcool.tech/posts/celebrating-the-immersive-web-in-2023) by [Matt
+  Cool](https://twitter.com/MattBCool)
+- <WebXRLogo /> [**The 2023 Polys WebXR Awards
+  Recap**](https://arpost.co/2023/03/07/the-2023-polys-webxr-awards-recap/) by [Jon
+  Jaehnig](https://twitter.com/JaehnigJon)
+- <BabylonLogo /> [**Unlocking the Power of UV
+  Manipulation**](https://babylonjs.medium.com/unlocking-the-power-of-uv-manipulation-3114c1501232)
+  by [Jason Carter](https://twitter.com/pirate_jc)
+
+## 🎮 Games
+
+- <ReactLogo /> [**Danger Crew**](https://play.thedangercrew.com/)
+  ([video](https://www.youtube.com/watch?v=nHaiLWUaWWw)) by [Drew
+  Conley](https://twitter.com/drewconley13) and [Glenn LaBarre](https://twitter.com/GlennLaBarre) –
+  DOM-based Pokémon-like made in React 💻
+- <PhaserLogo /> [**Dinogen Online**](https://dinogenonline.com/play/) by [Wilkin
+  Games](https://wilkingames.com/) – 2D multiplayer top-down shooter. Play as human or dinosaur! 🦖
+- <ThreeLogo /> [**Jamir**](https://jamir.io/) by [Mert Öztürk](https://twitter.com/jamir_io) –
+  v2.0.0 update of the multiplayer Three.js FPS 🧑‍🚀
+- <PixiLogo /> [**Earth's Greatest Defender**](https://egd.tap2play.io/)
+  ([article](https://www.indiedb.com/games/earths-greatest-defender/news/introducing-earths-greatest-defender))
+  by [Rémi Vansteelandt](https://twitter.com/remvst) – Repel the alien invasion! 👾
+- <WasmLogo /> [**Wolfenstein 3D**](https://wolfenstein.netlify.app/)
+  ([repo](https://github.com/midzer/wolf4sdl)) by [midzer](https://github.com/midzer) (Emscripten
+  port) and [fabiangreffrath](https://github.com/fabiangreffrath) (original SDL port) 🔫
+
+## ✨ Demos
+
+- <ThreeLogo /> [**MeshTranslucentMaterial**](https://n8python.github.io/subsurfaceScatteringMat/)
+  ([tweet](https://twitter.com/N8Programs/status/1634338290412273670)) by
+  [N8](https://twitter.com/N8Programs)
+- <ThreeLogo /> [**Volumetric
+  spotlights**](https://vis-prime.github.io/explore-vanilla-drei/?scene=WIP_SpotLight1)
+  ([video](https://twitter.com/vis_prime/status/1635468289316114433)) by
+  [V_Prime](https://twitter.com/vis_prime) for [Drei
+  vanilla](https://github.com/pmndrs/drei-vanilla).
+- <WebXRLogo /> [**SKYBX**](https://skybx.elixrjs.io/)
+  ([video](https://twitter.com/felix_trz/status/1630864195796480001)) by [Felix
+  Zhang](https://twitter.com/felix_trz). Uses [BlockadeLabs](https://www.blockadelabs.com/)
+  AI-generated skyboxes.
+- <SplineLogo /> [**Car game**](https://twitter.com/Mark_Linington/status/1630731234015064066) and
+  [**mecha game**](https://twitter.com/Mark_Linington/status/1632057100162732034) video demos by
+  [Mark Linington](https://twitter.com/Mark_Linington), made in [Spline](https://spline.design/).
+- <WebGLLogo /> [**Procedural GLSL sea in a
+  tweet**](https://twitter.com/zozuar/status/1632160439944478721) ([live
+  demo](https://twigl.app/?ol=true&ss=-NPivuXkgj-je0DIXAPx)) by
+  [yonatan](https://twitter.com/zozuar)
+- <R3FLogo /> [**Spaceship portfolio**](https://aengel-dev.com/) by [Arthur
+  Engel](https://twitter.com/ArthurEngelDev)
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+<NewsletterFooter tweetId="1636060076602712067" />

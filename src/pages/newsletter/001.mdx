@@ -1,0 +1,86 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import { JavascriptLogo, PlayCanvasLogo, R3FLogo, ThreeLogo, WebXRLogo } from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 001
+
+<SubTitleDate value="2022-12-12" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+Welcome to the first issue of the **Web Game Dev Newsletter**!
+
+## 🔥 Headlines
+
+<R3FLogo /> We've got 2 new work-in-progress projects to bring scene changes back to React Three
+Fiber source code: [**React Three Editor**](https://twitter.com/0xca0a/status/1601315795006410752)
+by [Nikhil Saraf](https://twitter.com/nkSaraf98), and a [proof of
+concept](https://twitter.com/itsdouges/status/1597178413449904129) by
+[DOUGES](https://twitter.com/itsdouges) which uses Deno and [ts-morph](https://ts-morph.com/).
+
+<WebXRLogo /> Great news for **WebXR** developers: Meta Quest browser now supports [**immersive
+navigation**](https://twitter.com/rcabanier/status/1598382690327097344), which means you can now
+change _same-origin_ URL routes within a WebXR session (yep, that was surprisingly not possible
+before). This is a step forward for metaverse experiences, and also opens up interesting ways to
+build XR games around traditional URL routes (like seamlessly going from `/my-house` to `/worldmap`
+or `/arena`). It is also now possible to [**send a link from desktop or
+mobile**](https://twitter.com/00davehill00/status/1597770283762388993) to Quest headsets, to not
+have to type URLs.
+
+## ⬆️ Updates
+
+<ThreeLogo /> [**Three.js 147**](https://twitter.com/threejs/status/1597864405445722112) – Everybody
+is in love with the [**pixel postprocessing
+effect**](https://threejs.org/examples/?q=pixel#webgl_postprocessing_pixel)
+([changelog](https://github.com/mrdoob/three.js/releases/tag/r147), [migration
+guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide#146--147)).
+
+## ✍️ Content
+
+- 🎬 🎓 [**How Big Budget AAA Games Render Clouds**](https://www.youtube.com/watch?v=Qj_tK_mdRcA) by [SimonDev](https://twitter.com/iced_coffee_dev). You will never look at clouds the same.
+- 🎬 🎓 [**Continuity of Splines**](https://www.youtube.com/watch?v=jvPPXbo87ds) by [Freya Holmér](https://twitter.com/FreyaHolmer). A beautiful in-depth explanation of splines (such as Bézier curves).
+- 🎬 <JavascriptLogo /> [**100+ JavaScript Concepts you Need to Know**](https://www.youtube.com/watch?v=lkIFF4maKMU) by [Fireship](https://www.youtube.com/@Fireship). A quick overview of all things JavaScript.
+- ✍️ <R3FLogo /> [**The magical world of
+  Particles**](https://blog.maximeheckel.com/posts/the-magical-world-of-particles-with-react-three-fiber-and-shaders/)
+  with React Three Fiber and Shaders by [Maxime Heckel](https://twitter.com/MaximeHeckel). If you
+  like this article, check out his previous one, [The Study of
+  Shaders](https://blog.maximeheckel.com/posts/the-study-of-shaders-with-react-three-fiber/).
+
+## ✨ Games & Demos
+
+- 🎮 <ThreeLogo /> [**Narrow One**](https://narrow.one/) by [Pelican
+  Party](https://twitter.com/pelican_party). A capture-the-flag archery multiplayer game.
+- 🎮 <ThreeLogo /> [**Slow Roads**](https://slowroads.io/) by [anslo](https://twitter.com/anslogen).
+  Buckle your seatbelt and cruise around an infinite procgen landscape.
+- 🎮 <R3FLogo /> (WIP) [**WoW-based card
+  game**](https://twitter.com/BrianBreiholz/status/1601676909372649472) by [Brian
+  Breiholz](https://twitter.com/BrianBreiholz). It uses
+  [Miniplex](https://github.com/hmans/miniplex) and the [Needle Engine](https://needle.tools/).
+- ✨ <PlayCanvasLogo /> [**Space Pod**](https://twitter.com/dankvr/status/1599859305284481025) by
+  [jin](https://twitter.com/dankvr) for the [M3](https://twitter.com/m3org) metaverse community
+  ([live demo](https://tv.m3org.com/)).
+- ✨ <R3FLogo /> (WIP) [**Hello Worlds**](https://twitter.com/KennyPirman/status/1600759656724430849)
+  by [Kenneth Pirman](https://twitter.com/KennyPirman), who is building gigantic worlds so [you
+  don't have to](https://worlds.kenny.wtf/docs/intro/).
+- ✨ <R3FLogo /> (WIP)
+  [**RaycastVehicle**](https://twitter.com/isaac_mason_/status/1601800966319538176) for
+  [Rapier](https://rapier.rs/) by [Isaac Mason](https://twitter.com/isaac_mason_), for all your car
+  physics needs.
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+## 💬 From our Discord
+
+We had the first Web Game Dev **video meetup** on December 10th 2022! Here is a recap:
+
+- • [I](https://twitter.com/verekia) talked about [**WebGameDev.com**](https://www.webgamedev.com/) and how I am dedicating 2023 to keep learning and writing about gamedev full-time to help other folks who are transitioning from web development.
+- • _anxpara_ presented [**Wayfinder**](https://wayfinderanimationtool.com/), an animation tool that augments any CSS animation engine, providing a waypoint-centric approach to moving elements around pages.
+- • [Nathan Pointer](https://twitter.com/nwpointer) presented his gorgeous [**three-landscape**](https://www.npmjs.com/package/three-landscape) [demo](https://three-landscape.vercel.app/) and talked about technical challenges.
+- • Hamza Kubba showed his futuristic city-spaceship-battle game and some of the tricks he's used, like fake projectile lighting, and an AI that's based on player line of sight.
+- • [Brian Breiholz](https://twitter.com/BrianBreiholz) gave us a big slap in the face with his [WoW-influenced card game](https://twitter.com/BrianBreiholz/status/1601676909372649472).
+- • [Hendrik Mans](https://twitter.com/hmans) presented [**Bigby**](https://github.com/hmans/bigby), a Three.js game framework based on plugins, and how it relates to [Miniplex](https://github.com/hmans/miniplex).
+- • [N8](https://twitter.com/N8Programs) took us for a tour of his procgen infinite office, and talked about performance optimization and effects.
+
+<NewsletterFooter tweetId="1602210452443844608" />

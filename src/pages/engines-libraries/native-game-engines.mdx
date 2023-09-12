@@ -1,0 +1,31 @@
+import Callout from 'components/Callout'
+import Project from 'components/Project'
+import { godot } from 'projects'
+import { GodotLogo, UnityLogo, UnrealLogo } from 'lib/logos'
+
+# 🎮 Native Game Engines
+
+This website is called Web Game Dev because we are going to use web standards to make games, but it is also worth addressing the topic of native game engines.
+
+The two biggest engines available for native game development are <UnityLogo /> [**Unity**](https://unity.com/) and <UnrealLogo /> [**Unreal Engine**](https://www.unrealengine.com). They are both industry standards with massive communities and markets. If you want to work for companies in the video games industry and be able to release performant games on multiple native platforms like desktop and mobile, these are your main options, and you can’t go wrong with either.
+
+Unity is easier to start with due to its big community, and has been very popular with indie game developers, whereas Unreal is usually considered better-suited for AAA games. But both can make any kind of games.
+
+Unity code is written in C# and with [Unity Visual Scripting](https://unity.com/features/unity-visual-scripting), and Unreal Engine code is written in C++ and with [Blueprints Visual Scripting](https://docs.unrealengine.com/5.0/en-US/blueprints-visual-scripting-in-unreal-engine/). While visual scripting is quite interesting and allows you to do a lot, you will eventually have to use C# or C++.
+
+There is also <GodotLogo /> <Project {...godot} />, an open-source alternative that supports C#, C++, visual scripting, and its proprietary Python-like GDScript.
+
+Note that if your goal is simply to publish a game to the web rather than using JavaScript, it is possible to export your games to WebAssembly and WebGL with both [Unity](https://docs.unity3d.com/Manual/webgl-building.html) and [Godot](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html). Some other recent actors are [**Needle**](https://needle.tools/), a tool to export Unity and Blender projects to a Three.js-based web runtime, and [**Wonder**](https://theimmersiveweb.com/blog) for Unreal Engine.
+
+There are a [lot of other game engines](https://en.wikipedia.org/wiki/List_of_game_engines) such as [**Defold**](https://defold.com/) (Lua) or [**GameMaker**](https://gamemaker.io/en) (GML).
+
+<Callout style={{ marginTop: 24, marginBottom: 24 }}>
+✅ **My choice: I am not going to use a native game engine**
+
+While it is undeniable that they are the right choice for games that require high performance and a more well-rounded game-specific ecosystem, I am not a fan of the developer experience of Unity and Unreal. Native development requires a lot of tools, SDKs, and dedicated IDEs, with all sorts of incompatibilities. To make a VR app for Meta Quest 2 on an Apple M1 with Unreal / Unity, I had to download about 50GB of tools, libraries, and editors, and deploying to the headset was a pain with both.
+
+Coming from the web with the great lightweight developer experience of VS Code, TypeScript, and easy hot-reloading, working with Unity and Unreal was a big downgrade. I haven't tried Godot yet, but either way, native game engines are a big lock-in that I prefer to avoid.
+
+In terms of languages, I strongly prefer working with TypeScript. Not only because I already know it, but also to be able to leverage the thriving JavaScript ecosystem, and to use one universal language for everything, website front-ends, games, and back-end.
+
+</Callout>

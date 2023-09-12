@@ -1,0 +1,139 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
+  JavascriptLogo,
+  KaboomLogo,
+  NeedleLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  R3FLogo,
+  ThreeLogo,
+  TresLogo,
+  WasmLogo,
+  WebXRLogo,
+  WebGLLogo,
+  WebGPULogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 014
+
+<SubTitleDate value="2023-04-13" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+<WebGPULogo /> [**WebGPU ships in Chrome 113**](https://developer.chrome.com/blog/webgpu-release/)
+(currently in the Beta channel). This release marks a new era for GPU-accelerated graphics on the
+web. <ThreeLogo /> Three.js, <BabylonLogo /> Babylon.js, and <PlayCanvasLogo /> PlayCanvas all have
+some initial support for WebGPU, but expect a bumpy road if you want to support both WebGL and
+WebGPU, considering that WebGPU uses WGSL instead of GLSL for shaders. The transition will be rough,
+but the future is bright!
+
+<PhaserLogo /> [**Phaser 3.60.0 is
+out!**](https://github.com/photonstorm/phaser/releases/tag/v3.60.0) This massive update has been in
+the works for over a year. It also marks the [10th
+anniversary](https://github.com/photonstorm/phaser/graphs/contributors) of the first Phaser release
+on GitHub on April 12th, 2013. The most recent beta versions include the
+[Timeline](https://www.patreon.com/posts/phaser-v3-60-22-80835382) class and a
+[Matter.js](https://github.com/liabru/matter-js) v0.19 update. Check out the complete
+[**Changelog**](https://github.com/photonstorm/phaser/releases/tag/v3.60.0) of this major update!
+
+[Anslo](https://twitter.com/anslogen) shared his thoughts on JavaScript game development and explained some of the performance optimizations and techniques used in [Slow Roads](https://slowroads.io/) in an excellent [**tech article on Google's web.dev**](https://web.dev/slow-roads/) website.
+
+We are one step closer to The Matrix scenario with this [**paper of a simulation**](https://twitter.com/emollick/status/1645499660402925576) involving 25 AI-driven characters hanging out in a virtual town. [Watch the replay](https://reverie.herokuapp.com/arXiv_Demo/) while wondering who is currently watching yours.
+
+## 🛠 Tools & Updates
+
+- <ThreeLogo /> [**enhance-shader-lighting**](https://twitter.com/0beqz/status/1641486795929006100)
+  ([demo](https://enhance-shader-lighting.vercel.app/),
+  [repo](https://github.com/0beqz/enhance-shader-lighting)) by [0beqz](https://twitter.com/0beqz) –
+  Makes lighting more realistic in Three.js.
+- <R3FLogo /> [**Drei v9.65**](https://github.com/pmndrs/drei/releases) – Adds
+  [**&lt;Wireframe&gt;**](https://github.com/pmndrs/drei#wireframe)
+  ([tweet](https://twitter.com/CantBeFaraz/status/1643574732103483394),
+  [demo](https://codesandbox.io/s/2572o5)),
+  [**useCubeCamera**](https://github.com/pmndrs/drei#usecubecamera) and
+  [**useEnvironment**](https://github.com/pmndrs/drei#useenvironment) hooks.
+- <PlayCanvasLogo /> [**PlayCanvas Engine v1.62**](https://github.com/playcanvas/engine/releases) –
+  [**Initial WebGPU
+  support**](https://blog.playcanvas.com/initial-webgpu-support-lands-in-playcanvas-engine-1-62/),
+  [glTF Viewer](https://twitter.com/willeastcott/status/1642092127461994500) update, some shader
+  breaking changes.
+- <PixiLogo /> [**PixiLayout**](https://pixijs.io/layout/) – A new CSS-like library for arranging
+  Pixi elements.
+- <BabylonLogo /> [**Babylon.js v5.55.0**](https://github.com/BabylonJS/Babylon.js/releases)
+- <WebGLLogo /> [**Web3D Survey**](https://web3dsurvey.com/) by [Ben
+  Houston](https://twitter.com/benhouston3d) – The _Can I Use_ of WebGL and WebGPU APIs.
+
+## 🎬 Videos
+
+- <R3FLogo /> [**Recreating Atmos with React Three Fiber – part
+  2**](https://www.youtube.com/watch?v=_KlIkgvadmc) and [**part
+  3**](https://www.youtube.com/watch?v=18weM_oRVmE) by [Wawa Sensei](https://twitter.com/wawasensei)
+- <CocosLogo /> [**Cocos Game Compilation 2022**](https://www.youtube.com/watch?v=4IKrTxzBHvU)
+  (mostly mobile Chinese games)
+
+## ✍️ Articles
+
+- <ThreeLogo /> [**Mastering Theatre.js
+  Animations**](https://tympanus.net/codrops/2023/03/30/mastering-theatre-js-animations-learn-to-create-dynamic-visuals/)
+  by [The Ebenezer](https://twitter.com/th_ebenezer)
+- <ConstructLogo /> [**Safari releases are a development
+  hell**](https://www.construct.net/en/blogs/ashleys-blog-2/safari-releases-development-1616) by
+  [Ashley Gullen](https://twitter.com/AshleyGullen)
+- <JavascriptLogo /> [**CPU performance
+  tips**](https://twitter.com/N8Programs/status/1646494526289190913) by
+  [N8](https://twitter.com/N8Programs)
+- 🌐 [**PWAs in app stores**](https://web.dev/pwas-in-app-stores/) by [Thomas Steiner](https://twitter.com/tomayac)
+
+## 🎮 Games
+
+- <ThreeLogo /> [**Super Mario Bros Movie Fan Game**](https://smbmovie.supertommy.com/) by
+  [supertommy](https://twitter.com/iamsupertommy) – Uses [Rapier](https://rapier.rs/),
+  [Miniplex](https://github.com/hmans/miniplex), and [howler.js](https://howlerjs.com/). 🍄
+- <WebGLLogo /> [**Duelyst GG**](https://duelyst.gg/) by [Hellgin](https://twitter.com/Duelystgg) –
+  Revival fan project of the Duelyst collectible card game coded from scratch. 🃏
+
+We need more web games! Join the 🍓 [**Open Jam – April 2023**](https://www.webgamedev.com/open-jam-april-2023) on Discord and build something cool this month!
+
+## ✨ Demos
+
+- <ThreeLogo /> [**Fake liquid
+  shader**](https://twitter.com/SketchpunkLabs/status/1641150481635344398)
+  ([source](https://github.com/sketchpunklabs/materials/commit/22805dcc3c6bf9bbffaed38acc9aea37c2887361))
+  by [VoR](https://twitter.com/SketchpunkLabs) ported from [Joyce](https://twitter.com/minionsart)'s
+  work.
+- <ThreeLogo /> [**Voxels with
+  physics**](https://twitter.com/DaniGatunes/status/1642968989730242560)
+  ([demo](https://cubes.gatunes.com/)) by [Daniel Esteban](https://twitter.com/DaniGatunes)
+- <ThreeLogo /> [**A responsive 3D
+  scene**](https://twitter.com/bruno_simon/status/1641771491027984386) by [Bruno
+  Simon](https://twitter.com/bruno_simon) and the <R3FLogo /> [**R3F
+  adaptation**](https://twitter.com/0xca0a/status/1641807644657590279)
+  ([demo](https://codesandbox.io/s/sad-tree-joqq47?file=/src/App.js)) by
+  [0xca0a](https://twitter.com/0xca0a).
+- <ThreeLogo /> [**Cube and hexagon terrain
+  generators**](https://twitter.com/jsulpis/status/1642606283315376128) by
+  [VoR](https://twitter.com/SketchpunkLabs), [Julien Sulpis](https://twitter.com/jsulpis), and
+  [Faraz](https://twitter.com/CantBeFaraz).
+- <ThreeLogo /> [**Jesse's Ramen**](https://jesse-zhou.com/) portfolio by [Jesse
+  Zhou](https://twitter.com/Jessezhouu)
+- <WebXRLogo /> <PlayCanvasLogo /> [**Arcade light
+  guns**](https://twitter.com/yaustar/status/1643553235607728130) by [Steven
+  Yau](https://twitter.com/yaustar)
+- <WebXRLogo /> <ThreeLogo /> [**Your face on an animated
+  model**](https://webar.rocks/demos/faceDepth/demos/threeReadyPlayerMeAvatar/)
+  ([source](https://github.com/WebAR-rocks/WebAR.rocks.faceDepth)) by [Xavier
+  Bourry](https://twitter.com/xavierbourry)
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+<NewsletterFooter tweetId="1646535940557656065" />

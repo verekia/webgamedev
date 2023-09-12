@@ -1,0 +1,11 @@
+import Todo from 'components/Todo'
+
+# 🎱 Object Pooling
+
+Object pooling is a design pattern that allows you to reuse existing objects instead of creating and destroying new ones frequently. This reduces the work done by the GPU and Garbage Collector. A typical use case is for projectiles that are fired rapidly and have a short lifespan such as bullets.
+
+Let's say you have a game where you can have at most 20 bullets displayed in the scene at the same time, you can create 20 bullet objects that are invisible, and cycle through them to make them visible and reset their position. If you don't know how many objects you will need, you can set up a mechanism to grow and shrink the object pool as needed on the fly.
+
+More generally, if you are having performance issues at the creation and destruction of some objects, you can consider toggling their visibility instead (with the trade-off of them being always loaded in memory).
+
+<Todo>ECS example</Todo>

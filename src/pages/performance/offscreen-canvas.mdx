@@ -1,0 +1,13 @@
+import Todo from 'components/Todo'
+import Project from 'components/Project'
+import { others as projects } from 'projects'
+
+# 🙈 OffscreenCanvas
+
+The [OffscreenCanvas API](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) lets you offload the rendering of a canvas to a web worker. This is useful if you want to avoid blocking the main thread and causing jank in your canvas when performing heavy computations ([demo](https://threejs.org/examples/webgl_worker_offscreencanvas.html)).
+
+Here is a [repository](https://github.com/F-loat/offscreen-canvas-demo) showing how to set it up with Three.js and React Three Fiber ([demo](https://f-loat.github.io/offscreen-canvas-demo/three-fiber6-offscreen)).
+
+OffscreenCanvas is supported by Chrome and Firefox, and will be supported in Safari 16.4 ([Can I Use](https://caniuse.com/offscreencanvas)).
+
+<Todo>Add a minimal R3F example.</Todo>

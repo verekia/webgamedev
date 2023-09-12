@@ -1,0 +1,21 @@
+# 🎮 Consoles
+
+One of the biggest drawbacks of creating a web-based game, is that browser support on consoles is limited or challenging. So if you intend to publish your game on consoles, you should consider using native engines.
+
+Also, note that to make your game usable on consoles, you'll need to integrate the [Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API).
+
+## Wrappers
+
+The Xbox One supports HTML / JS games via [UWP apps](https://learn.microsoft.com/en-us/windows/uwp/xbox-apps/development-lanes-html) and [Hosted Web Apps](https://blogs.windows.com/windowsdeveloper/2016/02/17/building-a-great-hosted-web-app/).
+
+It currently doesn't seem possible to publish JavaScript games to PlayStation or Nintendo Switch.
+
+That being said, [Radical Fish Games](https://www.radicalfishgames.com/) was able to release their game [CrossCode](https://www.cross-code.com/en/home) on Switch and PlayStation, by creating their own compiler and transforming JavaScript code to C++. They touch on the process in their blog posts [here](https://www.radicalfishgames.com/?p=6892) and [here](https://www.radicalfishgames.com/?p=6946), and in this [presentation](https://www.youtube.com/watch?v=KfBzlzvt8RU).
+
+## Browsers
+
+Alternatively, web games can be played in browsers on [Xbox](https://support.xbox.com/en-US/help/hardware-network/console/use-microsoft-edge-on-xbox) and [PS4](https://alvarotrigo.com/blog/ps4-web-browser/), but [not PS5](https://alvarotrigo.com/blog/web-browser-ps5/) or Switch. There are some tricks to access hidden browsers on these as well, but that's not something you'd want your users to go through to play your games).
+
+## Steam Deck
+
+[Steam Decks](https://store.steampowered.com/steamdeck) run the SteamOS Linux distribution. By publishing a [Linux build](https://github.com/ValveSoftware/steam-for-linux/issues/8781#issuecomment-1245964256) of your game to Steam via [Electron](https://www.electronjs.org/) and [Steamworks.js](https://github.com/ceifa/steamworks.js), it should work on Steam Deck. You might need the [`--no-sandbox` flag](https://steamcommunity.com/app/1675200/discussions/1/4826187053916237100/) when building your Electron game. I haven't done it myself, so please let me know if you have more info or if you can confirm this.

@@ -1,0 +1,7 @@
+{
+  "reducing-draw-calls": { "title": "✏️ Reduce Draw Calls" },
+  "instanced-meshes": { "title": "📋 Instanced Meshes" },
+  "object-pooling": { "title": "🎱 Object Pooling" },
+  "web-workers": { "title": "👷 Web Workers" },
+  "offscreen-canvas": { "title": "🙈 OffscreenCanvas" }
+}

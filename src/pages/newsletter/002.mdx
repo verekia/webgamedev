@@ -1,0 +1,71 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  BabylonLogo,
+  PlayCanvasLogo,
+  R3FLogo,
+  ThreeLogo,
+  ThrelteLogo,
+  WebGPULogo,
+  WebXRLogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 002
+
+<SubTitleDate value="2022-12-20" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+This is the second issue of the **Web Game Dev Newsletter**! 🚀
+
+## 🔥 Headlines
+
+**2 node-based shader graph editors** got released: [**NodeToy**](https://nodetoy.co/), a platform to create, fork, share, and export shader effects to GLSL, or to [Three.js](https://github.com/NodeToy/three-nodetoy) and [React Three Fiber](https://github.com/NodeToy/react-nodetoy) via a NodeToy URL in your components. If NodeToy is a little too _platform-y_ for you, you will like [**Alma**](https://www.alma.sh/) by [Emil Widlund](https://twitter.com/emilwidlund), a similar tool to create GLSL shaders via a neat UI that lets you jump right into a graph playground without any account.
+
+<WebGPULogo /> It looks like we may be getting [**WebGPU in Chrome
+desktop**](https://twitter.com/Tojiro/status/1603087438150217728) sometime around May 2022!
+
+<ThrelteLogo /> [**SvelteKit hit version 1.0**](https://www.youtube.com/watch?v=uEJ-Rnm2yOE), which
+is the perfect opportunity to bring your attention to [**Threlte**](https://threlte.xyz/), the
+equivalent of React Three Fiber in the [**Svelte**](https://svelte.dev/) world. Thanks to the way
+Svelte works, you can animate Threlte objects directly instead of manipulating the underlying
+Three.js object via refs like you would do in R3F. The version 5 of Threlte got released recently
+with some [major changes](https://threlte.xyz/core-transition), including an API that's closer to
+R3F, but the docs are still transitioning to the new paradigm. Note that Threlte has
+[built-in](https://threlte.xyz/rapier/rigid-body) support for the [**Rapier**](https://rapier.rs/)
+physics engine!
+
+<ThreeLogo /> [Anderson Mancini](https://twitter.com/Andersonmancini) hosted a [**Three.js
+event**](https://twitter.com/i/spaces/1RDGlapyYjjJL) on Twitter Spaces with [Bruno
+Simon](https://twitter.com/bruno_simon), [N8](https://twitter.com/N8Programs), and [Nicolas
+Carvajal](https://twitter.com/nicolas_web3).
+
+<WebXRLogo /> There is now an experimental API to bring up a [**WebXR System
+Keyboard**](https://developer.oculus.com/documentation/web/webxr-keyboard/) on Meta Quest.
+
+## ✍️ Content
+
+- 🎬 <ThrelteLogo /> An [**introduction to Threlte**](https://www.youtube.com/watch?v=89LYeHOncVk)
+  (v4) by [Joy of Code](https://twitter.com/joyofcodedev). Available in [text
+  version](https://joyofcode.xyz/introduction-to-3d-with-svelte).
+- ✍️ 🎓 A [**visual explanation of shaders**](https://typefully.com/DanHollick/gpnhhud) by [Dan Hollick](https://twitter.com/DanHollick).
+
+## ✨ Games & Demos
+
+- 🎮 <PlayCanvasLogo /> [**Venge**](https://venge.io/) by [OnRush Studio](https://onrush.studio/).
+  Probably the most impressive full-fledged web game I have seen so far.
+- 🎮 <ThrelteLogo /> [**Arcade Machine**](https://threlte.xyz/arcade-machine) by [Grischa
+  Erbe](https://github.com/grischaerbe) to showcase Threlte.
+- 🎮 <R3FLogo /> [**A Christmas game**](https://voeux2023.telkea.com/) by [Sébastien
+  Lempens](https://twitter.com/s_lempens) (press Space or click the glove icon to switch to
+  digging).
+- 🎮 <BabylonLogo /> (WIP) [**A fantasy card game**](https://summoners.io/) by [Stephen
+  Haney](https://twitter.com/sdothaney).
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+As a bonus, [**Blender**](https://www.blender.org/) published [**Charge**](https://www.youtube.com/watch?v=UXqq0ZvbOnk), a beautiful 4-minutes **open movie**.
+
+<NewsletterFooter tweetId="1605194541069660161" />

@@ -1,0 +1,110 @@
+import { FloatRightImage } from 'components/FloatImage'
+import { Asteroid, Space } from 'components/interviews/hendrik'
+
+# 🎙 Interview with Hendrik Mans
+
+_**For our first interview on WebGameDev.com, we welcome [Hendrik Mans](https://github.com/hmans), a German developer who works full-time on open-source game development tools. Thank you Hendrik for being our first interviewee! Could you tell us about your background and what led you to decide to go full-time with open source?**_
+
+<FloatRightImage
+  src="/interviews/hendrik-mans/hendrik-mans.jpg"
+  alt="Hendrik Mans"
+  height={250}
+  wifth={250}
+/>
+
+Hello and thanks for having me! Ironically, my background is actually something entirely different from game development – I’ve spent most of my professional life building business applications, designing databases and APIs, architecting complex systems, things like that. But I’ve also always been interested in game development, it’s the usual story really where, like many others like me, building a game on my first computer was the gateway drug to programming, and then it just never really let me go.
+
+Over the decades, I’ve always tried to keep up with the latest tools and engines, and more than once, I’ve told the people I work with: go build a game, not an app, you’ll learn new skills and gain new insights that you will be able to use in your day job, too. For me personally, building games has always been about balancing out the type of work for which I’d need to put on a good business shirt with something varied and colorful where I could allow myself to go a little crazy.
+
+Funny thing is, though, that very often the kind of tools that would otherwise be your first choice when building a game never fully clicked with me. Having spent so much time in web and server application development, I at some point understood that I really wanted to build games code-first, too, and on the web, because not only it’s a platform that I’m familiar with, but also because I feel that there are a lot of valuable properties to building on the web that are just waiting to be applied to game dev. Hence my focus on this specific section of our trade.
+
+And so, early in 2022, I decided to ramp down my activities as a consultant to focus more, and eventually fully, on my open source work in this space. There’s a whole collection of libraries that I’m working on now, and I’m getting paid by people who enjoy my work enough to want me to produce more of it. It’s a really cool setup that’s not without its own set of challenges, but my mind is still blown that it’s possible to work this way.
+
+_**What do you think of the current state of web game development?**_
+
+I think from a technical point of view, what we can do on the web today is super impressive, but games that make full use of the web’s capabilities are still quite rare. To some extent this is probably due to the libraries and engines still trying to catch up with the sort of feature sets of the big engines they aspire to imitate, but I think mainly it’s because not enough people are building games on the web yet.
+
+Building games on the web isn’t anything new, and it’s had many names, but just stop and consider the sort of connotation “HTML5 games'' or “Flash games” have – something that needs to happen more is to have people build full games that are more than just a quick hyper casual diversion or, worse, a front for a real-currency coin stores. This is unfortunately a really hard to sell idea right now, because nobody will go for bigger projects unless there’s a clear path towards monetizing them. We’re seeing some interesting platforms popping up that try to provide this, so I think there’s going to be some good developments in this space in the next few years.
+
+_**It seems like there is a trend to use UI libraries like React, Vue, and Svelte, to wrap WebGL libraries like Three.js, Pixijs, or Babylon.js. While they certainly help make our code more declarative, some people argue that these are not the right tool for the job. What is your take on this matter?**_
+
+Well, I’m going to give you the textbook answer first – these things don’t really matter all that much. If you sit down with the intention to build a game, the best stack you can choose is the one you’re familiar and comfortable with. No matter what that stack is, you’ll always find at least one person who’ll tell you that you’ve made an utterly terrible choice. Don’t listen to them. There are advantages and disadvantages to every of the many engines and libraries available, and none of them will ever be more important than your own familiarity and enjoyment of them.
+
+I wrote one of my earlier web games with CoffeeScript, a language that is now pretty much universally hated among modern web developers. I think it was already hated a lot back when I used it! I certainly remember being mocked for it. But the simple truth is that that particular game only ended up existing because I enjoyed making it, and that would quite possibly not have been the case with another stack at the time.
+
+Having said that – I know you’re also asking because I now use React in almost all of my game projects, have a lot of React- or React-Three-Fiber-specific libraries, or at least make sure that my libraries can be used in React environments. I love using React for game development. You wouldn’t believe how much people have mocked me for that choice, too, but, well, I can take it. In the end, React and other frameworks like it are really just tools that convert one state into another, and possibly run side-effects, which is a large part of what you’ll be doing in your game code either way. If you’re not using a framework like that, you’re guaranteed to write your own, it might work differently, have another set of features, but you’re still writing one. It’s not like there is a pure, lightweight, everything-is-peachy frameworkless game development model and the fatty framework-poisoned one that lazy people like me use. I’m just choosing to use someone else’s code to solve a specific problem instead of inventing things from scratch.
+
+_**You created [Miniplex](https://github.com/hmans/miniplex), a framework-agnostic ECS library, which has been very well received in the React Three Fiber ecosystem. Could you summarize what ECS is and how this approach can help developers architect their code? Do you have recommendations for people who would like to get started with ECS?**_
+
+<div style={{ margin: '24px auto', textAlign: 'center' }}>
+  <a href="https://github.com/hmans/miniplex" target="_blank" rel="noopener">
+    <img
+      src="/interviews/hendrik-mans/miniplex.jpg"
+      style={{
+        borderRadius: 4,
+        width: '100%',
+        maxWidth: 450,
+        display: 'inline-block',
+        marginBottom: -12,
+      }}
+    />
+  </a>
+  [**Miniplex**](https://github.com/hmans/miniplex), Hendrik's gentle ECS library
+</div>
+
+ECS is short for Entity Component System, a code architecture pattern that cleanly splits things into separate components, which are usually just representations of state, and systems, which is the code that operates on them. Entities are composed from multiple of these components.
+
+The benefits this pattern provides are some very enticing performance properties, but also keeping complex codebases nicely maintainable, and testable, too. Most people who choose ECS for their projects do it for its performance benefits, but I’m really a fan of it because of its structure, which is why Miniplex fully commits to that aspect of the pattern.
+
+There’s a whole bunch of JavaScript ECS libraries out there, but I felt that what was missing was one that very specifically was as easy to understand and use as possible, and was a perfect match for frameworks like React, without being exclusively designed for them. I let myself be inspired by the typical approach to state in JavaScript and React, where things usually are just boring old objects with specific properties on them, and ended up adapting that pattern to the idea of ECS.
+
+Miniplex will feel familiar to anyone who’s ever used a state management library like, say, Zustand, but gently push them away from the typical reactivity-leaning focus, and towards ECS. You know, it’s funny how we take libraries like React-Three-Fiber and React and, when building non-trivial games with them, actively avoid their reactive properties for the sake of performance, and Miniplex fully embraces that. I think that’s what makes it one of a kind.
+
+As to recommendations – I think the one I do have for newcomers to the pattern is to relax and not overthink things. The truth is, an object-based ECS library like Miniplex is really just a big array of things, with some tools that let you get a subset of that array to iterate over in your game loop. It doesn’t really matter if these things are “players” and “enemies”, or “movables”, “hittables”, “killables” and “pickupables”. Just like with the choice of stack we’ve discussed before, start with something that feels comfortable and fun – you’ll be surprised by how quickly the pieces will inevitably start falling into place by themselves.
+
+_**You have also been working on the [Composer Suite](https://github.com/hmans/composer-suite), a suite of standalone libraries for Three.js, React, and React Three Fiber. Could you tell us about the libraries and what developers can start using now?**_
+
+<div style={{ margin: '24px auto 30px', textAlign: 'center' }}>
+  <Space />
+</div>
+
+Oh yeah, good old Composer Suite. The big thing I wanted to achieve last year was an easy-to-use API for visual effects, you know, particle systems, noise texture effects, and the likes. After doing a little prototyping, I quickly understood that these had to be driven by the GPU, not CPU, so I ended up building a library that came with a custom GLSL shader that you could customize through a series of parameters.
+
+Then I got drunk with power and figured it’d be great to have something node-based that would fully let me build shaders using JavaScript, and thus [**Shader Composer**](https://github.com/hmans/composer-suite/tree/main/packages/shader-composer) was born. I liked the theme of composers doing composition, so I eventually added Material Composer, which adds a layers-based API to Shader Composer, and [**VFX Composer**](https://github.com/hmans/composer-suite/tree/main/packages/vfx-composer), which implements an optimized particle systems engine based on instanced rendering.
+
+<div style={{ margin: '24px auto', textAlign: 'center' }}>
+  <Asteroid />
+  [**VFX Composer**](https://github.com/hmans/composer-suite/tree/main/packages/vfx-composer) examples
+</div>
+
+All of these are ready to use, but sadly still need to receive meaningful documentation, something I’ve been holding off on because I wanted the development to settle first. And I’m glad I did because I will give at least the latter two of these libraries a little do-over and restructuring to make them more compact and easier to use.
+
+I think that was a lot of words to basically say that yeah, these libraries are still under heavier development than I’d like to admit, and you’d be crazy to use them in production projects, even though I know of some people who didn’t let that stop them from doing so anyway.
+
+_**Are you planning any other things for 2023 that web game developers should know about?**_
+
+I’ve been jotting down my plans for 2023, and there’s probably a long blog post waiting to be written about what it’s like to work on open-source software full-time, and the kind of traps that this mode of working lays out for you. I probably stepped into most of them! So part of my focus this year is to learn from those little accidents and iterate on how I work, and what I spend my time on.
+
+Which mostly means that the big theme this year is going to be simplicity. I want to make the things I’ve already built simpler to use. The Composer Suite is currently looking a little too daunting, I think, so there will be some restructuring. I plan on integrating the functionality that Material Composer provides directly into Shader Composer, and rebranding VFX Composer to better reflect what it is doing, which is GPU-based particle systems. Some of my libraries like Miniplex are really tiny and cute, and they’re really my favorites, so I want more of my stuff to be like that.
+
+Other than that, I’m currently exploring an idea for a lightweight framework for Three.js apps and games that, if I can make it work the way that I’m envisioning, might be pretty fun. But not talking about things too early is another thing I’m trying to do in 2023, so you’ll hopefully read more about this some other time, haha.
+
+_**Thank you, Hendrik, for taking the time to answer these questions and helping push this web game developer community forward with your tools! In closing words, would you like to share any advice with aspiring web game developers?**_
+
+Thank you, it’s been excellent!
+
+<FloatRightImage
+  src="/interviews/hendrik-mans/hendrik-mans-2.jpg"
+  alt="Hendrik Mans"
+  height={180}
+  wifth={180}
+  style={{ borderRadius: 999 }}
+/>
+
+To aspiring web game developers, I think I have the following to say: building games on the web, and elsewhere, is incredibly fun, so do not let others ruin this for you. Game development can be heavily opinionated. Don’t build games the way that someone else tells you to. Don’t build them to become rich and famous. Maybe don’t even build them to finish and release them. Build them to have fun. Not only because having fun is great, but also because if you’re having fun, it typically means you’re learning. Enjoyment and knowledge will always be yours to keep.
+
+📆 2023-01-10
+
+---
+
+If you would like to support Hendrik’s work, you can [**sponsor him on GitHub**](https://github.com/sponsors/hmans), follow him on [**Mastodon**](https://norden.social/@hmans), watch his code [**live streams on Twitch**](https://www.twitch.tv/HansVonMans), and join the [Web Game Dev Discord](https://webgamedev.com/discord) if you have questions!

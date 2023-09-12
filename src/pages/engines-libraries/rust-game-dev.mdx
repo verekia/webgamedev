@@ -1,0 +1,55 @@
+import Project from 'components/Project'
+import { rust } from 'projects'
+
+# 🦀 Rust Game Dev
+
+Over the past few years, Rust has taken the low-level programming world by storm thanks to its performance, safety, cross-platform nature, and ease of use. These qualities make Rust a growingly popular choice for game development, and there are many libraries and frameworks that can be used to create games in Rust. It is currently the most loved programming language according to the [StackOverflow 2022 survey](https://survey.stackoverflow.co/2022/#programming-scripting-and-markup-languages).
+
+This website is mainly about JavaScript game development, but due to the growing popularity of Rust for game development and the fact that it can be easily compiled to WebAssembly to run in the browser, I thought it would be useful to summarize what's going on in the Rust ecosystem for those who might be interested.
+
+## Game engines and libraries
+
+- <Project {...rust.wgpu} description="Cross-platform 3D library that implements WebGPU" />
+- <Project {...rust.bevy} description="3D Data-driven (ECS) game engine" />
+- <Project {...rust.fyrox} description="3D engine with a Unity-like editor (formerly rg3d)" />
+- <Project {...rust.ambient} description="3D multiplayer game engine" />
+- <Project {...rust.ggez} description="2D game engine" />
+- <Project {...rust.macroquad} description="2D game engine" />
+- <Project {...rust.piston} description="3D game engine" />
+- <Project {...rust.amethyst} description="2D and 3D game engine with ECS – Archived" />
+
+See [Libraries and frameworks for
+Game Development in Rust](https://github.com/dasifefe/rust-game-development-frameworks) for a more exhaustive list.
+
+## WebAssembly bundling
+
+- <Project {...rust.wasmPack} description="Build WebAssembly packages for the browser or NPM" />
+- <Project {...rust.trunk} description="WebAssembly application bundler" />
+
+## Games
+
+- [**Veloren**](https://veloren.net/) ([source](https://github.com/veloren/veloren))
+- [**Zemeroth**](https://ozkriff.itch.io/zemeroth) ([source](https://github.com/ozkriff/zemeroth))
+- [Are we game yet list](https://arewegameyet.rs/#games)
+
+## Resources
+
+- [**Rust GameDev WG**](https://gamedev.rs/)
+- [**Are we game yet?**](https://arewegameyet.rs/)
+- [**r/rust_gamedev subreddit**](https://www.reddit.com/r/rust_gamedev/)
+- [**Game Development in Rust Discord**](https://discord.gg/yNtPTb2)
+- [**Rust web framework comparison**](https://github.com/flosse/rust-web-framework-comparison)
+
+## Back-end
+
+As a bonus, here are some back-end web frameworks if you want to go full-stack with Rust:
+
+- <Project {...rust.hyper} />
+- <Project {...rust.actix} />
+- <Project {...rust.rocket} />
+- <Project {...rust.warp} />
+- <Project {...rust.axum} />
+- <Project {...rust.poem} />
+- <Project {...rust.iron} />
+- <Project {...rust.tide} />
+- <Project {...rust.rouille} />

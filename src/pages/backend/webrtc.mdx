@@ -1,0 +1,13 @@
+import Project from 'components/Project'
+import { webrtc as projects } from 'projects'
+
+# 🐆 WebRTC
+
+On the web, WebRTC is commonly used for peer-to-peer real-time audio or video streams and calls. It can also be used for games via [data channels](https://developer.mozilla.org/en-US/docs/Games/Techniques/WebRTC_data_channels). The main difference between WebSocket and WebRTC is that WebSocket uses TCP and sends series of messages in blocking order, whereas WebRTC uses UDP and sends data in a non-blocking way with potential messages (or "packets") being lost. In the case of an authoritative server sending regular updates of a game state, we don't need all messages to arrive in order, we only need the latest state. You might be fine with WebSocket, but if you need the lowest latency possible for multiplayer games (for a fast-paced game like an FPS for instance), WebRTC is a better fit. Here is a good [introduction to game networking](https://pvigier.github.io/2019/09/08/beginner-guide-game-networking.html).
+
+It seems like the only library offering a simple **client-server** _socket.io-like_ setup is <Project {...projects.geckos} />. I only tried the [example](https://github.com/geckosio/geckos-v2-cjs-example) and it worked great. Geckos.io uses <Project {...projects.nodeDataChannel} /> under the hood, so you might want to look into this if you need a more custom setup. Check out this [video comparison of WebSocket and WebRTC](https://www.youtube.com/watch?v=ZEEBsq3eQmg) by the creator of Geckos.io.
+
+There is also <Project {...projects.nodeWebRtc} /> but I was not able to try it due to a [missing file](https://github.com/node-webrtc/node-webrtc-examples/issues/1) during installation, and <Project {...projects.webUdp} />.
+
+For **peer-to-peer** WebRTC, there is <Project {...projects.peerJs} /> and its [PeerServer](https://github.com/peers/peerjs-server) signaling server, or <Project {...projects.simplePeer} /> and the related
+[signaling server](https://github.com/lisajamhoury/simple-peer-server) repository.

@@ -1,0 +1,58 @@
+import Callout from 'components/Callout'
+
+# 🌐 Progressive Web Apps (PWAs)
+
+**Progressive Web Apps** is a term coined by Google to describe a set of functionalities that bring web apps closer to native apps, and which include offline support, push notifications, installability, and more. [**web.dev**](https://web.dev/learn/pwa/) is a comprehensive resource to learn more about PWAs. While there is certainly a lot of PWA features that can be useful for games, I think the most important one is **installability**. Allowing your users to install your game on their device and have an icon on their desktop or home screen is a great way to increase engagement and gives a more immersive **fullscreen experience** with no browser UI.
+
+<Callout style={{ marginTop: 30, textAlign: 'center' }}>
+  💡 [**WebGamer.io**](https://webgamer.io/) is an example of installable Progressive Web App.
+</Callout>
+
+## Browser installation
+
+Installing a PWA on a device can be done in two ways: via a button in the browser UI (which may say **Add to home screen** "A2HS" on mobile, or **Install app** on desktop), or via a browser-native prompt that the PWA can trigger. By default, if supported, the [installation prompt](https://web.dev/learn/pwa/installation-prompt/) will appear whenever the browser has confirmed that your PWA meets the [installability criteria](https://web.dev/install-criteria/), which may happen soon after the user opens your game. That's less than ideal, as it may interrupt the user's experience and be seen as an annoying popup. You can instead trigger the prompt yourself, for example when the user clicks an in-game install button or has completed a level.
+
+## Support
+
+As on January 2023, installing PWAs directly from a web page is [supported on](https://caniuse.com/web-app-manifest):
+
+- ✅ Chromium-based desktop browsers (Chrome, Edge, Brave...).
+- ✅ Chromium-based Android browsers (Chrome, Edge, Brave...).
+- ✅ Firefox for Android.
+- 😕 Firefox desktop [via an extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
+- 😕 Safari on iOS and iPadOS, but with **no install prompt** support. Users have to click on **Share**, then **Add to home screen**, which is a terrible process that you will have to explain to your users (see example below).
+- ❌ Browsers other than Safari **cannot install PWAs at all** on iOS and iPadOS (Note: [this is changing!](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/) 🎉).
+- ❌ Safari and Opera on desktop.
+
+## Safari Install Instructions
+
+Here is what I implemented on [WebGamer.io](https://webgamer.io/) to explain how to install a PWA on iOS and iPadOS:
+
+<p style={{ marginTop: 30, textAlign: 'center' }}>
+  <img
+    src="/safari-pwa-instructions.png"
+    alt="Safari install instructions"
+    style={{ display: 'block', margin: '0 auto', maxWidth: 600, width: '100%' }}
+  />
+</p>
+
+<div style={{ margin: '24px auto', textAlign: 'center' }}>
+  (the red highlights are part of the instructions modal)
+</div>
+
+With the [recent changes](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/) to Safari going in the direction of supporting PWAs, I hope that this will just be a temporary workaround and that we will have access to a native install prompt on iOS and iPadOS soon.
+
+## PWABuilder
+
+The easiest way to publish your PWA to [app stores](https://web.dev/learn/pwa/installation/#app-catalogs-and-stores) is to use [PWABuilder](https://www.pwabuilder.com/), online or via the [VSCode extension](https://marketplace.visualstudio.com/items?itemName=PWABuilder.pwa-studio). It's a tool made by Microsoft to publish your existing PWA to app stores like the Apple App Store, Google Play Store, and Microsoft Store. It's free and easy to use, and it will generate all the assets you need for your app store submission. You can also use it to generate a [manifest](https://web.dev/learn/pwa/web-app-manifest/) or a [service worker](https://web.dev/learn/pwa/service-workers/).
+
+## Libraries
+
+Offline support is required to install a PWA, and that's achieved via service workers. Service workers can get quite complicated and I would recommend leveraging existing libraries instead of doing it yourself. You can use Google's [Workbox](https://developer.chrome.com/docs/workbox/) to help, but an even easier way to get started is to use a library for your bundler:
+
+- [vite-plugin-pwa](https://github.com/vite-pwa/vite-plugin-pwa)
+- [@vite-pwa/sveltekit](https://github.com/vite-pwa/sveltekit) (Svelte)
+- [@vite-pwa/astro](https://github.com/vite-pwa/astro)
+- [@ducanh2912/next-pwa](https://github.com/DuCanhGH/next-pwa) (Fork of [next-pwa](https://github.com/shadowwalker/next-pwa), React)
+- [next-offline](https://github.com/hanford/next-offline) (React)
+- [gatsby-plugin-offline](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline) (React)

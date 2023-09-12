@@ -1,0 +1,144 @@
+import Callout from 'components/Callout'
+import { R3FSandpack } from 'components/MySandpack'
+import { r3fFiles } from 'components/snippets'
+import Project from 'components/Project'
+import StatsComparison from 'components/StatsComparison'
+import {
+  AngularThreeLogo,
+  BabylonLogo,
+  EtherealLogo,
+  KaboomLogo,
+  OglLogo,
+  PhaserLogo,
+  PlayCanvasLogo,
+  ThreeLogo,
+  PixiLogo,
+  ReactLogo,
+  RogueLogo,
+  R3FLogo,
+  SvelteLogo,
+  TresLogo,
+  ThrelteLogo,
+  TwoLogo,
+  VueLogo,
+  WebGLLogo,
+  WebGPULogo,
+} from 'lib/logos'
+import { engines, wrappers, poimandres } from 'projects'
+import { NoBulletListStyles, IconsInTitlesStyles } from 'styles/pages'
+
+# 🌐 Web Game Engines & Libraries
+
+<NoBulletListStyles />
+<IconsInTitlesStyles />
+
+The technology that enables 2D and 3D graphics for the web is <WebGLLogo /> [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) ([WebGL2](https://webgl2fundamentals.org/webgl/lessons/webgl2-whats-new.html) for engines that support it). <WebGPULogo /> [WebGPU](https://developer.chrome.com/en/docs/web-platform/webgpu/) is an upcoming more performant technology but is [currently behind feature flags](https://caniuse.com/webgpu) (it may come in [Chrome desktop](https://twitter.com/Tojiro/status/1603087438150217728) around May 2023!). Writing raw WebGL code would be very tedious, so there are libraries that abstract the complexity and do the heavy-lifting to provide more user-friendly APIs.
+
+## Engines and libraries
+
+Much like any ecosystem of developer tools, there are 2 approaches: the monolithic batteries-included _framework_ approach (those would be the _engines_), or the modular assemble-independent-libraries-together approach. The main engines and libraries for JavaScript game development are:
+
+- <ThreeLogo /> <Project {...engines.three} description="3D library, WebGPU-ready" />
+- <PixiLogo /> <Project
+    {...engines.pixi}
+    description={
+      <>
+        2D library (there is also <a href="https://github.com/jnsmalm/pixi3d">Pixi3D</a>)
+      </>
+    }
+  />
+- <PhaserLogo /> <Project {...engines.phaser} description="2D engine" />
+- <BabylonLogo /> <Project {...engines.babylon} description="3D engine, WebGPU-ready" />
+- <PlayCanvasLogo /> <Project {...engines.playcanvas} description="3D engine, freemium editor, WebGPU-ready" />
+- <OglLogo /> <Project {...engines.ogl} description="Minimal 3D library" />
+- <KaboomLogo /> <Project {...engines.kaboom} description="Simple 2D engine" />
+- <TwoLogo /> <Project {...engines.two} description="2D library" />
+<details className="more-tools">
+<summary>Show more</summary>
+- <Project {...engines.excalibur} description="2D engine" />
+- <Project {...engines.melon} description="2D engine" />
+- <Project {...engines.kontra} description="2D micro-library" />
+- <Project {...engines.impact} description="2D engine" />
+</details>
+
+<StatsComparison
+  projects={[
+    engines.three,
+    engines.pixi,
+    engines.phaser,
+    engines.babylon,
+    engines.ogl,
+    engines.kaboom,
+  ]}
+/>
+
+There is also <RogueLogo /> [**Rogue Engine**](https://rogueengine.io/), an editor in alpha for Three.js games, <EtherealLogo /> [**Ethereal Engine**](https://xrfoundation.github.io/ethereal-engine-docs/), a full-stack solution for metaverse experiences, and [many more engines and libraries](https://gist.github.com/dmnsgn/76878ba6903cf15789b712464875cfdc).
+
+<Callout style={{ marginTop: 24, marginBottom: 24 }}>
+✅ **My choice: Three.js**
+
+Personally, I enjoy combining modular and specific independent libraries rather than committing to a more monolithic framework. Coming from the wild JavaScript and React ecosystem, the plumbing required to hook everything up together doesn’t bother me, and I like to be able to swap out pieces of my stack without lock-in. That’s why I am choosing **Three.js** as my core 3D library.
+
+</Callout>
+
+## UI libraries wrappers
+
+You can use any of the previous libraries and engines on their own, but some of them can also be combined with UI libraries wrappers for React, Svelte, Vue, or Angular. This might seem surprising at first, but using these makes your code more declarative and conveniently abstracts some boilerplate. The main wrapper libraries are:
+
+### <ThreeLogo /> Three.js
+
+- <R3FLogo /> <Project {...poimandres.r3f} />
+- <ThrelteLogo /> <Project {...wrappers.threlte} />
+- <SvelteLogo /> <Project {...wrappers.svelteCubed} />
+- <TresLogo /> <Project {...wrappers.tres} />
+- <VueLogo /> <Project {...wrappers.trois} />
+- <VueLogo /> <Project {...wrappers.lunchbox} />
+- <AngularThreeLogo /> <Project {...wrappers.angularThree} />
+
+### <BabylonLogo /> Babylon.js
+
+- <ReactLogo /> <Project {...wrappers.reactBabylon} />
+- <VueLogo /> <Project {...wrappers.vueBabylon} />
+- <SvelteLogo /> <Project {...wrappers.svelteBabylon} />
+
+### <PixiLogo /> PixiJS
+
+- <ReactLogo /> <Project {...wrappers.reactPixi} />
+- <ReactLogo /> <Project {...wrappers.reactPixiFiber} />
+- <SvelteLogo /> <Project {...wrappers.sveltePixi} />
+
+### <PhaserLogo /> Phaser
+
+- <VueLogo /> <Project {...wrappers.phavuer} />
+<details className="more-tools">
+<summary>Show more</summary>
+- <SvelteLogo /> <Project {...wrappers.sveltePhaser} description="Archived" />
+- <ReactLogo /> <Project {...wrappers.reactPhaserFiber} description="Archived" />
+- <ReactLogo /> <Project {...wrappers.reactPhaser} />
+- <Project
+    {...wrappers.ionPhaser}
+    description="Web Component to inject Phaser into any framework"
+  />
+</details>
+
+### <OglLogo /> OGL
+
+- <ReactLogo /> <Project {...wrappers.reactOgl} />
+- <SvelteLogo /> <Project {...wrappers.svelteOgl} />
+
+For instance, **React Three Fiber** (_R3F_), lets you add objects to a scene and control them as React components:
+
+<R3FSandpack />
+
+<Callout style={{ marginTop: 24, marginBottom: 24 }}>
+✅ **My choice: React Three Fiber**
+
+As a React developer, I am using R3F for the great quality-of-life improvements it provides over plain Three.js, and in particular for the [Drei](https://github.com/pmndrs/drei) library which contains tons of very useful helpers for R3F. R3F and Drei are projects of the [Poimandres](https://github.com/pmndrs) open-source developer collective.
+
+</Callout>
+
+## Going native with JavaScript
+
+Now hold on to your hats, because this is where things get wild. You can also use JavaScript (well, mostly React) to create native OpenGL ES games. [Expo](https://expo.dev/) is a framework for [React Native](https://reactnative.dev/) (it is basically the Next.js of React Native), and they created [Expo GL](https://docs.expo.dev/versions/latest/sdk/gl-view/) and [expo-three](https://github.com/expo/expo-three) to provide a Three.js interface for native OpenGL ES. And it can be used declaratively [with React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/installation#react-native). I have not tried it yet but that completely blows my mind 🤯.
+
+Babylon.js is working on a similar preview feature with [Babylon Native](https://www.babylonjs.com/native/) and [Babylon React Native](https://www.babylonjs.com/reactnative/).

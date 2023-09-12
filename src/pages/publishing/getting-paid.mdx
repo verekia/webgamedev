@@ -1,0 +1,23 @@
+# 💸 Getting Paid
+
+## Selling directly to customers
+
+If you want to sell directly to customers on your website, you could use a PSP (Payment Service Provider) such as [Stripe](https://stripe.com/) or [PayPal](https://www.paypal.com/) to accept payments. As web developers, that probably seems like an easy option at first.
+
+However, this **makes you liable for tax compliance, reporting, and remittance in the customer's country, payment disputes, refunds, chargebacks, and more**. That's a lot of work and probably not what you want to spend your time worrying about. If you are going this route, you should probably hire an accountant, and use services like [Stripe Tax](https://stripe.com/tax), [TaxJar](https://www.taxjar.com/), [Avalara](https://www.avalara.com/) and such, to help with the process.
+
+To make selling internationally easier, you need a _Merchant of Record_ service.
+
+## Merchants of Record services
+
+A [Merchant of Record](https://fastspring.com/blog/what-is-a-merchant-of-record-and-why-you-should-care) (MoR) is the entity that sells goods or services to a customer. It can be you, your company, or an external service. These external services sit between you and your customers and act as a proxy for tax remittance, managing payments, subscriptions, and other matters. [FastSpring](https://fastspring.com/) and [Paddle](https://www.paddle.com/) are examples of general-purpose MoR services. Itch.io's payments documentation has a [good comparison](https://itch.io/docs/creators/payments#payment-modes) between handling payments yourself versus using an MoR service (they support both).
+
+In the case of video games, some platforms that we can leverage to act as merchants of record include [Steam](https://partner.steamgames.com/doc/finance/taxfaq), [Apple App Store](https://developer.apple.com/forums/thread/42739), [Google Play Store](https://support.google.com/googleplay/android-developer/answer/7163598?hl=en), [itch.io](https://itch.io/docs/creators/payments), [Gumroad](https://help.gumroad.com/article/121-sales-tax-on-gumroad), or [Patreon](https://support.patreon.com/hc/en-us/articles/360043054911-Patreon-s-Sales-Tax-Requirements).
+
+With these platforms, if you are based outside of the US, you will likely have to submit a [W-8BEN form](https://businessservices.wisc.edu/documents/w-8ben-certificate-of-foreign-status-of-beneficial-owner-for-united-states-tax-withholding-and-reporting-individuals/), to declare your tax residency. It is usually pretty easy to do directly via the platform's website.
+
+The following services do **not act as MoR**: [Shopify](https://www.websitebuilderinsider.com/is-shopify-a-merchant-of-record/), [Ko-Fi](https://more.ko-fi.com/terms), [Buy me a coffee](https://www.buymeacoffee.com/terms).
+
+Note that MoR services take care of **sales taxes**, but you are still responsible for paying **income taxes** in your own country and for having the appropriate **legal status** to receive payments as a business. If you are a solo developer, you can set up a **sole proprietorship**, which is typically easier than setting up a corporation.
+
+_Disclaimer: The information on this page does not constitute tax or legal advice. You should consult a tax professional for advice on your specific situation._

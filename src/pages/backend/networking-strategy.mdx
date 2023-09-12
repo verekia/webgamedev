@@ -1,0 +1,29 @@
+import Project from 'components/Project'
+import { reactQuery } from 'projects'
+
+# 🤔 Networking Strategy
+
+Traditional websites typically use HTTP as a protocol to communicate between the client and the server. HTTP is a stateless request-response protocol, which means that the only way for the client to receive data from the server is as a response from a request. This might be good enough for a game that can follow similar mechanics to a traditional website, but it is not fast enough for a game that requires real-time communication between the client and the server. If you need the client to be immediately notified when an event happens, you will need a full-duplex solution like WebSockets or WebRTC.
+
+It is worth mentioning that if you can live with having a delay of a few seconds between a server event and the client receiving that event (for instance if you make a turn-based game like a card or chess game), your client can refetch data at an interval, for instance with <Project {...reactQuery} />. While this may seem like a waste of bandwidth, it will keep your infrastructure simple and stateless, which is immensely valuable.
+
+HTTP requests have the advantages over WebSocket of being easier to debug, allowing caching, using standard reponse codes, allowing cookie-based authorization.
+
+HTTP and WebSocket don't have to be mutually exclusive though. You can use HTTP GET and POST requests for everything that is not time-sensitive. For instance, fetching the inventory of the player can be a GET request, and upgrading an item can be a POST. Real-time combat on the other hand, has to be handled with WebSockets.
+
+There is also the option of using [Server-Sent Events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) / [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) which only support downstream communication from the server to the client but use the HTTP protocol.
+
+In order to be exhaustive I will also mention the _long polling_ approach, which keeps a connection open on the server and sends a response when an event happens. This is a very inefficient approach, and should be avoided.
+
+To summarize, from the simplest and least-real-time approach to the most complex and most real-time:
+
+- HTTP request-response
+- HTTP request-response + refetch interval
+- HTTP request-response + SSE
+- HTTP request-response + WebSocket
+- WebSocket-only
+- WebRTC
+
+**Note**: There is also the upcoming [WebTransport](https://web.dev/webtransport/) standard ([browser support](https://caniuse.com/webtransport)) which relies on HTTP3. [HTTP3](https://en.wikipedia.org/wiki/HTTP/3) ([browser support](https://caniuse.com/http3)) is based on the [QUIC](https://en.wikipedia.org/wiki/QUIC) protocol.
+
+In game development, you will encounter the broad term [_netcode_](https://en.wikipedia.org/wiki/Netcode), which refers to the implementation of the communication and synchronization between client and server.

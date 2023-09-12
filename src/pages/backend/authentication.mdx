@@ -1,0 +1,31 @@
+# 🔑 Authentication
+
+You might want to integrate authentication into your game, to save your users' progress for instance.
+
+## Considerations
+
+Managing user accounts involves legal obligations such as [GDPR](https://gdpr-info.eu/) and is, in general, a complex topic. In the context of a web game, _requiring_ authentication is also a big barrier to entry and is a turn-off for many users. Before adding authentication, ask yourself if there is any way you could persist the player's state on the _client_.
+
+For instance, you could use [**localStorage**](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save the player's progress in their browser, or embed a **code in a URL** that they can copy to "log in" on various devices. Of course it depends on the type of game you're building, but if it is mostly a front-end experience, you might not need to implement backend authentication at all.
+
+If you are certain you want to integrate authentication, an approach to consider is to let users play your game without account to see if they like it first, and offer to optionally sign up to save their progress.
+
+## Services and libraries
+
+There are many services and libraries to help you implement user authentication. If you are using a [Backend-as-a-Service](/backend/backend-as-a-service) like [**Firebase**](https://firebase.google.com/docs/auth), [**Supabase**](https://supabase.com/docs/guides/auth/overview), [**Nakama**](https://heroiclabs.com/), or [**Colyseus**](https://docs.colyseus.io/colyseus/tools/colyseus-social/), or a [backend web framework](/backend/web-frameworks) such as [**NestJS**](https://docs.nestjs.com/security/authentication), [**Ruby on Rails**](https://guides.rubyonrails.org/security.html#user-management), or [**Django**](https://docs.djangoproject.com/en/4.1/topics/auth/), authentication is built-in, with more or less features and OAuth providers available. There is also [**Auth0**](https://auth0.com/), [**SuperTokens**](https://supertokens.com/), [**Clerk**](https://clerk.dev/), [**Userfront**](https://userfront.com/), [**Magic Auth**](https://magic.link/auth), and many more services, but make sure to check their pricing carefully, as they can get very expensive at scale.
+
+You can also integrate libraries that focus on authentication. For instance, in the Node.js ecosystem, there is [**Passport**](https://www.passportjs.org/) for Express, and [**Auth.js**](https://authjs.dev/) which supports Next.js and SvelteKit. **Auth.js** is pretty opinionated (particularly the fact that [password logins](https://authjs.dev/getting-started/credentials-tutorial) are discouraged), but it is very easy to integrate to those meta-frameworks if you have your own database and want to stay in control of your authentication layer. It is particularly relevant for projects that use **React Three Fiber + Next.js** or **Threlte + SvelteKit**.
+
+## Strategies
+
+### OAuth
+
+Using **OAuth** to authenticate users is a great way to get started with authentication by relying on users having accounts on other platforms, saving them a few clicks. It's easy to implement and doesn't require you to store passwords or send emails. You can for instance offer signing in with [Google](https://authjs.dev/reference/oauth-providers/google), [Apple](https://authjs.dev/reference/oauth-providers/apple), [Discord](https://authjs.dev/reference/oauth-providers/discord), [Twitch](https://authjs.dev/reference/oauth-providers/twitch), [Twitter](https://authjs.dev/reference/oauth-providers/twitter) or [Facebook](https://authjs.dev/reference/oauth-providers/facebook). Pick the services that align with your target audience's preferences!
+
+### Passwordless, OTP
+
+An other way to avoid storing passwords is to send your users a **one-time password** ("OTP", sometimes also called "magic link") to their [email address](https://authjs.dev/guides/providers/email) or phone number. You will need a third-party email or SMS service with this method, such as [**SendGrid**](https://sendgrid.com/) for emails or [**Twilio**](https://www.twilio.com/sms) for SMS.
+
+### Email and password
+
+Finally, you can also ask your users to sign up with an email address and a password, but make sure to hash the password (with [bcrypt](https://www.npmjs.com/package/bcrypt) for instance), do not reinvent the wheel, and check for up-to-date security [best practices](https://cloud.google.com/blog/products/identity-security/account-authentication-and-password-management-best-practices).

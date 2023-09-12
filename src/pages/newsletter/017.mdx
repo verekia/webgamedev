@@ -1,0 +1,212 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
+  CssLogo,
+  DefoldLogo,
+  GltfLogo,
+  JavascriptLogo,
+  NeedleLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  R3FLogo,
+  ReactLogo,
+  ThreeLogo,
+  TresLogo,
+  WasmLogo,
+  WebXRLogo,
+  WebGLLogo,
+  WebGPULogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 017
+
+<SubTitleDate value="2023-07-19" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+A few **game jams** are coming up soon:
+
+The first [**React Jam**](https://reactjam.com/) (organized by [Rune](https://developers.rune.ai/)) is starting **tomorrow**. It's a 10-day event, with $2500 of cash prizes, and I will be judging submissions! You can make <CssLogo /> DOM-based games with divs and CSS, 2D canvas games with libraries like <PixiLogo /> [Pixi React](https://pixijs.io/pixi-react/), or 3D games with <R3FLogo /> [React Three Fiber](https://docs.pmnd.rs/react-three-fiber), for example.
+
+[**Multiplayer Madness**](https://itch.io/jam/multiplayer-madness-by-hathora) (organized by [Hathora](https://hathora.dev/)) is a 10-day game jam starting on **August 11th** with $2500+ in prizes and focused on online multiplayer games. Use any engine, web or native. [Steven Yau](https://www.webgamedev.com/interviews/steven-yau) is part of the jury!
+
+[**js13kGames**](https://js13kgames.com/), the competition with a file size limit of 13kb running yearly since 2012, will start on **August 13th**. You might want to look into [Kontra.js](https://straker.github.io/kontra/) for that one.
+
+## 🏎 Engines & Libraries
+
+- <ThreeLogo /> [**Three.js r154**](https://twitter.com/threejs/status/1674413657390977024) –
+  [alphaHash](https://github.com/mrdoob/three.js/pull/24271), WebGPU
+  [clearcoat](https://github.com/mrdoob/three.js/pull/26211), and
+  [sheen](https://github.com/mrdoob/three.js/pull/26329) support.
+  ([changelog](https://github.com/mrdoob/three.js/releases/tag/r154), [migration
+  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
+- <ThreeLogo /> [**THREE-CustomShaderMaterial**](https://github.com/FarazzShaikh/THREE-CustomShaderMaterial)
+  by [Faraz](https://twitter.com/CantBeFaraz) – Extend Three.js materials with custom shaders.
+- <ThreeLogo /> [**Threed Studio**](https://twitter.com/lifercode/status/1674461318269612040) by
+  [lifercode](https://twitter.com/lifercode) – An open-source Three.js editor.
+- <ThreeLogo /> [**three-perf**](https://github.com/TheoTheDev/three-perf) by [Bohdan
+  Horpynchuk](https://twitter.com/theo_the_dev) – Vanilla Three.js port of
+  [r3f-perf](https://github.com/utsuboco/r3f-perf).
+- <R3FLogo /> [**Drei v9.79**](https://github.com/pmndrs/drei/releases) –
+  [stats-gl](https://github.com/RenaudRohlinger/stats-gl) integration,
+  [MeshPortalMaterial](https://twitter.com/0xca0a/status/1669473415609085952),
+  [FaceControls](https://github.com/pmndrs/drei#facecontrols), radial variation for
+  [GradientTexture](https://github.com/pmndrs/drei#gradienttexture).
+- <R3FLogo /> [**r3f-effekseer**](https://github.com/Ctrlmonster/r3f-effekseer) by [Brian
+  Breiholz](https://twitter.com/BrianBreiholz) – R3F wrapper for
+  [Effekseer](https://effekseer.github.io/en/), a particle effects library and editor.
+- <TresLogo /> [**TresJS 2.3.0**](https://github.com/Tresjs/tres/releases) – [Nuxt
+  Module](https://tresjs.org/blog/announcing-tres-nuxt-module.html)
+  ([video](https://www.youtube.com/watch?v=U-6fRYfrAzU)),
+  [ScrollControls](https://cientos.tresjs.org/guide/controls/scroll-controls.html),
+  [KeyboardControls](https://cientos.tresjs.org/guide/controls/keyboard-controls.html),
+  [useProgress](https://cientos.tresjs.org/guide/loaders/use-progress.html).
+- <PlayCanvasLogo /> [**PlayCanvas Engine
+  v1.64.0**](https://github.com/playcanvas/engine/releases/tag/v1.64.0) – MRT, PCSS shadows, AO
+  Detail Map, PCF1 for directional/spot lights.
+- <PlayCanvasLogo /> [**PlayCanvas Editor**](https://github.com/playcanvas/editor/releases) –
+  [Sketchfab Integration](https://blog.playcanvas.com/playcanvas-adds-sketchfab-itegration/)
+- <PlayCanvasLogo /> [**Earthatile**](https://twitter.com/willeastcott/status/1676964523318865920)
+  ([repo](https://github.com/playcanvas/earthatile)) – Google Maps 3D tiles for PlayCanvas by [Will
+  Eastcott](https://twitter.com/willeastcott).
+- <PhaserLogo /> [**Phaser Editor 2D
+  v3.62.0**](https://phasereditor2d.com/blog/2023/06/phaser-editor-2d-v3620-released) – New Event
+  and KeyCode user property types, user components overhaul.
+- <PhaserLogo /> [**spine-phaser**](https://esotericsoftware.com/blog/spine-phaser-runtime)
+  ([docs](https://esotericsoftware.com/spine-phaser)) was released.
+  [Spine](https://esotericsoftware.com/spine-in-depth) is an animation tool for 2D games.
+- <PixiLogo /> [**PixiJS
+  v8.0.0-alpha**](https://github.com/pixijs/pixijs/releases/tag/v8.0.0-alpha.0) (highly
+  experimental) – WebGPU Renderer and overhaul of WebGL renderer (up to 2.5x faster), reactive
+  renderer, Advanced Blend Modes.
+- <BabylonLogo /> [**Babylon.js
+  v6.12.0**](https://github.com/BabylonJS/Babylon.js/releases/tag/6.12.0)
+
+## 🛠 Tools
+
+- <GltfLogo /> [**3e VS Code
+  Extension**](https://marketplace.visualstudio.com/items?itemName=degreat.3e) by
+  [De-Great](https://twitter.com/_yogr) – Visualize 3D models inside VS Code, with <R3FLogo /> R3F
+  export support.
+- <WebGLLogo /> [**stats-gl**](https://twitter.com/onirenaud/status/1681306077512744963)
+  ([repo](https://github.com/RenaudRohlinger/stats-gl)) by [Renaud
+  Rohlinger](https://twitter.com/onirenaud) – WebGL performance monitoring tool.
+- 👾 [**Miniplex**](https://github.com/hmans/miniplex), the developer-friendly ECS library with React bindings by [Hendrik Mans](https://www.webgamedev.com/interviews/hendrik-mans), just hit [2.0.0](https://github.com/hmans/miniplex/discussions/300) 🎉.
+- <JavascriptLogo /> [**aimless.js**](https://github.com/ChrisCavs/aimless.js), a randomness library
+  by [Christopher Cavalea](https://github.com/ChrisCavs).
+- 🎾 The [**Jolt**](https://github.com/jrouwe/JoltPhysics) physics engine by [Jorrit Rouwe](https://twitter.com/jrouwe) now has [2D physics support](https://twitter.com/jrouwe/status/1676311800797622279).
+- 🍎 [**SVOX 2.0.0**](https://svox.glitch.me/) ([playground](https://svox.glitch.me/playground.html)) – Transform groups, lights, Three.js materials, MagicaVoxel, WebXR, glTF support.
+- 🤖 [**FRVR Forge**](https://benjaminsen.substack.com/p/introducing-frvr-forge) ([video](https://www.youtube.com/watch?v=ipnsBmkM6fY)) – Editor to create AI-generated games.
+- 💰 [**AdLad**](https://github.com/Pelican-Party/AdLad) by [Pelican Party](https://twitter.com/pelican_party) – An Ads SDK manager for people who actually release games.
+- 📐 [**Graphtoy**](https://graphtoy.com/), a function graph visualizer by [Inigo Quilez](https://twitter.com/iquilezles).
+
+## 🎬 Videos
+
+- <PhaserLogo /> [**The Making of Vampire Survivors -
+  Documentary**](https://www.youtube.com/watch?v=XQVdR8mJrds) by
+  [Noclip](https://twitter.com/noclipvideo)
+- <ThreeLogo /> [**Image of particles in 3D using
+  Three.js**](https://www.youtube.com/watch?v=vEaAheMO0bo) ([video
+  demo](https://twitter.com/RobinPayot/status/1664308325863813121)) by [Robin
+  Payot](https://twitter.com/RobinPayot)
+- <R3FLogo /> [**Mesh Portal Material Tutorial**](https://www.youtube.com/watch?v=2W_VR92Pqgs) by
+  [Wawa Sensei](https://twitter.com/wawasensei)
+- <R3FLogo /> [**Dissolve Effect Tutorial**](https://www.youtube.com/watch?v=ma9t7HAOZRg) by [Wawa
+  Sensei](https://twitter.com/wawasensei)
+- <R3FLogo /> [**Blender Baking**](https://www.youtube.com/watch?v=YkHqpqJgLKw) by [Wawa
+  Sensei](https://twitter.com/wawasensei)
+- <TresLogo /> [**TresJS V2 - Geometries with Vue**](https://www.youtube.com/watch?v=95OpiYAqkfY) by
+  [Alvaro Sabu](https://twitter.com/alvarosabu)
+- <TresLogo /> [**TresJS v2 - Animate your 3D Objects with
+  Vue**](https://www.youtube.com/watch?v=bDWdikyqfjk) by [Alvaro
+  Sabu](https://twitter.com/alvarosabu)
+- <WebGLLogo /> <WebGPULogo /> [**WebGL + WebGPU Meetup - July
+  2023**](https://www.youtube.com/watch?v=2ME1aTD5-0k) – <PlayCanvasLogo /> [WebGPU + PlayCanvas
+  talk](https://youtu.be/2ME1aTD5-0k?t=2774) by [Martin Valigursky](https://twitter.com/ValigurskyM)
+- <WebGLLogo /> [**An introduction to Shader Art
+  Coding**](https://www.youtube.com/watch?v=f4s1h2YETNY) by
+  [kishimisu](https://twitter.com/kishimisu)
+- <WebGLLogo /> [**Height-Field Water Simulator with 100 lines of
+  code**](https://www.youtube.com/watch?v=hswBi5wcqAA) by [Ten Minutes
+  Physics](https://www.youtube.com/@TenMinutePhysics)
+- <ReactLogo /> [**Throw away your Xbox – The future of games is written in
+  React**](https://www.youtube.com/watch?v=NSwxSS_zOnA) (Talk at ReactNext '23) by [Opher
+  Vishnia](https://twitter.com/Opherv)
+- <JavascriptLogo /> [**Is the COST of JavaScript’s GC REALLY that
+  high?**](https://www.youtube.com/watch?v=easvMCCBFkQ) by
+  [SimonDev](https://twitter.com/iced_coffee_dev)
+- <JavascriptLogo /> [**Pokémon JavaScript Game Tutorial with HTML
+  Canvas**](https://www.youtube.com/watch?v=yP5DKzriqXA) (7 hours 🤯) by [Chris
+  Courses](https://twitter.com/christopher4lis)
+- <PlayCanvasLogo /> [**Best performance on casual
+  games?**](https://www.youtube.com/watch?v=PuGwC0rZD7Y) by [Cem
+  Demir](https://twitter.com/cemdemir) ([Venge.io](https://venge.io/),
+  [Tribals.io](https://tribals.io/))
+- <BabylonLogo /> [**Babylon.js Tutorial For Absolute
+  Beginners**](https://www.youtube.com/watch?v=e6EkrLr8g_o) by [Wael
+  Yasmina](https://www.youtube.com/@WaelYasmina/featured)
+- <DefoldLogo /> [**Defold Game Engine and Web Games**](https://www.w3.org/2023/07/bjorn-ritzl.html)
+  ([slides](https://defold.com/presentations/w3c_june_2023.pdf)) at W3C by [Björn
+  Ritzl](https://twitter.com/bjornritzl)
+- 🗡 [**Let's build Mega Man in JavaScript**](https://www.youtube.com/watch?v=kH9v4kMkg7U) by [Drew Conley](https://twitter.com/drewconley13) (Excalibur.js)
+- 🗡 [**I Built a Zelda Game... With Multiplayer!**](https://www.youtube.com/watch?v=ru1uo9k4v0s) by [Drew Conley](https://twitter.com/drewconley13) (Excalibur.js)
+
+## ✍️ Articles
+
+- <WebGPULogo /> [**Using WebGPU Compute Shaders with Vertex
+  Data**](https://toji.dev/webgpu-best-practices/compute-vertex-data) by [Brandon
+  Jones](https://twitter.com/Tojiro)
+- <WebGPULogo /> [**What's New in WebGPU (Chrome
+  115)**](https://developer.chrome.com/blog/new-in-webgpu-115/) by [François
+  Beaufort](https://github.com/beaufortfrancois)
+- <JavascriptLogo /> [**Better full screen mode with the Keyboard Lock
+  API**](https://developer.chrome.com/blog/better-full-screen-mode/) by [Thomas
+  Steiner](https://twitter.com/tomayac)
+- 🏹 [**Spilling our trade secrets! Narrow one updates**](https://pelicanparty.itch.io/narrow-one/devlog/536795/spilling-our-trade-secrets-narrow-one-updates-) by [Pelican Party](https://twitter.com/pelican_party)
+- 🐙 [**Gamedev.js Jam 2023 results**](https://github.blog/2023-06-21-gamedev-js-2023/) by [Andrzej Mazur](https://twitter.com/end3r)
+- <BabylonLogo /> [**Building Babylon Native for the Apple Vision
+  Pro**](https://babylonjs.medium.com/building-babylon-native-for-the-apple-vision-pro-8c580cc73041)
+  by [Cedric Guillemet](https://twitter.com/skaven_)
+- <TresLogo /> [**TresJS v2 First steps with 3D on
+  Vue**](https://dev.to/alvarosabu/tresjs-v2-first-steps-with-3d-on-vue-244p) by [Alvaro
+  Sabu](https://twitter.com/alvarosabu)
+
+## 🎮 Games
+
+**I am launching a new game**, <img src="https://minimana.io/icon-180.png" width="20" height="20" style={{ display: 'inline-block', verticalAlign: 'middle', position: 'relative', top: '-1px', left: '1px' }} /> [**MiniMana.io**](https://minimana.io)! It's an Action-RPG in early access, single-player for now. Built with <R3FLogo /> React Three Fiber and Miniplex. Fight the Demons invading your world to earn experience and unlock new abilities! Happy to discuss the game and tech used on the [Web Game Dev](https://webgamedev.com/discord) or [Mini Mana](https://discord.gg/XuJ7MBzVmz) Discord servers.
+
+- <ThreeLogo /> [**The Race: Montblanc Explorer**](https://therace.montblancexplorer.com/) by [Merci
+  Michel](https://twitter.com/MerciMichel) – Promotional racing game for Montblanc 🏎
+- <ThreeLogo /> [**Coastal World Season 2**](https://coastalworld.com/x1) by [Merci
+  Michel](https://twitter.com/MerciMichel) – Promotional adventure game for Coastal Community Bank 🏝
+- <R3FLogo /> [**Death Star Trench Run**](https://death-star-trench-run.vercel.app/)
+  ([repo](https://github.com/Lunakepio/death-star-trench-run)) by
+  [Lunakepio](https://twitter.com/Lunakepio) – Blast your way through like Luke Skywalker! 🚀
+- <PhaserLogo /> [**Izowave**](https://webgamer.io/en/g/izowave) by [Nikita
+  Galadiy](https://neki.guru/) – Isometric open-world Tower Defense. 🗼
+
+## ✨ Demos
+
+- <WebGLLogo /> [**Viola the Bird**](https://artsandculture.google.com/experiment/nAEJVwNkp-FnrQ) by
+  [David Li](https://twitter.com/daviddotli) for Google Arts & Culture
+- <ThreeLogo /> [**Skateboard configurator**](https://www.boardcrafters.tsmdev.fr/) by [Thomas
+  Saint-Martin ](https://twitter.com/TsM033)
+- <R3FLogo /> [**Impossible box with
+  MeshPortalMaterial**](https://twitter.com/0xca0a/status/1666372175404646405) by
+  [0xca0a](https://twitter.com/0xca0a)
+- <R3FLogo /> [**Unity dissolve effect in
+  R3F**](https://twitter.com/0xca0a/status/1678071371274809346) by
+  [0xca0a](https://twitter.com/0xca0a)
+- <R3FLogo /> [**3D liquid shader**](https://twitter.com/matiNotFound/status/1666913095438966786) by
+  [Matias](https://twitter.com/matiNotFound)
+
+<NewsletterFooter tweetId="1681680771801595906" />

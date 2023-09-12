@@ -1,0 +1,146 @@
+import Project from 'components/Project'
+import StatsComparison from 'components/StatsComparison'
+import Callout from 'components/Callout'
+import Todo from 'components/Todo'
+import { uiLibraries, reactFrameworks, typescript } from 'projects'
+
+# ⚛️ React
+
+If you are interested in using Three.js with React Three Fiber, you will need to know at least the basics of React. Use the [**new React docs**](https://beta.reactjs.org/) for that. Learning a UI library like React is a relatively significant commitment, but the good news is that you will be able to use React for all sorts of projects, not just Three.js. React itself is not tied to the web. You can use it to make regular websites via **react-dom**, native apps for iOS and Android via [React Native](https://reactnative.dev/), and even CLI tools via [react-blessed](https://github.com/Yomguithereal/react-blessed). I recommend [Cody Bennett's Technical Breakdown of React Three Fiber](https://codyb.co/articles/a-technical-breakdown-of-react-three-fiber) to learn more about React renderers and how React Three Fiber works.
+
+For good measure, you might want an overview of the current market shares of other UI libraries:
+
+- <Project {...uiLibraries.react} />
+- <Project {...uiLibraries.vue} />
+- <Project {...uiLibraries.angular} />
+- <Project {...uiLibraries.preact} />
+- <Project {...uiLibraries.svelte} />
+- <Project {...uiLibraries.lit} />
+- <Project {...uiLibraries.stencil} />
+- <Project {...uiLibraries.alpine} description="Partly used via CDN" />
+- <Project {...uiLibraries.solid} />
+
+<details className="more-tools">
+  <summary>Show more</summary>
+  - <Project {...uiLibraries.ember} />
+  - <Project {...uiLibraries.inferno} />
+  - <Project {...uiLibraries.mithril} />
+  - <Project {...uiLibraries.aurelia} />
+  - <Project {...uiLibraries.qwik} />
+  - <Project {...uiLibraries.angularJs} description="Deprecated in favor of Angular" />
+  - <Project {...uiLibraries.polymer} description="Deprecated in favor of Lit" />
+</details>
+
+<StatsComparison
+  projects={[
+    uiLibraries.react,
+    uiLibraries.vue,
+    uiLibraries.angular,
+    uiLibraries.preact,
+    uiLibraries.svelte,
+    uiLibraries.lit,
+    uiLibraries.stencil,
+  ]}
+/>
+
+## Frameworks and toolchains
+
+To use React, you need a tool that will transform your React (and optionally TypeScript) files into JavaScript code that the browser can understand. You probably also want hot reloading to see your changes instantly in the browser. You can use bundlers like Webpack and transpilers like Babel to configure this yourself, but a way more convenient option is to use a framework. These frameworks on top of React are sometimes called "meta-frameworks", as in frameworks on top of an other framework (although React brands itself as a UI library).
+
+- <Project {...reactFrameworks.next} />
+- <Project {...reactFrameworks.cra} />
+- <Project {...reactFrameworks.gatsby} />
+- <Project {...reactFrameworks.vite} description="Not React-specific, general-purpose bundler" />
+- <Project {...reactFrameworks.remix} />
+- <Project {...reactFrameworks.astro} description="Not React-specific, island architecture" />
+
+<StatsComparison projects={reactFrameworks} />
+
+<Callout style={{ marginTop: 24, marginBottom: 24 }}>
+✅ **My choice: Next.js (or Vite)**
+
+Vite is great for building [SPAs](https://developer.mozilla.org/en-US/docs/Glossary/SPA) (which most games are), but I think Next.js has an edge by providing extra features without added complexity. In particular, it includes a router, gives better SEO, server-side features, and performance optimizations. Next.js is [currently the most popular React framework](https://2021.stateofjs.com/en-US/libraries/back-end-frameworks) in terms of downloads and satisfaction and is a great choice for React websites and R3F games.
+
+</Callout>
+
+## TypeScript
+
+<Project {...typescript} /> is a superset of JavaScript made by Microsoft that adds types. It is a great
+way to catch bugs early in development, and nowadays, there is really no reason not to use it, particularly
+when the configuration is automatically handled by a framework like Next.js.
+
+## Next.js React Three Fiber Setup
+
+[Getting started with Next.js](https://nextjs.org/docs/getting-started), React, and TypeScript is extremely simple. Set up your project by running:
+
+```sh
+npx create-next-app@latest
+# or
+yarn create next-app
+# or
+pnpm create next-app
+```
+
+Install Three.js, React Three Fiber, and Drei:
+
+```sh
+npm i three @react-three/fiber @react-three/drei
+npm i -D @types/three
+# or
+yarn add three @react-three/fiber @react-three/drei
+yarn add -D @types/three
+# or
+pnpm i three @react-three/fiber @react-three/drei
+pnpm i -D @types/three
+```
+
+Add these styles to make your canvas take all available space in `styles/globals.css`:
+
+```css
+html,
+body,
+#__next {
+  height: 100%;
+}
+```
+
+Replace the content of `pages/index.tsx` with:
+
+```tsx
+import { OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+
+const IndexPage = () => (
+  <Canvas>
+    <ambientLight />
+    <mesh>
+      <boxGeometry />
+      <meshStandardMaterial color="hotpink" />
+    </mesh>
+    <OrbitControls />
+  </Canvas>
+)
+
+export default IndexPage
+```
+
+Run `npm run dev` or `yarn dev` or `pnpm dev`, and open [http://localhost:3000](http://localhost:3000).
+
+Congratulations, you have a 3D cube with mouse camera controls! You can now start building your game.
+
+You can deploy your app to [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/), or any other hosting provider that supports Next.js, usually by simply pushing to a Git repository and without any extra configuration.
+
+You may use the [react-three-next starter template](https://github.com/pmndrs/react-three-next), particularly if your app includes navigation between pages with a shared canvas, but I personally like to set up projects with my own preferred tools and coding style.
+
+## React Essentials
+
+The very minimum you need know in React to use R3F comfortably are:
+
+- The core React concept that _UI = fn(state)_.
+- Creating a UI with functional components and props.
+- What rerenders are ([Alex Sidorenko](https://alexsidorenko.com/blog/react-render-always-rerenders/) has excellent visual articles about that).
+- `useState` to hold a state in memory and rerender when it changes.
+- `useEffect` to trigger side effects in given conditions.
+- `useContext` to pass down data to deeply nested components.
+- `useRef` to hold a mutable value in memory (refs are very important in R3F).
+- Using hooks from external libraries, such as `useFrame` from R3F or Zustand stores.

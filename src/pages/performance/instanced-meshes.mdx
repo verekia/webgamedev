@@ -1,0 +1,96 @@
+import Todo from 'components/Todo'
+
+# 📋 Instanced Meshes
+
+If you have multiple identical meshes in your scene, use instanced meshes to reduce the number of draw calls. This is especially useful for large scenes with many trees, rocks, or other objects that are repeated many times.
+
+## Drei `Instances` and `Merged`
+
+If using React Three Fiber with Drei, you can use `<Instances />`:
+
+```jsx
+import { Instance, Instances } from '@react-three/drei'
+
+import { treeGeometry, treeMaterial } from 'lib/resources'
+
+const trees = [
+  { id: 1, position: [0, 0, 0] },
+  { id: 2, position: [1, 0, 0] },
+  { id: 3, position: [2, 0, 0] },
+]
+
+const Trees = () => (
+  <Instances geometry={treeGeometry} material={treeMaterial}>
+    {tree.map(t => (
+      <Instance key={t.id} position={t.position} />
+    ))}
+  </Instances>
+)
+```
+
+If you need multiple instanced meshes per entity, you can use `<Merged />`:
+
+```jsx
+import { Merged } from '@react-three/drei'
+
+import { leavesGeometry, leavesMaterial, trunkGeometry, trunkMaterial } from 'lib/resources'
+
+const trees = [
+  { id: 1, position: [0, 0, 0] },
+  { id: 2, position: [1, 0, 0] },
+  { id: 3, position: [2, 0, 0] },
+]
+
+const Trees = () => (
+  <Merged meshes={[leaves, trunk]}>
+    {(Leaves, Trunk) => (
+      <>
+        {tree.map(t => (
+          <Fragment key={t.id}>
+            <Leaves position={[t.position[0], t.position[1] + 5, t.position[2]]} />
+            <Trunk position={t.position} />
+          </Fragment>
+        ))}
+      </>
+    )}
+  </Merged>
+)
+```
+
+<Todo>Test this code.</Todo>
+
+This works great for static meshes, but not for animated skinned meshes.
+
+## Instanced Skinned Meshes
+
+<Todo
+  children={
+    <>
+      🤔 From my understanding, instanced skinned meshes are not supported by Three.js with WebGL,
+      only WebGPU, and without Drei helper. Relevant links:
+      <p>
+        <a href="https://github.com/wizgrav/three.js/blob/dev/examples/webgl_instancing_skinning.html">
+          WebGL
+        </a>{' '}
+        (
+        <a href="https://wizgrav.github.io/three.js/examples/webgl_instancing_skinning.html">
+          demo
+        </a>{' '}
+        – <a href="https://github.com/mrdoob/three.js/pull/22667">closed unmerged PR</a>),{' '}
+        <a href="https://github.com/mrdoob/three.js/blob/dev/examples/webgpu_skinning_instancing.html">
+          WebGPU
+        </a>{' '}
+        (<a href="https://threejs.org/examples/webgpu_skinning_instancing.html">demo</a> – requires
+        WebGPU enabled).{' '}
+        <a href="https://codesandbox.io/s/three-js-instanced-skinned-mesh-2yfgiu">
+          Cody Bennett's implementation
+        </a>
+        . <a href="https://112ka.github.io/sketches/instanced_skinned_mesh/">
+          iizuka masayuki's demo
+        </a> (<a href="https://github.com/112KA/Sketches/tree/main/apps/sketches/src/instanced_skinned_mesh">
+          source
+        </a>).
+      </p>
+    </>
+  }
+/>

@@ -1,0 +1,114 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
+  EtherealLogo,
+  NeedleLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  R3FLogo,
+  ThreeLogo,
+  ThrelteLogo,
+  TresLogo,
+  UnityLogo,
+  WasmLogo,
+  WebGLLogo,
+  WebGPULogo,
+  WebXRLogo,
+} from 'lib/logos'
+import { NoBulletListStyles, NewsletterStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 008
+
+<SubTitleDate value="2023-02-08" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+<WebGLLogo /> <WebGPULogo /> The Khronos WebGL + WebGPU Meetup took place last week. Here are the
+[slides](https://khr.io/web202301), [video](https://www.youtube.com/watch?v=Jl06sOvMnvU), and
+[highlights](https://omar-shehata.medium.com/webgl-webgpu-jan-2023-meetup-highlights-d29f9e0d0bdc).
+
+My main personal takeaway from the meetup is that Three.js' [mrdoob](https://twitter.com/mrdoob) thinks the way forward for writing shaders is node-based solutions that provide a compatibility abstraction layer over WebGL Shader Language (GLSL) and WebGPU Shader Language (WGSL). In Three.js, that would be the [**NodeMaterial**](https://www.donmccurdy.com/2019/03/17/three-nodematerial-introduction/), which has a [visual editor](https://threejs.org/examples/webgl_nodes_playground.html). Three.js is working on aligning with the [**MaterialX**](https://materialx.org/) open standard for node-based materials and already has a [MaterialXLoader](https://threejs.org/examples/?q=materialx#webgl_nodes_loader_materialx). [Sunag](https://github.com/sunag) does the heavy lifting on that front. You can also check out [Hendrik Mans](https://www.webgamedev.com/interviews/hendrik-mans)' [**Shader Composer**](https://github.com/hmans/composer-suite/tree/main/packages/shader-composer), which has React Three Fiber bindings but currently only supports GLSL.
+
+<TresLogo /> [Alvaro Sabu released](https://twitter.com/alvarosabu/status/1620836387925925890)
+[**TresJS**](https://tresjs.org/), a library to create Three.js scenes declaratively with
+[**Vue**](https://vuejs.org/). Read the [Motivation](https://tresjs.org/guide/#motivation) section
+to see how it relates to [**TroisJS**](https://troisjs.github.io/) and
+[**Lunchbox**](https://github.com/breakfast-studio/lunchboxjs), which are similar Vue wrappers for
+Three.js.
+
+<WebXRLogo /> Meta released the [**Immersive Web
+Emulator**](https://twitter.com/Oculus_Dev/status/1622672216348573697) to easily test WebXR
+experiences on desktop ([Chrome
+Store](https://chrome.google.com/webstore/detail/immersive-web-emulator/cgffilbpcibhmcfbgggfhfolhkfbhmik)).
+
+## 🛠 Tools & Updates
+
+- <ThreeLogo /> [**Three.js**](https://threejs.org/) only supports instanced skinned meshes [for
+  WebGPU](https://threejs.org/examples/#webgpu_skinning_instancing), not WebGL, so [Cody
+  Bennett](https://twitter.com/Cody_J_Bennett) wrote a user-land port of the [unmerged
+  PR](https://github.com/mrdoob/three.js/pull/22667) for **InstancedSkinnedMesh** in a
+  [CodeSandbox](https://codesandbox.io/s/three-js-instanced-skinned-mesh-2yfgiu).
+- <ThreeLogo /> [**Editor and code
+  generator**](https://twitter.com/a_warnes/status/1620664524591472641) for
+  **MeshTransmissionMaterial** by [Alex Warnes](https://twitter.com/a_warnes). Works for R3F and
+  Threlte.
+- <ThrelteLogo /> [**@threlte/gltf**](https://github.com/threlte/threlte/tree/main/packages/gltf) is
+  an experimental fork of [gltfjsx](https://github.com/pmndrs/gltfjsx) for Threlte by [Grischa
+  Erbe](https://twitter.com/threlte) to transform gLTF and GLB files into declarative Threlte
+  components
+  ([demo](https://stackblitz.com/edit/test-threlte-gltf?file=src%2Flib%2FGameboy.svelte)).
+- <ThreeLogo /> [**Phy**](https://github.com/lo-th/phy), [3TH](https://twitter.com/3dflashlo)'s game
+  engine to add physics to Three.js, now supports [NVIDIA
+  PhysX](https://developer.nvidia.com/physx-sdk) 5.1 via
+  [physx-js-webidl](https://github.com/fabmax/physx-js-webidl) JavaScript / Wasm bindings. See the
+  [other new features](https://twitter.com/3dflashlo/status/1621576273100242944) and [live
+  demo](https://lo-th.github.io/phy/). 3TH also created [Oimo.js](https://github.com/lo-th/Oimo.js)
+  and [Full IK](https://github.com/lo-th/fullik).
+- <PlayCanvasLogo /> [**PlayCanvas v1.61.0**](https://github.com/playcanvas/engine/releases) –
+  PlayCanvas now supports Microsoft's [**Volumetric
+  Videos**](https://twitter.com/playcanvas/status/1620795982337421312). All PlayCanvas builds now
+  include **WebGPU support** (it was previously only included in debug builds), adding only
+  [9kb](https://github.com/playcanvas/engine/pull/5030) to the engine!
+- <BabylonLogo /> [**Babylon.js v5.45.0**](https://github.com/BabylonJS/Babylon.js/releases)
+
+## ✍️ Content
+
+- 🎬 <R3FLogo /> [**React Three Fiber tutorial - Scroll Animations**](https://www.youtube.com/watch?v=pXpckHDDNYo) by [Wawa Sensei](https://twitter.com/wawasensei)
+- 🎬 <R3FLogo /> [**3D Games in JavaScript??!**](https://www.youtube.com/watch?v=Tfud2Mo_9sY) by [Theo - t3.gg](https://twitter.com/t3dotgg)
+- 🎬 <NeedleLogo /> [**Needle Engine - Quick intro to custom scripting**](https://www.youtube.com/watch?v=uf5UK0bLHlY) by [Marcel Wiessler
+  ](https://twitter.com/marcel_wiessler)
+- ✍️ <PlayCanvasLogo /> [**How to make your HTML5 Games Awesome!**](https://blog.playcanvas.com/how-to-make-your-html5-games-awesome/) by [Paulo Oliveira](https://twitter.com/ninitoph)
+- ✍️ <UnityLogo /> [**Math Breakdown: Anime Homing Missiles**](https://blog.littlepolygon.com/posts/missile/) by [Max!](https://twitter.com/xewlupus)
+- ✍️ <BabylonLogo /> [**Shell Shockers' multi-million $ web game success**](https://newsletter.gamediscover.co/p/deep-dive-shell-shockers-multi-million) by [Jason Kapalka](https://en.wikipedia.org/wiki/Jason_Kapalka) and [Simon Carless](https://twitter.com/simoncarless)
+- ✍️ <EtherealLogo /> [**Making PuttClub.io - Social WebXR Games in Full Body VR**](https://www.etherealengine.com/blog-posts/making-puttclub-io-social-webxr-games-in-full-body-vr) by [Josh Field](https://twitter.com/hexafield)
+- ✍️ <WebXRLogo /> [**WebXR Pass-Through on Quest**](https://timmykokke.com/blog/2023-02-03-webxr-pass-through) by [Timmy Kokke](https://twitter.com/Sorskoot)
+- ✨ <ThreeLogo /> [**Bruno Simon's Awwwards 3D presentation**](https://awwwards-2022-talk.vercel.app/) ([video](https://www.awwwards.com/talks/conference_amsterdam_2022/bruno-simon) for Awwwards Pro members only)
+
+## ✨ Games & Demos
+
+- 🎮 <ThreeLogo /> [**A Number From the Ghost**](https://www.anumberfromtheghost.com/asleep-in-trees)
+  by [jittercub](https://twitter.com/jittercub) – A one-of-a-kind musical experience. 🎵
+- 🎮 <UnityLogo /> [**Townscaper**](https://oskarstalberg.com/Townscaper/) (80MB) by [Oskar
+  Stålberg](https://twitter.com/OskSta) – A relaxing city-builder on the ocean. 🏗
+- ✨ <ThreeLogo /> [**Infinite World**](https://infinite-world.vercel.app/) by [Bruno
+  Simon](https://twitter.com/bruno_simon) ([source](https://github.com/brunosimon/infinite-world)) –
+  You'll love the super fluffy grass. 🍃
+- ✨ <ThreeLogo /> Some strange [**rainbow oil
+  bubbles**](https://twitter.com/mamesoncom/status/1621493799758462977) and [**bubble
+  tea**](https://twitter.com/mamesoncom/status/1618927674294177795) by [Maeda
+  Mameo](https://twitter.com/mamesoncom). 🌈
+- ✨ <R3FLogo /> [**Portal shaders from
+  Shadertoy**](https://codesandbox.io/s/portal-shaders-from-shadertoy-sduye0) by
+  [Cosmitar](https://twitter.com/LongSto10058277) – Check out the 3 presets. 🌀
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+<NewsletterFooter tweetId="1623350036091518976" />

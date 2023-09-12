@@ -1,0 +1,43 @@
+import Project from 'components/Project'
+import { trpc, graphql } from 'projects'
+import Todo from 'components/Todo'
+
+# 🏭 General-Purpose Web Frameworks
+
+You can build your main backend API using web frameworks or libraries that are not specifically designed for games. But you might need additional processes or services to handle game-specific logic, for instance to run a 3D simulation of a scene for client validation, or a stateful websocket server.
+
+There are plenty of backend languages and frameworks available, such as Rails for Ruby or Django for Python, but I will focus on Node.js options since we are already working with JavaScript or TypeScript.
+
+You may use simple HTTP endpoints, REST, GraphQL, or tRPC.
+
+<Todo>Add frameworks</Todo>
+
+## Barebones web server libraries
+
+- Express
+- https://www.fastify.io/
+- Koa
+
+## Backend Frameworks
+
+- Next
+- Nest
+
+Include Deno, Bun options
+
+## Authentication
+
+- Next Auth
+- Passport
+
+## GraphQL
+
+- <Project {...graphql.apolloServer} />
+
+## tRPC
+
+[tRPC](https://trpc.io/) is a new library that allows you to call remote functions (similarly to gRPC) from the browser via React Query, in a fully-typed experience.
+
+- <Project {...trpc} />
+
+I have not used it yet but it is highest on my list of tools to try, and is likely to replace GraphQL in my stacks.

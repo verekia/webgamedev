@@ -1,0 +1,59 @@
+import Todo from 'components/Todo'
+import Project from 'components/Project'
+import { desktop, steam } from 'projects'
+
+# 🖥 Desktop
+
+If you want to release your web game on Windows, Mac, or Linux, there are a few options available.
+
+First, if you simply want users to be able to launch the game from a desktop icon and play it in a standalone window instead of a browser, you can make it installable as a 🌐 [**Progressive Web App**](/publishing/pwa). That's the easiest way to turn your web game into a desktop game. By the way, you can also [customize the title bar](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay) of a PWA on desktop!
+
+But if you want to distribute full executables for users to download, or if you need a deeper OS integration than what a browser page can do, you will need to package your game with a **desktop framework**.
+
+## Desktop frameworks
+
+- <Project {...desktop.electron} description="Chromium and Node.js" />
+- <Project {...desktop.tauri} description="OS-native web views and Rust" />
+- <Project {...desktop.nw} description="Chromium and Node.js" />
+- <Project {...desktop.neutralino} description="OS-native web views and JavaScript" />
+- <Project {...desktop.wails} description="WebKit web view and Go" />
+- <Project
+    {...desktop.gluon}
+    description="User-installed browsers (Chromium or Firefox) and Node.js"
+  />
+- <Project
+    {...desktop.nodeGui}
+    description="Make native apps in Node and CSS (not for WebGL games)"
+  />
+
+Read this great in-depth [Web to Desktop framework comparison](https://github.com/Elanis/web-to-desktop-framework-comparison) for more details.
+
+Tauri, Neutralino, and Wails use lightweight OS web views that have a small memory footprint and build size. While that may sound appealing, WebKit web views (which you would get on Mac or Linux with [Tauri](https://tauri.app/v1/references/webview-versions/) for instance) are not as performant as Chromium when it comes to graphics. So if you want the most performant cross-platform experience, go for Electron or NW.js (or look into Gluon). Note that Electron and NW.js are also the only desktop frameworks officially supported by the two main libraries that help distribute games on Steam.
+
+## Electron
+
+<Todo>
+
+[Electron](https://www.electronjs.org/) – [Electron Packager](https://github.com/electron/electron-packager) – [Electron Forge](https://www.electronforge.io/) – [electron-builder](https://www.electron.build/) – [Electron Fiddle](https://www.electronjs.org/fiddle) – [Nextron](https://github.com/saltyshiomix/nextron)
+
+[How to package your web project for platforms like Steam](https://codepen.io/punkydrewster713/post/package-web-project-for-steam)
+
+[Automating Steam releases with Electron Forge and Github Actions](https://trashmoon.com/blog/2022/automating-steam-releases-for-html-games-with-electron-forge-and-github-actions/)
+
+</Todo>
+
+## Steam
+
+- <Project {...steam.steamworksjs} />
+- <Project {...steam.communityGreenworks} />
+- <Project {...steam.greenworks} />
+
+{/* Prepare your app for Steam distribution: You will need to create a [Steamworks](https://partner.steamgames.com/) account, set up your app on Steam, and obtain a Steam App ID. You will also need to package your Electron app using Electron Packager or a similar tool to create a distributable package for your game. Integrate Steam features: To integrate Steam features such as achievements, leaderboards, and cloud saves, you will need to use the Steamworks SDK and Steam API. Test and submit your app: Once your app is ready, test it thoroughly to ensure that it works properly. Submit your app to Steam for review and approval. Once your app is approved, it will be available for users to download and play on Steam. */}
+
+<Todo>
+
+Epic Games Store
+
+</Todo>
+
+{/* Trezy about Gluon and Neutralino: I think you probably can, but they’re built with Electron in mind so I’d be surprised if there weren’t any issues. At the very least, those 2 libs only support Electron for enabling the Steam overlay, so you’d need to build your own support if you wanted to leverage the Steam overlay. */}

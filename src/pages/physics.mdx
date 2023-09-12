@@ -1,0 +1,94 @@
+import Todo from 'components/Todo'
+import Project from 'components/Project'
+import StatsComparison from 'components/StatsComparison'
+import { physics as projects } from 'projects'
+
+# 🎾 Physics
+
+You can move around meshes using absolute positioning and math, but at some point you will probably want to use a physics engine to make things move and collide with each other in a more realistic way (and with less custom code). Here are the physics engines available for the web and a quick introduction to how they work.
+
+## Engines
+
+- <Project
+    {...projects.rapier}
+    description="Rust-based via Wasm with TypeScript support (4 packages)"
+  />
+- <Project
+    {...projects.cannonEs}
+    description={
+      <>
+        Maintained TypeScript fork of <b>cannon.js</b>
+      </>
+    }
+  />
+- <Project
+    {...projects.useCannon}
+    description={
+      <>
+        <b>cannon-es</b> for React Three Fiber
+      </>
+    }
+  />
+- <Project
+    {...projects.ammo}
+    description={
+      <>
+        JavaScript port of the <a href="https://github.com/bulletphysics/bullet3">Bullet</a> engine,
+        no NPM package
+      </>
+    }
+  />
+- <Project {...projects.oimo} description="" />
+- <Project {...projects.cannonJs} description="" />
+
+<StatsComparison projects={projects} />
+
+## Rigid Bodies
+
+In game development, a rigid body is a point in space controlled by the physics engine. It has a mass, can be moved by forces and velocity, and may be affected by gravity. To move a mesh of your scene using the physics engine, associate a rigid body to it, and set the mesh position to the one of its rigid body at each (fixed) update.
+
+On its own, a rigid body doesn't have a shape, and doesn't collide with other objects. It's simply a point than can be moved around and rotated. In order to behave like a real object, we need to give it a collider.
+
+## Colliders
+
+Colliders are shapes that define the volume of a rigid body to detect collisions with other objects. There are many different types of colliders such as boxes, spheres, or capsules. Pick the simplest shape that is the closest to what your mesh looks like. For instance for a human character, you can use a capsule collider. An other useful collider is the convex hull, which is a shape that fits around a mesh. It is useful for meshes that do not fit in simple shapes, like a house or a tree for instance.
+
+## Body Type
+
+A rigid body can be **dynamic**, **static** (or fixed), or **kinematic**.
+
+- A **dynamic** rigid body is affected by gravity and forces, can be moved, and can collide with other rigid bodies. It's the standard type of rigid body for most moving things in a scene.
+- A **static** (or fixed) rigid body is a body that cannot move. It can collide with other rigid bodies, which makes it a good choice for walls or floors.
+- A **kinematic** rigid body means that it is controlled by the physics engine, but it is not affected by forces. It is moved by setting its velocity or position directly. This is useful for moving platforms or elevators, or other objects that need to be moved around by the game logic, but cause collisions.
+
+[Rapier documentation](https://rapier.rs/docs/user_guides/bevy_plugin/rigid_bodies/#rigid-body-type)
+
+## Velocity, Acceleration, Forces
+
+You can move rigid bodies by setting their **position**, **velocity**, **acceleration**, or applying **forces** to them.
+
+## Friction
+
+Colliders have a certain friction coefficient. This basically means how "sticky" or how "slippery" they are when they collide with each other. Spider-Man can climb a vertical wall because his hands have a very high friction, which when combined with the friction of the wall, is stronger than gravity. In games you typically want walls that are not climbable to have a friction of 0 to be completely slippery if the player jumps against them.
+
+## Fixed step
+
+Physics are typically calculated on a fixed step or update. These fixed updates are called independently of the framerate. This means that if the framerate drops, the physics will still be calculated at the same rate and your moving objects will not appear to slow down. In Unity, the default fixed update rate is 50 times per second. Using a fixed update also saves CPU time, because you don't need to calculate physics every frame if your framerate is higher than the fixed update rate.
+
+[Here is a useful video on the topic of fixed updates and delta time](https://www.youtube.com/watch?v=4ki_ngP5vwc), and a [Gaffer On Games
+article](https://gafferongames.com/post/fix_your_timestep/).
+
+## Interpolation
+
+Since the physics engine is using fixed updates to calculate the position of the rigid bodies, the position of the rigid bodies will not be in sync with the frame rate. If your fixed update rate is set at 60 or 50, the desynchronization might not be very noticeable, so let's take an extreme example to understand the situation.
+
+Imagine you are running at 90 FPS, but you set the fixed update rate to 1 per second. Looking around with the camera will be very smooth, but any object moving in your scene with physics will appear to teleport to a different position every second. We are saving a lot on CPU cycles for physics, but object movements are very choppy. This is where interpolation comes in. Interpolation is a technique to smooth out the movement of objects by estimating their position at the current frame based on their last known physics position and velocity.
+
+When using React Three Fiber and Rapier, interpolation can be handled by [react-three-rapier](https://github.com/pmndrs/react-three-rapier/blob/main/packages/react-three-rapier/src/Physics.tsx).
+
+<Todo>
+[Rapier Character Controller](https://rapier.rs/docs/user_guides/javascript/character_controller)
+
+[Rapier Joints](https://rapier.rs/docs/user_guides/javascript/joints)
+
+</Todo>

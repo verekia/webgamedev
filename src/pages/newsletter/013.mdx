@@ -1,0 +1,182 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  CssLogo,
+  ConstructLogo,
+  KaboomLogo,
+  NeedleLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  R3FLogo,
+  ThreeLogo,
+  ThrelteLogo,
+  TresLogo,
+  UnityLogo,
+  UnrealLogo,
+  WasmLogo,
+  WebXRLogo,
+  WebGLLogo,
+  WebGPULogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 013
+
+<SubTitleDate value="2023-03-30" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+We are doing an **open-source game jam**! Head to 🍓 [**Web Game Dev Open Jam – April 2023**](https://www.webgamedev.com/open-jam-april-2023) to learn about the event, join the [**itch.io jam**](https://itch.io/jam/web-game-dev-open-jam-april-2023), [**spread the word**](https://twitter.com/webgamedevs/status/1641500458970669083), and get ready to make some cool browser games in April! 🚀
+
+Here are some highlights from GDC 2023: <UnrealLogo /> Epic Games announced [**Fab.com**](https://www.fab.com/), a new multi-engine
+marketplace for digital assets that unifies Quixel, Sketchfab, Unreal Engine Marketplace and
+ArtStation Marketplace, and the [**Unreal Editor for
+Fortnite**](https://www.unrealengine.com/en-US/blog/unreal-editor-for-fortnite-is-now-available-in-beta),
+a version of Unreal that can create and publish experiences directly to Fortnite. It uses
+[**Verse**](https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference), Epic's new
+programming language. <UnityLogo /> Unity teased some [AI
+integration](https://twitter.com/unitygames/status/1638510865069531138), and here is a [**Unity
+Roadmap**](https://www.youtube.com/watch?v=nUJrEa06nes) video by Code Monkey. Sonniss released [44GB of free samples](https://gdc.sonniss.com/) for game audio ([video explanation](https://www.youtube.com/watch?v=HhIacRZ0dcw)).
+
+<WebGLLogo /> <WebGPULogo /> On the web front, a live [**WebGL + WebGPU
+Meetup**](https://www.youtube.com/watch?v=oWwtCDv3Pgg) ([event
+page](https://www.khronos.org/events/webglwebgpu-meetup-at-the-2023-game-developers-conference))
+took place at GDC! It included presentations of [**ShaderFrog**](https://shaderfrog.com/)
+([timestamp](https://www.youtube.com/live/oWwtCDv3Pgg?feature=share&t=1827)) by [Andy
+Ray](https://twitter.com/andrewray), <CocosLogo /> [**Cocos
+Creator**](https://www.cocos.com/en/creator)
+([timestamp](https://www.youtube.com/live/oWwtCDv3Pgg?feature=share&t=2320)) by [Huabin
+Ling](https://twitter.com/pandamicro), WebGL Shader Pixel Local Storage
+([timestamp](https://www.youtube.com/live/oWwtCDv3Pgg?feature=share&t=3711)) by [Chris
+Dalton](https://twitter.com/csmartdalton), and <UnityLogo /> Unity + WebGPU
+([timestamp](https://www.youtube.com/live/oWwtCDv3Pgg?feature=share&t=4313)) by [Mark
+Watson](https://twitter.com/mark_kettner).
+
+[**Safari 16.4 is out!**](https://webkit.org/blog/13966/webkit-features-in-safari-16-4/) The most relevant features for us are:
+
+- • Third-party web browsers Add to Home Screen for 🌐 [**PWAs**](https://www.webgamedev.com/publishing/pwa) (called _Home Screen web apps_ by Apple).
+- • [**Web Push**](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) on iOS and iPadOS – Installed PWAs can send notifications.
+- • [**Badging API**](https://developer.mozilla.org/en-US/docs/Web/API/Badging_API) – Set a badge on the installed PWA icon to act as a notification.
+- • [**Offscreen Canvas**](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) – 2D-only for now.
+- • [**Fullscreen API**](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) on iPadOS – Reportedly unsuitable for games because swiping down exits fullscreen.
+- • [**Screen Orientation API**](https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation) – Preliminary support, can't trigger a rotation yet.
+- • [**Screen Wake Lock API**](https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API) – Keep your game open without the screen turning off.
+- • [**Compression Streams API**](https://developer.mozilla.org/en-US/docs/Web/API/Compression_Streams_API) – Compress and decompress gzip directly from JavaScript.
+- • [**Growable** `SharedArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#growing_sharedarraybuffers) and [**resizable** `ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+- • [**Media Queries Level 4 Syntax Improvements**](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4) – For example: `@media (400px <= width < 900px)`
+- • [**Import Maps**](https://web.dev/import-maps-in-all-modern-browsers/) – Useful to map ES module URLs to names if you don't use a bundler.
+
+📐 A mathematical breakthrough happened: the first ever aperiodic monotile called [**the hat**](https://cs.uwaterloo.ca/~csk/hat/) has been discovered. It is a single shape that tiles a plane, but never periodically – meaning it cannot be translated to align with itself. This pattern might have interesting applications in game development, who knows! Here is a [Veritasium video](https://www.youtube.com/watch?v=48sCx-wBs34) about infinite patterns covering the Penrose tiling (which is made of 2 shapes combined).
+
+## 🛠 Tools & Updates
+
+- <ThreeLogo /> [**Three.js r151**](https://github.com/mrdoob/three.js/releases) – Includes new
+  bounding volumes and an updated [NodeEditor](https://github.com/mrdoob/three.js/pull/25692)
+  ([changelog](https://github.com/mrdoob/three.js/releases/tag/r151), [migration
+  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
+- <R3FLogo /> [**Drei v9.59**](https://github.com/pmndrs/drei/releases) – Adds
+  [MeshDiscardMaterial](https://github.com/pmndrs/drei#meshdiscardmaterial) – a material that
+  renders nothing but can be used to show shadows and children – and a &lt;Shape&gt; component to
+  create a [THREE.Shape](https://threejs.org/docs/#api/en/extras/core/Shape) geometry with auto UV.
+  Drei [Shapes](https://github.com/pmndrs/drei#shapes) are helpers to create meshes with buffer
+  geometries.
+- <TresLogo /> [**TresJS v2.0.0-alpha**](https://tresjs.org/guide/migration-guide.html) – Uses a Vue
+  custom renderer, adds TS and Intellisense support, by [Alvaro
+  Sabu](https://twitter.com/alvarosabu).
+- <ThrelteLogo /> [**Threlte v6**](https://next.threlte.xyz/) – Early release with a new
+  documentation ([live
+  playground](https://stackblitz.com/edit/sveltejs-kit-template-default-n1qand?file=src%2Froutes%2FScene.svelte)).
+- <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) – New WebXR AR Starter Kit
+  ([video](https://www.youtube.com/watch?v=kbymJ5ib1gQ), [blog
+  post](https://blog.playcanvas.com/webxr-ar-made-easy-with-playcanvas/))
+- <PlayCanvasLogo /> [**Motion.js**](https://github.com/devcem/motion-playcanvas)
+  ([video](https://www.youtube.com/watch?v=EpCqspTkZxI)) is a plugin for PlayCanvas to create simple
+  animations with timelines by [Cem Demir](https://twitter.com/cemdemir).
+- <PhaserLogo /> [**Phaser v3.60.0 Beta 21**](https://github.com/photonstorm/phaser/releases) – Adds
+  ESM Support. Read the [March 2023 Dev
+  Log](https://www.patreon.com/posts/phaser-march-dev-80486375) for more details on v3.60.
+- <PhaserLogo /> [**Phaser Editor 2D v3.60 Beta
+  2**](https://phasereditor2d.com/blog/2023/03/finally-script-nodes-phaser-editor-2d-v3600-beta2-releaseed)
+  – Adds support for Script Nodes.
+- <BabylonLogo /> [**Babylon.js v5.53.0**](https://github.com/BabylonJS/Babylon.js/releases) –
+  BabylonJS v6 is [delayed](https://twitter.com/babylonjs/status/1636774395220996097) until April
+  20th.
+- <NeedleLogo /> [**Needle**](https://needle.tools/)
+  [**v2.67.0-pre**](https://github.com/needle-tools/needle-engine-support/releases) – Adds [Editor
+  Live Sync](https://twitter.com/marcel_wiessler/status/1640415879480393734), more postprocessing
+  effects, WebAR camera background.
+- <AframeLogo /> [**AUXL v0.2**](https://github.com/Minty-Crisp/AUXL) – A-Frame UX Library: WebXR
+  Scenario, Object Generator and Controller System by [Minty Crisp](https://mintycrisp.com/).
+
+## 🎬 Videos
+
+- <ThreeLogo /> [**Three.js Shaders (GLSL) Crash
+  Course**](https://www.youtube.com/watch?v=oKbCaj1J6EI) (3 hours!) by [Visionary
+  3D](https://twitter.com/3d_visionary)
+- <R3FLogo /> [**Custom shaders with R3F and Nodetoy
+  playlist**](https://www.youtube.com/watch?v=xlnKW28ei88&list=PLWP0narTpO8n9YwsTLVO7-vbIzLELrwwS)
+  by [Domenicobrz](https://twitter.com/Domenico_brz)
+- <R3FLogo /> [**Recreating Atmos with R3F**](https://www.youtube.com/watch?v=WL5zrKii5qc) by [Wawa
+  Sensei](https://twitter.com/wawasensei)
+- <TresLogo /> [**TresJS OrbitControls**](https://www.youtube.com/watch?v=QP3gCY5_dds) by [Alvaro
+  Sabu](https://twitter.com/alvarosabu)
+- <KaboomLogo /> [**Pokémon Game Tutorial with
+  Kaboom.js**](https://www.youtube.com/watch?v=zo3crHnFGho) by [JS
+  Legend](https://twitter.com/JSLegendDev)
+- <UnrealLogo /> [**Unreal Engine 5.2 is getting too
+  real**](https://www.youtube.com/watch?v=qLGmj86-j4k) by
+  [Fireship](https://www.youtube.com/@Fireship)
+- 📐 [**A new way to generate worlds**](https://www.youtube.com/watch?v=dFYMOzoSDNE) (Wave Function Collapse algorithm) by [Watt Designs](https://twitter.com/WattDesigns)
+
+## ✍️ Content
+
+- <ThreeLogo /> [**Cyberpunk inspired Three.js
+  Scene**](https://tympanus.net/codrops/2023/03/22/cyberpunk-inspired-three-js-scene-with-javascript-and-blender/)
+  by [Anderson Mancini](https://twitter.com/Andersonmancini)
+- <R3FLogo /> [**A thread of tips for React Three
+  Fiber**](https://twitter.com/0xca0a/status/1638216198360801286) with codesandboxes by
+  [0xca0a](https://twitter.com/0xca0a)
+- 📐 [**Resources for learning math/postprocessing**](https://twitter.com/N8Programs/status/1639627609821544450) by [N8](https://twitter.com/N8Programs)
+- <ThreeLogo /> [**Three.js March Talk**](https://twitter.com/i/spaces/1zqKVPMDyElJB) with
+  [mrdoob](https://twitter.com/mrdoob) and [0beqz](https://twitter.com/0beqz) as special guests
+
+## 🎮 Games
+
+- <PhaserLogo /> [**2020 Game**](https://2020game.io/) by [Max
+  Garkavyy](https://2020game.io/presskit.html) – In case you forgot what that year was like. 🦠
+- <ThreeLogo /> [**CodeQuest**](https://www.playcodequest.com) by
+  [Marc](https://twitter.com/playcodequest) – RPG that teaches you the basics of coding. 🧑‍💻
+- <PixiLogo /> [**Bubbo Bubbo**](https://bubbo-bubbo.netlify.app/)
+  ([source](https://github.com/pixijs/open-games/tree/main/bubbo-bubbo)) by
+  [PixiJS](https://pixijs.com/) – Open-source Bubble Bobble-like game. 🫧
+- <PixiLogo /> [**Puzzling Potions**](https://puzzling-potions.netlify.app/)
+  ([source](https://github.com/pixijs/open-games/blob/main/puzzling-potions)) by
+  [PixiJS](https://pixijs.com/) – Open-source tile-matching game. 🧪
+- <CssLogo /> [**Match City**](https://dennissmuda.github.io/match-city/)
+  ([source](https://github.com/DennisSmuda/match-city)) by [Dennis Smuda](https://dennissmuda.com/)
+  – Open-source tile-matching game 🔢
+
+## ✨ Demos
+
+- <ThreeLogo /> [**Rainy Window
+  Shader**](https://www.reddit.com/r/threejs/comments/1236qq3/rainy_window_shader/)
+  ([demo](https://www.rocksdanister.com/rain/)) by [Dani John](https://twitter.com/rocksdanister)
+- <R3FLogo /> [**Toon Material Color Ramp for
+  Three.js**](https://twitter.com/CantBeFaraz/status/1640351567323774976) by
+  [Faraz](https://twitter.com/CantBeFaraz)
+- <WebXRLogo /> <PlayCanvasLogo /> [**Editing a VR scene while being in the
+  scene**](https://twitter.com/yaustar/status/1640758146909044759) by [Steven
+  Yau](https://twitter.com/yaustar)
+- <WebXRLogo /> <PlayCanvasLogo /> [**XR Room**](https://solargames.io/demos/solar-xr-room/) by
+  [Solar Games](https://solargames.io/)
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+<NewsletterFooter tweetId="1641505589967613953" />

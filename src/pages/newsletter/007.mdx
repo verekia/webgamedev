@@ -1,0 +1,100 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
+  NeedleLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  R3FLogo,
+  ThreeLogo,
+  WasmLogo,
+  WebGLLogo,
+  WebGPULogo,
+  WebXRLogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 007
+
+<SubTitleDate value="2023-01-31" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+<WebGLLogo /> <WebGPULogo /> The Khronos [**WebGL + WebGPU
+meetup**](https://www.khronos.org/events/webgl-webgpu-meetup-january-2023) is today, January 31st,
+at 5pm PST (8pm EST, 2am Central Europe) and will include presentations by [Ken
+Russell](https://twitter.com/gfxprogrammer) (Khronos,
+Google), <ThreeLogo /> [mrdoob](https://twitter.com/mrdoob), Kelsey Gilbert (Mozilla) and John
+Anderson (Google Earth). [Omar Shehata](https://twitter.com/Omar4ur) writes
+[recaps](https://omar-shehata.medium.com/webgl-webgpu-april-2022-meetup-highlights-e57ad07e1f60) of
+those recurring meetups.
+
+<WebGPULogo /> **Chrome Canary on Android** now [**supports
+WebGPU**](https://twitter.com/Tojiro/status/1618997822854168582) if you toggle the
+`#enable-unsafe-webgpu` flag.
+
+[**Automerge 2.0**](https://automerge.org/blog/automerge-2/) got released. It's a [Conflict-free Replicated Data Type](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) (CRDT) library for Rust and JavaScript to facilitate state synchronization between Peer-to-Peer clients or client and server. Here is an [introduction](https://automerge.org/docs/hello/) to the concept. It's like Git for objects, with [automatic conflict resolution](https://automerge.org/docs/cookbook/conflicts/). CRDTs are used for real-time collaborative applications (like Google Docs or Figma), offline-first apps, and P2P decentralized apps and games. Not something you'll need for most games, but it's good to know that it exists if you someday run into concurrency issues when multiple players try to mutate a game state simultaneously. [Yjs](https://docs.yjs.dev/) is a popular alternative.
+
+I listed the **download sizes** of all games on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page and 🎮 [**WebGamer.io**](https://webgamer.io/), which you can see on game thumbnails on both pages. That's the total transferred size from hard refresh to actual gameplay. The smallest games boot with **as little as 3MB** and go **up to 87MB**. With a fast CDN, parallelized downloads, and a background download strategy, games under 20MB or even 30MB can load quickly or almost instantly. On mobile, [53% of users](https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/mobile-site-load-time-statistics/) leave a web page if it takes **more than 3 seconds to load**, so try to show the main menu as fast as possible and keep downloading well-compressed and optimized resources in the background.
+
+## ⬆️ Updates
+
+- <ThreeLogo /> [**Three.js r149**](https://twitter.com/threejs/status/1618630423294414848) –
+  Includes a new [**`three-bvh-csg`**](https://github.com/gkjohnson/three-bvh-csg)
+  [example](https://threejs.org/examples/webgl_geometry_csg.html) by [Garrett
+  Johnson](https://twitter.com/garrettkjohnson)
+  ([changelog](https://github.com/mrdoob/three.js/releases/tag/r149), [migration
+  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
+- <R3FLogo /> [**Drei v9.55 and v9.56**](https://github.com/pmndrs/drei/releases) – Adds
+  [**&lt;Bvh&gt;**](https://github.com/pmndrs/drei#bvh) by [0xca0a](https://twitter.com/0xca0a) to
+  very conveniently improve raycasting performance via
+  [**three-mesh-bvh**](https://github.com/gkjohnson/three-mesh-bvh). `OrbitControls` and
+  `CameraControls` [performance improvements](https://github.com/pmndrs/drei/pull/1245) by
+  [Faraz](https://twitter.com/CantBeFaraz).
+- <R3FLogo /> [**R3F-Perf**](https://github.com/utsuboco/r3f-perf)
+  [**v7.0.0**](https://github.com/utsuboco/r3f-perf/blob/main/CHANGELOG.md) by [Renaud
+  Rohlinger](https://twitter.com/onirenaud) – Headless mode, tree shaking, new CPU metric and report
+  system.
+- <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) – Improves [**glTF Editor
+  imports**](https://twitter.com/willeastcott/status/1620115105173372933) with camera, light, and
+  Draco-compressed mesh support.
+- <BabylonLogo /> [**Babylon.js v5.44.0**](https://github.com/BabylonJS/Babylon.js/releases)
+- <NeedleLogo /> [**Needle**](https://needle.tools/)
+  [**2.61.0-pre**](https://github.com/needle-tools/needle-engine-support/releases)
+
+## ✍️ Content
+
+- 🎬 <NeedleLogo /> [**Needle Engine – Getting Started. Unity → Three.js**](https://www.youtube.com/watch?v=3dB-d1Jo_Mk) by [Felix Herbst](https://twitter.com/hybridherbst).
+- ✍️ <ThreeLogo /> [**Stylish material switch effect**](https://www.patreon.com/posts/create-stylish-77823097) with ThreeJS and GLSL ([video](https://twitter.com/fra_michelini/status/1619337218820292613), [demo](https://threejs-matcap-switch.vercel.app/#debug)) by [Francesco Michelini](https://twitter.com/fra_michelini).
+- ✍️ <R3FLogo /> [**Refraction, dispersion, and other shader light effects**](https://blog.maximeheckel.com/posts/refraction-dispersion-and-other-shader-light-effects/) by [Maxime Heckel](https://twitter.com/MaximeHeckel).
+- ✍️ <WebGLLogo /> [**Floating Islands article**](https://dev.to/keaukraine/floating-islands-webgl-demo-995) ([demo](https://keaukraine.github.io/webgl-rock-pillars/)) by [Oleksandr Popov](https://twitter.com/keaukraine) (custom WebGL engine).
+- 🎙 <ThreeLogo /> [**Three.js January talk**](https://twitter.com/i/spaces/1OwGWwqWDEqGQ) with [Anderson Mancini](https://twitter.com/Andersonmancini), [Yuri Artiukh](https://twitter.com/akella), [N8](https://twitter.com/N8Programs), and [Nicolas Carvajal](https://twitter.com/nicolas_web3).
+
+## ✨ Games & Demos
+
+- 🎮 <R3FLogo /> [**Hockey Pockey**](https://hockeypockey-98b14.web.app/) by
+  [krazybubbler](https://twitter.com/krazybubbler) – Uses [React Three
+  Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) and
+  [use-cannon](https://github.com/pmndrs/use-cannon). 🏒
+- ✨ <ThreeLogo /> [**BugBall**](https://www.johnc.pro/bugball/indexHIFI.html) by [John
+  Cotterell](https://www.johnc.pro/) ([source](https://github.com/Cotterzz/titaniumballz)). _Go,
+  cute red robots team!_ ⚽️
+- ✨ <ThreeLogo /> [**Hand tracking experiment**](https://rdtr01.xl.digital/)
+  ([video](https://twitter.com/KMkota0/status/1620090836930400257)) by [Xavier
+  (Jack)](https://twitter.com/KMkota0). 👋
+- ✨ <WebXRLogo /> <ThreeLogo /> [**WebXR
+  Portals**](https://twitter.com/noerihuisman/status/1617587909170692120) by [Noeri
+  Huisman](https://twitter.com/noerihuisman). 🟠🏃🔵
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+On [WebGamer.io](https://webgamer.io/), you can now ⭐️ **save games to your Favorites**, ⬇️ **install the portal** as a [**PWA**](https://www.webgamedev.com/publishing/pwa), and hover thumbnails to see 🖼 **gameplay preview** pictures and download sizes.
+
+<NewsletterFooter tweetId="1620460369599930368" />

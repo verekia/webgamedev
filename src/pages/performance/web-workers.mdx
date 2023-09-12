@@ -1,0 +1,52 @@
+import StatsComparison from 'components/StatsComparison'
+import Orange from 'components/Orange'
+import Project from 'components/Project'
+import Todo from 'components/Todo'
+import A from 'components/A'
+import { webWorkers as projects } from 'projects'
+
+# 👷 Web Workers
+
+If you have computation-heavy tasks in your app, you can offload them to a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). Workers are separate threads that runs in the background without blocking the UI, reducing jank in your canvas. You can for instance use Web Workers for [pathfinding](https://en.wikipedia.org/wiki/Pathfinding) or physics.
+
+Web Workers rely on the `postMessage` and `onmessage` API to communicate with the main thread, which means you cannot wait for a particular message to be received and write code in a convenient `async`/`await` fashion. That's why some libraries have been created to help with the process:
+
+- <Project {...projects.comlink} />
+- <Project {...projects.workerpool} description="Supports pools, Node.js" />
+- <Project {...projects.threads} description="Supports pools, observables, Webpack, Node.js" />
+- <Project {...projects.troikaWorkerUtils} />
+- <Project
+    {...projects.workerizeLoader}
+    description="Webpack loader"
+    withNewlineDescription={false}
+  />
+- <Project {...projects.workerize} />
+- <Project
+    {...projects.comlinkLoader}
+    description="Webpack loader"
+    withNewlineDescription={false}
+  />
+- <Project {...projects.greenlet} />
+
+<StatsComparison projects={projects} />
+
+## `import.meta.url`
+
+Note that you can use [`import.meta.url`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) to reference a Web Worker file from your filesystem:
+
+```ts
+const worker = new Worker(new URL('./worker.ts', import.meta.url))
+```
+
+<Todo
+  children={
+    <>
+      Add an example with Comlink, serialization, passing references,{' '}
+      <A href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker">Shared Workers</A>,{' '}
+      <A href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">
+        Transferable objects
+      </A>
+      .
+    </>
+  }
+/>

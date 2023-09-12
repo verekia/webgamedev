@@ -1,0 +1,58 @@
+import Todo from 'components/Todo'
+
+# ⚡ Performance
+
+<Todo>
+[Fixed update](https://github.com/pmndrs/react-three-fiber/issues/2338) vs update, update stages
+
+GLTF, GLB, Draco, [gltf-pipeline](https://github.com/CesiumGS/gltf-pipeline)
+
+[gltf-transform](https://github.com/donmccurdy/glTF-Transform), gltfpack, meshoptimizer
+
+Reusing geometries and materials
+
+Mutations over FP (for loops over forEach / maps, Object.assign over spread, etc)
+
+WebGPU
+
+Debugging, [DrawCallInspector](https://www.notion.so/Web-Game-Dev-47e5753ac1064f269336d5e20ff509c4), RenderDoc, RenderDoc for Oculus
+
+MeshLambertMaterial, MeshPhongMaterial, MeshStandardMaterial
+
+Bake shadows, don’t render shadows if they are far
+
+Drei soft shadows
+
+Chrome / Firefox performance profiler
+
+React profiler
+
+Drei [Performance Monitor](https://github.com/pmndrs/drei#performancemonitor)
+
+[LOD](https://threejs.org/docs/#api/en/objects/LOD) (Drei [Detailed](https://github.com/pmndrs/drei#detailed))
+
+Multiple passes ([hmans discussion](https://discord.com/channels/@me/955885416148520980/1031851796903243776))
+
+[Blender mesh-gpu-instancing](https://github.com/takahirox/glTF-Blender-IO-EXT-mesh-gpu-instancing) ([demo](https://www.reddit.com/r/threejs/comments/yw1yw8/2000_chairs_created_with_blenders_geometry_nodes/))
+
+[PlayCanvas's guidelines](https://developer.playcanvas.com/en/user-manual/optimization/guidelines/)
+
+[Bullet Hell article (Unity)](https://blog.littlepolygon.com/posts/bullets/)
+
+[Tojiro's WebXR Scene Optimization article](https://toji.dev/webxr-scene-optimization/)
+
+[Optimizing scenes for better WebGL performance by Verge3D](https://www.soft8soft.com/docs/manual/en/introduction/Optimizing-WebGL-performance.html)
+
+[Spatial hashing](https://www.youtube.com/watch?v=sx4IIQL0x7c) ([Yuka](https://github.com/Mugen87/yuka/tree/master/src/partitioning), [other video](https://www.youtube.com/watch?v=i0OHeCj7SOw))
+
+For distance culling, use [PerspectiveCamera.far](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera.far) + [Fog](https://threejs.org/docs/#api/en/scenes/Fog)
+
+Tips from [Meta WebXR optimizations talk](https://web.facebook.com/watch/?v=573587777089806) (valid for non-XR too):
+
+- Rendering front-to-back as a performance optimization
+- If you cannot hit 90FPS consistently, target 72 or 80FPS. It is better to have a consistent FPS than big FPS drops and variations (particularly in VR).
+- Quest 2 : aim for 100-200 draw calls / frame max.
+
+[Three.js Optimization - Best Practices and Techniques](https://www.youtube.com/watch?v=dc5iJVInpPY)
+
+</Todo>

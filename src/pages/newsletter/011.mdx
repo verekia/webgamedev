@@ -1,0 +1,112 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
+  KaboomLogo,
+  NeedleLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  R3FLogo,
+  ThreeLogo,
+  ThrelteLogo,
+  TresLogo,
+  UnityLogo,
+  UnrealLogo,
+  WasmLogo,
+  WebGLLogo,
+  WebGPULogo,
+  WebXRLogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 011
+
+<SubTitleDate value="2023-03-01" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+<R3FLogo /> [Douges](https://twitter.com/itsdouges) released
+[**TRIPLEX**](https://www.npmjs.com/package/@triplex/run), the React Three Fiber editor that saves
+scene changes back to source. See the [introduction
+video](https://twitter.com/itsdouges/status/1628646325784023046) for a demo. TRIPLEX is a standalone
+server that runs alongside your project and is therefore compatible with any bundler and framework,
+including Next.js and Remix. Run `npx @triplex/run init` in a new folder to give it a try! Note that
+there is also the [react-three-editor](https://github.com/pmndrs/react-three-editor), which is
+currently a plugin for Vite.
+
+[**Ambient**](https://www.ambient.run/) was released ([blog post](https://www.ambient.run/post/introducing-ambient)). It is a multiplayer game engine powered by Rust, WebAssembly, and WebGPU. It features a GPU-driven physically-based-rendering engine, [PhysX](https://en.wikipedia.org/wiki/PhysX)-powered physics, a React-like UI system, spatial audio with composable filters, platform-independent user input, and more. If you are interested in game development in Rust, check out this website's new 🦀 [**Rust Game Dev**](https://www.webgamedev.com/engines-libraries/rust-game-dev) page!
+
+<WebXRLogo /> <ThreeLogo /> Meta open-sourced [**Project
+Flowerbed**](https://flowerbed.metademolab.com/), their WebXR showcase game
+([repo](https://github.com/meta-quest/ProjectFlowerbed)). They also published a very [**in-depth
+article**](https://developer.oculus.com/blog/project-flowerbed-a-webxr-case-study/) containing many
+workflow and performance tips useful for any WebGL game. It complements nicely their previous
+[**WebXR talk**](https://web.facebook.com/RealityLabs/videos/783508189585692) at Meta Connect about
+Flowerbed. [David Heaney](https://twitter.com/Heaney555) wrote an
+[article](https://uploadvr.com/project-flowerbed-webxr-minigolf-open-source-demos/) about how
+Project Flowerbed and [Above Par-adowski](https://aboveparadowski.com/) prove WebXR can be used for
+full VR games.
+
+[**SwissGL**](https://github.com/google/swissgl) ([demo](https://google.github.io/swissgl/)) is a minimalistic wrapper on top of the WebGL2 JS API by [Alex Mordvintsev](https://twitter.com/zzznah). It is an early-stage experiment at Google but is not an officially supported Google product at the moment.
+
+## 🛠 Tools & Updates
+
+- <ThreeLogo /> [**Three.js r150**](https://twitter.com/threejs/status/1628655575142924288) – Adds
+  [mipped bicubic transmission filtering](https://github.com/mrdoob/three.js/pull/25483) by
+  [mrdoob](https://twitter.com/mrdoob) and [N8](https://twitter.com/N8Programs), EXT_texture_avif
+  support by [Leon Radley](https://twitter.com/LeonRadley), camera view offset in CSS3DRenderer by
+  [yomotsu](https://twitter.com/yomotsu)
+  ([changelog](https://github.com/mrdoob/three.js/releases/tag/r150), [migration
+  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
+- <R3FLogo /> [**Drei v9.57**](https://github.com/pmndrs/drei/releases) – Cleaner percent-closer
+  [**&lt;SoftShadows&gt;**](https://github.com/pmndrs/drei#softshadows) by
+  [N8](https://twitter.com/N8Programs) and [0xca0a](https://twitter.com/0xca0a).
+- <R3FLogo /> R3F [Drei](https://github.com/pmndrs/drei) helpers will be [made
+  available](https://twitter.com/0xca0a/status/1630699907999825920) to
+  vanilla <ThreeLogo /> Three.js users via [**Drei
+  Vanilla**](https://github.com/pmndrs/drei-vanilla) by [V_Prime](https://twitter.com/vis_prime).
+- <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) – Generate Draco-compressed glTF
+  files in the Editor at import time ([blog
+  post](https://blog.playcanvas.com/draco-mesh-compression-arrives-in-the-playcanvas-editor/)).
+- <BabylonLogo /> [**Babylon.js v5.48.0**](https://github.com/BabylonJS/Babylon.js/releases)
+- [mjurczyk](https://twitter.com/thefrontendcat) created an [**AI-generated envmaps**](https://envmaps.wtlstudio.com/) tool.
+- [Emil Widlund](https://twitter.com/emilwidlund) released [**Nodl**](https://twitter.com/emilwidlund/status/1628877076424949760), a visual node graphs framework that powers [Alma](https://www.alma.sh/).
+
+## ✍️ Content
+
+- 🎬 <R3FLogo /> [**How to create animated shaders with Three.js**](https://www.youtube.com/watch?v=e2ntx-fyXaE) by [Wawa Sensei](https://twitter.com/wawasensei)
+- 🎬 🎓 [**Physics of JellyCar: Soft Body Physics Explained**](https://www.youtube.com/watch?v=3OmkehAJoyo) by [Walaber](https://twitter.com/walaber)
+- ✍️ <TresLogo /> [**Build 3D Scenes Declaratively with TresJS using Vue**](https://alvarosaburido.dev/blog/build-3d-scenes-declaratively-with-tresjs-using-vue/) by [Alvaro Sabu](https://twitter.com/alvarosabu)
+- ✍️ <WebGPULogo /> [**WebGPU Error Handling best practices**](https://toji.dev/webgpu-best-practices/error-handling) by [Brandon Jones](https://twitter.com/Tojiro)
+- ✍️ <UnrealLogo /> [**Performing Lag Compensation in Unreal Engine 5**](https://snapnet.dev/blog/performing-lag-compensation-in-unreal-engine-5/) by [Jay Mattis](https://twitter.com/BrainDx)
+- ✍️ <UnityLogo /> [**5 ways to draw an outline**](https://alexanderameye.github.io/notes/rendering-outlines/) by [Alex Ameye](https://twitter.com/alexanderameye). You can also try <ThreeLogo /> [**Outline**](https://pmndrs.github.io/postprocessing/public/demo/#outline) or <R3FLogo /> [**&lt;Outline&gt;**](https://github.com/pmndrs/react-postprocessing/blob/master/api.md#outline--).
+- ✍️ <ThreeLogo /> [**Creating carved surfaces using Three.js**](https://charlottedann.com/article/ceramics-2d-to-3d) by [Charlotte Dann](https://twitter.com/charlotte_dann)
+- ✍️ <PhaserLogo /> [**Building a Phaser 3 Game with bitECS**](https://blog.ourcade.co/posts/2023/building-phaser-3-ecs-game-with-reactjs/) ([source](https://github.com/officialyenum/tank-wars)) by [Yenum](https://twitter.com/officialyenum)
+- 🎙 <R3FLogo /> [**Three.js February Talk**](https://twitter.com/Andersonmancini/status/1629511026449235970) with [0xca0a](https://twitter.com/0xca0a) as special guest.
+
+## ✨ Games & Demos
+
+- 🎮 <R3FLogo /> [**Peter Talisman: Lord of the Harvest**](https://petertalisman.quest/) by [Ben West](https://twitter.com/be_we_me) and [Joseph Pleass](http://josephpleass.com/) – A musical incremental game. 🌾
+- 🎮 <R3FLogo /> [**Bowling R3F**](https://bowling-r3f.vercel.app/) by [Jorge Rubiano](https://twitter.com/ostjh) – I managed to get a score of 242, beat me! 🎳
+- 🎮 <ThrelteLogo /> [**Wooden labyrinth maze**](https://labs.leon.id/2023-02-maze) by [Leon Radley](https://twitter.com/LeonRadley) ([source](https://github.com/leon/labs.leon.id/tree/main/2023-02-maze)) – Might stress you out even more than the real thing. 🕳
+- 🎮 <PixiLogo /> [**Dungeon Quest**](https://dungeonquest.hasteoriginals.com/) by [rallieon](https://twitter.com/rallieon) and [foundrium](https://twitter.com/foundrium) – A Pacman-like with a Bomberman twist! 🔥
+- 🎮 <WebGLLogo /> [**13**](https://iioi.herokuapp.com/) by [Elias Ku](https://twitter.com/eliaskuvoice) (originally created for JS13K 2022, [article](https://eliasku.hashnode.dev/13-game), [source](https://github.com/eliasku/13)). Small warning: pixel-art gore 💀
+- ✨ <ThreeLogo /> [**Lightformers**](https://twitter.com/vis_prime/status/1630059789035380736) (env map and lighting demo) by [V_Prime](https://twitter.com/vis_prime)
+- ✨ <ThreeLogo /> [**The God particle from Dark TV series**](https://god-particle.netlify.app/) by [Marco Ludovico Perego](https://twitter.com/mlperego)
+- ✨ <ThreeLogo /> [**On-Scroll WebGL Fire**](https://twitter.com/uuuuuulala/status/1628701160197525504) by [Ksenia Kondrashova](https://twitter.com/uuuuuulala)
+- ✨ <ThreeLogo /> [**Train portfolio**](https://fikriemre.com/) by [Fikri Emre](https://twitter.com/emre_fikri/)
+- ✨ <BabylonLogo /> [**Scan Wave Shader**](https://aka.ms/scanWave) by [BabylonJS](https://twitter.com/babylonjs)
+- ✨ <WebXRLogo /> [**Augmented Reality Ball Pit**](https://twitter.com/XRarchitect/status/1628091647828578304) (video) by [Ian Curtis](https://twitter.com/XRarchitect). Uses [8th Wall](https://www.8thwall.com/).
+
+Bonus: [PSA - Do not use the Red Cross in your game](https://www.reddit.com/r/gamedev/comments/11908jv/psa_do_not_use_the_red_cross_in_your_game/)
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+<NewsletterFooter tweetId="1630976398457458688" />

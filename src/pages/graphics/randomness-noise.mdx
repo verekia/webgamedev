@@ -1,0 +1,47 @@
+import Project from 'components/Project'
+import StatsComparison from 'components/StatsComparison'
+import Todo from 'components/Todo'
+import { random, noise } from 'projects'
+
+# 〰️ Randomness & Noise
+
+Randomness is used extensively in game development and computer graphics. It is for instance used to generate procedural content, such as terrain or weather, or to create animations and effects. `Math.random` will give you a random float between 0 and 1. If you want to specify lower and upper bounds more conveniently than doing math over `Math.random`, or using integers instead of floats, you can use [Lodash's `random`](https://lodash.com/docs/4.17.15#random), or [random](https://github.com/transitive-bullshit/random). `Math.random` will often get the job done, but you will sometimes need more control over the randomness.
+
+## Seedable Pseudo-Randomness
+
+If you want the randomness to be deterministic, you can use a **seedable** pseudo-random number generator (PRNG). A seed is a value that is used to initialize the generator. If you use the same seed, you will get the same sequence of numbers, which will let you generate the same content every time. Here are some PRNG libraries:
+
+- <Project {...random.random} />
+- <Project {...random.prando} />
+- <Project {...random.thingRandom} />
+- <Project {...random.numberGenerator} />
+- <Project {...random.alea} />
+- <Project {...random.randomJs} />
+- <Project {...random.randomSeed} />
+- <Project {...random.seedRandom} />
+- <Project {...random.seedDashRandom} />
+
+<StatsComparison projects={random} />
+
+Random numbers distributed on 1, 2, 3, or more dimensions are called **noise**. Using `Math.random` for this will give you **white noise**. White noise has its use cases, but it is not very useful for things like generating terrain.
+
+## Perlin noise and Simplex noise
+
+If you want to generate random terrain or clouds for instance, you need **gradient noise** with peaks and valleys. You can use a **Perlin noise** (see [this article](https://eev.ee/blog/2016/05/29/perlin-noise/) for more details). Perlin noise was created by Ken Perlin in 1983. He later on released **Simplex noise** in 2001, which has some [improvements](https://www.bit-101.com/blog/2021/07/perlin-vs-simplex/) over Perlin noise, but was patented until January 8th 2022. [OpenSimplex noise](https://en.wikipedia.org/wiki/OpenSimplex_noise) was developed to overcome the patent issue of Simplex noise.
+
+- <Project {...noise.simplexNoise} />
+- <Project {...noise.fractalNoise} />
+- <Project {...noise.tumult} />
+- <Project {...noise.openSimplexNoise} />
+<details className="more-tools">
+<summary>Show more</summary>
+- <Project {...noise.fastSimplexNoise} description={<>Deprecated in favor of <code>open-simplex-noise</code></>} />
+</details>
+
+<StatsComparison projects={noise} />
+
+In the case of terrain, 2D noise can be used to generate the **heightmap** of a 3D map but you won't get any cave or any part of the ground with void under it. To get that, you can either use 3D noise, combine multiple noises, use a [Marching Cube algorithm](https://www.youtube.com/watch?v=M3iI2l0ltbE), or generate an initial terrain and fine-tune it manually. For texturing, you might want to look into [texture splatting](https://www.youtube.com/watch?v=rNuDkDhadfU) ([Three.js forum thread](https://discourse.threejs.org/t/how-to-create-a-multiple-textured-terrain/5069), [three-landscape](https://www.npmjs.com/package/three-landscape), [THREE.Terrain](https://github.com/IceCreamYou/THREE.Terrain)).
+
+Note that there are [other types of noises](<https://en.wikipedia.org/wiki/Category:Noise_(graphics)>) such as the [Worley noise](https://en.wikipedia.org/wiki/Worley_noise), which can for instance be used for [shaders](https://thebookofshaders.com/12/).
+
+This [SimonDev video](https://www.youtube.com/watch?v=sChQCdbLdHE) illustrates various usages of randomness and noise in computer graphics.

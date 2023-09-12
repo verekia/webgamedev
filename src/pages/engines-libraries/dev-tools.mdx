@@ -1,0 +1,72 @@
+import Project from 'components/Project'
+import Todo from 'components/Todo'
+import StatsComparison from 'components/StatsComparison'
+import { theatre, debugUI as projects } from 'projects'
+
+# 🧰 Dev Tools
+
+In order to get a more well-rounded environment for Three.js development, you can use the following tools:
+
+- Chrome [**Frame Rendering Stats**](https://developer.chrome.com/docs/devtools/rendering/performance/) in the [**Rendering tab**](https://developer.chrome.com/docs/devtools/rendering/#open-rendering)
+
+## Three.js
+
+- [**three-tools by BACE**](https://github.com/oslabs-beta/BACE) – Chrome
+- [**Three.js Developer Tools**](https://addons.mozilla.org/en-US/firefox/addon/three-js-developer-tools/) – Firefox
+- [**Stats.js**](https://github.com/mrdoob/stats.js/) – Included in R3F [**Drei**](https://github.com/pmndrs/drei#stats)
+- [**Three.js Editor**](https://threejs.org/editor/)
+- [**DrawCallInspector**](https://github.com/Fyrestar/THREE.DrawCallInspector) (Chrome, experimental)
+- [**three-inspect**](https://github.com/michealparks/three-inspect)
+
+## React Three Fiber
+
+- [**TRIPLEX**](https://www.npmjs.com/package/@triplex/run)
+- [**react-three-editor**](https://github.com/pmndrs/react-three-editor)
+- [**R3F-Perf**](https://github.com/utsuboco/r3f-perf)
+
+## WebGL
+
+- [**Spector.js**](https://spector.babylonjs.com/)
+
+## Debug UI
+
+- <Project {...projects.lilGui} />
+- <Project {...projects.datGui} />
+- <Project {...projects.leva} />
+- <Project {...projects.tweakpane} />
+<details className="more-tools">
+<summary>Show more</summary>
+- <Project {...projects.uil} />
+- <Project {...projects.guify} />
+- <Project {...projects.reactDatGui} />
+- <Project {...projects.controlPanel} />
+- <Project {...projects.oui} />
+- <Project {...projects.controlKit} />
+</details>
+
+<StatsComparison projects={[projects.lilGui, projects.datGui, projects.leva, projects.tweakpane]} />
+
+Example of [passing an existing Valtio object](https://twitter.com/BrianBreiholz/status/1624365863515070466) to Leva.
+
+<Todo>
+  [Eruda](https://github.com/liriliri/eruda) and [vConsole](https://github.com/Tencent/vConsole),
+  consoles for mobile browsers
+</Todo>
+
+## GLSL / VS Code Extensions
+
+- [**3e**](https://marketplace.visualstudio.com/items?itemName=degreat.3e)
+- [**Shader languages support**](https://marketplace.visualstudio.com/items?itemName=slevesque.shader)
+- [**GLSL Literal**](https://marketplace.visualstudio.com/items?itemName=boyswan.glsl-literal)
+- [**WebGL GLSL Editor**](https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor)
+- [**glsl-canvas**](https://marketplace.visualstudio.com/items?itemName=circledev.glsl-canvas)
+- [**prettier-plugin-glsl**](https://github.com/NaridaL/glsl-language-toolkit/tree/main/packages/prettier-plugin-glsl)
+
+## Theatre.js
+
+<Project {...theatre} /> is an animation library and toolkit to create cinematic scenes and animating
+objects of your scene. It contains a visual editor that can transform objects of your scene, which can
+be quite useful for debugging and positioning objects. It supports [vanilla Three.js](https://www.theatrejs.com/docs/latest/getting-started/with-three-js)
+and [React Three Fiber](https://www.theatrejs.com/docs/latest/getting-started/with-react-three-fiber).
+
+<Todo>[Motion Canvas](https://motion-canvas.github.io/) is an alternative to Theatre.js</Todo>

@@ -1,0 +1,28 @@
+import Project from 'components/Project'
+import StatsComparison from 'components/StatsComparison'
+import Todo from 'components/Todo'
+import { protobuf as projects } from 'projects'
+
+# 📩 Protobuf
+
+Protobuf ("Protocol Buffers") is a protocol developed by Google to serialize structured data. It is language agnostic and can be used in any programming language via libraries. Data is transfered in a non-human-readable binary compact format that is smaller than JSON. Here is a good [article by Auth0](https://auth0.com/blog/beating-json-performance-with-protobuf/).
+
+If you are making a real-time multiplayer game that sends a lot of data over the network, you might want to consider using Protobuf. It will come at a cost of some added complexity but that may be worth it depending on your use case. You could start building your game with JSON and then switch to Protobuf later if you find that message size is a bottleneck.
+
+- <Project {...projects.protobufJs} />
+- <Project
+    {...projects.googleProtobuf}
+    description={'In a "somewhat broken state" as per the readme. Being reworked.'}
+  />
+- <Project {...projects.tsProto} />
+- <Project {...projects.protobufTs} />
+- <Project {...projects.protobufEs} />
+- <Project {...projects.protocGenTs} />
+- <Project {...projects.protocolBuffers} />
+
+<StatsComparison projects={projects} />
+
+<Todo>
+  Add example, Typed Arrays, [Typed Array Buffer
+  Schema](https://github.com/geckosio/typed-array-buffer-schema#readme)
+</Todo>

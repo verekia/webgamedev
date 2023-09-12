@@ -1,0 +1,126 @@
+import { FloatLeftImage, FloatRightImage } from 'components/FloatImage'
+import YouTube, { Streamable } from 'components/YouTube'
+
+# 🎙 Interview with Dek (Hordes)
+
+_**For the second interview on WebGameDev.com, we welcome Dek! The solo developer behind [Hordes.io](https://hordes.io/), a 3D MMORPG that pushes the limits of what can be done in the browser. Dek has been working on Hordes since 2016 and has created one of the most ambitious and successful JavaScript games to date.**_
+
+<YouTube id="Hwk43mizO50" />
+
+_**Thank you so much, Dek, for being here and taking the time to answer some questions. There is much to cover about the game, but could you first tell us about you and your background? What was your job before working full-time on Hordes? Did you have prior experience with game development?**_
+
+<FloatRightImage src="/interviews/dek/dek.webp" alt="Dek" height={140} wifth={140} />
+
+My early teenage years were spent in Asian MMOs, and later on WoW. I was pretty much primed to love MMO worlds very early on, and I've been interested in running private servers, reverse engineering MMOs or making art for them. I've been teaching myself how to do things on computers since I was about ten years old, so by the time I could have started a degree in Comp.Sci. I was more interested in working on games right away.
+
+I worked as a 3D artist for an indie studio for a while, which taught me how small teams work. Eventually, I gave it a shot and decided to go full indie with my own projects, as I wanted to do more than just 3D art.
+
+Working on small projects, I learned all sorts of things over the course of ~4 years, but nothing I released was successful. I was getting by with very little resources, doing contract work occasionally to keep myself afloat. That's when I started working on Hordes.io, around July 2016.
+
+<Streamable
+  id="im3r7x?autoplay=1&nocontrols=1"
+  style={{ aspectRatio: '1170/798', maxWidth: '500px' }}
+/>
+
+_**Let's start from the very beginning. What were your initial intention and goals for Hordes? How long did it take to reach the first alpha and have the game up for people to play?**_
+
+The Hordes.io Alpha was created in roughly 3 months at that time, and it was my first real JavaScript game. I had no idea what I was doing, and I simply threw together whatever I could come up with, hoping it would somehow be interesting to players and keep me afloat.
+
+The basic idea is to give you the feeling of roaming across the world with a large group of players (hence "Hordes"), having massive PvP fights and grinding monsters together. I missed that in the games I was playing at the time, since a lot of MMOs moved to having more instanced, curated encounters. I like the more chaotic and organic stuff.
+
+I released it in a very unfinished, open-ended state. Pretty much "MMO, reduced to its absolute MVP form" (1 small world, 4 simple classes with 4 skills, no accounts, one type of monster, no items, no permanence at all). I just wanted to get something out there without having too much feature creep or other things slowing me down, and see how viable that is. It took many iterations and a lot of feedback to shape the game to its current form.
+
+Using Three.js helped me to come up with a 3D game in the browser very quickly. Anything that would have taken extra time was skipped. That's why the characters were (and still are) super simplistic. There was almost no art other than a few skill icons, and the world was nothing but a simple heightmap.
+
+_**Launching a game can be both exciting and daunting. How did you get the first waves of people to join your alpha, and how did that early phase go? How did you then manage to grow the community?**_
+
+Back then, the .io-games trend was just about to start. There were relatively few games, but lots of people were eager to play them. I contacted [iogames.space](https://iogames.space/), and they were happy to list the game right away. The website brought a small but constant wave of players (~ 30 concurrent players), which was perfect for me to stay motivated and get feedback. I opened a [Discord server](https://discord.gg/hordes) right away, talking to a handful of people about the game. The community has been growing and forming ever since.
+
+After a few days, [Godenot](https://www.youtube.com/watch?v=R7u1wTV8PR8) (a .io-game YouTuber popular in Brazil) showed the game on his channel. I remember being out to get lunch back then, talking about the game with a friend. When I returned and sat down at my desk, I opened analytics and saw that the game had ~550 CCU (_concurrent users_). I couldn't believe it, and just jumped out of my chair. That feeling is so exciting, it's hard to describe.
+
+<YouTube id="R7u1wTV8PR8" />
+
+I also noticed that almost immediately, more websites like [Poki](https://poki.com/) listed the game, which brought in additional traffic. More YouTubers followed, and that was enough to keep the CCU at around ~100-200 for at least two years. During this time, I published small updates and was able to stay afloat via ad-based monetization.
+
+In 2018 I decided to increase the scope of the game and fully rewrote it while massively increasing the feature set. Multiple worlds, party, clan and trading features. More skills per class, etc. I worked on that update for around a year straight and released it in late 2019.
+
+Shortly after releasing that update, [LazyPeon](https://www.youtube.com/watch?v=y1JFLxpn410) (one of the biggest MMO-related YouTubers) reviewed the game, and generally talked positively about it - which is crazy to me given how he is highly critical even of massive AAA projects, and Hordes.io is so simple. The CCU quickly spiked to about an extra order of magnitude, it was very rewarding and fulfilling to see. Ever since then, the community has been sitting at a good rate that allows me to work on the game comfortably, full-time.
+
+<YouTube id="y1JFLxpn410" />
+
+_**Let's talk graphics. Hordes' engine is based on the [OGL](https://github.com/oframe/ogl) WebGL library, which you have modified heavily. You told us in [Discord](https://webgamedev.com/discord) that you initially started with Three.js but had to switch to a lower-level library for performance reasons. Could you elaborate on the graphics and performance challenges you have encountered building Hordes and how you overcame them?**_
+
+When I rewrote the game in 2018/2019, I decided that I had to focus on making things highly performant in order to increase the scope of the project. Back then, Three.js had some performance issues primarily related to rendering many dynamically moving meshes with unique properties. The results of my benchmarks suggested that batching a lot of draw calls together could be massive. Three.js was also rather big with many features I did not use, and tree shaking support was minimal, so I looked for something that was lightweight and easy to extend. I found [Nathan Gordon](https://twitter.com/gordonnl)’s OGL, which was perfect in that regard. I ended up rewriting most of it to suit my own needs though. At this point I'd generally say it's a custom renderer for the project.
+
+<Streamable
+  id="k8vcgn?autoplay=1&nocontrols=1"
+  style={{ aspectRatio: '16/9', maxWidth: '650px' }}
+/>
+
+Three.js has improved massively in this regard, resolving many issues. I would absolutely recommend it to anyone that wants to get a project in the browser started effectively and quickly. Hordes would have never happened without it!
+
+_**What back-end and network optimizations have you done to ensure the game stays fast and responsive during peak times? What [client-side prediction](https://en.wikipedia.org/wiki/Client-side_prediction) and server reconciliation mechanisms have you implemented to keep the user experience smooth?**_
+
+Initially, net traffic was sent as JSON using [Socket.io](https://socket.io/). That worked to get things going early on, but since then, I've written my own serialization library and swapped to [uWebsockets](https://github.com/uNetworking/uWebSockets). This allows me to send much data at a fraction of the cost.
+
+In general, I try to reduce what is being sent at any given time. There is no need to ever send any information that the client already has, so simulating as much as possible with deterministic logic is important. Keeping things entirely deterministic is hard though, so there's always a middle ground. I think that there is no one optimal networking solution for all games. The parameters of the core gameplay influence what needs to be sent and what is redundant, what intervals you need, and how detailed that information has to be. In a shooter with hitscan mechanics you will need much more precision at low intervals than you'd need in an MMORPG with auto-targeted skills.
+
+Specifically in MMOs, you cannot truly anticipate how much traffic will hit a certain area at any given time. Players might decide to do something crazy and all come together at the same location, at unprecedented player counts. A 10v10 shooter does not have that problem. I decided to deal with that by allowing for dynamic tick rates. If the server gets overloaded with players, it will simply start ticking at slower intervals for information that does not need to be 100% precise. Even with a tick rate of only 10 updates a second, Hordes is still playable (albeit not optimal). That way I can handle ~1k CCU in a single instance without crashing.
+
+I also try not to over-engineer with concepts like server reconciliation and client-side prediction. The networking is fairly simple. I believe that focusing on game feel is more important than determinism in Hordes.io. Players can walk around and their clients will send that info to the server. The server checks whether that information is plausible, and accepts it or tells the client that it should be in a different spot. This means that there is a little bit of wiggle room, but it removes a massive amount of complicated networking logic.
+
+_**Many assets are involved in an MMO (maps, models, animations, sounds, icons...). What is the process for creating them for Hordes?**_
+
+I've written my own map editor in JavaScript which is also capable of multiplayer, allowing for several creators to work together at the same time, reflecting their changes as they update the world.
+
+I do a lot of 2D and 3D art myself, but I also occasionally hire artist friends for commissions, or source from icon packs or 3D asset libraries. The character animations are made procedurally, which is something I've always loved to write and can be very powerful when applied correctly.
+
+Blender is the main tool for 3D asset creation at the moment. I have written my own lossy compression library for 3D assets that specifically suits the needs of world props and contains all other engine-relevant information, which is very practical. There is very little loading / decoding code required, which makes things smooth when dynamically loading assets while moving around.
+
+Audio is mostly made from sample packs with some effects and mastering. There are great libraries out there to source from, and it isn't viable for me to record massive two-handers swishing in my backyard at the moment. Music-wise, almost everything is from licensed audio websites, and some has been created by the community.
+
+_**Keeping players invested and entertained over the years can be quite a challenge. How do you iterate on level design and gameplay changes when creating new content?**_
+
+MMO communities tend to be super vocal when it comes to content updates, so whenever I discuss potential changes, people are happy to give their input. Anything we do is tested on a PTR (_Public Test Realm_) branch of the game, and we usually test things for a few cycles before moving it to the Live version. People are eager to test, which is awesome. We also have suggestion channels that have a backlog longer than I can ever hope to catch up with, so I will probably not run out of ideas for improvements any time soon.
+
+My main issue has been that the tooling for content creation is very time intensive to create, which means a lot of time sunk into something nobody will ever see. Sometimes I spend a month or two on a new editor tool, which is hard to get players excited over. I believe that issue will diminish over time as the tools get more mature and a higher share of the time can be put into pure content creation.
+
+<div style={{ margin: '24px auto', textAlign: 'center' }}>
+  <Streamable
+    id="z6z6il?autoplay=1&nocontrols=1"
+    style={{ aspectRatio: '1212/720', maxWidth: '650px', marginBottom: -12 }}
+  />
+  Testing a boss on the PTR
+</div>
+
+_**In terms of monetization, you have used ads and an in-game store. Could you share with us how those models have worked for you and how sustainable the development of Hordes is today?**_
+
+<FloatLeftImage src="/interviews/dek/elixir.svg" alt="Elixir" height={180} wifth={180} />
+
+I use in-app purchases nowadays, mostly focusing on visuals and utility. You can buy mounts or pets that help you in various ways, considered fair by the community. Players can also share these items in-game so you don't really have to ever spend real money if you want a pet, for example.
+
+In terms of sustainability, the game can currently comfortably sustain me as a solo-dev, and allows me to commission freelancers for small jobs like asset creation, world-building or supplementary coding occasionally. I am not yet able to hire more developers full-time, but I have plans to do so as soon as it becomes viable to pay someone a good full-time salary. Maybe I'll work with investors and funding in the future, but at the moment I really enjoy the small-scale indie operation with very little outside influences.
+
+_**Building an MMO is an immense technical task, but managing a community is also a ton of work (and pressure). How have you been handling the social side of this experience? How is your time divided between your multiple roles these days?**_
+
+I believe this is a task nothing can truly prepare you for, and everyone will handle it differently. I've definitely had issues with this along the way, and I still constantly change my approach. In general, I love talking to the community regularly, and pretty much interact with players through Discord on a daily basis. In order to stay sane in that environment, moderating the space to a point where it is comfortable for the staff team and me is a high priority. The alternative is for me to be very hands-off and just read what people are writing. I do not like that as much, but I can understand that it works that way for many bigger MMO communities. Hordes is still fairly small, so it has been manageable.
+
+Time-wise, I'd say I spend ~30% of my time interacting with staff or players, and the rest is spent working. I'd love to be more active on social media though, and delegate more tasks in that space. I do feel that me being very close to people has made the space special for them, so there are ups and downs to both approaches.
+
+_**Hordes is a very inspiring project and a prime example of how advanced JavaScript games can get. Thank you for sharing your journey with us and being part of the Discord community! In closing words, what advice would you like to give to aspiring game developers?**_
+
+<FloatRightImage src="/interviews/dek/hordes.svg" alt="Hordes" height={180} width={180} />
+
+The hardest part in game development might just be the fact that you always have a honeymoon phase with your project, followed by a phase of hardship. It is easy to make the mistake of trying to bring things back to the honeymoon phase by adding new features or changing things you now find boring. This is an endless feature creep cycle you can get stuck in. Therefore, it is important to trust the state of mind you were in when you started working on something, and wrap that up, rather than forgetting about it and delving into the next cycle.
+
+Especially for new devs, I think knowing yourself well is really important. Know your limits when it comes to dev cycles and long working stretches. This comes with experience. So if you're going to burn yourself out, do it once, do it properly, and then learn from that so you don't repeat the mistakes.
+
+This is why I think "release small games early on" is right, but it will also not give you the full picture. Regardless of what you do, you will at some point, feature creep a dev cycle into oblivion. Learn to recognize that moment and steer away from it if possible. If you finish something that you're unhappy with by the time it is done, you've still finished something you were excited about when you started, and that is the lens through which a new person will see your game.
+
+I've talked about these issues with so many developers, and I have many thoughts about it, but that might be better material for another day :)
+
+📆 2023-01-23
+
+---
+
+⚔️ Go play Hordes on [**Hordes.io**](https://hordes.io/), follow Dek on [**Twitter**](https://twitter.com/shatterspine), and join and [**Hordes' Discord**](https://discord.gg/hordes)! Thank you Dek! 🙏

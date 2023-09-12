@@ -1,0 +1,102 @@
+import Todo from 'components/Todo'
+import Project from 'components/Project'
+import {
+  AframeLogo,
+  BabylonLogo,
+  EtherealLogo,
+  NeedleLogo,
+  ThreeLogo,
+  PlayCanvasLogo,
+  R3FLogo,
+  RogueLogo,
+  WonderlandLogo,
+} from 'lib/logos'
+import { engines, wrappers, poimandres } from 'projects'
+
+# 🥽 WebXR (VR, AR)
+
+Most WebGL 3D libraries and engines support [WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API), but there are also some XR-specific engines available if you intend to make VR or AR games. Here are some of your options:
+
+- <ThreeLogo /> <Project {...engines.three} /> (vanilla) – [WebXR
+  documentation](https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content)
+- <R3FLogo /> <Project {...poimandres.r3f} /> + <Project {...poimandres.reactXR} />
+- <AframeLogo /> <Project {...engines.aframe} description="VR/AR engine powered by Three.js" />
+- <BabylonLogo /> <Project {...engines.babylon} /> – [WebXR
+  documentation](https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR)
+- <PlayCanvasLogo /> <Project {...engines.playcanvas} /> – [WebXR
+  documentation](https://developer.playcanvas.com/en/user-manual/xr/using-webxr/)
+- <WonderlandLogo /> [**Wonderland Engine**](https://wonderlandengine.com/) – VR/AR engine and
+  editor
+- <EtherealLogo /> [**Ethereal Engine**](https://xrfoundation.github.io/ethereal-engine-docs/) –
+  Full-stack solution for metaverse experiences
+- <NeedleLogo /> [**Needle**](https://needle.tools/) – Exports Unity and Blender scenes to Three.js
+  – [WebXR documentation](https://engine.needle.tools/docs/xr.html)
+- <RogueLogo /> [**Rogue Engine**](https://rogueengine.io/) – Three.js editor in alpha with WebXR
+  support
+
+WebXR is [**not supported in Safari**](https://caniuse.com/webxr).
+
+<Todo>
+[WebXR Layers](https://developer.oculus.com/documentation/web/webxr-layers/) (for skyboxes, and more?) - [Rik Cabanier's explainer](https://github.com/cabanier/layers/blob/dom-layers/explainer.md)
+
+- <Project {...poimandres.reactXR} />
+
+Gestures
+
+[Hand tracking](https://github.com/pmndrs/react-xr#controllers)
+
+[handy.js](https://stewartsmith.io/handy/) ([GH](https://github.com/stewdio/handy.js))
+
+[webxr-hand-input explanation](https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md)
+
+[Project Flowerbed Hand animations](https://github.com/meta-quest/ProjectFlowerbed/blob/main/src/js/systems/hands/HandAnimationSystem.js)
+
+Controls
+
+[WebXR browser extention](https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje?hl=en)
+
+[Immersive Web Emulator by Meta](https://chrome.google.com/webstore/detail/immersive-web-emulator/cgffilbpcibhmcfbgggfhfolhkfbhmik)
+
+[WebXR Input Profiles](https://github.com/immersive-web/webxr-input-profiles)
+
+[three-mesh-ui](https://github.com/felixmariotto/three-mesh-ui)
+
+[@coconut-xr/koestlich](https://github.com/coconut-xr/koestlich)
+
+[WebXRQuestEmulator](https://github.com/felixtrz/WebXRQuestEmulator)
+
+[OVR Metrics Tool](https://developer.oculus.com/documentation/unity/ts-ovrmetricstool/)
+
+Fixed Foveated Rendering
+
+[Oculus Perf docs](https://developer.oculus.com/documentation/web/webxr-perf/)
+
+HTML UI inside VR ([Ethereal](https://github.com/aelatgt/ethereal), [HTMLMesh](https://github.com/mrdoob/three.js/blob/dev/examples/jsm/interactive/HTMLMesh.js), [Satori](https://github.com/vercel/satori) - [Tweet](https://twitter.com/0xca0a/status/1581751380339232768) - [R3F](https://codesandbox.io/s/stupefied-panini-wmgnzu?file=/src/App.js), [HTML2Canvas](https://html2canvas.hertzen.com/))
+
+[react-xr-ui](https://github.com/Enijar/react-xr-ui)
+
+[WebXR Awesome list](https://github.com/msub2/awesome-webxr)
+
+[Wonderland Engine](https://wonderlandengine.com/)
+
+[LogXR](https://github.com/felixtrz/logxr)
+
+[Experimental WebXR keyboard on Meta Quest](https://developer.oculus.com/documentation/web/webxr-keyboard/)
+
+[Two open-source demos show WebXR could be used to make full-fledged games](https://uploadvr.com/project-flowerbed-webxr-minigolf-open-source-demos/)
+
+[Ready Player Me](https://readyplayer.me/)
+
+[RATK (Reality Accelerator Tool Kit)](https://github.com/meta-quest/reality-accelerator-toolkit)
+
+## AR
+
+Plane detection
+
+[8th Wall WebAR](https://www.8thwall.com/)
+
+[AR.js](https://github.com/AR-js-org/AR.js)
+
+[MindAR](https://github.com/hiukim/mind-ar-js)
+
+</Todo>

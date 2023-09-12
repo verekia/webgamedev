@@ -1,0 +1,55 @@
+import Todo from 'components/Todo'
+import YouTube from 'components/YouTube'
+
+# 🏃 Model Animations
+
+Let's talk about controling model animations, which is a different topic from [🎬 Animations & Transitions](/graphics/animations-transitions).
+
+## Rigging
+
+If you want a model to be animated, you first need to **rig** it, which means adding **bones** to it. Once a model is rigged, it will follow the bones' movements as you transform them. You can use Blender to rig a model:
+
+<YouTube id="XkiWBSSuxLw" />
+
+[Mannequin.js](https://boytchev.github.io/mannequin.js/)' [Posture Editor](https://boytchev.github.io/mannequin.js/posture-editor.html) is a nice tool to familiarize yourself with manipulating human bones and joints.
+
+## Animating
+
+Animating is done by positioning and rotating the bones of your model and taking snapshots called **keyframes**. You set those keyframes on a **timeline** or **dope sheet** to represent the different positions of your model over time. Playing the animation will interpolate the positions between keyframes. You can also use Blender for this:
+
+<YouTube id="yjjLD3h3yRc" />
+
+<Todo>
+
+[Cascadeur](https://cascadeur.com/)
+
+</Todo>
+
+## Three.js
+
+<Todo>
+  [Three.js animation system](https://threejs.org/docs/#manual/en/introduction/Animation-system),
+  [AnimationMixer](https://threejs.org/docs/#api/en/animation/AnimationMixer)
+</Todo>
+
+## React Three Fiber
+
+In a R3F scene, you can use Drei [useAnimations](https://github.com/pmndrs/drei#useanimations), which abstracts Three.js' AnimationMixer to control animations.
+
+```tsx
+const MyCharacter = () => {
+  const { nodes, materials, animations } = useGLTF(url)
+  const { ref, mixer, names, actions, clips } = useAnimations(animations)
+
+  useEffect(() => {
+    actions?.jump.play()
+  })
+
+  return (
+    <mesh ref={ref} {...} />
+  )
+}
+```
+
+<YouTube id="mdj7Z3PCxRg" />
+<YouTube id="q7yH_ajINpA" />

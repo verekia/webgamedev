@@ -1,0 +1,82 @@
+import Project from 'components/Project'
+import StatsComparison from 'components/StatsComparison'
+import Todo from 'components/Todo'
+import { ecs as projects } from 'projects'
+
+# 👾 Entity - Component - System (ECS)
+
+<Todo>What ECS is</Todo>
+
+## Libraries
+
+- <Project {...projects.bitecs} />
+- <Project {...projects.miniplex} description="Has React bindings" />
+- <Project {...projects.becsy} />
+- <Project {...projects.javelin} description="Includes networking" />
+- <Project {...projects.tickKnock} />
+- <Project {...projects.ecsy} />
+- <Project {...projects.thyseus} />
+<details className="more-tools">
+<summary>Show more</summary>
+- <Project {...projects.ecsLib} />
+- <Project {...projects.entComp} />
+- <Project {...projects.picoes} />
+- <Project {...projects.geotic} />
+- <Project {...projects.reactECS} />
+- <Project {...projects.piecs} />
+- <Project {...projects.uecs} />
+- <Project {...projects.harmony} />
+- <Project {...projects.ape} />
+- <Project {...projects.nanoECS} />
+- <Project {...projects.performECS} />
+- <Project {...projects.yagl} />
+- <Project {...projects.tinyECS} />
+</details>
+
+<StatsComparison
+  projects={[
+    projects.bitecs,
+    projects.miniplex,
+    projects.becsy,
+    projects.javelin,
+    projects.tickKnock,
+    projects.ecsy,
+  ]}
+/>
+
+**Note**: There are tons of small ECS libraries that are unmaintained or barely used. I picked the ones that seemed the most relevant to me, and have received a commit less than a year ago.
+
+At the moment I have personally only tried **Miniplex**, which has excellent TypeScript support, React bindings, and a very nice simple API. It might include React Three Fiber bindings in the future as well. I have been following the development of this library closely and I am very happy with the direction it is going. I might try others in the future, but for now Miniplex is all I could ask for.
+
+<Todo>
+
+[js-ecs-benchmarks](https://github.com/ddmills/js-ecs-benchmarks)
+
+[noctjs/ecs-benchmark](https://github.com/noctjs/ecs-benchmark)
+
+[ECS FAQ](https://github.com/SanderMertens/ecs-faq)
+
+[ECS vs OOP](https://flamendless.github.io/ecs-vs-oop/)
+
+[Overwatch GDC](https://youtu.be/W3aieHjyNvw) ([reupload](https://www.youtube.com/watch?v=zrIY0eIyqmI))
+
+Using functions for derivations / computations if possible
+
+Reactivity with Zustand
+
+Systems dependencies
+
+Singleton entities (and enforcing them)
+
+Filters
+
+Side effects / Events vs calling functions directly
+
+Using callbacks on entities (onFreeze…)
+
+Saving the entity to Object3D, in userData directly on the object, or in a WeakMap.
+Useful for raycasting for instance.
+
+[Entity Relationships](https://ajmmertens.medium.com/building-games-in-ecs-with-entity-relationships-657275ba2c6c)
+
+</Todo>

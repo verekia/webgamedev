@@ -1,0 +1,117 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
+  GodotLogo,
+  NeedleLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  ReactLogo,
+  R3FLogo,
+  ThreeLogo,
+  TresLogo,
+  WasmLogo,
+  WebXRLogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+
+# Newsletter – Issue 009
+
+<SubTitleDate value="2023-02-15" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+<PlayCanvasLogo /> [Solar Games](https://solargames.io/) released their [**Uranus
+Tools**](https://solargames.io/tools/) for [PlayCanvas](https://playcanvas.com/), a collection of
+drag-and-drop scripts that extend the PlayCanvas editor with features such as automatic GPU
+instancing, open-world terrains, advanced material effects, a cross-platform multiplayer-enabled
+player controller, 3D spatial audio chat, video and screen sharing, and a lot more. They use Uranus
+Tools in the updated demo of
+[**Aritelia**](https://twitter.com/PlayingInCanvas/status/1625461178800431110), which looks better
+than ever!
+
+<ThreeLogo /> [Roman Liutikov](https://twitter.com/roman01la) open-sourced
+[**ThreeGN**](https://threegn.app/) ([repo](https://github.com/roman01la/threegn)), a port of
+Blender's geometry nodes system for the browser using [React Flow](https://reactflow.dev/) and
+[Three.js](https://threejs.org/). Read his [devlog
+article](https://www.romanliutikov.com/blog/threegn-1.html) for more details. Note that Roman
+doesn't intend to evolve the project. It is a proof of concept that others may use as a foundation
+to build upon.
+
+<WebXRLogo /> <ThreeLogo /> [Felix Zhang](https://twitter.com/felix_trz) published
+[**LogXR**](https://twitter.com/felix_trz/status/1624227962064363521), a WebXR console for Three.js
+(support for Babylon.js coming soon). Felix also developed the [Immersive Web
+Emulator](https://developer.oculus.com/blog/webxr-development-immersive-web-emulator/) mentioned in
+last week's issue.
+
+<GodotLogo /> In the native world, [**Godot 4.0 RC
+1**](https://godotengine.org/article/release-candidate-godot-4-0-rc-1/) got released, and the Godot
+Editor is now [available on Google
+Play](https://godotengine.org/article/android_godot_editor_play_store_beta_release/).
+
+## 🛠 Tools & Updates
+
+- <R3FLogo /> [**R3F v8.11.0**](https://github.com/pmndrs/react-three-fiber/releases) – [Allow
+  raycast without user
+  interaction](https://github.com/pmndrs/react-three-fiber/blob/master/docs/API/events.mdx#allow-raycast-without-user-interaction)
+  via `update()` by [0xca0a](https://twitter.com/0xca0a).
+- <R3FLogo /> [**r3f-form 2.0**](https://twitter.com/__jberesford__/status/1624152561107492864) by
+  [John Beresford](https://twitter.com/__jberesford__). Create inputs and forms in R3F. It relies on
+  the [Troika 3D Text](https://protectwise.github.io/troika/troika-three-text/) library.
+- <PlayCanvasLogo /> [**PlayCanvas v1.61.0**](https://github.com/playcanvas/engine/releases) – Last
+  week, I didn't mention that v1.61.0 brings [**UI scroll views in
+  XR**](https://twitter.com/playcanvas/status/1623334310110543872), faster clustered lighting shader
+  compile time, and WebGPU support for texture-based morphing and [light
+  cookies](https://developer.playcanvas.com/en/tutorials/light-cookies/).
+- <PhaserLogo /> [**Phaser Editor 2D v3.60 Beta
+  1**](https://phasereditor2d.com/blog/2023/02/phaser-editor-2d-v360-beta-1-released) by [Arian
+  Fornaris](https://twitter.com/PhaserEditor2D) with Nine Slice Game Object support.
+- <BabylonLogo /> [**Babylon.js v5.46.0**](https://github.com/BabylonJS/Babylon.js/releases) –
+  TypeScript version update (4.6.2 to 4.9.4).
+
+## ✍️ Content
+
+- 🎬 <ThreeLogo /> [**Three.js reflective grid with energy wave**](https://www.youtube.com/watch?v=JaXb-hH2BIg) (live stream) by [Yuri Artiukh](https://twitter.com/akella)
+- 🎬 <TresLogo /> [**Getting started with TresJS**](https://www.youtube.com/watch?v=ZM7EeS75sYM) and [**Basic animations with TresJS**](https://www.youtube.com/watch?v=XUDerRNweBE) by [Alvaro Sabu](https://twitter.com/alvarosabu)
+- 🎬 <ReactLogo /> [**React.js: The Documentary**](https://www.youtube.com/watch?v=8pDqJVdNa44) by [Honeypot](https://www.youtube.com/@Honeypotio) (there is also a [Vue documentary](https://www.youtube.com/watch?v=OrxmtDw4pVI))
+  <br />
+  <br />
+- 🐦 <ThreeLogo /> [**Use Bloom Pass to make some objects act as lights**](https://twitter.com/Andersonmancini/status/1625114134873313281) by [Anderson Mancini](https://twitter.com/Andersonmancini)
+- 🐦 <R3FLogo /> [**Using custom properties on meshes in Blender**](https://twitter.com/etthugo/status/1625534672791912459) by [Hugo Wiledal](https://twitter.com/etthugo)
+- 🐦 <R3FLogo /> [**Mini tutorial on making WebGL look good**](https://twitter.com/0xca0a/status/1625177704323596305) by [0xca0a](https://twitter.com/0xca0a)
+  <br />
+  <br />
+- ✍️ <R3FLogo /> [**Camera Fly-through on Scroll Using Theatre.js**](https://tympanus.net/codrops/2023/02/14/animate-a-camera-fly-through-on-scroll-using-theatre-js-and-react-three-fiber/) by [Andrew Prifer](https://twitter.com/AndrewPrifer)
+- ✍️ <ThreeLogo /> [**The Gooey Effects With Shader**](https://mofu-dev.com/en/blog/gooey-shader/) by [Misaki Nakano](https://twitter.com/misaki_mofu)
+- ✍️ [**ECMAScript Embedded Bitmap Encoding proposal**](https://mvasilkov.animuchan.net/ecmascript-embedded-bitmap-encoding) ([follow-up](https://mvasilkov.animuchan.net/bigint-embedded-bitmap-encoding)) by [Mark Vasilkov](https://twitter.com/mvasilkov)
+- ✍️ [**Fundamental Math for Game Developers**](https://pikuma.com/blog/math-for-game-developers) by [Gustavo Pezzi](https://twitter.com/pikuma).
+
+I also added a 📐 [**Fundamental Math**](https://www.webgamedev.com/graphics/fundamental-math) page referencing Gustavo's article and other video resources.
+
+## ✨ Games & Demos
+
+- 🎮 <ThreeLogo /> [**Ducklings**](https://ducklings.io/) by [Pelican
+  Party](https://twitter.com/pelican_party). Swim around to find your lost ducklings! 🦆
+- 🎮 <ThreeLogo /> [**Double Dodgers**](https://doubledodgers.com/) by [Pelican
+  Party](https://twitter.com/pelican_party). Do not play this game while walking on the street. 🚶
+- 🎮 <ThreeLogo /> [**Rago**](https://rago.wtlstudio.com/) by
+  [mjurczyk](https://twitter.com/thefrontendcat). The forklift-certified cat is urgently needed! 😺
+- 🎮 <BabylonLogo /> [**T5C**](https://t5c.onrender.com) – Work-in-progress multiplayer 3D top-down RPG
+  ([progress](https://forum.babylonjs.com/t/multiplayer-3d-top-down-rpg-babylon-js-colyseus/35733),
+  [article](https://dev.to/oriongunning/dev-blog-1-multiplayer-3d-top-down-rpg-using-babylonjs-colyseus-2gam),
+  [source](https://github.com/oriongunning/t5c)). Uses [Colyseus](https://www.colyseus.io/). 🦄
+- ✨ <R3FLogo /> [**Forest**](https://twitter.com/etthugo/status/1624823951275745281)
+  ([demo](https://codesandbox.io/s/pensive-julien-f1fdo4)), a React Three Fiber reproduction of
+  [this scene](https://twitter.com/TheMilkLake/status/1623056453568176128), by [Hugo
+  Wiledal](https://twitter.com/etthugo). 🌳
+
+See more on the ✨ [**Games & Demos**](https://www.webgamedev.com/games-demos) page or 🎮 [**WebGamer.io**](https://webgamer.io/).
+
+<NewsletterFooter tweetId="1625892424638955521" />

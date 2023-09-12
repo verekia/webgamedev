@@ -1,0 +1,53 @@
+import Todo from 'components/Todo'
+
+# 🔮 Techniques
+
+## Triplanar mapping
+
+Triplanar mapping is a technique used to apply textures to 3D models in a way that looks realistic regardless of the angle at which the model is viewed, to avoid stretching effects. This is especially useful for terrain.
+
+Triplanar mapping involves creating separate texture maps for each of the three axes (X, Y, and Z) and blending them based on the orientation of the face, using the one that fits best with the least stretching. This allows the texture maps to be applied consistently and smoothly across the surface of the model.
+
+More information: [Martin Palko's blog](https://www.martinpalko.com/triplanar-mapping/), [catlikecoding](https://catlikecoding.com/unity/tutorials/advanced-rendering/triplanar-mapping/), [SimonDev video](https://youtu.be/rNuDkDhadfU?t=65).
+
+## Texture bombing
+
+Texture bombing is a technique to avoid noticeable texture repetition patterns.
+
+More information: [Inigo Quilez article](https://iquilezles.org/articles/texturerepetition/), [NVIDIA article](https://developer.nvidia.com/gpugems/gpugems/part-iii-materials/chapter-20-texture-bombing), [SimonDev video](https://youtu.be/rNuDkDhadfU?t=347)
+
+## Clouds
+
+<Todo>
+
+[SimonDev's Clouds video](https://www.youtube.com/watch?v=Qj_tK_mdRcA)
+
+[Cody Bennett's implementation](https://codesandbox.io/s/rn9kfx)
+
+</Todo>
+
+## Fog
+
+<Todo>
+
+[Fog (SimonDev)](https://www.youtube.com/watch?v=k1zGz55EqfU)
+
+[Inigo Quilez article](https://iquilezles.org/articles/fog/)
+
+[Fog for Top-Down Games](https://kvachev.com/blog/posts/fog-for-topdown-games/) (Unreal Engine)
+
+</Todo>
+
+## Ray Marching
+
+[SimonDev's video](https://www.youtube.com/watch?v=BNZtUB7yhX4)
+
+[The Art of Code's video](https://www.youtube.com/watch?v=PGtv-dBi2wE)
+
+## Path Tracing
+
+You might encounter the term **path tracing** in the context of 3D graphics. Path tracing is a rendering technique that is used to generate realistic images by simulating the way light behaves in a scene. It is a type of [global illumination](https://en.wikipedia.org/wiki/Global_illumination) (GI) algorithm that can produce highly realistic images, but it is computationally intensive and requires a lot of processing power. Because of this, it is typically not used in real-time rendering for video games. However, it can be useful for creating high-quality offline renders or for creating pre-rendered cutscenes. In Three.js, you can use [three-gpu-pathtracer](https://github.com/gkjohnson/three-gpu-pathtracer) for this.
+
+## SSGI
+
+SSGI stands for **Screen Space Global Illumination**. It is a technique used to simulate realistic lighting effects such as reflections, refractions, and diffuse lighting. These effects can be difficult and computationally expensive to simulate accurately in real-time, especially in large and complex scenes. SSGI works by analyzing the scene rendered on the screen and using this information to approximate the global illumination effects. This approximation makes SSGI more performant than traditional methods of global illumination, making it suitable for use in games. [0beqz](https://twitter.com/0beqz) is working on an SSGI solution for Three.js.
