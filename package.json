@@ -2,6 +2,7 @@
   "name": "webgamedev.com",
   "version": "0.0.0",
   "private": true,
+  "deployBump": 1,
   "scripts": {
     "postbuild": "next-sitemap",
     "dev": "next dev",
