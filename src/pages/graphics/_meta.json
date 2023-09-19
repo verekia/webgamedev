@@ -1,7 +1,7 @@
 {
   "fundamental-math": { "title": "📐 Fundamental Math" },
   "3d-essentials": { "title": "🪩 3D Essentials" },
-  "particles": { "title": "✨ Particles" },
+  "vfx-particles": { "title": "✨ VFX & Particles" },
   "postprocessing": { "title": "🌈 Postprocessing" },
   "animations-transitions": { "title": "🎬 Animations" },
   "randomness-noise": { "title": "〰️ Randomness & Noise" },

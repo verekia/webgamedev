@@ -12,6 +12,11 @@ const config = withNextra({
       destination: 'https://discord.gg/5Z28wjTeyh',
       permanent: false,
     },
+    {
+      source: '/graphics/particles',
+      destination: '/graphics/vfx-particles',
+      permanent: true,
+    },
   ],
 })
 
