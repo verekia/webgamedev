@@ -1,17 +1,26 @@
 import Todo from 'components/Todo'
 import Project from 'components/Project'
-import StatsComparison from 'components/StatsComparison'
 import { physics as projects } from 'projects'
 
 # 🎾 Physics
 
 You can move around meshes using absolute positioning and math, but at some point you will probably want to use a physics engine to make things move and collide with each other in a more realistic way (and with less custom code). Here are the physics engines available for the web and a quick introduction to how they work.
 
-## Engines
+## 3D Engines
 
+- <Project {...projects.rapier3d} description="Rust-based via Wasm with TypeScript support" />
+- <Project {...projects.joltPhysics} description="C++ engine with JavaScript bindings" />
 - <Project
-    {...projects.rapier}
-    description="Rust-based via Wasm with TypeScript support (4 packages)"
+    {...projects.havok}
+    description={
+      <>
+        Closed-source web version of{' '}
+        <a target="_blank" href="https://www.havok.com/">
+          Havok
+        </a>{' '}
+        with TypeScript types
+      </>
+    }
   />
 - <Project
     {...projects.cannonEs}
@@ -33,15 +42,42 @@ You can move around meshes using absolute positioning and math, but at some poin
     {...projects.ammo}
     description={
       <>
-        JavaScript port of the <a href="https://github.com/bulletphysics/bullet3">Bullet</a> engine,
-        no NPM package
+        JavaScript port of the{' '}
+        <a target="_blank" href="https://github.com/bulletphysics/bullet3">
+          Bullet
+        </a>{' '}
+        engine, no NPM package
       </>
     }
   />
 - <Project {...projects.oimo} description="" />
 - <Project {...projects.cannonJs} description="" />
+- <Project {...projects.physxJs} description="" />
+- <Project {...projects.physxJsWebidl} description="" />
 
-<StatsComparison projects={projects} />
+## 2D Engines
+
+- <Project {...projects.matter} />
+- <Project {...projects.rapier2d} description="Rust-based via Wasm with TypeScript support" />
+- <Project
+    {...projects.detectCollisions}
+    description="TypeScript library for detecting collisions, not a full-blown engine"
+  />
+- <Project {...projects.planck} />
+- <Project
+    {...projects.box2dJs}
+    description={
+      <>
+        Port of{' '}
+        <a target="_blank" href="https://box2d.org/">
+          Box2D
+        </a>{' '}
+        to JavaScript using Emscripten
+      </>
+    }
+  />
+- <Project {...projects.p2} />
+- <Project {...projects.physicsJs} />
 
 ## Rigid Bodies
 
