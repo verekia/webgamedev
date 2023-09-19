@@ -47,19 +47,19 @@ For good measure, you might want an overview of the current market shares of oth
 
 To use React, you need a tool that will transform your React (and optionally TypeScript) files into JavaScript code that the browser can understand. You probably also want hot reloading to see your changes instantly in the browser. You can use bundlers like Webpack and transpilers like Babel to configure this yourself, but a way more convenient option is to use a framework. These frameworks on top of React are sometimes called "meta-frameworks", as in frameworks on top of an other framework (although React brands itself as a UI library).
 
+- <Project {...reactFrameworks.vite} description="Not React-specific, general-purpose bundler" />
 - <Project {...reactFrameworks.next} />
 - <Project {...reactFrameworks.cra} />
 - <Project {...reactFrameworks.gatsby} />
-- <Project {...reactFrameworks.vite} description="Not React-specific, general-purpose bundler" />
 - <Project {...reactFrameworks.remix} />
 - <Project {...reactFrameworks.astro} description="Not React-specific, island architecture" />
 
 <StatsComparison projects={reactFrameworks} />
 
 <Callout style={{ marginTop: 24, marginBottom: 24 }}>
-✅ **My choice: Next.js (or Vite)**
+✅ **My choice: Vite or Next.js**
 
-Vite is great for building [SPAs](https://developer.mozilla.org/en-US/docs/Glossary/SPA) (which most games are), but I think Next.js has an edge by providing extra features without added complexity. In particular, it includes a router, gives better SEO, server-side features, and performance optimizations. Next.js is [currently the most popular React framework](https://2021.stateofjs.com/en-US/libraries/back-end-frameworks) in terms of downloads and satisfaction and is a great choice for React websites and R3F games.
+Vite is great for building [SPAs](https://developer.mozilla.org/en-US/docs/Glossary/SPA) (which most web games are), but I think Next.js has an edge by providing extra features without much added complexity. In particular, it includes a router, gives better SEO, server-side features, and performance optimizations.
 
 </Callout>
 
