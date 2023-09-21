@@ -4,15 +4,20 @@ import {
   CocosLogo,
   ConstructLogo,
   GltfLogo,
+  GodotLogo,
   JavascriptLogo,
+  KaboomLogo,
   NeedleLogo,
   PlayCanvasLogo,
   PixiLogo,
   PhaserLogo,
+  CssLogo,
   R3FLogo,
+  RogueLogo,
   ThreeLogo,
   TresLogo,
   ThrelteLogo,
+  UnityLogo,
   WasmLogo,
   WebGPULogo,
   WebGLLogo,
@@ -30,18 +35,24 @@ import { SubTitleDate } from 'components/Date'
 
 ## 🔥 Headlines
 
-Unity stuff
+<UnityLogo /> You have probably heard that Unity is trying to introduce a [Runtime
+Fee](https://blog.unity.com/news/plan-pricing-and-packaging-updates) based on installs, for games
+that have earned more than $200.000 of revenue in the past 12 months and have at least 200,000
+lifetime installs. This is retroactive and supposed to affect all games including those that are
+already released. To the surprise of no one except the genius executives who came up with this idea,
+the community is not happy about it and they have received a ton of backlash. Unity already started
+backpedaling on some of the new rules. Web games for instance, are now exempt from this fee. They
+will soon announce their revised pricing plans.
 
-[React Jam winners](https://reactjam.com/summer-2023-winners) including 🎉 [**Keep the hype UP!**](https://webgamer.io/en/g/keep-the-hype-up) by [console_buche](https://twitter.com/Console_buche) and [Neolectron](https://twitter.com/neolectron), 🪩 [**Disco Warrior**](https://disco-warrior.summer-2023.reactjam.com/) by [Brian Breiholz](https://twitter.com/BrianBreiholz), and 🍽 [**Chop Chop**](https://app.rune.ai/dev-CAiKKUpg) by [Jason McLeod](https://twitter.com/jasonmcleod) and [Gustavo Vituri](https://twitter.com/GustavoVituri).
-
-Multiplayer Madness winners, [js13k entries](https://js13kgames.com/entries/2023)
+This fiasco has lead to a surge of interest in <GodotLogo /> [**Godot**](https://godotengine.org/), but if you have Unity refugee friends looking for new engines, send them over to [**🌐 Web Game Engines & Libraries**](https://www.webgamedev.com/engines-libraries/web-game-engines-libraries)! In particular, <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/), <RogueLogo /> [**Rogue Engine**](https://rogueengine.io/) (editor for Three.js), <BabylonLogo /> [**Babylon.js**](https://www.babylonjs.com/), <NeedleLogo /> [**Needle Engine**](https://needle.tools/), and <CocosLogo /> [**Cocos**](https://www.cocos.com/en/creator) may fulfill their needs.
 
 <img
   src="/icon.svg"
   style={{ display: 'inline-block', height: 24, width: 24, position: 'relative', top: '-1px' }}
-/> **WebGameDev.com** is now [**open source**](https://github.com/verekia/webgamedev)! The site is built
-with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me know on [Discord](https://webgamedev.com/discord)
-(@verekia) or [Twitter](https://twitter.com/verekia) if you would like to contribute!
+/> **WebGameDev.com** (yes, this website) is now [**open source**](https://github.com/verekia/webgamedev)!
+It is built with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me know on
+[Discord](https://webgamedev.com/discord) (@verekia) or [Twitter](https://twitter.com/verekia) if you
+would like to contribute!
 
 ## 💼 Jobs <span style={{ color: '#777', fontWeight: 'normal', fontSize: 24, position: 'relative', top: '-2px' }}>(sponsored)</span>
 
@@ -85,14 +96,15 @@ with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me
 
 ## 🏎 Engines & Libraries
 
-- <ThreeLogo /> [**Three.js r156**](https://github.com/mrdoob/three.js/releases) – XXX
-  https://twitter.com/threejs/status/1697267293011820955
-  ([changelog](https://github.com/mrdoob/three.js/releases/tag/rXXX), [migration
-  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
+- <ThreeLogo /> [**Three.js r156**](https://twitter.com/threejs/status/1697267293011820955) – See
+  the [changelog](https://github.com/mrdoob/three.js/releases/tag/r156) and [migration
+  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide).
 - <R3FLogo /> [**R3F v8.14.2**](https://github.com/pmndrs/react-three-fiber/releases) – Fixes and
   React Native experiments.
 - <R3FLogo /> [**Drei v9.XX**](https://github.com/pmndrs/drei/releases) –
-  [**Outlines**](https://twitter.com/0xca0a/status/1698429063776325745)
+  [MotionPathControls](https://twitter.com/0xca0a/status/1703796991975731340),
+  [Outlines](https://twitter.com/0xca0a/status/1698429063776325745), plane support for
+  [SpriteAnimator](https://codesandbox.io/s/r3f-sprite-animator-s12ijv?file=/src/App.tsx).
 - <TresLogo /> [**TresJS 3.1.0**](https://tresjs.org/blog/announcing-v-3-1-0.html) – Vue Devtools
   are back, Re-instancing of THREE Objects.
 - <TresLogo /> [**TresJS Cientos 3.2.0**](https://tresjs.org/blog/announcing-cientos-3-2-0.html) –
@@ -105,8 +117,8 @@ with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me
   the [changelog](https://github.com/photonstorm/phaser/releases) and
   [announcement](https://www.patreon.com/posts/phaser-3-61-beta-88921446).
 - <PixiLogo /> [**PixiJS 7.3.0**](https://github.com/pixijs/pixijs/releases) – See the
-  [changelog](https://github.com/pixijs/pixijs/releases). There was also a 🎙 [**Pixi
-  AMA**](https://audiomack.com/pixijs/song/discord-ama-2023-september-18) that covers Pixi v8 among
+  [changelog](https://github.com/pixijs/pixijs/releases). There was also a 🎙 [Pixi
+  AMA](https://audiomack.com/pixijs/song/discord-ama-2023-september-18) that covers Pixi v8 among
   other things.
 - <BabylonLogo /> [**Babylon.js v6.21.1**](https://github.com/BabylonJS/Babylon.js/releases) – See
   the [changelog](https://github.com/BabylonJS/Babylon.js/releases).
@@ -127,6 +139,10 @@ with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me
   Chen](https://twitter.com/AndrewChenE)
 - <R3FLogo /> [**use-spritesheet**](https://github.com/bfollington/use-spritesheet) by [Ben
   Follington](https://twitter.com/vivavolt) – 2D sprite animation helpers with Aseprite support.
+- <R3FLogo /> [**Confetti**](https://twitter.com/Andersonmancini/status/1687796441215844352)
+  ([demo](https://r3f-confetti-component.vercel.app/),
+  [source](https://github.com/ektogamat/r3f-confetti-component)) by [Anderson
+  Mancini](https://twitter.com/Andersonmancini) – Easily add confetti explosions to your scene.
 - <TresLogo /> [**TresLeches**](https://tresleches.tresjs.org/) – GUI control panel for Vue (and
   TresJS) by [Alvaro Sabu](https://twitter.com/alvarosabu)
 - <TresLogo /> [**vue-tres-starter**](https://twitter.com/fra_michelini/status/1700465842205470915)
@@ -136,10 +152,11 @@ with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me
 - <WebGLLogo /> [**Shaderfrog 2.0**](https://shaderfrog.com/2/) by [Andrew
   Ray](https://twitter.com/andrewray) – A hybrid GLSL shader graph/code editor with
   [support](https://twitter.com/andrewray/status/1697059247283142764) for Three.js, Babylon.js, and
-  PlayCanvas.
-- <GltfLogo /> [**glTF-Compressor**](https://github.khronos.org/glTF-Compressor-Release/) by
-  [Khronos](https://www.khronos.org/) – See [this
-  article](https://www.khronos.org/blog/optimize-3d-assets-with-khronos-new-gltf-compressor-tool).
+  PlayCanvas. A [JavaScript API](https://twitter.com/andrewray/status/1704697785159913752) is being
+  worked on.
+- <GltfLogo /> [**glTF-Compressor**](https://github.khronos.org/glTF-Compressor-Release/)
+  ([article](https://www.khronos.org/blog/optimize-3d-assets-with-khronos-new-gltf-compressor-tool))
+  by [Khronos](https://www.khronos.org/) – Optimize the performance and memory used by your models.
 - 🤖 [**recast-navigation-js**](https://github.com/isaac-mason/recast-navigation-js) by [Isaac Mason](https://twitter.com/isaac_mason_) was rewritten to expose more of the underlying Recast and Detour libraries while still offering a high-level API. Check out the [online navmesh generator](https://navmesh.isaacmason.com/).
 - 🏃 [**Ready Player Me Animation Library**](https://twitter.com/rainerselvet/status/1694042952946082038) ([repo](https://github.com/readyplayerme/animation-library)) – Use only allowed with [Ready Player Me](https://readyplayer.me/) avatars.
 
@@ -196,6 +213,9 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
   Tutorial**](https://www.youtube.com/watch?v=HXquxWtE5vA) (6 hours, uses
   [socket.io](https://socket.io/), no engine) by [Chris
   Courses](https://twitter.com/christopher4lis)
+- <KaboomLogo /> [**Creating a Mario-like Game in
+  JavaScript**](https://www.youtube.com/watch?v=Rtr2QpwTjM4) by [JS
+  Legend](https://twitter.com/JSLegendDev)
 - 🗺 [**Athena Crisis Map and Campaign Editor**](https://www.youtube.com/watch?v=BLEheiLmI9Q) by [Christoph Nakazawa](https://twitter.com/cpojer)
 - 🎁 [**Get Good at Blender – Practical challenges**](https://www.youtube.com/watch?v=V-NF_m1RMaw) by [Grant Abbitt](https://twitter.com/grantabbitt)
 
@@ -210,6 +230,9 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
 - <R3FLogo /> [**R3F: The Ultimate Guide to 3D Web
   Development**](https://lessons.wawasensei.dev/courses/react-three-fiber) (paid course) by [Wawa
   Sensei](https://twitter.com/wawasensei)
+- <R3FLogo /> [**Normalized 3D cursor and focal-point depth of
+  field**](https://twitter.com/0xca0a/status/1701216870404153761) by
+  [0xca0a](https://twitter.com/0xca0a)
 - <WebXRLogo /> [**WebXR is the future of
   VR**](https://mirror.xyz/kayh-online.eth/LuD-tgYNkF7hxGF9b07AzTnIfW7QzWQ0_2fe2-hOIKU) by
   [kayh](https://twitter.com/kayh_online)
@@ -230,7 +253,7 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
 - <ThreeLogo /> [**Atomize**](https://www.anumberfromtheghost.com/atomize) by [Peter
   Adams](https://twitter.com/jittercub) – New musical experience from [A Number From the
   Ghost](https://www.anumberfromtheghost.com/) 🎵
-- <ThreeLogo /> [**Slash Saber**](https://slashsaber.com/)
+- <ThreeLogo /> [**Slash Saber**](https://webgamer.io/en/g/slash-saber)
   ([source](https://github.com/honzaap/SlashSaber))
   ([video](https://www.reddit.com/r/threejs/comments/16gj8xq/slash_saber_endless_game_made_with_threejs_and_vue/))
   by [Jan Pánek](https://github.com/honzaap) – Slash bamboos to progress! (aim far ahead) 🥷
@@ -251,6 +274,19 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
 - <WebXRLogo /> <ThreeLogo /> [**Elysian**](https://elysian.fun/)
   ([video](https://twitter.com/felix_trz/status/1688376665976745985)) by [Felix
   Z](https://twitter.com/felix_trz) – Multiplayer VR shooting game 🔫
+
+The games that won [React Jam](https://reactjam.com/summer-2023-winners) (best game category) are:
+
+- <R3FLogo /> [**Keep the hype UP!**](https://webgamer.io/en/g/keep-the-hype-up) by
+  [console_buche](https://twitter.com/Console_buche) and
+  [Neolectron](https://twitter.com/neolectron) 🎉
+- <R3FLogo /> [**Disco Warrior**](https://disco-warrior.summer-2023.reactjam.com/) by [Brian
+  Breiholz](https://twitter.com/BrianBreiholz) 🪩
+- <CssLogo /> [**Chop Chop**](https://app.rune.ai/dev-CAiKKUpg) by [Jason
+  McLeod](https://twitter.com/jasonmcleod) and [Gustavo Vituri](https://twitter.com/GustavoVituri).
+  🍽
+
+Also check out the [Multiplayer Madness winners](https://itch.io/jam/multiplayer-madness-by-hathora/results) and [js13k entries](https://js13kgames.com/entries/2023).
 
 ## ✨ Demos
 
