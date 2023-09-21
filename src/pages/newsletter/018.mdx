@@ -3,6 +3,7 @@ import {
   BabylonLogo,
   CocosLogo,
   ConstructLogo,
+  GltfLogo,
   JavascriptLogo,
   NeedleLogo,
   PlayCanvasLogo,
@@ -84,7 +85,8 @@ with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me
 
 ## 🏎 Engines & Libraries
 
-- <ThreeLogo /> [**Three.js rXXX**](https://github.com/mrdoob/three.js/releases) – XXX
+- <ThreeLogo /> [**Three.js r156**](https://github.com/mrdoob/three.js/releases) – XXX
+  https://twitter.com/threejs/status/1697267293011820955
   ([changelog](https://github.com/mrdoob/three.js/releases/tag/rXXX), [migration
   guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
 - <R3FLogo /> [**R3F v8.14.2**](https://github.com/pmndrs/react-three-fiber/releases) – Fixes and
@@ -106,11 +108,18 @@ with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me
   [changelog](https://github.com/pixijs/pixijs/releases). There was also a 🎙 [**Pixi
   AMA**](https://audiomack.com/pixijs/song/discord-ama-2023-september-18) that covers Pixi v8 among
   other things.
-- <BabylonLogo /> [**Babylon.js v6.21.1**](https://github.com/BabylonJS/Babylon.js/releases)
+- <BabylonLogo /> [**Babylon.js v6.21.1**](https://github.com/BabylonJS/Babylon.js/releases) – See
+  the [changelog](https://github.com/BabylonJS/Babylon.js/releases).
 - 🗡 [**Excalibur.js v0.28.0**](https://twitter.com/excaliburjs/status/1689821246500831232) ([video](https://www.youtube.com/watch?v=t-aLiF74BoE)) by [Erik Onarheim](https://twitter.com/erikonarheim) – Arbitrary Raycasting, Text Wrapping, Custom shaders per actor, post processing improvements, Aseprite Plugin native file support, Input mapping, and more.
 
 ## 🛠 Tools
 
+- <ThreeLogo /> [**MeshParallaxMaterial**](https://three-kit.vercel.app/materials/parallax-material/)
+  ([demo](https://threejs-kit-playground.vercel.app/parallax),
+  [source](https://github.com/jerzakm/threejs-kit/tree/main/packages/materials/src/MeshParallaxMaterial))
+  by [Marcin J ](https://twitter.com/jerzakm). Here is a [BabylonJS
+  equivalent](https://twitter.com/MirkoWittwer/status/1690368342551318528) by
+  [Mirkowo](https://twitter.com/MirkoWittwer).
 - <R3FLogo /> [**Triplex 0.57.0**](https://triplex.dev/releases/v0.57.0) – Edit any child element,
   filter components, elements, and props, custom provider support.
 - <R3FLogo /> [**R3F + Rapier Character Controller
@@ -128,9 +137,11 @@ with [Nextra](https://nextra.site/), so it's a mix of Markdown and React. Let me
   Ray](https://twitter.com/andrewray) – A hybrid GLSL shader graph/code editor with
   [support](https://twitter.com/andrewray/status/1697059247283142764) for Three.js, Babylon.js, and
   PlayCanvas.
-
-[**recast-navigation-js**](https://github.com/isaac-mason/recast-navigation-js) by [Isaac Mason](https://twitter.com/isaac_mason_) was rewritten to expose more of the underlying recast and detour libraries.
-There's still a high level API that is great for most use cases, but now you also get lower level building blocks for creating your own more advanced nav mesh generator. Several issues with the three.js helpers and navmesh website have also been fixed, so in most cases you will get a good result out of the box.
+- <GltfLogo /> [**glTF-Compressor**](https://github.khronos.org/glTF-Compressor-Release/) by
+  [Khronos](https://www.khronos.org/) – See [this
+  article](https://www.khronos.org/blog/optimize-3d-assets-with-khronos-new-gltf-compressor-tool).
+- 🤖 [**recast-navigation-js**](https://github.com/isaac-mason/recast-navigation-js) by [Isaac Mason](https://twitter.com/isaac_mason_) was rewritten to expose more of the underlying Recast and Detour libraries while still offering a high-level API. Check out the [online navmesh generator](https://navmesh.isaacmason.com/).
+- 🏃 [**Ready Player Me Animation Library**](https://twitter.com/rainerselvet/status/1694042952946082038) ([repo](https://github.com/readyplayerme/animation-library)) – Use only allowed with [Ready Player Me](https://readyplayer.me/) avatars.
 
 My [Bookmarks](https://twitter.com/i/bookmarks).
 
@@ -150,10 +161,7 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
 **Twitter**:
 [Three.js](https://twitter.com/threejs),
 [#threejs](https://twitter.com/hashtag/threejs),
-[R3F](https://twitter.com/0xca0a),
-[#r3f](https://twitter.com/hashtag/r3f),
-[Babylon](https://twitter.com/babylonjs),
-[Threlte](https://twitter.com/threlte)
+[R3F](https://twitter.com/0xca0a)
 
 ## 🎬 Videos
 
@@ -173,9 +181,15 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
 - <TresLogo /> [**How to add 3D to Astro using
   TresJS**](https://www.youtube.com/watch?v=0Lg9uAuhpG8) by [Alvaro
   Sabu](https://twitter.com/alvarosabu)
+- <ThrelteLogo /> [**Make A 3D GitHub Skyline With
+  Threlte**](https://www.youtube.com/watch?v=f9fd1L1FEts) by [Joy of
+  Code](https://twitter.com/joyofcodedev)
 - <PlayCanvasLogo /> [**Creating Casual Game with
   PlayCanvas**](https://www.youtube.com/watch?v=fBpwnT201yc) by [Cem
   Demir](https://twitter.com/cemdemir)
+- <BabylonLogo /> [**Babylon Chronicles
+  podcast**](https://www.youtube.com/watch?v=5GPpE_G-SYo&list=PLsaE__vWcRalT0TQ8t00uaNPA6rZglGVb) by
+  [BabylonJS](https://www.babylonjs.com/)
 - <BabylonLogo /> [**Introducing Node Geometry**](https://www.youtube.com/watch?v=C3V-Xbj9cCE) by
   [Deltakosh](https://twitter.com/deltakosh)
 - <JavascriptLogo /> [**Online Multiplayer JavaScript Game
@@ -199,9 +213,16 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
 - <WebXRLogo /> [**WebXR is the future of
   VR**](https://mirror.xyz/kayh-online.eth/LuD-tgYNkF7hxGF9b07AzTnIfW7QzWQ0_2fe2-hOIKU) by
   [kayh](https://twitter.com/kayh_online)
+- <BabylonLogo /> [**Drawing points with
+  Babylon.js...**](https://babylonjs.medium.com/drawing-points-with-babylon-js-fd91d5d8e4ee) by
+  [Popov](https://github.com/Popov72/)
+- <BabylonLogo /> [**Babylon.js: A Cross-Platform Web-First Game
+  Engine**](https://80.lv/articles/babylon-js-a-web-first-game-engine-powering-cross-platform-experiences/)
 - <BabylonLogo /> [**Backwards Compatibility in
   Babylon.js**](https://babylonjs.medium.com/there-and-back-again-a-tale-of-backwards-compatibility-in-babylon-js-47ffc4f7ed6f)
   by [Raanan Weber](https://twitter.com/RaananW)
+- 📈 [**BLUMGI: Reaching 100M players in 2 years as an indie dev**](https://medium.com/poki/blumgi-my-journey-on-the-web-how-i-reached-100m-players-in-2-years-as-an-indie-game-developer-6071481a3461) by [Loïc](https://twitter.com/UltraBanaman)
+- 🤖 [**Using a RNN for 2D Tile Map Synthesis**](https://voxely.net/blog/using-a-rnn-for-2d-tile-map-synthesis/) by [John Lin](https://twitter.com/ProgrammerLin)
 - 🎙 [**Experience of creating JavaScript Games**](https://twitter.com/jsgamedevsummit/status/1702321365418979391) podcast by [JS GameDev Summit](https://twitter.com/jsgamedevsummit)
 
 ## 🎮 Games
@@ -263,5 +284,9 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
   [Faraz](https://twitter.com/CantBeFaraz), inspired by [Alex
   Ameye](https://twitter.com/alexanderameye)'s
   [article](https://ameye.dev/notes/stylized-water-shader/).
+- <BabylonLogo /> [**HDR Corrupted
+  Fireball**](https://twitter.com/dot_sine/status/1701522273801314653)
+  ([demo](https://playground.babylonjs.com/#BF4ZQH#22)) by [Benjamin
+  Guignabert](https://twitter.com/dot_sine)
 
 <NewsletterFooter tweetId="WILL_BE_UPDATED_IN_A_MINUTE" />
