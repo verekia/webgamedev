@@ -12,11 +12,11 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
 
     const fn = async () => {
       const res = await fetch(
-        'https://discord.com/api/v9/invites/5Z28wjTeyh?with_counts=true&with_expiration=true'
+        'https://discord.com/api/v9/invites/5Z28wjTeyh?with_counts=true&with_expiration=true',
       )
       const data = await res.json()
       const el: HTMLAnchorElement = document.querySelector(
-        'nav a[href="https://webgamedev.com/discord"]'
+        'nav a[href="https://webgamedev.com/discord"]',
       )
       el.style.top = '4px'
 
@@ -32,7 +32,12 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
 
   return (
     <>
-      <PlausibleProvider domain="webgamedev.com" trackOutboundLinks>
+      <PlausibleProvider
+        domain="webgamedev.com"
+        trackOutboundLinks
+        selfHosted
+        customDomain="https://pl.v1v2.io"
+      >
         {/* eslint-disable no-useless-escape */}
         <style global jsx>{`
           html[class~='dark'] .dark-invert-filter {

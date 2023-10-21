@@ -20,4 +20,6 @@ const config = withNextra({
   ],
 })
 
-module.exports = withPlausibleProxy({ scriptName: 'pl' })(config)
+module.exports = withPlausibleProxy({ scriptName: 'pl', customDomain: 'https://pl.v1v2.io' })(
+  config,
+)
