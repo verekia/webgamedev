@@ -1,13 +1,14 @@
 import A from 'components/A'
 
-const url = 'https://hathora.dev/?utm_source=webgamedev&utm_content=homepage'
+const mainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=homepage'
+const learnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=homepage'
 
-const HathoraSponsor = () => (
+const PokiSponsor = () => (
   <div className="homepage-promo-block">
     <style>
       {`
       .homepage-promo-block {
-        margin: 20px 0 20px;
+        margin: 40px 0 12px;
         display: flex;
         align-items: center;
       }
@@ -27,35 +28,35 @@ const HathoraSponsor = () => (
         .homepage-promo-block img {
           width: 162px;
         }
-        .hathora-white {
+        .poki-white {
           display: none;
         }
-        .hathora-black {
+        .poki-black {
           display: inline-block;
         }
-        .dark .hathora-white {
+        .dark .poki-white {
           display: inline-block;
         }
-        .dark .hathora-black {
+        .dark .poki-black {
           display: none;
         }
       `}
     </style>
     <div className="img-block">
-      <a href={url} target="_blank" rel="noopener">
-        <img alt="Hathora logo" className="hathora-black" src="/partnerships/hathora-black.png" />
-        <img alt="Hathora logo" className="hathora-white" src="/partnerships/hathora-white.png" />
+      <a href={mainUrl} target="_blank" rel="noopener">
+        <img alt="Poki logo" className="poki-black" src="/partnerships/poki-black.webp" />
+        <img alt="Poki logo" className="poki-white" src="/partnerships/poki-white.webp" />
       </a>
     </div>
     <div>
       <div>
         Sponsored by{' '}
-        <A href={url} rel="noopener">
-          <b>Hathora</b>
+        <A href={mainUrl} rel="noopener">
+          <b>Poki</b>
         </A>
-        , a serverless cloud hosting platform for multiplayer games. Seamlessly build, launch, and
-        scale your game servers globally.{' '}
-        <A href={url} rel="noopener">
+        . Reaching 50 million monthly users, Poki is on a mission to create the ultimate playground
+        for both players and developers on Web!{' '}
+        <A href={learnMoreUrl} rel="noopener">
           <b>Learn more</b>
         </A>
         .
@@ -64,4 +65,4 @@ const HathoraSponsor = () => (
   </div>
 )
 
-export default HathoraSponsor
+export default PokiSponsor

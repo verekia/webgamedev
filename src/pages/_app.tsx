@@ -234,7 +234,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
           }
           @media (max-width: 767px) {
             .full-width-mobile {
-              width: 100vw;
+              width: 98vw;
               position: relative;
               left: 50%;
               right: 50%;
