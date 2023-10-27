@@ -2,8 +2,8 @@ import A from 'components/A'
 
 const hathoraUrl = 'https://hathora.dev/?utm_source=webgamedev&utm_content=footer'
 
-const pokiMainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=homepage'
-const pokiLearnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=homepage'
+const pokiMainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=footer'
+const pokiLearnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=footer'
 
 const Footer = () => (
   <footer className="nx-bg-gray-100 dark:nx-bg-neutral-900 nx-py-12 nx-text-gray-600">
