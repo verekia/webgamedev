@@ -1,7 +1,9 @@
 import A from 'components/A'
 
 const hathoraUrl = 'https://hathora.dev/?utm_source=webgamedev&utm_content=footer'
-const pokiUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=homepage'
+
+const pokiMainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=homepage'
+const pokiLearnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=homepage'
 
 const Footer = () => (
   <footer className="nx-bg-gray-100 dark:nx-bg-neutral-900 nx-py-12 nx-text-gray-600">
@@ -43,12 +45,24 @@ const Footer = () => (
             .dark .hathora-black {
               display: none;
             }
+            .poki-white {
+              display: none;
+            }
+            .poki-black {
+              display: inline-block;
+            }
+            .dark .poki-white {
+              display: inline-block;
+            }
+            .dark .poki-black {
+              display: none;
+            }
           `}
     </style>
     <div className="footer-promo-block">
       <div>
         <div>
-          <a href={pokiUrl} target="_blank" rel="noopener">
+          <a href={pokiMainUrl} target="_blank" rel="noopener">
             <img
               alt="Poki logo"
               className="poki-black"
@@ -66,7 +80,7 @@ const Footer = () => (
         <div>
           <div>
             Sponsored by{' '}
-            <A href={pokiUrl} rel="noopener">
+            <A href={pokiLearnMoreUrl} rel="noopener">
               <b>Poki</b>
             </A>
           </div>
