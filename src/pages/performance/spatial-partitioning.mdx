@@ -1,0 +1,42 @@
+import Project from 'components/Project'
+import { spatial as projects } from 'projects'
+import { R3FLogo } from 'lib/logos'
+
+# 🧊 Spatial Partitioning
+
+Spatial partitioning is a technique for dividing a space into multiple sub-spaces, or partitions, to aid in the processing and management of data. It is used in a variety of applications, from collision detection to ray tracing. Here is a nice [visualization of how it works](https://timohausmann.github.io/quadtree-ts/).
+
+A simple use case could be checking the distance between the player and nearby enemies in a game. If there are 100 enemies, you would have to check the distance between the player and all 100 enemies. If you divide the game world into 4 quadrants, you would only have to check the distance between the player and the enemies in the quadrant the player is in, resulting in a significant performance boost.
+
+Here are some libraries to help you implement spatial partitioning in your projects.
+
+## Quadtrees
+
+[Wikipedia](https://en.wikipedia.org/wiki/Quadtree)
+
+- <Project {...projects.quadtreeTs} />
+- <Project {...projects.d3Quadtree} />
+- <Project {...projects.quadtreeJs} />
+
+## Octrees
+
+[Wikipedia](https://en.wikipedia.org/wiki/Octree)
+
+- <Project {...projects.sparseOctree} description="Requires Three.js as a peer dependency" />
+- <Project {...projects.d3Octree} />
+
+## BVH
+
+Bounding Volume Hierarchy: [Wikipedia](https://en.wikipedia.org/wiki/Bounding_volume_hierarchy)
+
+- <Project
+    {...projects.threeMeshBvh}
+    description={
+      <>
+        With React Three Fiber, see <R3FLogo />
+        <a style={{ marginLeft: 5 }} href="https://github.com/pmndrs/drei#bvh" target="_blank">
+          <b>Drei &lt;Bvh&gt;</b>
+        </a>
+      </>
+    }
+  />

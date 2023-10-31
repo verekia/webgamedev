@@ -13,6 +13,7 @@ export const engines = {
     npm: 'three',
     stars: 95_000,
     downloads: 1_000_000,
+    ts: 'dt',
   },
   pixi: {
     name: 'PixiJS',
@@ -21,6 +22,7 @@ export const engines = {
     stars: 41_000,
     downloads: 105_000,
     npm: 'pixi.js',
+    ts: 'ts',
   },
   phaser: {
     name: 'Phaser',
@@ -29,6 +31,7 @@ export const engines = {
     stars: 35_000,
     downloads: 16_000,
     npm: 'phaser',
+    ts: 'ts',
   },
   babylon: {
     name: 'Babylon.js',
@@ -37,6 +40,7 @@ export const engines = {
     stars: 22_000,
     downloads: 30_000,
     npm: '@babylonjs/core',
+    ts: 'ts',
   },
   playcanvas: {
     name: 'PlayCanvas',
@@ -45,6 +49,7 @@ export const engines = {
     stars: 9_000,
     // downloads: 2_000,
     npm: 'playcanvas',
+    ts: 'ts',
   },
   ogl: {
     url: 'https://oframe.github.io/ogl/examples/',
@@ -53,6 +58,7 @@ export const engines = {
     stars: 3300,
     npm: 'ogl',
     downloads: 12_000,
+    ts: 'ts',
   },
   kaboom: {
     name: 'Kaboom',
@@ -61,6 +67,7 @@ export const engines = {
     stars: 2200,
     npm: 'kaboom',
     downloads: 5000,
+    ts: 'ts',
   },
   two: {
     name: 'Two.js',
@@ -69,6 +76,7 @@ export const engines = {
     stars: 8000,
     npm: 'two.js',
     downloads: 3500,
+    ts: 'ts',
   },
   excalibur: {
     name: 'Excalibur',
@@ -77,6 +85,7 @@ export const engines = {
     stars: 1400,
     downloads: 1200,
     npm: 'excalibur',
+    ts: 'ts',
   },
   kontra: {
     name: 'Kontra',
@@ -85,6 +94,7 @@ export const engines = {
     stars: 800,
     npm: 'kontra',
     downloads: 400,
+    ts: 'ts',
   },
   melon: {
     name: 'melonJS',
@@ -93,6 +103,7 @@ export const engines = {
     stars: 5500,
     npm: 'melonjs',
     downloads: 200,
+    ts: 'ts',
   },
   impact: {
     name: 'Impact',
@@ -100,6 +111,7 @@ export const engines = {
     lastCommitDate: '2014-07-28',
     repo: 'phoboslab/impact',
     stars: 1900,
+    ts: 'js',
   },
   aframe: {
     name: 'A-Frame',
@@ -108,6 +120,7 @@ export const engines = {
     stars: 16_000,
     downloads: 10_000,
     npm: 'aframe',
+    ts: 'dt',
   },
 }
 
@@ -116,19 +129,22 @@ export const hybridEngines = {
     name: 'Needle',
     url: 'https://needle.tools/',
     npm: '@needle-tools/engine',
-    downloads: 500,
+    downloads: 900,
+    ts: 'ts',
   },
   spline: {
     url: 'https://spline.design/',
     name: 'Spline',
     npm: '@splinetool/runtime',
     downloads: 90_000,
+    ts: 'ts',
   },
   cocosCreator: {
     name: 'Cocos Creator',
     url: 'https://www.cocos.com/en/creator',
     repo: 'cocos/cocos-engine',
     stars: 4600,
+    ts: 'ts',
   },
   cocos2dx: {
     name: 'Cocos2d-x',
@@ -136,22 +152,26 @@ export const hybridEngines = {
     repo: 'cocos2d/cocos2d-x',
     stars: 17_400,
     lastCommitDate: '2020-01-06',
+    ts: 'js',
   },
   construct: {
     name: 'Construct 3',
     url: 'https://www.construct.net/',
+    ts: 'ts',
   },
   filament: {
     name: 'Filament',
     url: 'https://google.github.io/filament/',
     repo: 'google/filament',
     stars: 16_000,
+    ts: 'ts',
   },
   gdevelop: {
     name: 'GDevelop',
     url: 'https://gdevelop.io/',
     repo: '4ian/GDevelop',
     stars: 5100,
+    ts: 'ts',
   },
 }
 
@@ -163,6 +183,7 @@ export const poimandres = {
     npm: '@react-three/fiber',
     stars: 24_000,
     downloads: 210_000,
+    ts: 'ts',
   },
   drei: {
     name: 'Drei',
@@ -170,6 +191,7 @@ export const poimandres = {
     npm: '@react-three/drei',
     stars: 6100,
     downloads: 150_000,
+    ts: 'ts',
   },
   reactSpring: {
     name: 'react-spring',
@@ -178,6 +200,7 @@ export const poimandres = {
     npm: 'react-spring',
     stars: 26_000,
     downloads: 800_000,
+    ts: 'ts',
   },
   leva: {
     name: 'Leva',
@@ -186,6 +209,7 @@ export const poimandres = {
     npm: 'leva',
     stars: 4100,
     downloads: 35_000,
+    ts: 'ts',
   },
   gltfjsx: {
     name: 'gltfjsx',
@@ -193,6 +217,7 @@ export const poimandres = {
     repo: 'pmndrs/gltfjsx',
     stars: 3600,
     npm: 'gltfjsx',
+    ts: 'js',
     // Not putting downloads as it's not relevant
   },
   threeStdlib: {
@@ -201,6 +226,7 @@ export const poimandres = {
     npm: 'three-stdlib',
     stars: 550,
     downloads: 140_000,
+    ts: 'ts',
   },
   cannonEs: {
     name: 'cannon-es',
@@ -208,6 +234,7 @@ export const poimandres = {
     stars: 1500,
     downloads: 10_000,
     npm: 'cannon-es',
+    ts: 'ts',
   },
   useCannon: {
     name: 'use-cannon',
@@ -215,6 +242,7 @@ export const poimandres = {
     npm: '@react-three/cannon',
     stars: 2600,
     downloads: 8000,
+    ts: 'ts',
   },
   postprocessing: {
     name: 'postprocessing',
@@ -222,6 +250,7 @@ export const poimandres = {
     npm: 'postprocessing',
     stars: 1600,
     downloads: 28_000,
+    ts: 'ts',
   },
   reactPostprocessing: {
     name: 'react-postprocessing',
@@ -229,6 +258,7 @@ export const poimandres = {
     npm: '@react-three/postprocessing',
     stars: 900,
     downloads: 18_000,
+    ts: 'ts',
   },
   reactXR: {
     name: 'react-xr',
@@ -236,6 +266,7 @@ export const poimandres = {
     npm: '@react-three/xr',
     stars: 1700,
     downloads: 1800,
+    ts: 'ts',
   },
   reactThreeRapier: {
     name: 'react-three-rapier',
@@ -243,12 +274,14 @@ export const poimandres = {
     npm: '@react-three/rapier',
     stars: 600,
     downloads: 2000,
+    ts: 'ts',
   },
   reactThreeNext: {
     name: 'react-three-next',
     url: 'https://react-three-next.vercel.app/',
     repo: 'pmndrs/react-three-next',
     stars: 1700,
+    ts: 'ts',
   },
   reactThreeFlex: {
     name: 'react-three-flex',
@@ -256,6 +289,7 @@ export const poimandres = {
     npm: '@react-three/flex',
     stars: 1600,
     downloads: 1300,
+    ts: 'ts',
   },
   reactThreeEditor: {
     name: 'react-three-editor',
@@ -264,6 +298,7 @@ export const poimandres = {
     npm: '@react-three/editor',
     downloads: 700,
     lastCommitDate: '2023-01-13',
+    ts: 'ts',
   },
   lamina: {
     name: 'Lamina',
@@ -271,6 +306,7 @@ export const poimandres = {
     npm: 'lamina',
     stars: 940,
     downloads: 2500,
+    ts: 'ts',
   },
   zustand: {
     name: 'Zustand',
@@ -278,6 +314,7 @@ export const poimandres = {
     npm: 'zustand',
     stars: 35_000,
     downloads: 2_000_000,
+    ts: 'ts',
   },
   jotai: {
     name: 'Jotai',
@@ -285,6 +322,7 @@ export const poimandres = {
     npm: 'jotai',
     stars: 15_000,
     downloads: 500_000,
+    ts: 'ts',
   },
   valtio: {
     name: 'Valtio',
@@ -292,6 +330,7 @@ export const poimandres = {
     npm: 'valtio',
     stars: 7500,
     downloads: 300_000,
+    ts: 'ts',
   },
 }
 
@@ -302,6 +341,7 @@ export const theatre = {
   npm: '@theatre/core',
   stars: 10_000,
   downloads: 1200,
+  ts: 'ts',
 }
 
 export const particles = {
@@ -310,11 +350,13 @@ export const particles = {
     name: 'Effekseer',
     repo: 'effekseer/EffekseerForWebGL',
     stars: 1200,
+    ts: 'ts',
   },
   r3fEffekseer: {
     repo: 'Ctrlmonster/r3f-effekseer',
     name: 'r3f-effekseer',
     stars: 50,
+    ts: 'ts',
   },
   quarks: {
     name: 'three.quarks',
@@ -322,6 +364,7 @@ export const particles = {
     stars: 300,
     npm: 'three.quarks',
     downloads: 600,
+    ts: 'ts',
   },
   nebula: {
     url: 'https://three-nebula.org/',
@@ -331,6 +374,7 @@ export const particles = {
     stars: 800,
     downloads: 200,
     lastCommitDate: '2021-11-05',
+    ts: 'dt',
   },
   proton: {
     url: 'https://drawcall.github.io/three.proton/',
@@ -340,6 +384,7 @@ export const particles = {
     npm: 'three.proton.js',
     downloads: 10,
     lastCommitDate: '2020-07-29',
+    ts: 'js',
   },
 }
 
@@ -351,6 +396,7 @@ export const debugUI = {
     stars: 750,
     npm: 'lil-gui',
     downloads: 150_000,
+    ts: 'ts',
   },
   datGui: {
     name: 'dat.GUI',
@@ -359,6 +405,7 @@ export const debugUI = {
     stars: 7_000,
     downloads: 27_000,
     lastCommitDate: '2022-02-19',
+    ts: 'dt',
   },
   leva: poimandres.leva,
   tweakpane: {
@@ -368,6 +415,7 @@ export const debugUI = {
     npm: 'tweakpane',
     stars: 2900,
     downloads: 10_000,
+    ts: 'ts',
   },
   uil: {
     url: 'https://lo-th.github.io/uil/',
@@ -376,6 +424,7 @@ export const debugUI = {
     stars: 530,
     npm: 'uil',
     downloads: 30,
+    ts: 'js',
   },
   guify: {
     url: 'https://jons.website/projects/guify/',
@@ -385,6 +434,7 @@ export const debugUI = {
     stars: 270,
     npm: 'guify',
     downloads: 560,
+    ts: 'js',
   },
   reactDatGui: {
     name: 'React dat.GUI',
@@ -393,6 +443,7 @@ export const debugUI = {
     stars: 290,
     downloads: 1100,
     lastCommitDate: '2021-03-30',
+    ts: 'ts',
   },
   controlPanel: {
     name: 'control-panel',
@@ -401,6 +452,7 @@ export const debugUI = {
     stars: 220,
     downloads: 20,
     lastCommitDate: '2018-10-21',
+    ts: 'js',
   },
   oui: {
     name: 'Oui',
@@ -409,6 +461,7 @@ export const debugUI = {
     stars: 270,
     downloads: 10,
     lastCommitDate: '2018-04-03',
+    ts: 'js',
   },
   controlKit: {
     name: 'ControlKit',
@@ -417,6 +470,7 @@ export const debugUI = {
     npm: 'controlkit',
     downloads: 15,
     lastCommitDate: '2016-07-30',
+    ts: 'js',
   },
 }
 
@@ -428,6 +482,7 @@ export const uiLibraries = {
     stars: 213_000,
     downloads: 20_000_000,
     npm: 'react',
+    ts: 'dt',
   },
   vue: {
     url: 'https://vuejs.org/',
@@ -436,6 +491,7 @@ export const uiLibraries = {
     stars: 205_000,
     downloads: 3_900_000,
     npm: 'vue',
+    ts: 'ts',
   },
   angular: {
     url: 'https://angular.io/',
@@ -444,6 +500,7 @@ export const uiLibraries = {
     stars: 90_000,
     npm: '@angular/core',
     downloads: 3_100_000,
+    ts: 'ts',
   },
   preact: {
     url: 'https://preactjs.com/',
@@ -452,6 +509,7 @@ export const uiLibraries = {
     stars: 35_000,
     npm: 'preact',
     downloads: 2_300_000,
+    ts: 'ts',
   },
   svelte: {
     url: 'https://svelte.dev/',
@@ -460,6 +518,7 @@ export const uiLibraries = {
     stars: 73_000,
     npm: 'svelte',
     downloads: 700_000,
+    ts: 'ts',
   },
   lit: {
     name: 'Lit',
@@ -468,6 +527,7 @@ export const uiLibraries = {
     stars: 16_000,
     npm: 'lit',
     downloads: 1_000_000,
+    ts: 'ts',
   },
   stencil: {
     url: 'https://stenciljs.com/',
@@ -476,6 +536,7 @@ export const uiLibraries = {
     stars: 12_000,
     npm: '@stencil/core',
     downloads: 1_000_000,
+    ts: 'ts',
   },
   alpine: {
     url: 'https://alpinejs.dev/',
@@ -484,6 +545,7 @@ export const uiLibraries = {
     repo: 'alpinejs/alpine',
     stars: 25_000,
     downloads: 160_000,
+    ts: 'dt',
   },
   solid: {
     url: 'https://www.solidjs.com/',
@@ -492,6 +554,7 @@ export const uiLibraries = {
     stars: 29_000,
     npm: 'solid-js',
     downloads: 120_000,
+    ts: 'ts',
   },
   ember: {
     url: 'https://emberjs.com/',
@@ -500,6 +563,7 @@ export const uiLibraries = {
     stars: 22_000,
     npm: 'ember-cli',
     downloads: 140_000,
+    ts: 'ts',
   },
   inferno: {
     url: 'https://www.infernojs.org/',
@@ -508,6 +572,7 @@ export const uiLibraries = {
     stars: 16_000,
     npm: 'inferno',
     downloads: 112_000,
+    ts: 'ts',
   },
   mithril: {
     url: 'https://mithril.js.org/',
@@ -516,6 +581,7 @@ export const uiLibraries = {
     npm: 'mithril',
     stars: 14_000,
     downloads: 14_000,
+    ts: 'dt',
   },
   aurelia: {
     name: 'Aurelia',
@@ -525,6 +591,7 @@ export const uiLibraries = {
     downloads: 12_000,
     stars: 12_000,
     lastCommitDate: '2022-03-31',
+    ts: 'ts',
   },
   qwik: {
     url: 'https://qwik.builder.io/',
@@ -533,6 +600,7 @@ export const uiLibraries = {
     stars: 19_000,
     npm: '@builder.io/qwik',
     downloads: 12_000,
+    ts: 'ts',
   },
   angularJs: {
     url: 'https://angularjs.org/',
@@ -542,6 +610,7 @@ export const uiLibraries = {
     stars: 59_000,
     npm: 'angular',
     downloads: 460_000,
+    ts: 'dt',
   },
   polymer: {
     url: 'https://polymer-library.polymer-project.org/',
@@ -550,6 +619,7 @@ export const uiLibraries = {
     stars: 22_000,
     npm: '@polymer/polymer',
     downloads: 81_000,
+    ts: 'ts',
   },
 }
 
@@ -561,6 +631,7 @@ export const wrappers = {
     stars: 1400,
     npm: '@threlte/core',
     downloads: 5_000,
+    ts: 'ts',
   },
   svelteCubed: {
     url: 'https://svelte-cubed.vercel.app/',
@@ -570,6 +641,7 @@ export const wrappers = {
     npm: 'svelte-cubed',
     downloads: 500,
     lastCommitDate: '2021-11-23',
+    ts: 'ts',
   },
   tres: {
     name: 'TresJS',
@@ -577,7 +649,8 @@ export const wrappers = {
     repo: 'tresjs/tres',
     stars: 700,
     npm: '@tresjs/core',
-    downloads: 500,
+    downloads: 1200,
+    ts: 'ts',
   },
   trois: {
     url: 'https://troisjs.github.io/',
@@ -587,6 +660,7 @@ export const wrappers = {
     lastCommitDate: '2023-02-22',
     npm: 'troisjs',
     downloads: 1000,
+    ts: 'ts',
   },
   lunchbox: {
     name: 'Lunchbox',
@@ -596,6 +670,7 @@ export const wrappers = {
     npm: 'lunchboxjs',
     downloads: 30,
     lastCommitDate: '2022-11-19',
+    ts: 'ts',
   },
   angularThree: {
     url: 'https://angular-three.netlify.app/',
@@ -604,6 +679,7 @@ export const wrappers = {
     stars: 100,
     downloads: 100,
     repo: 'angular-threejs/angular-three',
+    ts: 'ts',
   },
   reactBabylon: {
     name: 'react-babylonjs',
@@ -611,6 +687,7 @@ export const wrappers = {
     stars: 700,
     npm: 'react-babylonjs',
     downloads: 1700,
+    ts: 'ts',
   },
   vueBabylon: {
     url: 'https://vue-babylonjs.com',
@@ -620,6 +697,7 @@ export const wrappers = {
     npm: 'vue-babylonjs',
     downloads: 60,
     lastCommitDate: '2019-06-02',
+    ts: 'js',
   },
   svelteBabylon: {
     url: 'https://svelte-babylon.netlify.app/',
@@ -628,6 +706,7 @@ export const wrappers = {
     stars: 14,
     npm: 'svelte-babylon',
     downloads: 10,
+    ts: 'ts',
   },
   reactPixi: {
     url: 'https://pixijs.io/pixi-react/',
@@ -636,6 +715,7 @@ export const wrappers = {
     stars: 1900,
     npm: '@pixi/react',
     downloads: 5000,
+    ts: 'ts',
   },
   reactPixiFiber: {
     name: 'ReactPixiFiber',
@@ -644,6 +724,7 @@ export const wrappers = {
     npm: 'react-pixi-fiber',
     downloads: 800,
     lastCommitDate: '2022-11-25',
+    ts: 'ts',
   },
   sveltePixi: {
     url: 'https://svelte-pixi.com/docs/getting-started/introduction',
@@ -653,6 +734,7 @@ export const wrappers = {
     npm: 'svelte-pixi',
     downloads: 80,
     lastCommitDate: '2022-08-23',
+    ts: 'ts',
   },
   phavuer: {
     name: 'Phavuer',
@@ -660,6 +742,7 @@ export const wrappers = {
     stars: 100,
     npm: 'phavuer',
     downloads: 30,
+    ts: 'ts',
     // lastCommitDate: '2023-03-28',
   },
   sveltePhaser: {
@@ -668,6 +751,7 @@ export const wrappers = {
     stars: 80,
     npm: 'svelte-phaser',
     downloads: 15,
+    ts: 'ts',
     lastCommitDate: '2021-08-22',
   },
   reactPhaserFiber: {
@@ -676,6 +760,7 @@ export const wrappers = {
     stars: 50,
     npm: 'react-phaser-fiber',
     downloads: 20,
+    ts: 'ts',
     lastCommitDate: '2020-04-03',
   },
   reactPhaser: {
@@ -684,6 +769,7 @@ export const wrappers = {
     stars: 100,
     npm: 'react-phaser',
     downloads: 10,
+    ts: 'js',
     lastCommitDate: '2016-04-22',
   },
   ionPhaser: {
@@ -693,6 +779,7 @@ export const wrappers = {
     npm: '@ion-phaser/core',
     downloads: 400,
     lastCommitDate: '2021-03-16',
+    ts: 'ts',
   },
   reactOgl: {
     name: 'react-ogl',
@@ -700,14 +787,16 @@ export const wrappers = {
     npm: 'react-ogl',
     stars: 140,
     downloads: 30,
+    ts: 'ts',
     lastCommitDate: '2022-10-10',
   },
   svelteOgl: {
     name: 'svelte-ogl',
     repo: 'KotwOSS/svelte-ogl',
     stars: 3,
-    npm: 'svelte-ogl',
-    downloads: 10,
+    // npm: 'svelte-ogl',
+    // downloads: 10,
+    ts: 'ts',
     lastCommitDate: '2022-12-21',
   },
 }
@@ -720,6 +809,7 @@ export const reactFrameworks = {
     stars: 60_000,
     npm: 'vite',
     downloads: 6_500_000,
+    ts: 'ts',
   },
   next: {
     url: 'https://nextjs.org/',
@@ -728,6 +818,7 @@ export const reactFrameworks = {
     stars: 112_000,
     downloads: 4_600_000,
     npm: 'next',
+    ts: 'ts',
   },
   cra: {
     url: 'https://create-react-app.dev/',
@@ -736,6 +827,7 @@ export const reactFrameworks = {
     stars: 101_000,
     npm: 'react-scripts',
     downloads: 3_200_000,
+    ts: 'ts',
   },
   gatsby: {
     url: 'https://www.gatsbyjs.com/',
@@ -744,6 +836,7 @@ export const reactFrameworks = {
     stars: 55_000,
     npm: 'gatsby',
     downloads: 330_000,
+    ts: 'ts',
   },
   remix: {
     url: 'https://remix.run/',
@@ -752,6 +845,7 @@ export const reactFrameworks = {
     stars: 25_000,
     npm: '@remix-run/react',
     downloads: 180_000,
+    ts: 'ts',
   },
   astro: {
     url: 'https://astro.build/',
@@ -760,6 +854,7 @@ export const reactFrameworks = {
     stars: 35_000,
     npm: 'astro',
     downloads: 120_000,
+    ts: 'ts',
   },
 }
 
@@ -770,6 +865,7 @@ export const typescript = {
   stars: 94_000,
   npm: 'typescript',
   downloads: 43_000_000,
+  ts: 'ts',
 }
 
 export const animations = {
@@ -780,6 +876,7 @@ export const animations = {
     stars: 19_500,
     npm: 'popmotion',
     downloads: 1_400_000,
+    ts: 'ts',
   },
   reactSpring: poimandres.reactSpring,
   gsap: {
@@ -789,6 +886,16 @@ export const animations = {
     stars: 17_000,
     npm: 'gsap',
     downloads: 380_000,
+    ts: 'ts',
+  },
+  animeJs: {
+    name: 'anime.js',
+    url: 'https://animejs.com/',
+    repo: 'juliangarnier/anime',
+    npm: 'animejs',
+    stars: 47_000,
+    downloads: 150_000,
+    ts: 'dt',
   },
   framerMotion3d: {
     url: 'https://www.framer.com/docs/three-introduction/',
@@ -797,6 +904,7 @@ export const animations = {
     stars: 20_000,
     npm: 'framer-motion-3d',
     downloads: 3000,
+    ts: 'ts',
   },
   tweenJs: {
     name: 'tween.js',
@@ -805,6 +913,7 @@ export const animations = {
     stars: 9400,
     npm: '@tweenjs/tween.js',
     downloads: 320_000,
+    ts: 'ts',
   },
   motionOne: {
     name: 'Motion One',
@@ -813,17 +922,9 @@ export const animations = {
     stars: 1800,
     downloads: 200_000,
     npm: 'motion',
+    ts: 'ts',
   },
   theatre,
-  animeJs: {
-    name: 'anime.js',
-    url: 'https://animejs.com/',
-    repo: 'juliangarnier/anime',
-    npm: 'animejs',
-    stars: 47_000,
-    downloads: 150_000,
-    lastCommitDate: '2020-10-15',
-  },
 }
 
 export const audio = {
@@ -834,6 +935,7 @@ export const audio = {
     stars: 22_000,
     npm: 'howler',
     downloads: 280_000,
+    ts: 'dt',
   },
   tuna: {
     name: 'tuna',
@@ -841,6 +943,7 @@ export const audio = {
     stars: 1600,
     npm: 'tunajs',
     downloads: 200,
+    ts: 'dt',
   },
   pizzicato: {
     name: 'Pizzicato',
@@ -849,6 +952,7 @@ export const audio = {
     lastCommitDate: '2020-03-22',
     npm: 'pizzicato',
     downloads: 500,
+    ts: 'dt',
   },
   reactronica: {
     url: 'https://reactronica.com/',
@@ -857,6 +961,7 @@ export const audio = {
     stars: 400,
     npm: 'reactronica',
     downloads: 40,
+    ts: 'ts',
   },
   reactMusic: {
     name: 'react-music',
@@ -865,6 +970,7 @@ export const audio = {
     npm: 'react-music',
     downloads: 10,
     lastCommitDate: '2018-03-16',
+    ts: 'js',
   },
   soundJs: {
     name: 'SoundJS',
@@ -873,6 +979,7 @@ export const audio = {
     npm: 'soundjs',
     downloads: 200,
     lastCommitDate: '2017-10-17',
+    ts: 'dt',
   },
   tone: {
     name: 'Tone.js',
@@ -881,6 +988,7 @@ export const audio = {
     stars: 13_000,
     npm: 'tone',
     downloads: 20_000,
+    ts: 'ts',
   },
   wad: {
     name: 'WadJS',
@@ -888,6 +996,7 @@ export const audio = {
     stars: 1700,
     npm: 'web-audio-daw',
     downloads: 400,
+    ts: 'ts',
   },
   xsound: {
     name: 'XSound',
@@ -895,6 +1004,7 @@ export const audio = {
     stars: 170,
     npm: 'xsound',
     downloads: 200,
+    ts: 'ts',
   },
 }
 
@@ -906,6 +1016,7 @@ export const physics = {
     stars: 2800,
     npm: '@dimforge/rapier3d-compat',
     downloads: 4500,
+    ts: 'ts',
   },
   rapier2d: {
     name: 'Rapier (2D)',
@@ -914,11 +1025,22 @@ export const physics = {
     stars: 2800,
     npm: '@dimforge/rapier2d-compat',
     downloads: 300,
+    ts: 'ts',
   },
   ammo: {
     name: 'ammo.js',
     repo: 'kripken/ammo.js',
     stars: 3800,
+    ts: 'js',
+  },
+  ammoTyped: {
+    repo: 'giniedp/ammojs-typed',
+    stars: 50,
+    name: 'Ammo.js Typed',
+    npm: 'ammojs-typed',
+    downloads: 400,
+    ts: 'ts',
+    lastCommitDate: '2020-07-13',
   },
   cannonEs: poimandres.cannonEs,
   cannonJs: {
@@ -928,6 +1050,7 @@ export const physics = {
     stars: 4400,
     downloads: 3000,
     lastCommitDate: '2016-05-03',
+    ts: 'dt',
   },
   oimo: {
     name: 'Oimo.js',
@@ -936,6 +1059,7 @@ export const physics = {
     npm: 'oimo',
     downloads: 500,
     lastCommitDate: '2017-06-20',
+    ts: 'js',
   },
   useCannon: poimandres.useCannon,
   joltPhysics: {
@@ -944,12 +1068,14 @@ export const physics = {
     npm: 'jolt-physics',
     stars: 3700,
     downloads: 10,
+    ts: 'ts',
   },
   havok: {
     url: 'https://doc.babylonjs.com/features/featuresDeepDive/physics/havokPlugin',
     name: 'Havok for the Web',
     npm: '@babylonjs/havok',
     downloads: 400,
+    ts: 'ts',
   },
   physxJs: {
     name: 'physx-js',
@@ -958,6 +1084,7 @@ export const physics = {
     npm: 'physx-js',
     downloads: 10,
     lastCommitDate: '2022-10-23',
+    ts: 'js',
   },
   physxJsWebidl: {
     repo: 'fabmax/physx-js-webidl',
@@ -965,6 +1092,7 @@ export const physics = {
     npm: 'physx-js-webidl',
     stars: 70,
     downloads: 10,
+    ts: 'ts',
   },
   detectCollisions: {
     name: 'Detect-Collisions',
@@ -972,6 +1100,7 @@ export const physics = {
     stars: 140,
     npm: 'detect-collisions',
     downloads: 2000,
+    ts: 'ts',
   },
   matter: {
     url: 'https://brm.io/matter-js/',
@@ -980,6 +1109,7 @@ export const physics = {
     stars: 15_000,
     npm: 'matter-js',
     downloads: 15_000,
+    ts: 'dt',
   },
   planck: {
     url: 'https://piqnt.com/planck.js',
@@ -988,6 +1118,7 @@ export const physics = {
     stars: 4600,
     npm: 'planck-js',
     downloads: 300,
+    ts: 'ts',
   },
   p2: {
     url: 'https://schteppe.github.io/p2.js/',
@@ -997,6 +1128,7 @@ export const physics = {
     npm: 'p2',
     downloads: 500,
     lastCommitDate: '2016-10-04',
+    ts: 'dt',
   },
   physicsJs: {
     repo: 'wellcaffeinated/PhysicsJS',
@@ -1005,12 +1137,14 @@ export const physics = {
     stars: 3600,
     npm: 'physicsjs',
     downloads: 5,
+    ts: 'js',
   },
   box2dJs: {
     name: 'box2D.js',
     repo: 'kripken/box2d.js',
     stars: 1300,
     lastCommitDate: '2020-06-04',
+    ts: 'js',
   },
 }
 
@@ -1022,6 +1156,7 @@ export const webWorkers = {
     downloads: 270_000,
     npm: 'comlink',
     lastCommitDate: '2023-02-03',
+    ts: 'ts',
   },
   workerpool: {
     name: 'workerpool',
@@ -1029,6 +1164,7 @@ export const webWorkers = {
     stars: 1500,
     npm: 'workerpool',
     downloads: 5_400_000,
+    ts: 'dt',
   },
   threads: {
     name: 'threads.js',
@@ -1038,6 +1174,7 @@ export const webWorkers = {
     npm: 'threads',
     downloads: 92_000,
     lastCommitDate: '2021-09-26',
+    ts: 'ts',
   },
   troikaWorkerUtils: {
     url: 'https://protectwise.github.io/troika/troika-worker-utils/',
@@ -1045,6 +1182,7 @@ export const webWorkers = {
     repo: 'protectwise/troika',
     npm: 'troika-worker-utils',
     downloads: 120_000,
+    ts: 'js',
   },
   comlinkLoader: {
     name: 'comlink-loader',
@@ -1053,6 +1191,7 @@ export const webWorkers = {
     downloads: 5000,
     npm: 'comlink-loader',
     lastCommitDate: '2020-01-15',
+    ts: 'ts',
   },
   greenlet: {
     name: 'Greenlet',
@@ -1061,6 +1200,7 @@ export const webWorkers = {
     npm: 'greenlet',
     downloads: 600,
     lastCommitDate: '2019-10-16',
+    ts: 'ts',
   },
   workerize: {
     name: 'Workerize',
@@ -1069,6 +1209,7 @@ export const webWorkers = {
     npm: 'workerize',
     downloads: 700,
     lastCommitDate: '2019-12-28',
+    ts: 'js',
   },
   workerizeLoader: {
     name: 'workerize-loader',
@@ -1076,6 +1217,7 @@ export const webWorkers = {
     stars: 2300,
     npm: 'workerize-loader',
     downloads: 15_000,
+    ts: 'js',
   },
 }
 
@@ -1097,13 +1239,15 @@ export const ecs = {
     stars: 730,
     npm: 'bitecs',
     downloads: 600,
+    ts: 'ts',
   },
   miniplex: {
     name: 'Miniplex',
     repo: 'hmans/miniplex',
     stars: 500,
     npm: 'miniplex',
-    downloads: 600,
+    downloads: 1000,
+    ts: 'ts',
   },
   becsy: {
     name: 'Becsy',
@@ -1111,6 +1255,7 @@ export const ecs = {
     stars: 150,
     npm: '@lastolivegames/becsy',
     downloads: 1500,
+    ts: 'ts',
   },
   ape: {
     name: 'Ape-ECS',
@@ -1119,6 +1264,7 @@ export const ecs = {
     downloads: 60,
     npm: 'ape-ecs',
     lastCommitDate: '2021-02-04',
+    ts: 'ts',
   },
   ecsLib: {
     name: 'ecs-lib',
@@ -1126,6 +1272,7 @@ export const ecs = {
     stars: 150,
     npm: 'ecs-lib',
     downloads: 50,
+    ts: 'ts',
   },
   ecsy: {
     name: 'ECSY',
@@ -1134,6 +1281,7 @@ export const ecs = {
     downloads: 500,
     npm: 'ecsy',
     lastCommitDate: '2020-09-10',
+    ts: 'ts',
   },
   entComp: {
     name: 'EntComp',
@@ -1141,6 +1289,7 @@ export const ecs = {
     stars: 25,
     downloads: 200,
     npm: 'ent-comp',
+    ts: 'js',
   },
   geotic: {
     name: 'Geotic',
@@ -1149,6 +1298,7 @@ export const ecs = {
     stars: 150,
     downloads: 100,
     lastCommitDate: '2022-03-21',
+    ts: 'js',
   },
   harmony: {
     name: 'Harmony ECS',
@@ -1157,6 +1307,7 @@ export const ecs = {
     downloads: 30,
     repo: '3mcd/harmony-ecs',
     lastCommitDate: '2021-12-01',
+    ts: 'ts',
   },
   javelin: {
     name: 'Javelin',
@@ -1164,6 +1315,7 @@ export const ecs = {
     npm: '@javelin/ecs',
     stars: 170,
     downloads: 100,
+    ts: 'ts',
   },
   nanoECS: {
     name: 'Nano ECS',
@@ -1172,6 +1324,7 @@ export const ecs = {
     stars: 60,
     downloads: 20,
     lastCommitDate: '2020-05-28',
+    ts: 'js',
   },
   performECS: {
     name: 'Perform ECS',
@@ -1180,6 +1333,7 @@ export const ecs = {
     downloads: 30,
     npm: 'perform-ecs',
     lastCommitDate: '2019-06-18',
+    ts: 'ts',
   },
   picoes: {
     name: 'PicoES',
@@ -1187,6 +1341,7 @@ export const ecs = {
     stars: 10,
     npm: 'picoes',
     downloads: 90,
+    ts: 'js',
     // lastCommitDate: '2022- 05-11'
   },
   piecs: {
@@ -1196,6 +1351,7 @@ export const ecs = {
     lastCommitDate: '2021-11-07',
     npm: 'piecs',
     downloads: 30,
+    ts: 'ts',
   },
   reactECS: {
     name: 'React ECS',
@@ -1204,6 +1360,7 @@ export const ecs = {
     stars: 70,
     downloads: 290,
     lastCommitDate: '2021-12-12',
+    ts: 'ts',
   },
   thyseus: {
     name: 'Thyseus',
@@ -1211,6 +1368,7 @@ export const ecs = {
     stars: 50,
     npm: 'thyseus',
     downloads: 200,
+    ts: 'ts',
   },
   tickKnock: {
     name: 'Tick-Knock',
@@ -1218,6 +1376,7 @@ export const ecs = {
     stars: 100,
     npm: 'tick-knock',
     downloads: 250,
+    ts: 'ts',
   },
   tinyECS: {
     name: 'TinyECS',
@@ -1226,6 +1385,7 @@ export const ecs = {
     npm: 'tiny-ecs',
     downloads: 30,
     lastCommitDate: '2014-02-07',
+    ts: 'js',
   },
   uecs: {
     name: 'μECS',
@@ -1234,6 +1394,7 @@ export const ecs = {
     stars: 30,
     downloads: 60,
     lastCommitDate: '2021-11-18',
+    ts: 'ts',
   },
   yagl: {
     name: 'Yagl',
@@ -1242,6 +1403,7 @@ export const ecs = {
     stars: 120,
     npm: 'yagl-ecs',
     downloads: 30,
+    ts: 'js',
   },
 }
 
@@ -1306,6 +1468,7 @@ export const reactQuery = {
   stars: 36_000,
   npm: '@tanstack/react-query',
   downloads: 1_800_000,
+  ts: 'ts',
 }
 
 export const graphql = {
@@ -1322,6 +1485,7 @@ export const trpc = {
   repo: 'trpc/trpc',
   stars: 29_000,
   downloads: 290_000,
+  ts: 'ts',
 }
 
 export const webrtc = {
@@ -1332,6 +1496,7 @@ export const webrtc = {
     stars: 11_500,
     npm: 'peerjs',
     downloads: 24_000,
+    ts: 'ts',
   },
   simplePeer: {
     name: 'SimplePeer',
@@ -1340,13 +1505,15 @@ export const webrtc = {
     npm: 'simple-peer',
     downloads: 37_000,
     lastCommitDate: '2023-02-18',
+    ts: 'dt',
   },
   geckos: {
     name: 'Geckos.io',
     repo: 'geckosio/geckos.io',
     npm: '@geckos.io/server',
     stars: 1200,
-    downloads: 100,
+    downloads: 160,
+    ts: 'ts',
   },
   nodeDataChannel: {
     name: 'node-datachannel',
@@ -1354,6 +1521,7 @@ export const webrtc = {
     stars: 190,
     npm: 'node-datachannel',
     downloads: 6000,
+    ts: 'ts',
   },
   nodeWebRtc: {
     name: 'node-webrtc',
@@ -1361,6 +1529,7 @@ export const webrtc = {
     stars: 2600,
     npm: 'wrtc',
     downloads: 9_000,
+    ts: 'js',
   },
   webUdp: {
     name: 'web-udp',
@@ -1369,6 +1538,7 @@ export const webrtc = {
     npm: '@web-udp/client',
     downloads: 10,
     lastCommitDate: '2020-05-04',
+    ts: 'ts',
   },
 }
 
@@ -1379,6 +1549,7 @@ export const random = {
     stars: 140,
     npm: 'random',
     downloads: 25_000,
+    ts: 'ts',
   },
   prando: {
     name: 'Prando',
@@ -1387,6 +1558,7 @@ export const random = {
     npm: 'prando',
     downloads: 12_000,
     lastCommitDate: '2021-05-01',
+    ts: 'ts',
   },
   alea: {
     name: 'alea',
@@ -1395,6 +1567,7 @@ export const random = {
     npm: 'alea',
     downloads: 44_000,
     lastCommitDate: '2021-09-08',
+    ts: 'js',
   },
   aimless: {
     url: 'https://chriscavs.github.io/aimless-demo/',
@@ -1404,6 +1577,7 @@ export const random = {
     npm: 'aimless.js',
     downloads: 20,
     isNew: true,
+    ts: 'ts',
   },
   numberGenerator: {
     name: 'Number Generator',
@@ -1412,6 +1586,7 @@ export const random = {
     npm: 'number-generator',
     downloads: 600,
     lastCommitDate: '2022-10-19',
+    ts: 'ts',
   },
   randomJs: {
     name: 'random-js',
@@ -1419,6 +1594,7 @@ export const random = {
     stars: 600,
     downloads: 60_000,
     lastCommitDate: '2019-05-31',
+    ts: 'ts',
   },
   randomSeed: {
     name: 'random-seed',
@@ -1427,6 +1603,7 @@ export const random = {
     npm: 'random-seed',
     downloads: 100_000,
     lastCommitDate: '2015-06-02',
+    ts: 'dt',
   },
   seedRandom: {
     name: 'seedrandom.js',
@@ -1435,6 +1612,7 @@ export const random = {
     npm: 'seedrandom',
     downloads: 1_600_000,
     lastCommitDate: '2019-09-17',
+    ts: 'dt',
   },
   seedDashRandom: {
     name: 'seed-random',
@@ -1443,6 +1621,7 @@ export const random = {
     npm: 'seed-random',
     downloads: 1_000_000,
     lastCommitDate: '2013-11-11',
+    ts: 'dt',
   },
   thingRandom: {
     url: 'https://www.npmjs.com/package/@thi.ng/random',
@@ -1450,6 +1629,7 @@ export const random = {
     repo: 'thi-ng/umbrella',
     npm: '@thi.ng/random',
     downloads: 145_000,
+    ts: 'ts',
   },
 }
 
@@ -1460,14 +1640,7 @@ export const noise = {
     stars: 1400,
     npm: 'simplex-noise',
     downloads: 20_000,
-  },
-  fastSimplexNoise: {
-    name: 'fast-simplex-noise',
-    repo: 'joshforisha/fast-simplex-noise-js',
-    stars: 60,
-    npm: 'fast-simplex-noise',
-    downloads: 300,
-    lastCommitDate: '2017-02-17',
+    ts: 'ts',
   },
   fractalNoise: {
     name: 'fractal-noise',
@@ -1475,6 +1648,7 @@ export const noise = {
     repo: 'joshforisha/fractal-noise-js',
     stars: 50,
     downloads: 40,
+    ts: 'ts',
   },
   tumult: {
     name: 'tumult',
@@ -1483,6 +1657,7 @@ export const noise = {
     npm: 'tumult',
     downloads: 150,
     lastCommitDate: '2019-12-02',
+    ts: 'js',
   },
   openSimplexNoise: {
     name: 'open-simplex-noise',
@@ -1491,6 +1666,72 @@ export const noise = {
     npm: 'open-simplex-noise',
     downloads: 200,
     lastCommitDate: '2021-04-27',
+    ts: 'ts',
+  },
+  fastSimplexNoise: {
+    name: 'fast-simplex-noise',
+    repo: 'joshforisha/fast-simplex-noise-js',
+    stars: 60,
+    npm: 'fast-simplex-noise',
+    downloads: 300,
+    lastCommitDate: '2017-02-17',
+    ts: 'ts',
+  },
+}
+
+export const spatial = {
+  quadtreeTs: {
+    name: 'quadtree-ts',
+    url: 'https://timohausmann.github.io/quadtree-ts/',
+    repo: 'timohausmann/quadtree-ts',
+    stars: 74,
+    npm: '@timohausmann/quadtree-ts',
+    downloads: 500,
+    ts: 'ts',
+  },
+  d3Quadtree: {
+    name: 'd3-quadtree',
+    url: 'https://d3js.org/d3-quadtree',
+    repo: 'd3/d3-quadtree',
+    stars: 222,
+    npm: 'd3-quadtree',
+    downloads: 2_500_000,
+    lastCommitDate: '2021-07-16',
+    ts: 'dt',
+  },
+  quadtreeJs: {
+    name: 'js-quadtree',
+    repo: 'CorentinTh/quadtree-js',
+    stars: 63,
+    npm: 'js-quadtree',
+    downloads: 200,
+    lastCommitDate: '2021-06-11',
+    ts: 'ts',
+  },
+  sparseOctree: {
+    name: 'sparse-octree',
+    repo: 'vanruesc/sparse-octree',
+    stars: 100,
+    npm: 'sparse-octree',
+    downloads: 5400,
+    ts: 'ts',
+  },
+  d3Octree: {
+    name: 'vasturiano/d3-octree',
+    repo: 'vasturiano/d3-octree',
+    stars: 25,
+    npm: 'd3-octree',
+    downloads: 30_000,
+    ts: 'js',
+  },
+  threeMeshBvh: {
+    name: 'three-mesh-bvh',
+    url: 'https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html',
+    repo: 'gkjohnson/three-mesh-bvh',
+    stars: 2000,
+    npm: 'three-mesh-bvh',
+    downloads: 182_000,
+    ts: 'ts',
   },
 }
 
@@ -1502,6 +1743,7 @@ export const gameFrameworks = {
     stars: 5100,
     npm: 'colyseus',
     downloads: 3500,
+    ts: 'ts',
   },
   actionhero: {
     url: 'https://www.actionherojs.com/',
@@ -1510,6 +1752,7 @@ export const gameFrameworks = {
     stars: 2400,
     npm: 'actionhero',
     downloads: 2000,
+    ts: 'ts',
   },
   pomelo: {
     name: 'Pomelo',
@@ -1518,6 +1761,7 @@ export const gameFrameworks = {
     npm: 'pomelo',
     downloads: 300,
     lastCommitDate: '2019-11-08',
+    ts: 'js',
   },
   lance: {
     name: 'Lance',
@@ -1527,6 +1771,7 @@ export const gameFrameworks = {
     npm: 'lance-gg',
     downloads: 30,
     lastCommitDate: '2020-01-11',
+    ts: 'ts',
   },
   boardGameIo: {
     url: 'https://boardgame.io',
@@ -1535,6 +1780,7 @@ export const gameFrameworks = {
     stars: 9700,
     npm: 'boardgame.io',
     downloads: 500,
+    ts: 'ts',
   },
   nengi: {
     name: 'nengi',
@@ -1543,6 +1789,7 @@ export const gameFrameworks = {
     npm: 'nengi',
     downloads: 50,
     lastCommitDate: '2022-03-22',
+    ts: 'ts',
   },
 }
 
@@ -1554,6 +1801,7 @@ export const desktop = {
     stars: 109_000,
     npm: 'electron',
     downloads: 623_000,
+    ts: 'ts',
   },
   tauri: {
     url: 'https://tauri.app/',
@@ -1562,12 +1810,14 @@ export const desktop = {
     stars: 80_000,
     npm: '@tauri-apps/cli',
     downloads: 20_000,
+    ts: 'ts',
   },
   nw: {
     url: 'https://nwjs.io/',
     name: 'NW.js',
     repo: 'nwjs/nw.js',
     stars: 40_000,
+    ts: 'js',
   },
   nodeGui: {
     name: 'NodeGui',
@@ -1576,6 +1826,7 @@ export const desktop = {
     stars: 8500,
     npm: '@nodegui/nodegui',
     downloads: 400,
+    ts: 'ts',
   },
   gluon: {
     url: 'https://gluonjs.org/',
@@ -1584,6 +1835,7 @@ export const desktop = {
     stars: 2600,
     npm: '@gluon-framework/gluon',
     downloads: 30,
+    ts: 'ts',
   },
   neutralino: {
     name: 'Neutralinojs',
@@ -1592,6 +1844,7 @@ export const desktop = {
     stars: 6900,
     npm: '@neutralinojs/neu',
     downloads: 400,
+    ts: 'js',
   },
   wails: {
     name: 'Wails',
@@ -1608,18 +1861,21 @@ export const steam = {
     stars: 220,
     npm: 'steamworks.js',
     downloads: 300,
+    ts: 'ts',
   },
   communityGreenworks: {
     name: 'Greenworks (community fork)',
     repo: 'greenworksjs/greenworks',
     stars: 15,
     lastCommitDate: '2022-02-25',
+    ts: 'ts',
   },
   greenworks: {
     name: 'Greenworks',
     repo: 'greenheartgames/greenworks',
     stars: 1400,
     lastCommitDate: '2018-11-18',
+    ts: 'js',
   },
 }
 

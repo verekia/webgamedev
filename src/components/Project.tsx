@@ -1,5 +1,6 @@
 import A from 'components/A'
 import { DeadIcon, DownloadIcon, NewIcon, SleepIcon, StarIcon } from 'lib/icons'
+import { DTLogo, TypescriptLogo, JavascriptLogo } from 'lib/logos'
 
 const black = 'black-text'
 const red = 'red-text'
@@ -19,6 +20,7 @@ type Props = {
   withNewlineDescription?: boolean
   isNew?: boolean
   hide?: boolean
+  ts?: 'ts' | 'dt' | 'js'
   crateDownloads?: number
   crate?: string
 }
@@ -39,6 +41,7 @@ const Project = ({
   isNew,
   crate,
   crateDownloads,
+  ts,
   hide = false,
   ...props
 }: Props) => {
@@ -83,8 +86,26 @@ const Project = ({
       <A href={url ?? repoUrl} style={{ fontWeight: 'bold' }}>
         {name}
       </A>
-      {(repo || npm || description || isNew || lastCommitDate) && (
+      {(repo || npm || description || isNew || lastCommitDate || ts) && (
         <>
+          {ts === 'ts' && (
+            <span style={{ marginLeft: 5, position: 'relative', top: -2 }}>
+              {/* @ts-ignore */}
+              <TypescriptLogo />
+            </span>
+          )}
+          {ts === 'js' && (
+            <span style={{ marginLeft: 5, position: 'relative', top: -2 }}>
+              {/* @ts-ignore */}
+              <JavascriptLogo />
+            </span>
+          )}
+          {ts === 'dt' && (
+            <span style={{ marginLeft: 5, position: 'relative', top: -2 }}>
+              {/* @ts-ignore */}
+              <DTLogo />
+            </span>
+          )}
           {isNew && (
             <span style={{ marginLeft: 6 }}>
               <NewIcon

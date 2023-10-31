@@ -42,6 +42,7 @@ import WebGLSrc from '../../public/logos/webgl-letter.png'
 import WebGPUSrc from '../../public/logos/webgpu.png'
 import WebXRSrc from '../../public/logos/webxr.png'
 import WonderlandSrc from '../../public/logos/wonderland.png'
+import DTSrc from '../../public/logos/dt.svg'
 
 const defaultStyle = { width: 20, height: 20, display: 'inline-block' }
 
@@ -552,6 +553,18 @@ export const DefoldLogo = (props: ImageProps) => (
       alt="Defold"
       title="Defold"
       src={DefoldSrc}
+      style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const DTLogo = (props: ImageProps) => (
+  <a href="https://github.com/DefinitelyTyped/DefinitelyTyped" target="_blank" rel="noopener">
+    <Image
+      alt="Definitely Typed"
+      title="Definitely Typed"
+      src={DTSrc}
       style={{ ...defaultStyle, ...props.style }}
       {...props}
     />
