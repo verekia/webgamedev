@@ -1,28 +1,32 @@
 import StatsComparison from 'components/StatsComparison'
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import { animations as projects } from 'projects'
 
 # 🎬 Animations & Transitions
 
 Let's talk about animations and transitions, which is a different topic from [🏃 Model Animations](/models-assets/model-animations).
 
-- <Project
-    {...projects.popmotion}
-    description={
-      <>
-        Low-level library used by{' '}
-        <a href="https://www.framer.com/motion/">
-          <b>Framer Motion</b>
-        </a>
-      </>
-    }
-  />
-- <Project {...projects.reactSpring} />
-- <Project {...projects.gsap} />
-- <Project {...projects.animeJs} />
-- <Project {...projects.framerMotion3d} description="Framer Motion for React Three Fiber" />
-- <Project {...projects.tweenJs} />
-- <Project {...projects.motionOne} />
-- <Project {...projects.theatre} />
+<ProjectList
+  projects={[
+    {
+      ...projects.popmotion,
+      description: (
+        <>
+          Low-level library used by{' '}
+          <a href="https://www.framer.com/motion/">
+            <b>Framer Motion</b>
+          </a>
+        </>
+      ),
+    },
+    projects.reactSpring,
+    projects.gsap,
+    projects.animeJs,
+    { ...projects.framerMotion3d, description: 'Framer Motion for React Three Fiber' },
+    projects.tweenJs,
+    projects.motionOne,
+    projects.theatre,
+  ]}
+/>
 
 <StatsComparison projects={projects} />

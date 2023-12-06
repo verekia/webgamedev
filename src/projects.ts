@@ -262,6 +262,7 @@ export const poimandres = {
   },
   reactXR: {
     name: 'react-xr',
+    url: 'https://github.com/pmndrs/react-xr',
     repo: 'pmndrs/react-xr',
     npm: '@react-three/xr',
     stars: 1700,

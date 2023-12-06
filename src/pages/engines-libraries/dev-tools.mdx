@@ -1,4 +1,6 @@
+import ProjectList from 'components/ProjectList'
 import Project from 'components/Project'
+import A from 'components/A'
 import Todo from 'components/Todo'
 import StatsComparison from 'components/StatsComparison'
 import { theatre, debugUI as projects } from 'projects'
@@ -11,38 +13,74 @@ In order to get a more well-rounded environment for Three.js development, you ca
 
 ## Three.js
 
-- [**three-tools by BACE**](https://github.com/oslabs-beta/BACE) – Chrome
-- [**Three.js Developer Tools**](https://addons.mozilla.org/en-US/firefox/addon/three-js-developer-tools/) – Firefox
-- [**Stats.js**](https://github.com/mrdoob/stats.js/) – Included in R3F [**Drei**](https://github.com/pmndrs/drei#stats)
-- [**stats-gl**](https://github.com/RenaudRohlinger/stats-gl) – WebGL performance monitoring tool
-- [**Three.js Editor**](https://threejs.org/editor/)
-- [**DrawCallInspector**](https://github.com/Fyrestar/THREE.DrawCallInspector) (Chrome, experimental)
-- [**three-inspect**](https://github.com/michealparks/three-inspect)
+<ProjectList
+  projects={[
+    {
+      name: 'three-tools by BACE',
+      url: 'https://github.com/oslabs-beta/BACE',
+      description: 'Chrome',
+    },
+    {
+      name: 'Three.js Developer Tools',
+      url: 'https://addons.mozilla.org/en-US/firefox/addon/three-js-developer-tools/',
+      description: 'Firefox',
+    },
+    {
+      name: 'Stats.js',
+      url: 'https://github.com/mrdoob/stats.js/',
+      description: (
+        <>
+          Included in R3F{' '}
+          <A href="https://github.com/pmndrs/drei#stats" isExternal>
+            Drei
+          </A>
+        </>
+      ),
+    },
+    {
+      name: 'stats-gl',
+      url: 'https://github.com/RenaudRohlinger/stats-gl',
+      description: 'WebGL performance monitoring tool',
+    },
+    { name: 'Three.js Editor', url: 'https://threejs.org/editor/' },
+    {
+      name: 'DrawCallInspector',
+      url: 'https://github.com/Fyrestar/THREE.DrawCallInspector',
+      description: '(Chrome, experimental)',
+    },
+    { name: 'three-inspect', url: 'https://github.com/michealparks/three-inspect' },
+  ]}
+/>
 
 ## React Three Fiber
 
-- [**TRIPLEX**](https://triplex.dev/)
-- [**R3F-Perf**](https://github.com/utsuboco/r3f-perf)
+<ProjectList
+  projects={[
+    { name: 'TRIPLEX', url: 'https://triplex.dev' },
+    { name: 'R3F-Perf', url: 'https://github.com/utsuboco/r3f-perf' },
+  ]}
+/>
 
 ## WebGL
 
-- [**Spector.js**](https://spector.babylonjs.com/)
+<ProjectList projects={[{ name: 'Spector.js', url: 'https://spector.babylonjs.com' }]} />
 
 ## Debug UI
 
-- <Project {...projects.lilGui} />
-- <Project {...projects.datGui} />
-- <Project {...projects.leva} />
-- <Project {...projects.tweakpane} />
-<details className="more-tools">
-<summary>Show more</summary>
-- <Project {...projects.uil} />
-- <Project {...projects.guify} />
-- <Project {...projects.reactDatGui} />
-- <Project {...projects.controlPanel} />
-- <Project {...projects.oui} />
-- <Project {...projects.controlKit} />
-</details>
+<ProjectList
+  projects={[
+    projects.lilGui,
+    projects.datGui,
+    projects.leva,
+    projects.tweakpane,
+    projects.uil,
+    projects.guify,
+    projects.reactDatGui,
+    projects.controlPanel,
+    projects.oui,
+    projects.controlKit,
+  ]}
+/>
 
 <StatsComparison projects={[projects.lilGui, projects.datGui, projects.leva, projects.tweakpane]} />
 

@@ -1,5 +1,6 @@
 import Todo from 'components/Todo'
 import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import {
   AframeLogo,
   BabylonLogo,
@@ -17,22 +18,81 @@ import { engines, wrappers, poimandres, hybridEngines } from 'projects'
 
 Most WebGL 3D libraries and engines support [WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API), but there are also some XR-specific engines available if you intend to make VR or AR games. Here are some of your options:
 
-- <ThreeLogo /> <Project {...engines.three} /> (vanilla) – [WebXR
-  documentation](https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content)
-- <R3FLogo /> <Project {...poimandres.r3f} /> + <Project {...poimandres.reactXR} />
-- <AframeLogo /> <Project {...engines.aframe} description="VR/AR engine powered by Three.js" />
-- <BabylonLogo /> <Project {...engines.babylon} /> – [WebXR
-  documentation](https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR)
-- <PlayCanvasLogo /> <Project {...engines.playcanvas} /> – [WebXR
-  documentation](https://developer.playcanvas.com/en/user-manual/xr/using-webxr/)
-- <WonderlandLogo /> [**Wonderland Engine**](https://wonderlandengine.com/) – VR/AR engine and
-  editor
-- <EtherealLogo /> [**Ethereal Engine**](https://www.etherealengine.com/) – Full-stack solution for
-  metaverse experiences
-- <NeedleLogo /> <Project {...hybridEngines.needle} /> – Exports Unity and Blender scenes to
-  Three.js – [WebXR documentation](https://engine.needle.tools/docs/xr.html)
-- <RogueLogo /> [**Rogue Engine**](https://rogueengine.io/) – Three.js editor in alpha with WebXR
-  support
+<ProjectList
+  projects={[
+    {
+      ...engines.three,
+      logo: <ThreeLogo />,
+      description: (
+        <a href="https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content">
+          WebXR documentation
+        </a>
+      ),
+    },
+    {
+      ...poimandres.reactXR,
+      description: (
+        <>
+          React components and hooks for creating VR/AR applications with{' '}
+          <a href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction">
+            React Three Fiber
+          </a>
+        </>
+      ),
+    },
+    {
+      ...engines.aframe,
+      logo: <AframeLogo />,
+      description: 'VR/AR engine powered by Three.js',
+    },
+    {
+      ...engines.babylon,
+      logo: <BabylonLogo />,
+      description: (
+        <a href="https://doc.babylonjs.com/features/featuresDeepDive/webXR/introToWebXR">
+          WebXR documentation
+        </a>
+      ),
+    },
+    {
+      ...engines.playcanvas,
+      logo: <PlayCanvasLogo />,
+      description: (
+        <a href="https://developer.playcanvas.com/en/user-manual/xr/using-webxr">
+          WebXR documentation
+        </a>
+      ),
+    },
+    {
+      name: 'Wonderland Engine',
+      url: 'https://wonderlandengine.com/',
+      logo: <WonderlandLogo />,
+      description: 'VR/AR engine and editor',
+    },
+    {
+      name: 'Ethereal Engine',
+      url: 'https://www.etherealengine.com/',
+      logo: <EtherealLogo />,
+      description: 'Full-stack solution for metaverse experiences',
+    },
+    {
+      ...hybridEngines.needle,
+      logo: <NeedleLogo />,
+      description: (
+        <>
+          Exports Unity and Blender scenes to Three.js.{' '}
+          <a href="https://engine.needle.tools/docs/xr.html">WebXR documentation</a>
+        </>
+      ),
+    },
+    {
+      name: 'Rogue Engine',
+      url: 'https://rogueengine.io/',
+      logo: <RogueLogo />,
+      description: 'Three.js editor in alpha with WebXR support',
+    },
+  ]}
+/>
 
 WebXR is [**not supported in Safari**](https://caniuse.com/webxr).
 

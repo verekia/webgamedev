@@ -1,23 +1,26 @@
 import Todo from 'components/Todo'
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import { audio as projects } from 'projects'
 
 # 🔈 Audio
 
 ## Toolkits
 
-- <Project {...projects.howler} />
-- <Project {...projects.soundJs} />
+<ProjectList projects={[projects.howler, projects.soundJs]} />
 
 ## Music production, effects
 
-- <Project {...projects.tone} description="DAW" />
-- <Project {...projects.wad} description="DAW" />
-- <Project {...projects.tuna} description="Effects" />
-- <Project {...projects.xsound} description="DAW" />
-- <Project {...projects.reactronica} description="Tone.js in React" />
-- <Project {...projects.pizzicato} description="DAW" />
-- <Project {...projects.reactMusic} description="Archived" />
+<ProjectList
+  projects={[
+    { ...projects.tone, description: 'DAW' },
+    { ...projects.wad, description: 'DAW' },
+    { ...projects.tuna, description: 'Effects' },
+    { ...projects.xsound, description: 'DAW' },
+    { ...projects.reactronica, description: 'Tone.js in React' },
+    { ...projects.pizzicato, description: 'DAW' },
+    { ...projects.reactMusic, description: 'Archived' },
+  ]}
+/>
 
 <Todo>
   Positional audio / spatial audio

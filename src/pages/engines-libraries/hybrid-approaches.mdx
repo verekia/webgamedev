@@ -1,5 +1,5 @@
 import { hybridEngines } from 'projects'
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import {
   CocosLogo,
   ConstructLogo,
@@ -13,10 +13,38 @@ import {
 
 Some game engines combine native features such as providing an editor and native exports, and offer JavaScript support or bindings, making them somewhat _hybrid_. They all have pretty unique features, so check them out in more detail to see which one is right for you.
 
-- <NeedleLogo /> <Project {...hybridEngines.needle} description="Tools to export Unity and Blender scenes to Three.js" />
-- <SplineLogo /> <Project {...hybridEngines.spline} description="Freemium collaborative web-based 3D modeling tool. Can be used for games." />
-- <CocosLogo /> <Project {...hybridEngines.cocosCreator} description="2D & 3D engine" />
-- <CocosLogo /> <Project {...hybridEngines.cocos2dx} description="Legacy 2D engine with JavaScript to C++ bindings" />
-- <ConstructLogo /> <Project {...hybridEngines.construct} description="2D engine with visual scripting and JavaScript support" />
-- <FilamentLogo /> <Project {...hybridEngines.filament} description="C++ 3D engine with JavaScript support and WebGL2 exports" />
-- <GDevelopLogo /> <Project {...hybridEngines.gdevelop} description="Open-source no-code platform" />
+<ProjectList
+  projects={[
+    {
+      ...hybridEngines.needle,
+      logo: <NeedleLogo />,
+      description: 'Tools to export Unity and Blender scenes to Three.js',
+    },
+    {
+      ...hybridEngines.spline,
+      logo: <SplineLogo />,
+      description: 'Freemium collaborative web-based 3D modeling tool. Can be used for games',
+    },
+    { ...hybridEngines.cocosCreator, logo: <CocosLogo />, description: '2D & 3D engine' },
+    {
+      ...hybridEngines.cocos2dx,
+      logo: <CocosLogo />,
+      description: 'Legacy 2D engine with JavaScript to C++ bindings',
+    },
+    {
+      ...hybridEngines.construct,
+      logo: <ConstructLogo />,
+      description: '2D engine with visual scripting and JavaScript support',
+    },
+    {
+      ...hybridEngines.filament,
+      logo: <FilamentLogo />,
+      description: 'C++ 3D engine with JavaScript support and WebGL2 exports',
+    },
+    {
+      ...hybridEngines.gdevelop,
+      logo: <GDevelopLogo />,
+      description: 'Open-source no-code platform',
+    },
+  ]}
+/>

@@ -1,4 +1,4 @@
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import { spatial as projects } from 'projects'
 import { R3FLogo } from 'lib/logos'
 
@@ -14,29 +14,35 @@ Here are some libraries to help you implement spatial partitioning in your proje
 
 [Wikipedia](https://en.wikipedia.org/wiki/Quadtree)
 
-- <Project {...projects.quadtreeTs} />
-- <Project {...projects.d3Quadtree} />
-- <Project {...projects.quadtreeJs} />
+<ProjectList projects={[projects.quadtreeTs, projects.d3Quadtree, projects.quadtreeJs]} />
 
 ## Octrees (3D)
 
 [Wikipedia](https://en.wikipedia.org/wiki/Octree)
 
-- <Project {...projects.sparseOctree} description="Requires Three.js as a peer dependency" />
-- <Project {...projects.d3Octree} />
+<ProjectList
+  projects={[
+    { ...projects.sparseOctree, description: 'Requires Three.js as a peer dependency' },
+    projects.d3Octree,
+  ]}
+/>
 
 ## BVH
 
 Bounding Volume Hierarchy: [Wikipedia](https://en.wikipedia.org/wiki/Bounding_volume_hierarchy)
 
-- <Project
-    {...projects.threeMeshBvh}
-    description={
-      <>
-        With React Three Fiber, see <R3FLogo />
-        <a style={{ marginLeft: 5 }} href="https://github.com/pmndrs/drei#bvh" target="_blank">
-          <b>Drei &lt;Bvh&gt;</b>
-        </a>
-      </>
-    }
-  />
+<ProjectList
+  projects={[
+    {
+      ...projects.threeMeshBvh,
+      description: (
+        <>
+          With React Three Fiber, see <R3FLogo />
+          <a style={{ marginLeft: 5 }} href="https://github.com/pmndrs/drei#bvh" target="_blank">
+            <b>Drei &lt;Bvh&gt;</b>
+          </a>
+        </>
+      ),
+    },
+  ]}
+/>

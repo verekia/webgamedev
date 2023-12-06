@@ -1,4 +1,4 @@
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import StatsComparison from 'components/StatsComparison'
 import Todo from 'components/Todo'
 import { ecs as projects } from 'projects'
@@ -9,29 +9,30 @@ import { ecs as projects } from 'projects'
 
 ## Libraries
 
-- <Project {...projects.bitecs} />
-- <Project {...projects.miniplex} description="Has React bindings" />
-- <Project {...projects.becsy} />
-- <Project {...projects.javelin} description="Includes networking" />
-- <Project {...projects.tickKnock} />
-- <Project {...projects.ecsy} />
-- <Project {...projects.thyseus} />
-<details className="more-tools">
-<summary>Show more</summary>
-- <Project {...projects.ecsLib} />
-- <Project {...projects.entComp} />
-- <Project {...projects.picoes} />
-- <Project {...projects.geotic} />
-- <Project {...projects.reactECS} />
-- <Project {...projects.piecs} />
-- <Project {...projects.uecs} />
-- <Project {...projects.harmony} />
-- <Project {...projects.ape} />
-- <Project {...projects.nanoECS} />
-- <Project {...projects.performECS} />
-- <Project {...projects.yagl} />
-- <Project {...projects.tinyECS} />
-</details>
+<ProjectList
+  projects={[
+    projects.bitecs,
+    { ...projects.miniplex, description: 'Has React bindings' },
+    projects.becsy,
+    { ...projects.javelin, description: 'Includes networking' },
+    projects.tickKnock,
+    projects.ecsy,
+    projects.thyseus,
+    projects.ecsLib,
+    projects.entComp,
+    projects.picoes,
+    projects.geotic,
+    projects.reactECS,
+    projects.piecs,
+    projects.uecs,
+    projects.harmony,
+    projects.ape,
+    projects.nanoECS,
+    projects.performECS,
+    projects.yagl,
+    projects.tinyECS,
+  ]}
+/>
 
 <StatsComparison
   projects={[

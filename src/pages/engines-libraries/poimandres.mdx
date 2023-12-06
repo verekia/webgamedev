@@ -1,5 +1,4 @@
-import Callout from 'components/Callout'
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import { poimandres as projects } from 'projects'
 
 # ⚫️ Poimandres Libraries
@@ -8,65 +7,64 @@ import { poimandres as projects } from 'projects'
 
 Three.js and React Three Fiber libraries:
 
-- <Project {...projects.r3f} description="Declarative Three.js in React" />
-- <Project {...projects.drei} description="Useful helpers for Three.js and R3F" />
-- <Project {...projects.reactSpring} description="Animations, can be used with R3F" />
-- <Project {...projects.leva} description="React components GUI" />
-- <Project
-    {...projects.gltfjsx}
-    description={
-      <>
-        JSX from GLTF/GLB models, <a href="https://gltf.pmnd.rs/">online GUI</a>
-      </>
-    }
-  />
-- <Project {...projects.threeStdlib} description="Three.js examples/jsm as a package" />
-- <Project
-    {...projects.cannonEs}
-    description={
-      <>
-        Fork of the <a href="https://github.com/schteppe/cannon.js">cannon.js</a> physics engine
-      </>
-    }
-  />
-- <Project
-    {...projects.useCannon}
-    description={
-      <>
-        Hooks for <code>cannon-es</code>
-      </>
-    }
-  />
-- <Project {...projects.postprocessing} description="Filter effects for Three.js" />
-- <Project
-    {...projects.reactPostprocessing}
-    description={
-      <>
-        <code>postprocessing</code> for R3F
-      </>
-    }
-  />
-- <Project {...projects.reactXR} description="VR/AR for R3F" />
-- <Project
-    {...projects.reactThreeRapier}
-    description={
-      <>
-        <a href="https://rapier.rs/">Rapier</a> physics engine for R3F
-      </>
-    }
-  />
-- <Project {...projects.reactThreeNext} description="Next.js boilerplate for R3F" />
-- <Project {...projects.reactThreeFlex} description="Flexbox for R3F" />
-<details className="more-tools">
-<summary>Show more</summary>
-- <Project {...projects.reactThreeEditor} description="Editor for R3F + Vite – Archived" />
-- <Project {...projects.lamina} description="Declarative shader materials – Archived" />
-</details>
+<ProjectList
+  projects={[
+    { ...projects.r3f, description: 'Declarative Three.js in React' },
+    { ...projects.drei, description: 'Useful helpers for Three.js and R3F' },
+    { ...projects.reactSpring, description: 'Animations, can be used with R3F' },
+    { ...projects.leva, description: 'React components GUI' },
+    {
+      ...projects.gltfjsx,
+      description: (
+        <>
+          JSX from GLTF/GLB models, <a href="https://gltf.pmnd.rs/">online GUI</a>
+        </>
+      ),
+    },
+    { ...projects.threeStdlib, description: 'Three.js examples/jsm as a package' },
+    {
+      ...projects.cannonEs,
+      description: (
+        <>
+          Fork of the <a href="https://github.com/schteppe/cannon.js">cannon.js</a> physics engine
+        </>
+      ),
+    },
+    {
+      ...projects.useCannon,
+      description: (
+        <>
+          Hooks for <code>cannon-es</code>
+        </>
+      ),
+    },
+    { ...projects.postprocessing, description: 'Filter effects for Three.js' },
+    {
+      ...projects.reactPostprocessing,
+      description: (
+        <>
+          <code>postprocessing</code> for R3F
+        </>
+      ),
+    },
+    { ...projects.reactXR, description: 'VR/AR for R3F' },
+    {
+      ...projects.reactThreeRapier,
+      description: (
+        <>
+          <a href="https://rapier.rs/">Rapier</a> physics engine for R3F
+        </>
+      ),
+    },
+    { ...projects.reactThreeNext, description: 'Next.js boilerplate for R3F' },
+    { ...projects.reactThreeFlex, description: 'Flexbox for R3F' },
+    { ...projects.reactThreeEditor, description: 'Editor for R3F + Vite – Archived' },
+    { ...projects.lamina, description: 'Declarative shader materials – Archived' },
+  ]}
+/>
 
 State-management libraries:
 
-- <Project {...projects.zustand} />
-- <Project {...projects.jotai} />
-- <Project {...projects.valtio} />
+<ProjectList projects={[projects.zustand, projects.jotai, projects.valtio]} />
 
 As you can see there is a lot going on in the R3F ecosystem and this community is a driving force to make Three.js development more convenient. With the Poimandres ecosystem, we have a core set of libraries for 3D graphics to build our games upon.

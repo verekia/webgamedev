@@ -1,5 +1,6 @@
 import Todo from 'components/Todo'
 import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import { desktop, steam } from 'projects'
 
 # 🖥 Desktop
@@ -12,19 +13,17 @@ But if you want to distribute full executables for users to download, or if you 
 
 ## Desktop frameworks
 
-- <Project {...desktop.electron} description="Chromium and Node.js" />
-- <Project {...desktop.tauri} description="OS-native web views and Rust" />
-- <Project {...desktop.nw} description="Chromium and Node.js" />
-- <Project {...desktop.neutralino} description="OS-native web views and JavaScript" />
-- <Project {...desktop.wails} description="WebKit web view and Go" />
-- <Project
-    {...desktop.gluon}
-    description="User-installed browsers (Chromium or Firefox) and Node.js"
-  />
-- <Project
-    {...desktop.nodeGui}
-    description="Make native apps in Node and CSS (not for WebGL games)"
-  />
+<ProjectList
+  projects={[
+    { ...desktop.electron, description: 'Chromium and Node.js' },
+    { ...desktop.tauri, description: 'OS-native web views and Rust' },
+    { ...desktop.nw, description: 'Chromium and Node.js' },
+    { ...desktop.neutralino, description: 'OS-native web views and JavaScript' },
+    { ...desktop.wails, description: 'WebKit web view and Go' },
+    { ...desktop.gluon, description: 'User-installed browsers (Chromium or Firefox) and Node.js' },
+    { ...desktop.nodeGui, description: 'Make native apps in Node and CSS (not for WebGL games)' },
+  ]}
+/>
 
 Read this great in-depth [Web to Desktop framework comparison](https://github.com/Elanis/web-to-desktop-framework-comparison) for more details.
 
@@ -48,9 +47,7 @@ Tauri, Neutralino, and Wails use lightweight OS web views that have a small memo
 
 ## Steam
 
-- <Project {...steam.steamworksjs} />
-- <Project {...steam.communityGreenworks} />
-- <Project {...steam.greenworks} />
+<ProjectList projects={[steam.steamworksjs, steam.communityGreenworks, steam.greenworks]} />
 
 {/* Prepare your app for Steam distribution: You will need to create a [Steamworks](https://partner.steamgames.com/) account, set up your app on Steam, and obtain a Steam App ID. You will also need to package your Electron app using Electron Packager or a similar tool to create a distributable package for your game. Integrate Steam features: To integrate Steam features such as achievements, leaderboards, and cloud saves, you will need to use the Steamworks SDK and Steam API. Test and submit your app: Once your app is ready, test it thoroughly to ensure that it works properly. Submit your app to Steam for review and approval. Once your app is approved, it will be available for users to download and play on Steam. */}
 

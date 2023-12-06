@@ -1,6 +1,6 @@
 import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import StatsComparison from 'components/StatsComparison'
-import Todo from 'components/Todo'
 import { random, noise } from 'projects'
 
 # 〰️ Randomness & Noise
@@ -11,16 +11,20 @@ Randomness is used extensively in game development and computer graphics. It is 
 
 If you want the randomness to be deterministic, you can use a **seedable** pseudo-random number generator (PRNG). A seed is a value that is used to initialize the generator. If you use the same seed, you will get the same sequence of numbers, which will let you generate the same content every time. Here are some PRNG libraries:
 
-- <Project {...random.random} />
-- <Project {...random.prando} />
-- <Project {...random.thingRandom} />
-- <Project {...random.aimless} />
-- <Project {...random.alea} />
-- <Project {...random.seedRandom} />
-- <Project {...random.randomJs} />
-- <Project {...random.numberGenerator} />
-- <Project {...random.randomSeed} />
-- <Project {...random.seedDashRandom} />
+<ProjectList
+  projects={[
+    random.random,
+    random.prando,
+    random.thingRandom,
+    random.aimless,
+    random.alea,
+    random.seedRandom,
+    random.randomJs,
+    random.numberGenerator,
+    random.randomSeed,
+    random.seedDashRandom,
+  ]}
+/>
 
 <StatsComparison projects={random} />
 
@@ -32,14 +36,22 @@ Random numbers distributed on 1, 2, 3, or more dimensions are called **noise**. 
 
 If you want to generate random terrain or clouds for instance, you need **gradient noise** with peaks and valleys. You can use a **Perlin noise** (see [this article](https://eev.ee/blog/2016/05/29/perlin-noise/) for more details). Perlin noise was created by Ken Perlin in 1983. He later on released **Simplex noise** in 2001, which has some [improvements](https://www.bit-101.com/blog/2021/07/perlin-vs-simplex/) over Perlin noise, but was patented until January 8th 2022. [OpenSimplex noise](https://en.wikipedia.org/wiki/OpenSimplex_noise) was developed to overcome the patent issue of Simplex noise.
 
-- <Project {...noise.simplexNoise} />
-- <Project {...noise.fractalNoise} />
-- <Project {...noise.tumult} />
-- <Project {...noise.openSimplexNoise} />
-<details className="more-tools">
-<summary>Show more</summary>
-- <Project {...noise.fastSimplexNoise} description={<>Deprecated in favor of <code>open-simplex-noise</code></>} />
-</details>
+<ProjectList
+  projects={[
+    noise.simplexNoise,
+    noise.fractalNoise,
+    noise.tumult,
+    noise.openSimplexNoise,
+    {
+      ...noise.fastSimplexNoise,
+      description: (
+        <>
+          Deprecated in favor of <code>open-simplex-noise</code>
+        </>
+      ),
+    },
+  ]}
+/>
 
 <StatsComparison projects={noise} />
 

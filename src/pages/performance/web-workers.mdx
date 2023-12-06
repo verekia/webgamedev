@@ -1,6 +1,5 @@
 import StatsComparison from 'components/StatsComparison'
-import Orange from 'components/Orange'
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import Todo from 'components/Todo'
 import A from 'components/A'
 import { webWorkers as projects } from 'projects'
@@ -11,22 +10,18 @@ If you have computation-heavy tasks in your app, you can offload them to a [Web 
 
 Web Workers rely on the `postMessage` and `onmessage` API to communicate with the main thread, which means you cannot wait for a particular message to be received and write code in a convenient `async`/`await` fashion. That's why some libraries have been created to help with the process:
 
-- <Project {...projects.comlink} />
-- <Project {...projects.workerpool} description="Supports pools, Node.js" />
-- <Project {...projects.threads} description="Supports pools, observables, Webpack, Node.js" />
-- <Project {...projects.troikaWorkerUtils} />
-- <Project
-    {...projects.workerizeLoader}
-    description="Webpack loader"
-    withNewlineDescription={false}
-  />
-- <Project {...projects.workerize} />
-- <Project
-    {...projects.comlinkLoader}
-    description="Webpack loader"
-    withNewlineDescription={false}
-  />
-- <Project {...projects.greenlet} />
+<ProjectList
+  projects={[
+    projects.comlink,
+    { ...projects.workerpool, description: 'Supports pools, Node.js' },
+    { ...projects.threads, description: 'Supports pools, observables, Webpack, Node.js' },
+    projects.troikaWorkerUtils,
+    { ...projects.workerizeLoader, description: 'Webpack loader' },
+    projects.workerize,
+    { ...projects.comlinkLoader, description: 'Webpack loader' },
+    projects.greenlet,
+  ]}
+/>
 
 <StatsComparison projects={projects} />
 

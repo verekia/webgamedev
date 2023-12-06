@@ -1,4 +1,4 @@
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import StatsComparison from 'components/StatsComparison'
 import Todo from 'components/Todo'
 import { protobuf as projects } from 'projects'
@@ -9,16 +9,20 @@ Protobuf ("Protocol Buffers") is a protocol developed by Google to serialize str
 
 If you are making a real-time multiplayer game that sends a lot of data over the network, you might want to consider using Protobuf. It will come at a cost of some added complexity but that may be worth it depending on your use case. You could start building your game with JSON and then switch to Protobuf later if you find that message size is a bottleneck.
 
-- <Project {...projects.protobufJs} />
-- <Project
-    {...projects.googleProtobuf}
-    description={'In a "somewhat broken state" as per the readme. Being reworked.'}
-  />
-- <Project {...projects.tsProto} />
-- <Project {...projects.protobufTs} />
-- <Project {...projects.protobufEs} />
-- <Project {...projects.protocGenTs} />
-- <Project {...projects.protocolBuffers} />
+<ProjectList
+  projects={[
+    projects.protobufJs,
+    {
+      ...projects.googleProtobuf,
+      description: 'In a "somewhat broken state" as per the readme. Being reworked.',
+    },
+    projects.tsProto,
+    projects.protobufTs,
+    projects.protobufEs,
+    projects.protocGenTs,
+    projects.protocolBuffers,
+  ]}
+/>
 
 <StatsComparison projects={projects} />
 

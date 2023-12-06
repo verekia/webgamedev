@@ -1,0 +1,151 @@
+.table {
+  all: unset;
+  display: grid;
+  grid-template-columns: 1fr repeat(calc(var(--columns) - 1), auto);
+  /* We do not use horizontal gaps, because we want lines to be highlighted */
+  /* See below where we put a padding-right to every row children */
+  gap: 0.2em 0;
+
+  /* This shouldn't really be here, because the layout should dictate spacing between components */
+  margin-top: 1em;
+}
+
+.row {
+  /* List item elements are just here so the list is semantic, but we display it as a grid */
+  display: contents;
+}
+
+/* We align the numerical columns to the right */
+.row > * {
+  text-align: right;
+}
+.row > *:first-child {
+  text-align: left;
+}
+
+.row > *:not(:last-child) {
+  padding-right: 1rem;
+}
+
+/* We add some padding at the beginning and the end of a row to make it breath a bit */
+.row > *:last-child {
+  padding-right: 0.2rem;
+}
+.row > *:first-child {
+  padding-left: 0.4rem;
+}
+
+/* For readability, we put a background on each row */
+.row > * {
+  background-color: #f6f6f6;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+:global(.dark) .row > * {
+  background-color: #222;
+}
+
+/* We also add some round corners all around the table */
+.row:first-child > *:first-child {
+  border-top-left-radius: 5px;
+}
+.row:first-child > *:last-child {
+  border-top-right-radius: 5px;
+}
+.row:last-child > *:first-child {
+  border-bottom-left-radius: 5px;
+}
+.row:last-child > *:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+.header > * {
+  /* We use opacity as a shortcut to dim the row */
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+:global(.dark) .header > * {
+  opacity: 0.65;
+}
+
+.project {
+  display: block;
+}
+
+.noLogo {
+  display: inline-block;
+  height: 1em;
+  width: 1.4em;
+}
+
+.empty {
+  /* We use opacity as a shortcut to dim the text */
+  color: #66707f;
+}
+:global(.dark) .empty {
+  color: #999da2;
+}
+
+.mobileHidden {
+  display: initial;
+}
+
+.mobileStats {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+  }
+
+  .row {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .row > *,
+  :global(.dark) .row > * {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  /* In mobile, the stats are part of the .project element */
+  .row > *:not(.project) {
+    display: none;
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+  }
+
+  .mobileStats {
+    display: flex;
+    gap: 0.5em;
+    justify-content: flex-end;
+  }
+
+  .mobileStats > * {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2em;
+    align-items: center;
+  }
+
+  .description {
+    grid-column: 1 / 3;
+  }
+
+  .mobileHidden,
+  .header,
+  .noLogo,
+  .empty {
+    display: none;
+  }
+}

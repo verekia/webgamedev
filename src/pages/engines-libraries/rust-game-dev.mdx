@@ -1,4 +1,5 @@
 import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import { rust } from 'projects'
 
 # 🦀 Rust Game Dev
@@ -9,22 +10,32 @@ This website is mainly about JavaScript game development, but due to the growing
 
 ## Game engines and libraries
 
-- <Project {...rust.wgpu} description="Cross-platform 3D library that implements WebGPU" />
-- <Project {...rust.bevy} description="3D Data-driven (ECS) game engine" />
-- <Project {...rust.fyrox} description="3D engine with a Unity-like editor (formerly rg3d)" />
-- <Project {...rust.ambient} description="3D multiplayer game engine" />
-- <Project {...rust.ggez} description="2D game engine" />
-- <Project {...rust.macroquad} description="2D game engine" />
-- <Project {...rust.piston} description="3D game engine" />
-- <Project {...rust.amethyst} description="2D and 3D game engine with ECS – Archived" />
+<ProjectList
+  projects={[
+    { ...rust.wgpu, description: 'Cross-platform 3D library that implements WebGPU' },
+    { ...rust.bevy, description: '3D Data-driven (ECS) game engine' },
+    { ...rust.fyrox, description: '3D engine with a Unity-like editor (formerly rg3d)' },
+    { ...rust.ambient, description: '3D multiplayer game engine' },
+    { ...rust.ggez, description: '2D game engine' },
+    { ...rust.macroquad, description: '2D game engine' },
+    { ...rust.piston, description: '3D game engine' },
+    { ...rust.amethyst, description: '2D and 3D game engine with ECS – Archived' },
+  ]}
+  rust
+/>
 
 See [Libraries and frameworks for
 Game Development in Rust](https://github.com/dasifefe/rust-game-development-frameworks) for a more exhaustive list.
 
 ## WebAssembly bundling
 
-- <Project {...rust.wasmPack} description="Build WebAssembly packages for the browser or NPM" />
-- <Project {...rust.trunk} description="WebAssembly application bundler" />
+<ProjectList
+  projects={[
+    { ...rust.wasmPack, description: 'Build WebAssembly packages for the browser or NPM' },
+    { ...rust.trunk, description: 'WebAssembly application bundler' },
+  ]}
+  rust
+/>
 
 ## Games
 
@@ -44,12 +55,17 @@ Game Development in Rust](https://github.com/dasifefe/rust-game-development-fram
 
 As an unnecessary bonus, here are some back-end web frameworks if you want to go full-stack with Rust:
 
-- <Project {...rust.hyper} />
-- <Project {...rust.actix} />
-- <Project {...rust.rocket} />
-- <Project {...rust.axum} />
-- <Project {...rust.warp} />
-- <Project {...rust.iron} />
-- <Project {...rust.tide} />
-- <Project {...rust.rouille} />
-- <Project {...rust.poem} />
+<ProjectList
+  projects={[
+    rust.hyper,
+    rust.actix,
+    rust.rocket,
+    rust.axum,
+    rust.warp,
+    rust.iron,
+    rust.tide,
+    rust.rouille,
+    rust.poem,
+  ]}
+  rust
+/>

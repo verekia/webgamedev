@@ -1,7 +1,7 @@
+import ProjectList from 'components/ProjectList'
 import Project from 'components/Project'
 import StatsComparison from 'components/StatsComparison'
 import Callout from 'components/Callout'
-import Todo from 'components/Todo'
 import { uiLibraries, reactFrameworks, typescript } from 'projects'
 
 # ⚛️ React
@@ -10,26 +10,26 @@ If you are interested in using Three.js with React Three Fiber, you will need to
 
 For good measure, you might want an overview of the current market shares of other UI libraries:
 
-- <Project {...uiLibraries.react} />
-- <Project {...uiLibraries.vue} />
-- <Project {...uiLibraries.angular} />
-- <Project {...uiLibraries.preact} />
-- <Project {...uiLibraries.svelte} />
-- <Project {...uiLibraries.lit} />
-- <Project {...uiLibraries.stencil} />
-- <Project {...uiLibraries.alpine} description="Partly used via CDN" />
-- <Project {...uiLibraries.solid} />
-
-<details className="more-tools">
-  <summary>Show more</summary>
-  - <Project {...uiLibraries.ember} />
-  - <Project {...uiLibraries.inferno} />
-  - <Project {...uiLibraries.mithril} />
-  - <Project {...uiLibraries.aurelia} />
-  - <Project {...uiLibraries.qwik} />
-  - <Project {...uiLibraries.angularJs} description="Deprecated in favor of Angular" />
-  - <Project {...uiLibraries.polymer} description="Deprecated in favor of Lit" />
-</details>
+<ProjectList
+  projects={[
+    uiLibraries.react,
+    uiLibraries.vue,
+    uiLibraries.angular,
+    uiLibraries.preact,
+    uiLibraries.svelte,
+    uiLibraries.lit,
+    uiLibraries.stencil,
+    { ...uiLibraries.alpine, description: 'Partly used via CDN' },
+    uiLibraries.solid,
+    uiLibraries.ember,
+    uiLibraries.inferno,
+    uiLibraries.mithril,
+    uiLibraries.aurelia,
+    uiLibraries.qwik,
+    { ...uiLibraries.angularJs, description: 'Deprecated in favor of Angular' },
+    { ...uiLibraries.polymer, description: 'Deprecated in favor of Lit' },
+  ]}
+/>
 
 <StatsComparison
   projects={[
@@ -47,12 +47,16 @@ For good measure, you might want an overview of the current market shares of oth
 
 To use React, you need a tool that will transform your React (and optionally TypeScript) files into JavaScript code that the browser can understand. You probably also want hot reloading to see your changes instantly in the browser. You can use bundlers like Webpack and transpilers like Babel to configure this yourself, but a way more convenient option is to use a framework. These frameworks on top of React are sometimes called "meta-frameworks", as in frameworks on top of an other framework (although React brands itself as a UI library).
 
-- <Project {...reactFrameworks.vite} description="Not React-specific, general-purpose bundler" />
-- <Project {...reactFrameworks.next} />
-- <Project {...reactFrameworks.cra} />
-- <Project {...reactFrameworks.gatsby} />
-- <Project {...reactFrameworks.remix} />
-- <Project {...reactFrameworks.astro} description="Not React-specific, island architecture" />
+<ProjectList
+  projects={[
+    { ...reactFrameworks.vite, description: 'Not React-specific, general-purpose bundler' },
+    reactFrameworks.next,
+    reactFrameworks.cra,
+    reactFrameworks.gatsby,
+    reactFrameworks.remix,
+    { ...reactFrameworks.astro, description: 'Not React-specific, island architecture' },
+  ]}
+/>
 
 <StatsComparison projects={reactFrameworks} />
 

@@ -1,7 +1,6 @@
 import Callout from 'components/Callout'
 import { R3FSandpack } from 'components/MySandpack'
-import { r3fFiles } from 'components/snippets'
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import StatsComparison from 'components/StatsComparison'
 import {
   AngularThreeLogo,
@@ -38,28 +37,70 @@ The technology that enables 2D and 3D graphics for the web is <WebGLLogo /> [Web
 
 Much like any ecosystem of developer tools, there are 2 approaches: the monolithic batteries-included _framework_ approach (those would be the _engines_), or the modular assemble-independent-libraries-together approach. The main engines and libraries for JavaScript game development are:
 
-- <ThreeLogo /> <Project {...engines.three} description="3D library, WebGPU-ready" />
-- <PixiLogo /> <Project
-    {...engines.pixi}
-    description={
-      <>
-        2D library (there is also <a href="https://github.com/jnsmalm/pixi3d">Pixi3D</a>)
-      </>
-    }
-  />
-- <PhaserLogo /> <Project {...engines.phaser} description="2D engine" />
-- <BabylonLogo /> <Project {...engines.babylon} description="3D engine, WebGPU-ready" />
-- <PlayCanvasLogo /> <Project {...engines.playcanvas} description="3D engine, freemium editor, WebGPU-ready" />
-- <OglLogo /> <Project {...engines.ogl} description="Minimal 3D library" />
-- <KaboomLogo /> <Project {...engines.kaboom} description="Simple 2D engine" />
-- <TwoLogo /> <Project {...engines.two} description="2D library" />
-<details className="more-tools">
-<summary>Show more</summary>
-- <Project {...engines.excalibur} description="2D engine" />
-- <Project {...engines.melon} description="2D engine" />
-- <Project {...engines.kontra} description="2D micro-library" />
-- <Project {...engines.impact} description="2D engine" />
-</details>
+<ProjectList
+  projects={[
+    {
+      ...engines.three,
+      logo: <ThreeLogo />,
+      description: '3D library, WebGPU-ready',
+    },
+    {
+      ...engines.pixi,
+      logo: <PixiLogo />,
+      description: (
+        <>
+          2D library (there is also <a href="https://github.com/jnsmalm/pixi3d">Pixi3D</a>)
+        </>
+      ),
+    },
+    {
+      ...engines.phaser,
+      logo: <PhaserLogo />,
+      description: '2D engine',
+    },
+    {
+      ...engines.babylon,
+      logo: <BabylonLogo />,
+      description: '3D engine, WebGPU-ready',
+    },
+    {
+      ...engines.playcanvas,
+      logo: <PlayCanvasLogo />,
+      description: '3D engine, freemium editor, WebGPU-ready',
+    },
+    {
+      ...engines.ogl,
+      logo: <OglLogo />,
+      description: 'Minimal 3D library',
+    },
+    {
+      ...engines.kaboom,
+      logo: <KaboomLogo />,
+      description: 'Simple 2D engine',
+    },
+    {
+      ...engines.two,
+      logo: <TwoLogo />,
+      description: '2D library',
+    },
+    {
+      ...engines.excalibur,
+      description: '2D engine',
+    },
+    {
+      ...engines.melon,
+      description: '2D engine',
+    },
+    {
+      ...engines.kontra,
+      description: '2D micro-library',
+    },
+    {
+      ...engines.impact,
+      description: '2D engine',
+    },
+  ]}
+/>
 
 <StatsComparison
   projects={[
@@ -87,44 +128,58 @@ You can use any of the previous libraries and engines on their own, but some of 
 
 ### <ThreeLogo /> Three.js
 
-- <R3FLogo /> <Project {...poimandres.r3f} />
-- <ThrelteLogo /> <Project {...wrappers.threlte} />
-- <SvelteLogo /> <Project {...wrappers.svelteCubed} />
-- <TresLogo /> <Project {...wrappers.tres} />
-- <VueLogo /> <Project {...wrappers.trois} />
-- <VueLogo /> <Project {...wrappers.lunchbox} />
-- <AngularThreeLogo /> <Project {...wrappers.angularThree} />
+<ProjectList
+  projects={[
+    { ...poimandres.r3f, logo: <R3FLogo /> },
+    { ...wrappers.threlte, logo: <ThrelteLogo /> },
+    { ...wrappers.svelteCubed, logo: <SvelteLogo /> },
+    { ...wrappers.tres, logo: <TresLogo /> },
+    { ...wrappers.trois, logo: <VueLogo /> },
+    { ...wrappers.lunchbox, logo: <VueLogo /> },
+    { ...wrappers.angularThree, logo: <AngularThreeLogo /> },
+  ]}
+/>
 
 ### <BabylonLogo /> Babylon.js
 
-- <ReactLogo /> <Project {...wrappers.reactBabylon} />
-- <VueLogo /> <Project {...wrappers.vueBabylon} />
-- <SvelteLogo /> <Project {...wrappers.svelteBabylon} />
+<ProjectList
+  projects={[
+    { ...wrappers.reactBabylon, logo: <ReactLogo /> },
+    { ...wrappers.vueBabylon, logo: <VueLogo /> },
+    { ...wrappers.svelteBabylon, logo: <SvelteLogo /> },
+  ]}
+/>
 
 ### <PixiLogo /> PixiJS
 
-- <ReactLogo /> <Project {...wrappers.reactPixi} />
-- <ReactLogo /> <Project {...wrappers.reactPixiFiber} />
-- <SvelteLogo /> <Project {...wrappers.sveltePixi} />
+<ProjectList
+  projects={[
+    { ...wrappers.reactPixi, logo: <ReactLogo /> },
+    { ...wrappers.reactPixiFiber, logo: <ReactLogo /> },
+    { ...wrappers.sveltePixi, logo: <SvelteLogo /> },
+  ]}
+/>
 
 ### <PhaserLogo /> Phaser
 
-- <VueLogo /> <Project {...wrappers.phavuer} />
-<details className="more-tools">
-<summary>Show more</summary>
-- <SvelteLogo /> <Project {...wrappers.sveltePhaser} description="Archived" />
-- <ReactLogo /> <Project {...wrappers.reactPhaserFiber} description="Archived" />
-- <ReactLogo /> <Project {...wrappers.reactPhaser} />
-- <Project
-    {...wrappers.ionPhaser}
-    description="Web Component to inject Phaser into any framework"
-  />
-</details>
+<ProjectList
+  projects={[
+    { ...wrappers.phavuer, logo: <VueLogo /> },
+    { ...wrappers.sveltePhaser, logo: <SvelteLogo />, description: 'Archived' },
+    { ...wrappers.reactPhaserFiber, logo: <ReactLogo />, description: 'Archived' },
+    { ...wrappers.reactPhaser, logo: <ReactLogo /> },
+    { ...wrappers.ionPhaser, description: 'Web Component to inject Phaser into any framework' },
+  ]}
+/>
 
 ### <OglLogo /> OGL
 
-- <ReactLogo /> <Project {...wrappers.reactOgl} />
-- <SvelteLogo /> <Project {...wrappers.svelteOgl} />
+<ProjectList
+  projects={[
+    { ...wrappers.reactOgl, logo: <ReactLogo /> },
+    { ...wrappers.svelteOgl, logo: <SvelteLogo /> },
+  ]}
+/>
 
 For instance, **React Three Fiber** (_R3F_), lets you add objects to a scene and control them as React components:
 

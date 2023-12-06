@@ -1,4 +1,4 @@
-import Project from 'components/Project'
+import ProjectList from 'components/ProjectList'
 import Todo from 'components/Todo'
 import { particles as projects } from 'projects'
 
@@ -6,11 +6,15 @@ import { particles as projects } from 'projects'
 
 There are a few VFX and particles libraries for Three.js:
 
-- <Project {...projects.effekseer} />
-- <Project {...projects.r3fEffekseer} />
-- <Project {...projects.quarks} />
-- <Project {...projects.nebula} />
-- <Project {...projects.proton} />
+<ProjectList
+  projects={[
+    projects.effekseer,
+    projects.r3fEffekseer,
+    projects.quarks,
+    projects.nebula,
+    projects.proton,
+  ]}
+/>
 
 <Todo>
 `BufferGeometry`
