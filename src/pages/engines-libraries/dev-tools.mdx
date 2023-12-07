@@ -13,57 +13,22 @@ In order to get a more well-rounded environment for Three.js development, you ca
 
 ## Three.js
 
-<ProjectList
-  projects={[
-    {
-      name: 'three-tools by BACE',
-      url: 'https://github.com/oslabs-beta/BACE',
-      description: 'Chrome',
-    },
-    {
-      name: 'Three.js Developer Tools',
-      url: 'https://addons.mozilla.org/en-US/firefox/addon/three-js-developer-tools/',
-      description: 'Firefox',
-    },
-    {
-      name: 'Stats.js',
-      url: 'https://github.com/mrdoob/stats.js/',
-      description: (
-        <>
-          Included in R3F{' '}
-          <A href="https://github.com/pmndrs/drei#stats" isExternal>
-            Drei
-          </A>
-        </>
-      ),
-    },
-    {
-      name: 'stats-gl',
-      url: 'https://github.com/RenaudRohlinger/stats-gl',
-      description: 'WebGL performance monitoring tool',
-    },
-    { name: 'Three.js Editor', url: 'https://threejs.org/editor/' },
-    {
-      name: 'DrawCallInspector',
-      url: 'https://github.com/Fyrestar/THREE.DrawCallInspector',
-      description: '(Chrome, experimental)',
-    },
-    { name: 'three-inspect', url: 'https://github.com/michealparks/three-inspect' },
-  ]}
-/>
+- [**three-tools by BACE**](https://github.com/oslabs-beta/BACE) – Chrome
+- [**Three.js Developer Tools**](https://addons.mozilla.org/en-US/firefox/addon/three-js-developer-tools/) – Firefox
+- [**Stats.js**](https://github.com/mrdoob/stats.js/) – Included in R3F [**Drei**](https://github.com/pmndrs/drei#stats)
+- [**stats-gl**](https://github.com/RenaudRohlinger/stats-gl) – WebGL performance monitoring tool
+- [**Three.js Editor**](https://threejs.org/editor/)
+- [**DrawCallInspector**](https://github.com/Fyrestar/THREE.DrawCallInspector) (Chrome, experimental)
+- [**three-inspect**](https://github.com/michealparks/three-inspect)
 
 ## React Three Fiber
 
-<ProjectList
-  projects={[
-    { name: 'TRIPLEX', url: 'https://triplex.dev' },
-    { name: 'R3F-Perf', url: 'https://github.com/utsuboco/r3f-perf' },
-  ]}
-/>
+- [**TRIPLEX**](https://triplex.dev/)
+- [**R3F-Perf**](https://github.com/utsuboco/r3f-perf)
 
 ## WebGL
 
-<ProjectList projects={[{ name: 'Spector.js', url: 'https://spector.babylonjs.com' }]} />
+- [**Spector.js**](https://spector.babylonjs.com/)
 
 ## Debug UI
 
@@ -73,12 +38,12 @@ In order to get a more well-rounded environment for Three.js development, you ca
     projects.datGui,
     projects.leva,
     projects.tweakpane,
-    projects.uil,
-    projects.guify,
-    projects.reactDatGui,
-    projects.controlPanel,
-    projects.oui,
-    projects.controlKit,
+    {...projects.uil, collapsed: true },
+    {...projects.guify, collapsed: true },
+    {...projects.reactDatGui, collapsed: true },
+    {...projects.controlPanel, collapsed: true },
+    {...projects.oui, collapsed: true },
+    {...projects.controlKit, collapsed: true },
   ]}
 />
 

@@ -42,7 +42,7 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
     {
       ...engines.three,
       logo: <ThreeLogo />,
-      description: '3D library, WebGPU-ready',
+      description: '3D library',
     },
     {
       ...engines.pixi,
@@ -86,18 +86,22 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
     {
       ...engines.excalibur,
       description: '2D engine',
+      collapsed: true,
     },
     {
       ...engines.melon,
       description: '2D engine',
+      collapsed: true
     },
     {
       ...engines.kontra,
       description: '2D micro-library',
+      collapsed: true
     },
     {
       ...engines.impact,
       description: '2D engine',
+      collapsed: true
     },
   ]}
 />
@@ -165,10 +169,10 @@ You can use any of the previous libraries and engines on their own, but some of 
 <ProjectList
   projects={[
     { ...wrappers.phavuer, logo: <VueLogo /> },
-    { ...wrappers.sveltePhaser, logo: <SvelteLogo />, description: 'Archived' },
-    { ...wrappers.reactPhaserFiber, logo: <ReactLogo />, description: 'Archived' },
-    { ...wrappers.reactPhaser, logo: <ReactLogo /> },
-    { ...wrappers.ionPhaser, description: 'Web Component to inject Phaser into any framework' },
+    { ...wrappers.sveltePhaser, logo: <SvelteLogo />, description: 'Archived', collapsed: true },
+    { ...wrappers.reactPhaserFiber, logo: <ReactLogo />, description: 'Archived', collapsed: true },
+    { ...wrappers.reactPhaser, logo: <ReactLogo />, collapsed: true },
+    { ...wrappers.ionPhaser, description: 'Web Component to inject Phaser into any framework', collapsed: true },
   ]}
 />
 

@@ -5,8 +5,6 @@ import { ecs as projects } from 'projects'
 
 # 👾 Entity - Component - System (ECS)
 
-<Todo>What ECS is</Todo>
-
 ## Libraries
 
 <ProjectList
@@ -18,19 +16,19 @@ import { ecs as projects } from 'projects'
     projects.tickKnock,
     projects.ecsy,
     projects.thyseus,
-    projects.ecsLib,
-    projects.entComp,
-    projects.picoes,
-    projects.geotic,
-    projects.reactECS,
-    projects.piecs,
-    projects.uecs,
-    projects.harmony,
-    projects.ape,
-    projects.nanoECS,
-    projects.performECS,
-    projects.yagl,
-    projects.tinyECS,
+    {...projects.ecsLib, collapsed: true},
+    {...projects.entComp, collapsed: true},
+    {...projects.picoes, collapsed: true},
+    {...projects.geotic, collapsed: true},
+    {...projects.reactECS, collapsed: true},
+    {...projects.piecs, collapsed: true},
+    {...projects.uecs, collapsed: true},
+    {...projects.harmony, collapsed: true},
+    {...projects.ape, collapsed: true},
+    {...projects.nanoECS, collapsed: true},
+    {...projects.performECS, collapsed: true},
+    {...projects.yagl, collapsed: true},
+    {...projects.tinyECS, collapsed: true},
   ]}
 />
 
@@ -50,6 +48,8 @@ import { ecs as projects } from 'projects'
 At the moment I have personally only tried **Miniplex**, which has excellent TypeScript support, React bindings, and a very nice simple API. It might include React Three Fiber bindings in the future as well. I have been following the development of this library closely and I am very happy with the direction it is going. I might try others in the future, but for now Miniplex is all I could ask for.
 
 <Todo>
+
+What ECS is and how it compares to other paradigms.
 
 [js-ecs-benchmarks](https://github.com/ddmills/js-ecs-benchmarks)
 

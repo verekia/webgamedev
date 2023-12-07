@@ -1,4 +1,4 @@
-import ProjectList from 'components/ProjectList'
+import Project from 'components/Project'
 import { trpc, graphql } from 'projects'
 import Todo from 'components/Todo'
 
@@ -14,30 +14,23 @@ You may use simple HTTP endpoints, REST, GraphQL, or tRPC.
 
 ## Barebones web server libraries
 
-<ProjectList
-  projects={[
-    { name: 'Express' },
-    { name: 'Fastify', url: 'https://www.fastify.io/' },
-    { name: 'Koaport' },
-  ]}
-/>
+- [**Express**](https://expressjs.com/)
+- [**Fastify**](https://fastify.dev/)
+- [**Koa**](https://koajs.com/)
 
 ## Backend Frameworks
 
-<ProjectList projects={[{ name: 'Next' }, { name: 'Nest' }]} />
+- [**Next**](https://nextjs.org/)
+- [**Nest**](https://nestjs.com/)
 
 Include Deno, Bun options
 
-## Authentication
-
-<ProjectList projects={[{ name: 'Next Auth' }, { name: 'Passport' }]} />
-
 ## GraphQL
 
-<ProjectList projects={[graphql.apolloServer]} />
+- <Project {...graphql.apolloServer} />
 
 ## tRPC
 
 [tRPC](https://trpc.io/) is a new library that allows you to call remote functions (similarly to gRPC) from the browser via React Query, in a fully-typed experience.
 
-<ProjectList projects={[trpc]} />
+- <Project {...trpc} />

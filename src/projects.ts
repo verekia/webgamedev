@@ -262,7 +262,6 @@ export const poimandres = {
   },
   reactXR: {
     name: 'react-xr',
-    url: 'https://github.com/pmndrs/react-xr',
     repo: 'pmndrs/react-xr',
     npm: '@react-three/xr',
     stars: 1700,
@@ -1245,9 +1244,9 @@ export const ecs = {
   miniplex: {
     name: 'Miniplex',
     repo: 'hmans/miniplex',
-    stars: 500,
+    stars: 600,
     npm: 'miniplex',
-    downloads: 1000,
+    downloads: 500,
     ts: 'ts',
   },
   becsy: {

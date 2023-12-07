@@ -6,8 +6,19 @@
   /* See below where we put a padding-right to every row children */
   gap: 0.2em 0;
 
-  /* This shouldn't really be here, because the layout should dictate spacing between components */
-  margin-top: 1em;
+  margin-top: 0.25em;
+  margin-left: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .table {
+    margin-top: 1em;
+  }
+}
+
+/* For some reason, all links have a border radius, which becomes visible when there is a background */
+.table a {
+  border-radius: none;
 }
 
 .row {
@@ -37,12 +48,26 @@
 
 /* For readability, we put a background on each row */
 .row > * {
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
 }
+
+.row:hover > * {
+  background-color: #f3f3f3;
+}
 :global(.dark) .row > * {
-  background-color: #222;
+  background-color: #191919;
+}
+:global(.dark) .row:hover > * {
+  background-color: #2a2a2a;
+}
+
+.row:first-child > * {
+  background: unset;
+}
+.row:first-child:hover > * {
+  background-color: unset;
 }
 
 /* We also add some round corners all around the table */
@@ -82,10 +107,10 @@
 
 .empty {
   /* We use opacity as a shortcut to dim the text */
-  color: #66707f;
+  color: #aaa;
 }
 :global(.dark) .empty {
-  color: #999da2;
+  color: #555;
 }
 
 .mobileHidden {
@@ -148,4 +173,10 @@
   .empty {
     display: none;
   }
+}
+
+.showMore {
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 0;
 }
