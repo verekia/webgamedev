@@ -1,15 +1,83 @@
-import Todo from 'components/Todo'
+import ProjectList from 'components/ProjectList'
+import StatsComparison from 'components/StatsComparison'
+import { pubsub as projects } from 'projects'
 
-# Events & Messaging
+# 📨 Events & Messaging
 
-<Todo>
+Depending on the architecture you are using, you might need to communicate between components or between different parts of your codebase. The [Pub/Sub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) pattern is a way to do this. Here are some Pub/Sub libraries:
 
-PubSub
+<ProjectList
+  projects={[
+    projects.emittery,
+    projects.mitt,
+    projects.pubSubJs,
+    projects.tinyEmitter,
+    projects.eventEmitter,
+    projects.postalJs,
+    projects.eventery,
+  ]}
+/>
 
-[PubSubJS](https://github.com/mroderick/PubSubJS)
+<StatsComparison
+  projects={[
+    projects.emittery,
+    projects.mitt,
+    projects.pubSubJs,
+    projects.tinyEmitter,
+    projects.eventEmitter,
+    projects.postalJs,
+  ]}
+/>
 
-[Eventery](https://github.com/hmans/eventery)
+If you don't want to use a library, see [PubSub in 150 bytes](https://hassanshaikley.medium.com/pubsub-in-half-a-kilobyte-b6cf6a66d674) by [Hassan Khan-Shaikley](https://twitter.com/HassanShaikley):
 
-Symbols
+```js
+const eventTarget = new EventTarget()
 
-</Todo>
+export const subscribe = (eventName, callback) => {
+  eventTarget.addEventListener(eventName, callback)
+  return () => {
+    eventTarget.removeEventListener(eventName, callback)
+  }
+}
+
+export const publish = (n, data) => {
+  eventTarget.dispatchEvent(new CustomEvent(n, { detail: data }))
+}
+```
+
+And then use it with:
+
+```js
+const unsubscribe = subscribe('SOME_EVENT', e => {
+  console.log(e.detail)
+})
+
+publish('SOME_EVENT', { hello: 'world' })
+// logs {hello: 'world'}
+unsubscribe()
+publish('SOME_EVENT', 123)
+// does nothing
+```
+
+## React
+
+When using React, you can subscribe your components to events using `useEffect`. Subscription functions typically return an `unsubscribe` function that you can call when the component unmounts:
+
+```js
+useEffect(() => {
+  const unsubscribe = subscribe('SOME_EVENT', e => {
+    console.log(e.detail)
+  })
+
+  return () => {
+    unsubscribe()
+  }
+}, [])
+```
+
+Short version:
+
+```js
+useEffect(() => subscribe('SOME_EVENT', e => console.log(e.detail)), [])
+```

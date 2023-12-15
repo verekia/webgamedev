@@ -1428,7 +1428,6 @@ export const protobuf = {
     stars: 400,
     npm: '@bufbuild/protobuf',
     downloads: 7000,
-    isNew: true,
   },
   tsProto: {
     name: 'ts-proto',
@@ -1576,7 +1575,6 @@ export const random = {
     stars: 800,
     npm: 'aimless.js',
     downloads: 20,
-    isNew: true,
     ts: 'ts',
   },
   numberGenerator: {
@@ -1876,6 +1874,70 @@ export const steam = {
     stars: 1400,
     lastCommitDate: '2018-11-18',
     ts: 'js',
+  },
+}
+
+export const pubsub = {
+  emittery: {
+    name: 'emittery',
+    repo: 'sindresorhus/emittery',
+    stars: 1600,
+    npm: 'emittery',
+    downloads: 23_000_000,
+    ts: 'ts',
+  },
+  pubSubJs: {
+    name: 'PubSubJS',
+    repo: 'mroderick/PubSubJS',
+    stars: 4700,
+    npm: 'pubsub-js',
+    downloads: 130_000,
+    ts: 'dt',
+    lastCommitDate: '2021-11-11',
+  },
+  mitt: {
+    name: 'Mitt',
+    repo: 'developit/mitt',
+    stars: 9800,
+    npm: 'mitt',
+    downloads: 4_500_000,
+    ts: 'ts',
+  },
+  tinyEmitter: {
+    name: 'tiny-emitter',
+    repo: 'scottcorgan/tiny-emitter',
+    stars: 900,
+    npm: 'tiny-emitter',
+    downloads: 2_700_000,
+    lastCommitDate: '2019-07-01',
+    ts: 'ts',
+  },
+  eventEmitter: {
+    name: 'event-emitter',
+    repo: 'medikoo/event-emitter',
+    stars: 230,
+    npm: 'event-emitter',
+    downloads: 5_200_000,
+    lastCommitDate: '2017-03-15',
+    ts: 'dt',
+  },
+  postalJs: {
+    name: 'Postal.js',
+    repo: 'postaljs/postal.js',
+    stars: 2800,
+    npm: 'postal',
+    downloads: 20_000,
+    lastCommitDate: '2021-07-30',
+    ts: 'dt',
+  },
+  eventery: {
+    name: 'Eventery',
+    repo: 'hmans/eventery',
+    stars: 20,
+    npm: 'eventery',
+    downloads: 100,
+    ts: 'ts',
+    lastCommitDate: '2023-01-23',
   },
 }
 
