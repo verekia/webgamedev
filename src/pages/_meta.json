@@ -18,6 +18,7 @@
   "resources": { "title": "📚 Resources", "theme": { "breadcrumb": false } },
   "interviews": { "title": "🎙 Interviews", "theme": { "breadcrumb": false } },
   "newsletter": { "title": "💌 Newsletter", "theme": { "breadcrumb": false } },
+  "blog": { "title": "✍️ Community Blog", "theme": { "breadcrumb": false } },
   "open-jam-april-2023": {
     "display": "hidden",
     "title": "🍓 Open Jam – April 2023",
