@@ -1,0 +1,69 @@
+import { css } from 'projects'
+import ProjectList from 'components/ProjectList'
+import { ReactLogo, SvelteLogo, VueLogo } from 'lib/logos'
+
+# 🎨 HTML/CSS UI
+
+One of the best things about building games using the web platform is the ability to use HTML and CSS to create the UI of your game. You get great accessibility for free and can use all the tools and libraries available in the CSS ecosystem. HTML and CSS are not topics specific to web game development, so I won't get into too much detail, but let's list some options to create design systems and UI components for your game.
+
+There are tons of ways to write CSS, including plain CSS, preprocessors like [Sass](https://sass-lang.com/), [CSS Modules](https://github.com/css-modules/css-modules), and CSS-in-JS. There are also a ton of components libraries, all with different approaches, supported UI libraries, and features. I cannot possibly list them all, so I will list the ones that currently seem to be the most popular, focusing mainly on the React and Tailwind ecosystems.
+
+## Foundational libraries
+
+<ProjectList
+  projects={[
+    css.tailwind,
+    css.emotion,
+    { ...css.styledComponents, description: <ReactLogo /> },
+    css.vanillaExtract,
+    css.uno,
+    css.panda,
+    css.openProps,
+    css.stitches,
+  ]}
+/>
+
+## Unstyled component libraries
+
+<ProjectList
+  projects={[
+    {
+      ...css.headlessUI,
+      description: (
+        <>
+          <ReactLogo />
+          <VueLogo /> Based on Tailwind
+        </>
+      ),
+    },
+    { ...css.baseUI, description: <ReactLogo /> },
+    { ...css.radixPrimitives, description: <ReactLogo /> },
+    { ...css.reactAria, description: <ReactLogo /> },
+    { ...css.ariakit, description: <ReactLogo /> },
+    {
+      ...css.arkUI,
+      description: (
+        <>
+          <ReactLogo />
+          <VueLogo />
+        </>
+      ),
+    },
+  ]}
+/>
+
+## Component libraries
+
+<ProjectList
+  projects={[
+    { ...css.materialUI, description: <ReactLogo /> },
+    { ...css.ant, description: <ReactLogo /> },
+    { ...css.shadcn, description: 'Based on Tailwind and Radix' },
+    { ...css.chakraUI, description: <ReactLogo /> },
+    { ...css.mantine, description: <ReactLogo /> },
+    { ...css.daisyUI, description: 'Based on Tailwind' },
+    { ...css.radixThemes, description: <ReactLogo /> },
+  ]}
+/>
+
+See more libraries for <VueLogo /> [**Vue**](https://ui-libs.vercel.app/), <SvelteLogo /> [**Svelte**](https://madewithsvelte.com/ui-library), and <ReactLogo /> [**React**](https://react-ui-libs.vercel.app/).

@@ -17,6 +17,11 @@ const config = withNextra({
       destination: '/graphics/vfx-particles',
       permanent: true,
     },
+    {
+      source: '/webxr-vr-ar',
+      destination: '/engines-libraries/webxr-vr-ar',
+      permanent: true,
+    },
   ],
 })
 

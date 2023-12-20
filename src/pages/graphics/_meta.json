@@ -7,5 +7,6 @@
   "randomness-noise": { "title": "〰️ Randomness & Noise" },
   "shaders": { "title": "👻 Shaders" },
   "techniques": { "title": "🔮 Techniques" },
-  "user-interface": { "title": "🖥️ User Interface" }
+  "user-interface": { "title": "🖥️ User Interface" },
+  "html-css-ui": { "title": "🎨 HTML/CSS UI" }
 }

@@ -4,7 +4,6 @@
   "engines-libraries": { "title": "🏎️ Game Engines", "theme": { "breadcrumb": false } },
   "graphics": { "title": "🎨 Graphics", "theme": { "breadcrumb": false } },
   "assets": { "title": "🎁 Assets", "theme": { "breadcrumb": false } },
-  "webxr-vr-ar": { "title": "🥽 WebXR (VR, AR)", "theme": { "breadcrumb": false } },
   "game-design": { "title": "💡 Game Design", "theme": { "breadcrumb": false } },
   "artificial-intelligence": {
     "title": "🤖 Artificial Intelligence",

@@ -5,5 +5,6 @@
   "dev-tools": { "title": "🧰 Dev Tools" },
   "native-game-engines": { "title": "🎮 Native Engines" },
   "hybrid-approaches": { "title": "🧬 Hybrid Approaches" },
+  "webxr-vr-ar": { "title": "🥽 WebXR (VR, AR)" },
   "rust-game-dev": { "title": "🦀 Rust Game Dev" }
 }
