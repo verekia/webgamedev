@@ -1722,6 +1722,15 @@ export const css = {
     downloads: 96_000,
     ts: 'ts',
   },
+  styleX: {
+    name: 'StyleX',
+    url: 'https://stylexjs.com/',
+    repo: 'facebook/stylex',
+    stars: 6300,
+    npm: '@stylexjs/stylex',
+    downloads: 2000,
+    ts: 'ts',
+  },
   openProps: {
     name: 'Open Props',
     url: 'https://open-props.style/',

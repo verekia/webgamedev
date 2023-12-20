@@ -6,7 +6,7 @@ import { ReactLogo, SvelteLogo, VueLogo } from 'lib/logos'
 
 One of the best things about building games using the web platform is the ability to use HTML and CSS to create the UI of your game. You get great accessibility for free and can use all the tools and libraries available in the CSS ecosystem. HTML and CSS are not topics specific to web game development, so I won't get into too much detail, but let's list some options to create design systems and UI components for your game.
 
-There are tons of ways to write CSS, including plain CSS, preprocessors like [Sass](https://sass-lang.com/), [CSS Modules](https://github.com/css-modules/css-modules), and CSS-in-JS. There are also a ton of components libraries, all with different approaches, supported UI libraries, and features. I cannot possibly list them all, so I will list the ones that currently seem to be the most popular, focusing mainly on the React and Tailwind ecosystems.
+There are tons of ways to write CSS, including plain CSS, preprocessors like [Sass](https://sass-lang.com/), [CSS Modules](https://github.com/css-modules/css-modules), and CSS-in-JS. There are also a ton of component libraries, all with different approaches, supported UI libraries, and features. I cannot possibly list them all, so I will list the ones that currently seem to be the most popular, focusing mainly on the React and Tailwind ecosystems.
 
 See the State of CSS Survey pages on [CSS Frameworks](https://2023.stateofcss.com/en-US/css-frameworks/) and [CSS-in-JS](https://2023.stateofcss.com/en-US/css-in-js/) for interest and retention details.
 
@@ -20,6 +20,7 @@ See the State of CSS Survey pages on [CSS Frameworks](https://2023.stateofcss.co
     css.vanillaExtract,
     css.uno,
     css.panda,
+    { ...css.styleX, description: '🌱 New' },
     css.openProps,
     css.stitches,
   ]}
