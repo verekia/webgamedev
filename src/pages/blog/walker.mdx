@@ -1,0 +1,243 @@
+import { ThreeLogo } from 'lib/logos'
+import { SubTitleDate } from 'components/Date'
+import Author from 'components/Author'
+import Image from 'next/image'
+import YouTube from 'components/YouTube'
+
+# How to create a Mech Walker in Blender and bring it to the Web with A-Frame
+
+<SubTitleDate value="2024-12-20" />
+
+<Author
+  name="Dirk Krause"
+  twitter="dirkk"
+  website="https://curious-electric.com"
+  picture="dirkk0.jpeg"
+  mastodon="https://mastodon.gamedev.place/@curiousgames"
+  bio="Dirk Krause is the Captain of the Web Development studio Curious Electric."
+/>
+
+
+## The creation of the Walker Mech
+
+Mechs are a recurring trope in Computer Games. Stefan Persson a.k.a Imphenzia's 10 Minute Challenge introduced a great tutorial on how to create one:
+
+<YouTube id="deaQeIje-pQ" />
+
+
+I also released a video on Youtube with the focus on creating a rather minimal model with a full and simple animation cycle:
+
+<YouTube id="vkCZbZas3y8" />
+
+The challenge now is to bring this model to the web.
+
+## Step 2: export the model
+
+To import the model in  A-Frame, it should be exported to glTF,
+which is a modern format for 3D models.
+
+With the loaded model in Blender, choose "File/Export/glTF2.0".
+
+![start the export](/blog/walker/01.png)
+
+Choose glTF (embedded) there. This will give us one file in the JSON Format. All three formats would work, but for a real production, the binary .glb would be preferable.
+
+![Select glTF embedded](/blog/walker/03.png)
+
+Usually you also want to apply all modifiers on export.
+
+![Select 'Apply Modifiers'](/blog/walker/04.png)
+
+## Step 3: create an A-Frame HTML file
+
+A-Frame is [a web framework for building virtual reality experiences](https://aframe.io/) maintained by Diego Marcos. You could also see it as a wrapper around the popular Three.JS library.
+
+A-Frames "Hello, world" looks like this:
+
+```html
+<script>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Hello, WebVR! • A-Frame</title>
+      <meta name="description" content="Hello, WebVR! • A-Frame">
+      <script src="https://aframe.io/releases/1.4.2/aframe.min.js"><∕script>
+    </head>
+    <body>
+      <a-scene background="color: #FAFAFA">
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+      </a-scene>
+    </body>
+  </html>
+</script>
+```
+
+which results into a scene that can be navigated with WASD and is fully Web-VR ready:
+
+![Image of the result of the Glitch.com example](/blog/walker/05.png)
+
+So if you create an HTML file called index.html, drop the code in there, and open it in a web browser, you should see exactly this.
+
+For the rest of this article we continue to use this skeleton, and add lines either to the header or the scene tag:
+
+```html
+<script>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Hello, WebVR! • A-Frame</title>
+      <meta name="description" content="Hello, WebVR! • A-Frame">
+      <script src="https://aframe.io/releases/1.4.2/aframe.min.js"><∕script>
+      <!-- HEADER LINES GO HERE -->
+    </head>
+    <body>
+      <a-scene>
+        <!-- SCENE LINES GO HERE -->
+      </a-scene>
+    </ body>
+  </html>
+</script>
+```
+
+## Step 4: Use a web server
+
+This worked because we didn't load external files yet.
+
+To follow this, you need to either
+
+- install a local webserver or
+- use some hosting service like Glitch.
+
+The reason for this is that we need to import a file which the browser considers a problem (CORS) if it it's loaded from the local file system.
+
+This is explained in more detail on [this page](https://aframe.io/docs/) and there are many companies providing services like this,
+for example [CodePen](https://codepen.io/mozillavr/pen/BjygdO), [jsFiddle](https://jsfiddle.net/) or [JSBin](https://jsbin.com/).
+
+## Step 5: Import the model
+
+Importing the model in A-Frame is just one line, which would place the Mech in the center so we'll move it back and rotate it a little.
+
+Add this to the scene:
+
+```html
+<a-entity gltf-model="mech.gltf" position="0 0 -7" rotation="0 40 0"></a-entity>
+```
+
+The result should look like this:
+
+![Just one line. Nice.](/blog/walker/06.png)
+
+## Step 6: Make it move
+
+Let's make the Mech move by having it walking a circle in A-Frame.
+
+This means that we need to
+
+- activate the glTF animation from Blender
+- adding a circle movement in A-Frame
+
+Using the animation from Blender is adding the `animation-mixer` component to the model entity. Since this is not part of the standard A-Frame distribution, we include the A-Frame Extras library written by Don McCurdy.
+
+To add this component, we need to include it in the header section of the page:
+
+```
+<script type="preformatted">
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.js"></script>
+  </script>
+```
+
+Having it walk in a circle requires the introduction of a second enitity that offsets the model and additionally adds the animation.
+
+After some tweaking the code in the scene entity looks like that:
+
+```html
+<a-entity
+  position="0 0 -12"
+  animation="property: rotation.y; to: 0; from: 360; dur: 18000; loop: true; autoplay: true; easing: linear;"
+>
+  <a-entity position="8 0 0">
+    <a-entity scale="0.5 0.5 0.5" gltf-model="mech.gltf" animation-mixer> </a-entity>
+  </a-entity>
+</a-entity>
+```
+![walking walker](/blog/walker/07.gif)
+
+
+So, are we done?
+
+## Step 7: Add environment (optional)
+
+By the book, we are done, but A-Frame makes it very easy to add some environment, so let's do this.
+
+Diego F. Goberna wrote the A-Frame Environment component which makes this task adding two lines of code.
+Again, add the library to the header:
+
+```html
+<script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
+</script>
+```
+
+Then, add the entity:
+
+```
+<a-entity environment="preset: desert;"></a-entity>
+```
+
+There's tons of parameters that can be tweaked, read about them in the [documentation](https://github.com/supermedium/aframe-environment-component#parameters); here are some screen shots for `default`, `tron` and `yavapai` that include the shadows introduced in the last step.
+
+![walking walker](/blog/walker/08.png)
+
+
+## Step 8: add shadows (optional)
+
+The Environment component adds lights already, but since the Mech walking circle spans quite some area, we need to introduce a light with a large shadowMap like this:
+
+```html
+<a-entity light="type: ambient; intensity:0.3;"></a-entity>
+<a-entity
+  id="sun"
+  light="type: directional; intensity: 0.9;
+  castShadow: true; shadowCameraFar: 500;
+  shadowBias: -0.001;
+  shadowMapHeight:2048; shadowMapWidth:2048;
+  shadowCameraLeft: -50; shadowCameraRight: 50;
+  shadowCameraBottom: -50; shadowCameraTop: 50;"
+  position="3 10 10"
+>
+</a-entity>
+```
+
+Then we add shadows and prevent double lighting:
+
+```html
+<a-entity
+  environment="preset: yavapai; shadow: true; lighting:none;"
+></a-entity>
+```
+and add the shadow property to the gltf-model:
+
+```html
+<a-entity
+  shadow="cast: true; receive: true"
+  scale="0.5 0.5 0.5"
+  gltf-model="mech.gltf"
+  animation-mixer
+>
+</a-entity>
+```
+
+## Result
+
+The final result can be seen and remixed here:
+https://mech-walker.glitch.me/
+
+
+
+## References:
+
+- A-Frame Documentation: https://aframe.io/docs/
+- Environment https://github.com/supermedium/aframe-environment-component
+
