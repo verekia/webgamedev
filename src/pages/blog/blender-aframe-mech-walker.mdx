@@ -41,7 +41,7 @@ Choose glTF (embedded) there. This will give us one file in JSON Format. All thr
 
 ![Select glTF embedded](/blog/walker/03.png)
 
-Usually you also want to apply all modifiers on export:
+Usually, you also want to apply all modifiers on export:
 
 ![Select 'Apply Modifiers'](/blog/walker/04.png)
 
@@ -85,7 +85,7 @@ It results into a scene that can be navigated with WASD and is fully WebVR-ready
 
 ![Image of the result of the Glitch.com example](/blog/walker/05.png)
 
-If you create an `index.html` file, drop this code in there, and open it in a browser, you should see exactly this. For the rest of this article we continue to use this skeleton, and add lines either to `head` or `a-scene`:
+If you create an `index.html` file, drop this code in there, and open it in a browser, you should see exactly this. For the rest of this article we continue to use this skeleton and add lines either to `head` or `a-scene`:
 
 ```html
 <html>
@@ -105,7 +105,7 @@ You will need to use a web server for imports to work correctly. If you have [No
 
 ## Importing the model
 
-Importing a model in A-Frame is just one line. It places the mech in the center so we'll move it back and rotate it a little. Download the [mech.gltf](https://www.webgamedev.com/blog/mech/mech.gltf) file and replace the content of `a-scene` with:
+Importing a model in A-Frame is just one line. It places the mech in the center, so we'll move it back and rotate it a little. Download the [mech.gltf](https://www.webgamedev.com/blog/walker/mech.gltf) file and replace the content of `a-scene` with:
 
 ```html
 <a-entity gltf-model="mech.gltf" position="0 0 -7" rotation="0 40 0"></a-entity>
@@ -117,7 +117,7 @@ The result should look like this:
 
 ## Making it move
 
-Let's make the mech move by having it walking a circle in A-Frame. This means that we need to:
+Let's make the mech move by having it walk a circle in A-Frame. This means that we need to:
 
 - Activate the glTF animation from Blender.
 - Add a circle movement in A-Frame.
@@ -128,7 +128,7 @@ We can use Blender animations by adding the `animation-mixer` component to the m
 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.2.0/dist/aframe-extras.js"></script>
 ```
 
-Having it walk in a circle requires adding a second enitity that offsets the model and defines the animation. After some tweaking the code in the scene entity looks like this:
+Having it walk in a circle requires adding a second entity that offsets the model and defines the animation. After some tweaking, the code in the scene entity looks like this:
 
 ```html
 <a-entity
@@ -159,18 +159,17 @@ Then, add the entity:
 <a-entity environment="preset: yavapai;"></a-entity>
 ```
 
-There's tons of parameters that can be tweaked, read about them in the [documentation](https://github.com/supermedium/aframe-environment-component#parameters). Here are some screenshots for `default`, `tron` and `yavapai` (shadows will be added in the next section):
+There are tons of parameters that can be tweaked. Read about them in the [documentation](https://github.com/supermedium/aframe-environment-component#parameters). Here are some screenshots for `default`, `tron` and `yavapai` (shadows will be added in the next section):
 
 ![walking walker](/blog/walker/08.png)
 
 ## Shadows
 
-The Environment component adds lights already, but since the Mech walking circle spans quite some area, we need to introduce a light with a large `shadowMap` like this:
+The Environment component adds lights already, but since the mech walking circle spans quite some area, we need to introduce a light with a large `shadowMap` like this:
 
 ```html
 <a-entity light="type: ambient; intensity:0.3;"></a-entity>
 <a-entity
-  id="sun"
   light="type: directional; intensity: 0.9;
   castShadow: true; shadowCameraFar: 500;
   shadowBias: -0.001;
@@ -182,7 +181,7 @@ The Environment component adds lights already, but since the Mech walking circle
 </a-entity>
 ```
 
-Then we add shadows and prevent double lighting:
+Then, we add shadows and prevent double lighting:
 
 ```html
 <a-entity environment="preset: yavapai; shadow: true; lighting:none;"></a-entity>
@@ -202,7 +201,7 @@ And add the `shadow` property to the model:
 
 ## Result
 
-The final result can be seen and remixed here:
+See and remix the final result here:
 https://mech-walker.glitch.me/
 
 <video autoPlay loop muted style={{ margin: '24px auto 16px', maxWidth: 500, borderRadius: 6 }}>
