@@ -1,5 +1,5 @@
 const Callout = ({ children, ...props }) => (
-  <aside className="full-width-mobile callout" {...props}>
+  <aside {...props} className={`full-width-mobile callout ${props.className ?? ''}`}>
     {children}
   </aside>
 )
