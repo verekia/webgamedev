@@ -46,9 +46,9 @@ With the [recent changes](https://webkit.org/blog/13878/web-push-for-web-apps-on
 
 The easiest way to publish your PWA to [app stores](https://web.dev/learn/pwa/installation/#app-catalogs-and-stores) is to use [PWABuilder](https://www.pwabuilder.com/), online or via the [VSCode extension](https://marketplace.visualstudio.com/items?itemName=PWABuilder.pwa-studio). It's a tool made by Microsoft to publish your existing PWA to app stores like the Apple App Store, Google Play Store, and Microsoft Store. It's free and easy to use, and it will generate all the assets you need for your app store submission. You can also use it to generate a [manifest](https://web.dev/learn/pwa/web-app-manifest/) or a [service worker](https://web.dev/learn/pwa/service-workers/).
 
-## Libraries
+## Offline support
 
-Offline support is required to install a PWA, and that's achieved via service workers. Service workers can get quite complicated and I would recommend leveraging existing libraries instead of doing it yourself. You can use Google's [Workbox](https://developer.chrome.com/docs/workbox/) to help, but an even easier way to get started is to use a library for your bundler:
+Offline support is **no longer required** to install a PWA 🎉. If you want your game to work offline, you can use service workers. Service workers can get quite complicated and I would recommend leveraging existing libraries instead of doing it yourself. You can use Google's [Workbox](https://developer.chrome.com/docs/workbox/) to help, but an even easier way to get started is to use a library for your bundler:
 
 - [vite-plugin-pwa](https://github.com/vite-pwa/vite-plugin-pwa)
 - [@vite-pwa/sveltekit](https://github.com/vite-pwa/sveltekit) (Svelte)
