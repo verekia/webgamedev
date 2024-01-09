@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 import PlausibleProvider from 'next-plausible'
 import 'nextra-theme-docs/style.css'
+import '../styles/global.css'
 
 const darkBg = '#1c1c1c'
 
