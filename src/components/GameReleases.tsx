@@ -1,4 +1,5 @@
-import { PokiLogo } from './PokiSponsor'
+import A from './A'
+import { PokiLogo, PokiIcon } from './PokiSponsor'
 import { WebGamerIcon, WebGamerText } from './WebGamer'
 
 const GameReleases = ({ portal }) => (
@@ -23,6 +24,44 @@ const GameReleases = ({ portal }) => (
       </a>
     )}
   </div>
+)
+
+export const GameRelease = ({ title, url, description, developer, developerUrl, EngineIcon }) => (
+  <span>
+    <EngineIcon className="mr-2" />
+    {url.startsWith('https://poki.com') ? (
+      <a
+        href="https://poki.com/?utm_source=webgamedev&utm_content=newsletter"
+        target="_blank"
+        rel="noopener"
+      >
+        <PokiIcon className="size-5 inline-block mr-2" />
+      </a>
+    ) : url.startsWith('https://webgamer.io') ? (
+      <WebGamerIcon className="size-5 inline-block mr-2" />
+    ) : null}
+    <A
+      href={
+        url.startsWith('https://poki.com')
+          ? `${url}?utm_source=webgamedev&utm_content=newsletter`
+          : url
+      }
+      target="_blank"
+      rel="noopener"
+      className="font-bold"
+    >
+      {title}
+    </A>{' '}
+    {developer && (
+      <>
+        by{' '}
+        <A href={developerUrl} target="_blank" rel="noopener">
+          {developer}
+        </A>{' '}
+      </>
+    )}
+    – {description}
+  </span>
 )
 
 export default GameReleases
