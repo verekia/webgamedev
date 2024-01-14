@@ -8,6 +8,7 @@ import {
   GodotLogo,
   NeedleLogo,
   PlayCanvasLogo,
+  JavascriptLogo,
   PixiLogo,
   PhaserLogo,
   R3FLogo,
@@ -21,7 +22,7 @@ import {
 import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
 import { SubTitleDate } from 'components/Date'
 import { FloatLeftImage } from 'components/FloatImage'
-import { PokiLogo } from 'components/PokiSponsor'
+import { PokiLogo, PokiIcon } from 'components/PokiSponsor'
 import { GameRelease } from 'components/GameReleases'
 
 # Newsletter – Issue 020
@@ -40,7 +41,7 @@ Preview**](https://webkit.org/blog/14879/webgpu-now-available-for-testing-in-saf
 
 📝 I've created a **form to share our social media profiles** to strengthen our network of web game developers. Some of us would like to connect on Mastodon, Bluesky, Threads, itch.io, etc., so this is a chance to diversify our social media presence and not keep all our eggs in one basket. Please [**fill out the form**](https://forms.gle/8x4RB2cbFxkaBCyH8), and I'll prepare a list of links to easily follow everyone! Responses are public and emails are not collected.
 
-## ⭐️ Sponsors
+## ⭐️ Sponsor
 
 <div className="flex flex-col gap-5 mt-5">
   <div className="flex flex-col gap-5 lg:flex-row items-center">
@@ -105,25 +106,38 @@ Preview**](https://webkit.org/blog/14879/webgpu-now-available-for-testing-in-saf
   –{' '}
 - <PlayCanvasLogo /> [**PlayCanvas Editor vXXX**](https://github.com/playcanvas/editor/releases)
   –{' '}
-- <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX
-- <AframeLogo /> [**A-Frame vXXX**](https://github.com/aframevr/aframe/releases)
-- <PixiLogo /> [**PixiJS XXX**](https://github.com/pixijs/pixijs/releases)
-- <PixiLogo /> [**Pixi React XXX**](https://github.com/pixijs/pixi-react/releases)
-- <BabylonLogo /> [**Babylon.js vXXX**](https://github.com/BabylonJS/Babylon.js/releases)
+- <AframeLogo /> [**A-Frame v1.5.0**](https://github.com/aframevr/aframe/releases/tag/v1.5.0) –
+  Multiview extension, Spatial computing UIs, Mixed Reality features, Quest 3 support.
+- <PixiLogo /> [**PixiJS v8 is at the Release Candidate
+  stage**](https://github.com/pixijs/pixijs/releases)
+- <PhaserLogo /> [**Phaser v3.70.0**](https://github.com/photonstorm/phaser/releases) – Round
+  pixels, Texture Packer Nine Slice support, Arcade Physics, FX updates and fixes. Richard Davey
+  launched [**Phaser Studio**](https://opencoreventures.com/blog/2023-12-phaser-studio-launched/)
+  and is looking for [**senior WebGL
+  developers**](https://phaser.io/community/jobs?utm_source=webgamedev&utm_content=newsletter#senior-webgl-graphics-engineer)
+  (read his [dev report](https://www.patreon.com/posts/phaser-in-2024-94882498)).
+- <PhaserLogo /> [**Phaser Editor 2D
+  v3.66**](https://phaser.io/news/2024/01/phaser-editor-v366-released) – Adds Script Node libraries.
+  v3.64 added [Aseprite
+  support](https://phasereditor2d.com/blog/2023/11/phaser-editor-2d-v3640-released-boosting-sprite-animations-hi-aseprite).
+  [Arian Fornaris](https://twitter.com/boniatillo_com), developer of Phaser Editor 2D, [**joined the
+  Phaser Studio team**](https://www.patreon.com/posts/arian-fornaris-95868577) 🔥
+- <BabylonLogo /> [**Babylon.js v6.38.0**](https://github.com/BabylonJS/Babylon.js/releases)
 - <NeedleLogo /> [**Needle**](https://needle.tools/)
   [**2.XXX**](https://github.com/needle-tools/needle-engine-support/releases)
 - [**Rapier**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md)
+- <ConstructLogo /> [**Construct**](https://www.construct.net/en) now [supports
+  TypeScript](https://www.construct.net/en/blogs/construct-official-blog-1/construct-supports-typescript-1872).
 - Wonderland Engine
 - Defold
 - [**Modd.io**](https://www.modd.io/), the full-stack HTML5 engine by [m0dE](https://twitter.com/bboym0dE) is now [open source](https://github.com/moddio/moddio2). It uses <PhaserLogo /> [Phaser](https://phaser.io/) on the client.
 
 ## 🛠 Tools
 
-- x
-- x
-- x
-
 - 🎨 [**Aseprite 1.3**](https://blog.aseprite.org/2023/11/27/aseprite-v13/) is out! Aseprite is an animated sprite and pixel art editor. 1.2 came out in 2017!
+- 🎨 [**Sprite Fusion**](https://www.spritefusion.com/) – Free web-based tilemap editor. Exports to Unity, Godot, and JSON ([video](https://twitter.com/HugoDuprez/status/1745114947233681477)) by [Hugo Duprez](https://twitter.com/HugoDuprez).
+- 🕹 [**Optimized fork of Joymap**](https://github.com/cpojer/joymap) (8x smaller) by [Christoph Nakazawa](https://twitter.com/cpojer). [Joymap](https://github.com/diegodoumecq/joymap) is a a Gamepad API wrapper.
+- [**Steam now somewhat allows pre-generated AI content**](https://steamcommunity.com/groups/steamworks/announcements/detail/3862463747997849619) as long as it doesn't include illegal or infringing content. Games will have to disclose how AI was used during development.
 
 My [Bookmarks](https://twitter.com/i/bookmarks).
 
@@ -172,11 +186,27 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
 
 ## 🎬 Videos
 
+- ⚡️ [**How Games Have Worked for 30 Years to Do Less Work**](https://www.youtube.com/watch?v=CHYxjpYep_M) by [SimonDev](https://www.youtube.com/@simondev758) (great watch on culling)
+- <WebGPULogo /> [**WebGPU - JavaScript at the speed of
+  Light**](https://www.youtube.com/watch?v=oAwlk0j5RUM) by [Visionary
+  3D](https://www.youtube.com/@3dvisionary)
+- <ThreeLogo /> [**I tried making Zelda The Wind Waker in
+  JavaScript**](https://www.youtube.com/watch?v=IyAOCwUWkNE) by [Robin
+  Payot](https://twitter.com/RobinPayot) ([game](https://wind-waker-js.vercel.app/),
+  [repo](https://github.com/Robpayot/zelda-project-public))
+
 ## ✍️ Articles
 
 - <CssLogo /> [**CSS Wrapped 2023**](https://developer.chrome.com/blog/css-wrapped-2023) by the
   Chrome UI DevRel Team
+- <PlayCanvasLogo />
+  <PokiIcon className="size-5 inline-block mx-0.5" /> [**6 Million Plays in 30 Days – Vortelli's
+  Pizza
+  Delivery**](https://medium.com/poki/6-million-plays-in-30-days-vortellis-pizza-delivery-2576935294ee)
+  by [Devortel](https://twitter.com/devortel)
 - 🌐 [**What PWA Can Do Today**](https://whatpwacando.today/) by [Danny Moerkerke](https://www.dannymoerkerke.com/)
+- 🌐 [**How We Enabled In-App Purchases for PWAs on iOS**](https://blog.pwabuilder.com/posts/you-won't-believe-how-we-enabled-in-app-purchases-for-pwas-on-ios/) by [Gleb Khmyznikov](https://twitter.com/khmyznikov)
+- 🎓 [**DOOM - Graphics Study**](https://www.adriancourreges.com/blog/2016/09/09/doom-2016-graphics-study/) (2016) by [Adrian Courrèges](https://www.adriancourreges.com/)
 - 📨 New [**Events & Messaging (PubSub)**](https://www.webgamedev.com/code-architecture/events-messaging) page on Web Game Dev.
 
 ## 🎮 Games
@@ -220,6 +250,14 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
     description="Multiplayer spaceship shooting game"
   />
 - <GameRelease
+    title="Pipedown"
+    url="https://webgamer.io/en/g/pipedown"
+    developer="Nik Lever"
+    developerUrl="https://twitter.com/NikLever"
+    EngineIcon={ThreeLogo}
+    description="Solve 3D puzzles by connecting pipes!"
+  />
+- <GameRelease
     title="Conq.io"
     url="https://webgamer.io/en/g/conq-io"
     developer="Modd.io"
@@ -228,12 +266,36 @@ My [Bookmarks](https://twitter.com/i/bookmarks).
     EngineIcon={GodotLogo}
   />
 - <GameRelease
+    title="Robocalypse"
+    url="https://webgamer.io/en/g/robocalypse"
+    developer="Weavers Games"
+    developerUrl="https://www.weaversgames.com/"
+    description="An adventure game of a robot in an apocalyptic world"
+    EngineIcon={BabylonLogo}
+  />
+- <GameRelease
     title="Athena Crisis"
     url="https://athenacrisis.com/"
     developer="Nakazawa Tech"
     developerUrl="https://nkzw.tech/"
     description="Modern retro turn-based strategy game now in early access"
     EngineIcon={CssLogo}
+  />
+- <GameRelease
+    title="The Great Gift Hunt"
+    url="https://thegreatgifthunt.com/"
+    developer="Piotr Obidowski"
+    developerUrl="https://twitter.com/pobidowski"
+    description="Help Santa find gifts and beat up some zombies"
+    EngineIcon={R3FLogo}
+  />
+- <GameRelease
+    title="Reckless Chess"
+    url="https://www.recklesschess.com/"
+    developer="Weavers Games"
+    developerUrl="https://www.weaversgames.com/"
+    description="Chess game with a dice roll mechanic twist"
+    EngineIcon={JavascriptLogo}
   />
 
 ## ✨ Demos
