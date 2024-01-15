@@ -16,9 +16,11 @@ import FilamentSrc from '../../public/logos/filament.png'
 import GDevelopSrc from '../../public/logos/gdevelop.png'
 import GltfSrc from '../../public/logos/gltf-letter.png'
 import GodotSrc from '../../public/logos/godot.png'
+import HaxeSrc from '../../public/logos/haxe.png'
 import ImpactSrc from '../../public/logos/impact.png'
 import JavascriptSrc from '../../public/logos/javascript.png'
 import KaboomSrc from '../../public/logos/kaboom.png'
+import ModdIoSrc from '../../public/logos/modd-io.png'
 import NeedleSrc from '../../public/logos/needle.png'
 import OglSrc from '../../public/logos/ogl.png'
 import PhaserSrc from '../../public/logos/phaser.png'
@@ -565,6 +567,30 @@ export const DTLogo = (props: ImageProps) => (
       alt="Definitely Typed"
       title="Definitely Typed"
       src={DTSrc}
+      style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const ModdIoLogo = (props: ImageProps) => (
+  <a href="https://modd.io/" target="_blank" rel="noopener">
+    <Image
+      alt="Modd.io"
+      title="Modd.io"
+      src={ModdIoSrc}
+      style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const HaxeLogo = (props: ImageProps) => (
+  <a href="https://haxe.org/" target="_blank" rel="noopener">
+    <Image
+      alt="Haxe"
+      title="Haxe"
+      src={HaxeSrc}
       style={{ ...defaultStyle, ...props.style }}
       {...props}
     />
