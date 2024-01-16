@@ -31,6 +31,7 @@ import ReactSrc from '../../public/logos/react.png'
 import RogueSrc from '../../public/logos/rogue.png'
 import SplineSrc from '../../public/logos/spline.png'
 import SvelteSrc from '../../public/logos/svelte.png'
+import StencylSrc from '../../public/logos/stencyl.png'
 import ThreeSrc from '../../public/logos/three.png'
 import ThrelteSrc from '../../public/logos/threlte.png'
 import TresSrc from '../../public/logos/tres.png'
@@ -591,6 +592,18 @@ export const HaxeLogo = (props: ImageProps) => (
       alt="Haxe"
       title="Haxe"
       src={HaxeSrc}
+      style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const StencylLogo = (props: ImageProps) => (
+  <a href="https://www.stencyl.com/" target="_blank" rel="noopener">
+    <Image
+      alt="Stencyl"
+      title="Stencyl"
+      src={StencylSrc}
       style={{ ...defaultStyle, ...props.style }}
       {...props}
     />
