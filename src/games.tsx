@@ -64,11 +64,11 @@ const Game = ({
           style={{
             position: 'absolute',
             right: 0,
-            bottom: 27,
+            bottom: 0,
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
             textShadow: '0 0 3px black, 0 0 5px black',
             borderTopLeftRadius: 4,
-            padding: '2px 4px 0',
+            padding: '1px 4px',
             color: 'white',
             fontWeight: 'bold',
             fontSize: 12,
@@ -127,6 +127,31 @@ const Game = ({
           ) : null}
         </span>
       </div>
+      {externalPlayUrl?.startsWith('https://poki.com') && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            background: 'white',
+            zIndex: 9,
+            width: 70,
+            padding: '6px 8px',
+            borderBottomLeftRadius: 6,
+            boxShadow: '0 2px 2px rgba(0, 0, 0, 0.3)',
+          }}
+        >
+          <a href={externalPlayUrl} target="_blank" rel="noopener">
+            <img
+              src="/partnerships/poki.webp"
+              alt="Poki"
+              width="300"
+              height="142"
+              style={{ width: '100%' }}
+            />
+          </a>
+        </div>
+      )}
       {(sourceUrl || infoUrl) && (
         <div
           style={{
@@ -187,30 +212,31 @@ const Game = ({
           )}
         </div>
       )}
-      <div className="plate">
-        <a
-          href={websiteUrl ?? externalPlayUrl}
-          target="_blank"
-          rel="noopener"
-          style={{ fontWeight: 'bold' }}
-        >
-          {name}
-        </a>{' '}
-        {author && authorUrl && (
-          <>
-            by{' '}
-            <a
-              className="game-author"
-              target="_blank"
-              rel="noopener"
-              href={authorUrl}
-              style={{ fontWeight: 'bold' }}
-            >
-              {author}
-            </a>
-          </>
-        )}
-        {/* <button
+      {false && (
+        <div className="plate">
+          <a
+            href={websiteUrl ?? externalPlayUrl}
+            target="_blank"
+            rel="noopener"
+            style={{ fontWeight: 'bold' }}
+          >
+            {name}
+          </a>{' '}
+          {false && author && authorUrl && (
+            <>
+              by{' '}
+              <a
+                className="game-author"
+                target="_blank"
+                rel="noopener"
+                href={authorUrl}
+                style={{ fontWeight: 'bold' }}
+              >
+                {author}
+              </a>
+            </>
+          )}
+          {/* <button
             style={{ position: 'absolute', right: 6, top: 6 }}
             onClick={() => setAreDetailsOpen(true)}
           >
@@ -222,7 +248,8 @@ const Game = ({
               <button>OK</button>
             </form>
           </dialog> */}
-      </div>
+        </div>
+      )}
       <a href={websiteUrl ?? externalPlayUrl} target="_blank" rel="noopener" />
     </div>
   </>
