@@ -59,7 +59,7 @@ const Game = ({
           : `url("/games-logos/${img}")`,
       }}
     >
-      {size && (
+      {false && size && (
         <div
           style={{
             position: 'absolute',
@@ -83,7 +83,7 @@ const Game = ({
           top: 0,
           left: 0,
           backgroundColor: 'rgba(0, 0, 0, 0.3)',
-          borderBottomRightRadius: 4,
+          borderBottomRightRadius: 8,
           padding: '4px 6px',
         }}
       >
@@ -136,9 +136,9 @@ const Game = ({
             background: 'white',
             zIndex: 9,
             width: 70,
-            padding: '6px 8px',
-            borderBottomLeftRadius: 6,
-            boxShadow: '0 2px 2px rgba(0, 0, 0, 0.3)',
+            padding: '7px 10px',
+            borderBottomLeftRadius: 8,
+            boxShadow: '0 2px 2px rgba(0, 0, 0, 0.2)',
           }}
         >
           <a href={externalPlayUrl} target="_blank" rel="noopener">
@@ -289,14 +289,14 @@ export const Games = () => {
         .grid-container {
           display: grid;
           grid-template-columns: auto auto auto;
-          column-gap: 20px;
-          row-gap: 20px;
+          column-gap: 16px;
+          row-gap: 16px;
           margin: 0 auto;
         }
         .grid-container > div {
           background-color: #eee;
-          height: 130px;
-          border-radius: 4px;
+          height: 142px;
+          border-radius: 12px;
           text-align: center;
           background-position: center center;
           background-size: cover;
