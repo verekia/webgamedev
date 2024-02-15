@@ -141,7 +141,11 @@ const Game = ({
             boxShadow: '0 2px 2px rgba(0, 0, 0, 0.2)',
           }}
         >
-          <a href={externalPlayUrl} target="_blank" rel="noopener">
+          <a
+            href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
+            target="_blank"
+            rel="noopener"
+          >
             <img
               src="/partnerships/poki.webp"
               alt="Poki"
@@ -250,7 +254,15 @@ const Game = ({
           </dialog> */}
         </div>
       )}
-      <a href={websiteUrl ?? externalPlayUrl} target="_blank" rel="noopener" />
+      <a
+        href={
+          websiteUrl ?? externalPlayUrl?.startsWith('https://poki.com')
+            ? `${externalPlayUrl}?utm_source=webgamedev&utm_content=games`
+            : externalPlayUrl
+        }
+        target="_blank"
+        rel="noopener"
+      />
     </div>
   </>
 )
