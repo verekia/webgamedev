@@ -1077,6 +1077,13 @@ export const physics = {
     downloads: 400,
     ts: 'ts',
   },
+  phy: {
+    name: 'Phy',
+    url: 'https://lo-th.github.io/phy/',
+    repo: 'lo-th/phy',
+    stars: 400,
+    ts: 'js',
+  },
   physxJs: {
     name: 'physx-js',
     repo: 'ashconnell/physx-js',
