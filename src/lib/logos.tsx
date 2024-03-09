@@ -5,6 +5,7 @@ import Image, { ImageProps } from 'next/image'
 import AframeSrc from '../../public/logos/aframe.png'
 import AngularThreeSrc from '../../public/logos/angular-three.png'
 import BabylonSrc from '../../public/logos/babylon.png'
+import BlenderSrc from '../../public/logos/blender.png'
 import CocosSrc from '../../public/logos/cocos.png'
 import Colyseus from '../../public/logos/colyseus.png'
 import ConstructSrc from '../../public/logos/construct.png'
@@ -604,6 +605,18 @@ export const StencylLogo = (props: ImageProps) => (
       alt="Stencyl"
       title="Stencyl"
       src={StencylSrc}
+      style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const BlenderLogo = (props: ImageProps) => (
+  <a href="https://www.blender.org/" target="_blank" rel="noopener">
+    <Image
+      alt="Blender"
+      title="Blender"
+      src={BlenderSrc}
       style={{ ...defaultStyle, ...props.style }}
       {...props}
     />
