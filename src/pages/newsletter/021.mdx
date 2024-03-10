@@ -13,6 +13,7 @@ import {
   PlayCanvasLogo,
   PixiLogo,
   PhaserLogo,
+  ReactLogo,
   R3FLogo,
   ThreeLogo,
   ThrelteLogo,
@@ -21,6 +22,7 @@ import {
   WasmLogo,
   WebXRLogo,
   WonderlandLogo,
+  WebGPULogo,
 } from 'lib/logos'
 import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
 import { SubTitleDate } from 'components/Date'
@@ -43,9 +45,7 @@ If you are attending GDC, make sure to come say hi to [**Poki at their booth**](
 
 🇪🇺 The [**Digital Markets Act**](https://open-web-advocacy.org/blog/the-digital-markets-act-is-in-force-what-happens-now/) is now in force, which means that _gatekeepers_ such as Apple, Google, Meta, and Microsoft must now comply with the new rules. The act aims to create a fair and competitive digital market by preventing gatekeepers from abusing their power. As a reponse to the DMA, Apple tried last week to kill PWAs entirely in the EU and reversed their decision after being met with backlash led by the [Open Web Advocacy](https://open-web-advocacy.org/blog/apple-backs-off-killing-web-apps/).
 
-- https://pixijs.com/blog/pixi-v8-launches
-
-- https://gamedevjs.com/survey/2023/ - https://twitter.com/Gamedevjs
+The [**results of the Gamedev.js Survey 2023**](https://gamedevjs.com/survey/2023/) are now available!
 
 ## ⭐️ Sponsors
 
@@ -112,18 +112,19 @@ If you are attending GDC, make sure to come say hi to [**Poki at their booth**](
 - <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX – [Phaser
   World 164](https://madmimi.com/p/85dda81), New quickstart project
   [templates](https://github.com/phaserjs#quickstart-templates)
-- <AframeLogo /> [**A-Frame vXXX**](https://github.com/aframevr/aframe/releases)
-- <PixiLogo /> [**PixiJS XXX**](https://github.com/pixijs/pixijs/releases)
-- <PixiLogo /> [**Pixi React XXX**](https://github.com/pixijs/pixi-react/releases)
-- <BabylonLogo /> [**Babylon.js vXXX**](https://github.com/BabylonJS/Babylon.js/releases)
+- <PixiLogo /> [**PixiJS**](https://pixijs.com/) – Read the [**v8 release
+  announcement**](https://pixijs.com/blog/pixi-v8-launches), with performance improvements and
+  WebGPU support.
+- <BabylonLogo /> [**Babylon.js v6.46**](https://github.com/BabylonJS/Babylon.js/releases)
 - <NeedleLogo /> [**Needle**](https://needle.tools/)
   [**2.XXX**](https://github.com/needle-tools/needle-engine-support/releases)
-- [**Rapier**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md)
+- 🤺 [**Rapier v0.18.0**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md) – New [non-linear constraints solver](https://github.com/dimforge/rapier/pull/579)
 - <WonderlandLogo /> Wonderland Engine
 - <DefoldLogo /> Defold
-- <ColyseusLogo /> Colyseus
 - <ConstructLogo /> Construct
 - Excalibur
+- <ReactLogo /> [**Overreact**](https://overreactjs.github.io/docs/intro) – A new DOM-based game
+  engine for React by [Craig Smith](https://twitter.com/MartiansGame)
 
 https://twitter.com/excaliburjs/status/1761156596338454818
 
@@ -153,6 +154,8 @@ https://twitter.com/excaliburjs/status/1761156596338454818
 - <R3FLogo /> <BlenderLogo /> [**2EZ GLTFJSX**](https://abdel369.gumroad.com/l/2EZgltfjsx) Blender
   add-on ([demo](https://twitter.com/0xca0a/status/1756318335816335794)) by
   [abdel369](https://twitter.com/abdel369hady)
+- <ReactLogo /> [**Mana Potion**](https://github.com/verekia/manapotion) – Gamedev toolkit (mostly
+  reactive inputs) for React and React Three Fiber by [me](https://twitter.com/verekia)
 - <ThrelteLogo /> [**FakeGlowMaterial**](https://threlte.xyz/docs/reference/extras/fake-glow-material)
   port for Threlte by [flobit](https://twitter.com/flobit_dev)
 - <BlenderLogo /> [**Export_Vertices_To_JSON**](https://github.com/ClassOutside/Export_Vertices_To_JSON/)
@@ -163,6 +166,9 @@ https://twitter.com/excaliburjs/status/1761156596338454818
 - <ThreeLogo /> [**Quick_Grass**](https://github.com/simondevyoutube/Quick_Grass) by
   [SimonDev](https://twitter.com/iced_coffee_dev) – Code used in [his video about
   grass](https://www.youtube.com/watch?v=bp7REZBV4P4).
+- 🎁 [**Input Prompts**](https://kenney.nl/assets/input-prompts) assets by [Kenney](https://twitter.com/KenneyNL)
+- 🖥 [**Electron Steam App Template
+  **](https://github.com/trezy-studios/electron-steam-app-template) by [Trezy](https://twitter.com/TrezyCodes)
 
 **YouTube**:
 [Three.js](https://www.youtube.com/results?search_query=three+js),
@@ -209,9 +215,19 @@ https://twitter.com/excaliburjs/status/1761156596338454818
 
 ## 🎬 Videos
 
-- 🎓 [**How Persona Combines 2D and 3D Art**](https://www.youtube.com/watch?v=dVWkPADNdJ4) by Acerola
+- 🎓 [**How Persona Combines 2D and 3D Art**](https://www.youtube.com/watch?v=dVWkPADNdJ4) by [Acerola](https://twitter.com/Acerola_t)
 - 🎓 [**How GPUs Handle Vertices and Why LOD Works**](https://www.youtube.com/watch?v=hf27qsQPRLQ) by [SimonDev](https://twitter.com/iced_coffee_dev)
 - 🎓 [**Developing a Procedural Mountain Forest**](https://www.youtube.com/watch?v=VxMwggFQRQM) by [Rune Skovbo Johansen](https://twitter.com/runevision)
+- <WebGPULogo /> [**What Is WebGPU?**](https://www.youtube.com/watch?v=oIur9NATg-I) by [Suboptimal
+  Engineer](https://www.youtube.com/@SuboptimalEng)
+
+- <ThreeLogo /> <R3FLogo /> [**Comparison of vanilla Three.js and React Three
+  Fiber**](https://www.youtube.com/watch?v=DPl34H2ISsk) by [Rabbit Hole
+  Syndrome](https://twitter.com/ggrdson)
+
+- <ThreeLogo /> [**How to Make an Object Follow a Path in
+  Three.js**](https://www.youtube.com/watch?v=nwiaqLGAyjo) by [Wael
+  Yasmina](https://www.youtube.com/@WaelYasmina/featured)
 
 ## ✍️ Articles
 
