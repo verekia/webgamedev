@@ -3,6 +3,7 @@ import Image, { ImageProps } from 'next/image'
 /* eslint-disable no-restricted-imports */
 
 import AframeSrc from '../../public/logos/aframe.png'
+import AngularSrc from '../../public/logos/angular.png'
 import AngularThreeSrc from '../../public/logos/angular-three.png'
 import BabylonSrc from '../../public/logos/babylon.png'
 import BlenderSrc from '../../public/logos/blender.png'
@@ -15,6 +16,7 @@ import EaselSrc from '../../public/logos/easel2.png'
 import EtherealSrc from '../../public/logos/ethereal.png'
 import FilamentSrc from '../../public/logos/filament.png'
 import GDevelopSrc from '../../public/logos/gdevelop.png'
+import GameMakerSrc from '../../public/logos/gamemaker.png'
 import GltfSrc from '../../public/logos/gltf-letter.png'
 import GodotSrc from '../../public/logos/godot.png'
 import HaxeSrc from '../../public/logos/haxe.png'
@@ -618,6 +620,31 @@ export const BlenderLogo = (props: ImageProps) => (
       title="Blender"
       src={BlenderSrc}
       style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const AngularLogo = (props: ImageProps) => (
+  <a href="https://angular.io/" target="_blank" rel="noopener">
+    <Image
+      alt="Angular"
+      title="Angular"
+      src={AngularSrc}
+      style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const GameMakerLogo = (props: ImageProps) => (
+  <a href="https://gamemaker.io/" target="_blank" rel="noopener">
+    <Image
+      alt="GameMaker"
+      title="GameMaker"
+      src={GameMakerSrc}
+      className="dark-invert-filter"
+      style={{ ...defaultStyle, opacity: 0.8, ...props.style }}
       {...props}
     />
   </a>

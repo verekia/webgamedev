@@ -28,7 +28,8 @@ const GameReleases = ({ portal }) => (
 
 export const GameRelease = ({ title, url, description, developer, developerUrl, EngineIcon }) => (
   <span>
-    <EngineIcon className="mr-2" />
+    <EngineIcon />
+    <span className="inline-block w-2" />
     {url.startsWith('https://poki.com') ? (
       <a
         href="https://poki.com/?utm_source=webgamedev&utm_content=newsletter"
