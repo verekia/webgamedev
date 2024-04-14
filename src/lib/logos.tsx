@@ -49,6 +49,7 @@ import WebGPUSrc from '../../public/logos/webgpu.png'
 import WebXRSrc from '../../public/logos/webxr.png'
 import WonderlandSrc from '../../public/logos/wonderland.png'
 import DTSrc from '../../public/logos/dt.svg'
+import ManapotionSrc from '../../public/logos/manapotion.png'
 
 const defaultStyle = { width: 20, height: 20, display: 'inline-block' }
 
@@ -644,6 +645,18 @@ export const GameMakerLogo = (props: ImageProps) => (
       title="GameMaker"
       src={GameMakerSrc}
       className="dark-invert-filter"
+      style={{ ...defaultStyle, opacity: 0.8, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const ManapotionLogo = (props: ImageProps) => (
+  <a href="https://manapotion.org" target="_blank" rel="noopener">
+    <Image
+      alt="Mana Potion"
+      title="Mana Potion"
+      src={ManapotionSrc}
       style={{ ...defaultStyle, opacity: 0.8, ...props.style }}
       {...props}
     />
