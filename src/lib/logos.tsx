@@ -684,6 +684,7 @@ export const OrillusionLogo = (props: ImageProps) => (
       title="Orillusion"
       src={OrillusionSrc}
       style={{ ...defaultStyle, ...props.style }}
+      className="dark-invert-filter"
       {...props}
     />
   </a>
