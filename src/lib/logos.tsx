@@ -51,6 +51,7 @@ import WonderlandSrc from '../../public/logos/wonderland.png'
 import DTSrc from '../../public/logos/dt.svg'
 import ManapotionSrc from '../../public/logos/manapotion.png'
 import ExcaliburSrc from '../../public/logos/excalibur.png'
+import OrillusionSrc from '../../public/logos/orillusion.png'
 
 const defaultStyle = { width: 20, height: 20, display: 'inline-block' }
 
@@ -670,6 +671,18 @@ export const ExcaliburLogo = (props: ImageProps) => (
       alt="Excalibur"
       title="Excalibur"
       src={ExcaliburSrc}
+      style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const OrillusionLogo = (props: ImageProps) => (
+  <a href="https://www.orillusion.com/en/" target="_blank" rel="noopener">
+    <Image
+      alt="Orillusion"
+      title="Orillusion"
+      src={OrillusionSrc}
       style={{ ...defaultStyle, ...props.style }}
       {...props}
     />

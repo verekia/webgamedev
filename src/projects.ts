@@ -65,6 +65,15 @@ export const engines = {
     downloads: 15_000,
     ts: 'ts',
   },
+  orillusion: {
+    url: 'https://www.orillusion.com/en/',
+    name: 'Orillusion',
+    repo: 'Orillusion/orillusion',
+    stars: 3700,
+    npm: '@orillusion/core',
+    downloads: 150,
+    ts: 'ts',
+  },
   kaboom: {
     name: 'Kaboom',
     url: 'https://kaboomjs.com',
