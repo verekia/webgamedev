@@ -56,9 +56,21 @@ Three.js and React Three Fiber libraries:
         </>
       ),
     },
+    {
+      ...projects.reactThreeJolt,
+      description: (
+        <>
+          <a href="https://github.com/jrouwe/JoltPhysics.js">Jolt</a> physics engine for R3F
+        </>
+      ),
+    },
     { ...projects.reactThreeNext, description: 'Next.js boilerplate for R3F' },
     { ...projects.reactThreeFlex, description: 'Flexbox for R3F' },
-    { ...projects.reactThreeEditor, description: 'Editor for R3F + Vite – Archived', collapsed: true },
+    {
+      ...projects.reactThreeEditor,
+      description: 'Editor for R3F + Vite – Archived',
+      collapsed: true,
+    },
     { ...projects.lamina, description: 'Declarative shader materials – Archived', collapsed: true },
   ]}
 />

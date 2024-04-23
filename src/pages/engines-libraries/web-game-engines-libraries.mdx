@@ -43,7 +43,7 @@ The technology that enables 2D and 3D graphics for the web is <WebGLLogo /> [Web
 
 ## Engines and libraries
 
-Much like any ecosystem of developer tools, there are 2 approaches: the monolithic batteries-included _framework_ approach (those would be the _engines_), or the modular assemble-independent-libraries-together approach. Some of them are installable as typical NPM dependencies, others come in the form of editors that can be downloaded or used in the browser. The main **NPM-installable** engines and libraries for JavaScript game development are:
+Much like any ecosystem of developer tools, there are 2 approaches: the monolithic batteries-included _framework_ approach (those would be the _engines_), or the modular assemble-independent-libraries-together approach. Some of them are installable as typical NPM dependencies, others come in the form of editors that can be downloaded or used in the browser. The main engines and libraries available as **packages** for JavaScript game development are:
 
 <ProjectList
   projects={[
@@ -100,13 +100,13 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
     {
       ...hybridEngines.filament,
       logo: <FilamentLogo />,
-      description: 'C++ 3D engine with JS support, no package',
+      description: 'C++ 3D engine with JS support, no NPM package',
       collapsed: true,
     },
     {
       ...hybridEngines.cocos2dx,
       logo: <CocosLogo />,
-      description: 'Legacy 2D engine with JavaScript to C++ bindings',
+      description: 'Legacy 2D engine, no NPM package',
       collapsed: true,
     },
     {
@@ -133,6 +133,211 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
     engines.excalibur,
   ]}
 />
+
+And [many more engines and libraries](https://gist.github.com/dmnsgn/76878ba6903cf15789b712464875cfdc).
+
+## UI library wrappers
+
+You can use any of the previous libraries and engines on their own, but some of them can also be combined with UI libraries wrappers for React, Svelte, Vue, or Angular. This might seem surprising at first, but using these makes your code more declarative and conveniently abstracts some boilerplate. The main wrapper libraries are:
+
+<ProjectList
+  projects={[
+    {
+      ...poimandres.r3f,
+      logo: (
+        <>
+          <ThreeLogo />
+          <R3FLogo />
+        </>
+      ),
+    },
+    {
+      ...wrappers.threlte,
+      logo: (
+        <>
+          <ThreeLogo />
+          <ThrelteLogo />
+        </>
+      ),
+    },
+    {
+      ...wrappers.tres,
+      logo: (
+        <>
+          <ThreeLogo />
+          <TresLogo />
+        </>
+      ),
+    },
+    {
+      ...wrappers.trois,
+      logo: (
+        <>
+          <ThreeLogo />
+          <VueLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+    {
+      ...wrappers.lunchbox,
+      logo: (
+        <>
+          <ThreeLogo />
+          <VueLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+    {
+      ...wrappers.svelteCubed,
+      logo: (
+        <>
+          <ThreeLogo />
+          <SvelteLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+    {
+      ...wrappers.angularThree,
+      logo: (
+        <>
+          <ThreeLogo />
+          <AngularThreeLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+    {
+      ...wrappers.reactBabylon,
+      logo: (
+        <>
+          <BabylonLogo />
+          <ReactLogo />
+        </>
+      ),
+    },
+    {
+      ...wrappers.vueBabylon,
+      logo: (
+        <>
+          <BabylonLogo />
+          <VueLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+    {
+      ...wrappers.svelteBabylon,
+      logo: (
+        <>
+          <BabylonLogo />
+          <SvelteLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+    {
+      ...wrappers.reactPixi,
+      logo: (
+        <>
+          <PixiLogo />
+          <ReactLogo />
+        </>
+      ),
+    },
+    {
+      ...wrappers.reactPixiFiber,
+      logo: (
+        <>
+          <PixiLogo />
+          <ReactLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+    {
+      ...wrappers.sveltePixi,
+      logo: (
+        <>
+          <PixiLogo />
+          <SvelteLogo />
+        </>
+      ),
+    },
+    {
+      ...wrappers.phavuer,
+      logo: (
+        <>
+          <PhaserLogo />
+          <VueLogo />
+        </>
+      ),
+    },
+    {
+      ...wrappers.sveltePhaser,
+      logo: (
+        <>
+          <PhaserLogo />
+          <SvelteLogo />
+        </>
+      ),
+      description: 'Archived',
+      collapsed: true,
+    },
+    {
+      ...wrappers.reactPhaserFiber,
+      logo: (
+        <>
+          <PhaserLogo />
+          <ReactLogo />
+        </>
+      ),
+      description: 'Archived',
+      collapsed: true,
+    },
+    {
+      ...wrappers.reactPhaser,
+      logo: (
+        <>
+          <PhaserLogo />
+          <ReactLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+    {
+      ...wrappers.ionPhaser,
+      logo: <PhaserLogo />,
+      description: 'Web Component to inject Phaser into any framework',
+      collapsed: true,
+    },
+    {
+      ...wrappers.reactOgl,
+      logo: (
+        <>
+          <OglLogo />
+          <ReactLogo />
+        </>
+      ),
+    },
+    {
+      ...wrappers.svelteOgl,
+      logo: (
+        <>
+          <OglLogo />
+          <SvelteLogo />
+        </>
+      ),
+      collapsed: true,
+    },
+  ]}
+/>
+
+For instance, **React Three Fiber** (_R3F_), lets you add objects to a scene and control them as React components:
+
+<R3FSandpack />
 
 ## Downloadable/cloud editors
 
@@ -201,86 +406,6 @@ The following engines are available as downloadable or cloud-based editors and s
   ]}
 />
 
-And [many more engines and libraries](https://gist.github.com/dmnsgn/76878ba6903cf15789b712464875cfdc).
-
-## UI libraries wrappers
-
-You can use any of the previous libraries and engines on their own, but some of them can also be combined with UI libraries wrappers for React, Svelte, Vue, or Angular. This might seem surprising at first, but using these makes your code more declarative and conveniently abstracts some boilerplate. The main wrapper libraries are:
-
-### <ThreeLogo /> Three.js
-
-<ProjectList
-  projects={[
-    { ...poimandres.r3f, logo: <R3FLogo /> },
-    { ...wrappers.threlte, logo: <ThrelteLogo /> },
-    { ...wrappers.svelteCubed, logo: <SvelteLogo /> },
-    { ...wrappers.tres, logo: <TresLogo /> },
-    { ...wrappers.trois, logo: <VueLogo /> },
-    { ...wrappers.lunchbox, logo: <VueLogo /> },
-    { ...wrappers.angularThree, logo: <AngularThreeLogo /> },
-  ]}
-/>
-
-### <BabylonLogo /> Babylon.js
-
-<ProjectList
-  projects={[
-    { ...wrappers.reactBabylon, logo: <ReactLogo /> },
-    { ...wrappers.vueBabylon, logo: <VueLogo /> },
-    { ...wrappers.svelteBabylon, logo: <SvelteLogo /> },
-  ]}
-/>
-
-### <PixiLogo /> PixiJS
-
-<ProjectList
-  projects={[
-    { ...wrappers.reactPixi, logo: <ReactLogo /> },
-    { ...wrappers.reactPixiFiber, logo: <ReactLogo /> },
-    { ...wrappers.sveltePixi, logo: <SvelteLogo /> },
-  ]}
-/>
-
-### <PhaserLogo /> Phaser
-
-<ProjectList
-  projects={[
-    { ...wrappers.phavuer, logo: <VueLogo /> },
-    { ...wrappers.sveltePhaser, logo: <SvelteLogo />, description: 'Archived', collapsed: true },
-    { ...wrappers.reactPhaserFiber, logo: <ReactLogo />, description: 'Archived', collapsed: true },
-    { ...wrappers.reactPhaser, logo: <ReactLogo />, collapsed: true },
-    {
-      ...wrappers.ionPhaser,
-      description: 'Web Component to inject Phaser into any framework',
-      collapsed: true,
-    },
-  ]}
-/>
-
-### <OglLogo /> OGL
-
-<ProjectList
-  projects={[
-    { ...wrappers.reactOgl, logo: <ReactLogo /> },
-    { ...wrappers.svelteOgl, logo: <SvelteLogo /> },
-  ]}
-/>
-
-For instance, **React Three Fiber** (_R3F_), lets you add objects to a scene and control them as React components:
-
-<R3FSandpack />
-
 ## Going native with JavaScript
 
-Now hold on to your hats, because this is where things get wild. You can also use JavaScript (well, mostly React) to create native OpenGL ES games. [Expo](https://expo.dev/) is a framework for [React Native](https://reactnative.dev/) (it is basically the Next.js of React Native), and they created [Expo GL](https://docs.expo.dev/versions/latest/sdk/gl-view/) and [expo-three](https://github.com/expo/expo-three) to provide a Three.js interface for native OpenGL ES. And it can be used declaratively [with React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/installation#react-native). I have not tried it yet but that completely blows my mind 🤯.
-
-Babylon.js is working on a similar preview feature with [Babylon Native](https://www.babylonjs.com/native/) and [Babylon React Native](https://www.babylonjs.com/reactnative/).
-
-<Callout style={{ marginTop: 24, marginBottom: 24 }}>
-✅ **Personal choice: Three.js with React Three Fiber**
-
-Personally, I enjoy combining modular and specific independent libraries rather than committing to a more monolithic framework. Coming from the wild JavaScript and React ecosystem, the plumbing required to hook everything up together doesn’t bother me, and I like to be able to swap out pieces of my stack without lock-in. That’s why I am choosing **Three.js** as my core 3D library.
-
-As a React developer, I am using R3F for the great quality-of-life improvements it provides over plain Three.js, and in particular for the [Drei](https://github.com/pmndrs/drei) library which contains tons of very useful helpers for R3F. R3F and Drei are projects of the [Poimandres](https://github.com/pmndrs) open-source developer collective.
-
-</Callout>
+You also have a few options to write JavaScript code that compiles to native. [Expo](https://expo.dev/) is a framework for [React Native](https://reactnative.dev/), and they created [Expo GL](https://docs.expo.dev/versions/latest/sdk/gl-view/) and [expo-three](https://github.com/expo/expo-three) to provide a Three.js interface for native OpenGL ES. And it can be used declaratively [with React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/installation#react-native)! Babylon.js is working on a similar preview feature with [Babylon Native](https://www.babylonjs.com/native/) and [Babylon React Native](https://www.babylonjs.com/reactnative/). There is also [Cocos Creator](https://www.cocos.com/en/creator), a native editor that can compile TypeScript to native.

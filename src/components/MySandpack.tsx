@@ -6,7 +6,7 @@ import { r3fFiles } from 'components/snippets'
 export const R3FSandpack = ({ files = {} }: { files: SandpackFiles }) => (
   <Sandpack
     template="react"
-    options={{ showTabs: false, editorHeight: '100%', editorWidthPercentage: 55 }}
+    options={{ showTabs: false, editorHeight: '300px', editorWidthPercentage: 55 }}
     theme={monokaiPro}
     files={{ ...r3fFiles, ...files }}
     customSetup={{
