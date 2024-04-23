@@ -5,11 +5,18 @@ import StatsComparison from 'components/StatsComparison'
 import {
   AngularThreeLogo,
   BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
   EtherealLogo,
+  ExcaliburLogo,
+  FilamentLogo,
+  GDevelopLogo,
   KaboomLogo,
   OglLogo,
   PhaserLogo,
   PlayCanvasLogo,
+  NeedleLogo,
+  SplineLogo,
   ThreeLogo,
   PixiLogo,
   ReactLogo,
@@ -22,8 +29,9 @@ import {
   VueLogo,
   WebGLLogo,
   WebGPULogo,
+  WonderlandLogo,
 } from 'lib/logos'
-import { engines, wrappers, poimandres } from 'projects'
+import { engines, hybridEngines, wrappers, poimandres } from 'projects'
 import { NoBulletListStyles, IconsInTitlesStyles } from 'styles/pages'
 
 # 🌐 Web Game Engines & Libraries
@@ -35,7 +43,7 @@ The technology that enables 2D and 3D graphics for the web is <WebGLLogo /> [Web
 
 ## Engines and libraries
 
-Much like any ecosystem of developer tools, there are 2 approaches: the monolithic batteries-included _framework_ approach (those would be the _engines_), or the modular assemble-independent-libraries-together approach. The main engines and libraries for JavaScript game development are:
+Much like any ecosystem of developer tools, there are 2 approaches: the monolithic batteries-included _framework_ approach (those would be the _engines_), or the modular assemble-independent-libraries-together approach. Some of them are installable as typical NPM dependencies, others come in the form of editors that can be downloaded or used in the browser. The main **NPM-installable** engines and libraries for JavaScript game development are:
 
 <ProjectList
   projects={[
@@ -65,8 +73,13 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
     },
     {
       ...engines.playcanvas,
+      name: 'PlayCanvas',
       logo: <PlayCanvasLogo />,
-      description: '3D engine, freemium editor, WebGPU-ready',
+      url: 'https://github.com/playcanvas/engine',
+      stars: 9100,
+      npm: 'playcanvas',
+      downloads: 2000,
+      description: '(engine only) 3D engine, WebGPU-ready',
     },
     {
       ...engines.ogl,
@@ -83,25 +96,28 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
       logo: <TwoLogo />,
       description: '2D library',
     },
+    { ...engines.excalibur, logo: <ExcaliburLogo />, description: '2D engine' },
     {
-      ...engines.excalibur,
-      description: '2D engine',
+      ...hybridEngines.filament,
+      logo: <FilamentLogo />,
+      description: 'C++ 3D engine with JS support, no package',
+      collapsed: true,
+    },
+    {
+      ...hybridEngines.cocos2dx,
+      logo: <CocosLogo />,
+      description: 'Legacy 2D engine with JavaScript to C++ bindings',
       collapsed: true,
     },
     {
       ...engines.melon,
       description: '2D engine',
-      collapsed: true
+      collapsed: true,
     },
     {
       ...engines.kontra,
       description: '2D micro-library',
-      collapsed: true
-    },
-    {
-      ...engines.impact,
-      description: '2D engine',
-      collapsed: true
+      collapsed: true,
     },
   ]}
 />
@@ -114,17 +130,76 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
     engines.babylon,
     engines.ogl,
     engines.kaboom,
+    engines.excalibur,
   ]}
 />
 
-There is also <RogueLogo /> [**Rogue Engine**](https://rogueengine.io/) – an editor for Three.js, <R3FLogo /> [**Triplex**](https://triplex.dev/) – the React Three Fiber editor, <span style={{ whiteSpace: 'nowrap' }}><EtherealLogo /> [**Ethereal Engine**](https://www.etherealengine.com/)</span> – a full-stack solution for metaverse experiences, and [many more engines and libraries](https://gist.github.com/dmnsgn/76878ba6903cf15789b712464875cfdc).
+## Downloadable/cloud editors
 
-<Callout style={{ marginTop: 24, marginBottom: 24 }}>
-✅ **My choice: Three.js**
+<ProjectList
+  projects={[
+    {
+      ...engines.playcanvas,
+      logo: <PlayCanvasLogo />,
+      stars: undefined,
+      description: '3D engine, freemium cloud editor, WebGPU-ready',
+    },
+    {
+      ...hybridEngines.cocosCreator,
+      logo: <CocosLogo />,
+      description: '2D and 3D engine, native editor and exports',
+    },
+    {
+      ...engines.wonderland,
+      logo: <WonderlandLogo />,
+      description: '3D engine, freemium, native editor',
+      ts: 'ts',
+    },
+    {
+      name: 'Rogue Engine',
+      logo: <RogueLogo />,
+      url: 'https://rogueengine.io/',
+      ts: 'ts',
+      description: '3D editor for Three.js',
+    },
+    {
+      name: 'Triplex',
+      logo: <R3FLogo />,
+      url: 'https://triplex.dev/',
+      description: 'React Three Fiber editor that saves to source code',
+      ts: 'ts',
+    },
+    {
+      ...hybridEngines.construct,
+      logo: <ConstructLogo />,
+      description: 'Premium 2D engine with visual scripting',
+    },
+    {
+      ...hybridEngines.gdevelop,
+      logo: <GDevelopLogo />,
+      description: 'Freemium 2D and 3D no-code platform',
+    },
+    {
+      ...hybridEngines.needle,
+      logo: <NeedleLogo />,
+      description: 'Tools to export Unity and Blender scenes to Three.js',
+    },
+    {
+      ...hybridEngines.spline,
+      logo: <SplineLogo />,
+      description: 'Freemium collaborative web-based 3D modeling tool',
+    },
+    {
+      name: 'Ethereal Engine',
+      logo: <EtherealLogo />,
+      url: 'https://www.etherealengine.com/',
+      description: 'Full-stack solution for metaverse experiences',
+      ts: 'ts',
+    },
+  ]}
+/>
 
-Personally, I enjoy combining modular and specific independent libraries rather than committing to a more monolithic framework. Coming from the wild JavaScript and React ecosystem, the plumbing required to hook everything up together doesn’t bother me, and I like to be able to swap out pieces of my stack without lock-in. That’s why I am choosing **Three.js** as my core 3D library.
-
-</Callout>
+And [many more engines and libraries](https://gist.github.com/dmnsgn/76878ba6903cf15789b712464875cfdc).
 
 ## UI libraries wrappers
 
@@ -172,7 +247,11 @@ You can use any of the previous libraries and engines on their own, but some of 
     { ...wrappers.sveltePhaser, logo: <SvelteLogo />, description: 'Archived', collapsed: true },
     { ...wrappers.reactPhaserFiber, logo: <ReactLogo />, description: 'Archived', collapsed: true },
     { ...wrappers.reactPhaser, logo: <ReactLogo />, collapsed: true },
-    { ...wrappers.ionPhaser, description: 'Web Component to inject Phaser into any framework', collapsed: true },
+    {
+      ...wrappers.ionPhaser,
+      description: 'Web Component to inject Phaser into any framework',
+      collapsed: true,
+    },
   ]}
 />
 
@@ -189,15 +268,17 @@ For instance, **React Three Fiber** (_R3F_), lets you add objects to a scene and
 
 <R3FSandpack />
 
-<Callout style={{ marginTop: 24, marginBottom: 24 }}>
-✅ **My choice: React Three Fiber**
-
-As a React developer, I am using R3F for the great quality-of-life improvements it provides over plain Three.js, and in particular for the [Drei](https://github.com/pmndrs/drei) library which contains tons of very useful helpers for R3F. R3F and Drei are projects of the [Poimandres](https://github.com/pmndrs) open-source developer collective.
-
-</Callout>
-
 ## Going native with JavaScript
 
 Now hold on to your hats, because this is where things get wild. You can also use JavaScript (well, mostly React) to create native OpenGL ES games. [Expo](https://expo.dev/) is a framework for [React Native](https://reactnative.dev/) (it is basically the Next.js of React Native), and they created [Expo GL](https://docs.expo.dev/versions/latest/sdk/gl-view/) and [expo-three](https://github.com/expo/expo-three) to provide a Three.js interface for native OpenGL ES. And it can be used declaratively [with React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/installation#react-native). I have not tried it yet but that completely blows my mind 🤯.
 
 Babylon.js is working on a similar preview feature with [Babylon Native](https://www.babylonjs.com/native/) and [Babylon React Native](https://www.babylonjs.com/reactnative/).
+
+<Callout style={{ marginTop: 24, marginBottom: 24 }}>
+✅ **Personal choice: Three.js with React Three Fiber**
+
+Personally, I enjoy combining modular and specific independent libraries rather than committing to a more monolithic framework. Coming from the wild JavaScript and React ecosystem, the plumbing required to hook everything up together doesn’t bother me, and I like to be able to swap out pieces of my stack without lock-in. That’s why I am choosing **Three.js** as my core 3D library.
+
+As a React developer, I am using R3F for the great quality-of-life improvements it provides over plain Three.js, and in particular for the [Drei](https://github.com/pmndrs/drei) library which contains tons of very useful helpers for R3F. R3F and Drei are projects of the [Poimandres](https://github.com/pmndrs) open-source developer collective.
+
+</Callout>

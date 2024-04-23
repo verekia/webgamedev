@@ -50,6 +50,7 @@ import WebXRSrc from '../../public/logos/webxr.png'
 import WonderlandSrc from '../../public/logos/wonderland.png'
 import DTSrc from '../../public/logos/dt.svg'
 import ManapotionSrc from '../../public/logos/manapotion.png'
+import ExcaliburSrc from '../../public/logos/excalibur.png'
 
 const defaultStyle = { width: 20, height: 20, display: 'inline-block' }
 
@@ -658,6 +659,18 @@ export const ManapotionLogo = (props: ImageProps) => (
       title="Mana Potion"
       src={ManapotionSrc}
       style={{ ...defaultStyle, opacity: 0.8, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const ExcaliburLogo = (props: ImageProps) => (
+  <a href="https://excaliburjs.com/" target="_blank" rel="noopener">
+    <Image
+      alt="Excalibur"
+      title="Excalibur"
+      src={ExcaliburSrc}
+      style={{ ...defaultStyle, ...props.style }}
       {...props}
     />
   </a>

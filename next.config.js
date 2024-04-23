@@ -22,6 +22,11 @@ const config = withNextra({
       destination: '/engines-libraries/webxr-vr-ar',
       permanent: true,
     },
+    {
+      source: '/engines-libraries/hybrid-approaches',
+      destination: '/engines-libraries/web-game-engines-libraries',
+      permanent: true,
+    },
   ],
 })
 
