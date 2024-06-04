@@ -14,7 +14,7 @@ const Author = ({ name, bio, twitter, mastodon, picture, website }) => (
             </A>
           )}
           {twitter && (
-            <A isExternal href={`https://twitter.com/${twitter}`}>
+            <A isExternal href={`https://x.com/${twitter}`}>
               🐦 Twitter
             </A>
           )}

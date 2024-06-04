@@ -50,7 +50,7 @@ Shortly after releasing that update, [LazyPeon](https://www.youtube.com/watch?v=
 
 _**Let's talk graphics. Hordes' engine is based on the [OGL](https://github.com/oframe/ogl) WebGL library, which you have modified heavily. You told us in [Discord](https://webgamedev.com/discord) that you initially started with Three.js but had to switch to a lower-level library for performance reasons. Could you elaborate on the graphics and performance challenges you have encountered building Hordes and how you overcame them?**_
 
-When I rewrote the game in 2018/2019, I decided that I had to focus on making things highly performant in order to increase the scope of the project. Back then, Three.js had some performance issues primarily related to rendering many dynamically moving meshes with unique properties. The results of my benchmarks suggested that batching a lot of draw calls together could be massive. Three.js was also rather big with many features I did not use, and tree shaking support was minimal, so I looked for something that was lightweight and easy to extend. I found [Nathan Gordon](https://twitter.com/gordonnl)’s OGL, which was perfect in that regard. I ended up rewriting most of it to suit my own needs though. At this point I'd generally say it's a custom renderer for the project.
+When I rewrote the game in 2018/2019, I decided that I had to focus on making things highly performant in order to increase the scope of the project. Back then, Three.js had some performance issues primarily related to rendering many dynamically moving meshes with unique properties. The results of my benchmarks suggested that batching a lot of draw calls together could be massive. Three.js was also rather big with many features I did not use, and tree shaking support was minimal, so I looked for something that was lightweight and easy to extend. I found [Nathan Gordon](https://x.com/gordonnl)’s OGL, which was perfect in that regard. I ended up rewriting most of it to suit my own needs though. At this point I'd generally say it's a custom renderer for the project.
 
 <Streamable
   id="k8vcgn?autoplay=1&nocontrols=1"
@@ -123,6 +123,6 @@ I've talked about these issues with so many developers, and I have many thoughts
 
 ---
 
-⚔️ Play Hordes on [**Hordes.io**](https://hordes.io/), follow dek on [**Twitter**](https://twitter.com/shatterspine), check out his [**website**](https://dek.engineer/), and join and [**Hordes' Discord**](https://discord.gg/hordes)!
+⚔️ Play Hordes on [**Hordes.io**](https://hordes.io/), follow dek on [**Twitter**](https://x.com/shatterspine), check out his [**website**](https://dek.engineer/), and join and [**Hordes' Discord**](https://discord.gg/hordes)!
 
 <div className="text-center mt-5">Thank you, dek! 🙏</div>

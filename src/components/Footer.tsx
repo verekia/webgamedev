@@ -115,7 +115,7 @@ const Footer = () => (
     </div>
     <div style={{ textAlign: 'center' }}>
       Written by{' '}
-      <A href="https://twitter.com/verekia" target="_blank" rel="noopener">
+      <A href="https://x.com/verekia" target="_blank" rel="noopener">
         🐦 Verekia
       </A>
       <br />

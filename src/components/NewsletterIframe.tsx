@@ -38,11 +38,7 @@ export const NewsletterFooter = ({ tweetId }: { tweetId?: string }) => (
   <>
     <p style={{ textAlign: 'center', marginTop: 30, marginBottom: 0 }}>
       Liked this issue? 🐦{' '}
-      <A
-        href={`https://twitter.com/intent/retweet?tweet_id=${tweetId}`}
-        target="_blank"
-        rel="noopener"
-      >
+      <A href={`https://x.com/intent/retweet?tweet_id=${tweetId}`} target="_blank" rel="noopener">
         <b>Retweet it</b>
       </A>
       , join our{' '}
