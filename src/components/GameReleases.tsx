@@ -28,8 +28,6 @@ const GameReleases = ({ portal }) => (
 
 export const GameRelease = ({ title, url, description, developer, developerUrl, EngineIcon }) => (
   <span>
-    <EngineIcon />
-    <span className="inline-block w-2" />
     {url.startsWith('https://poki.com') ? (
       <a
         href="https://poki.com/?utm_source=webgamedev&utm_content=newsletter"
@@ -41,6 +39,7 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
     ) : url.startsWith('https://webgamer.io') ? (
       <WebGamerIcon className="size-5 inline-block mr-2" />
     ) : null}
+    <EngineIcon />
     <A
       href={
         url.startsWith('https://poki.com')
@@ -49,7 +48,7 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
       }
       target="_blank"
       rel="noopener"
-      className="font-bold"
+      className="font-bold ml-2"
     >
       {title}
     </A>{' '}
