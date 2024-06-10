@@ -8,6 +8,8 @@ import {
   ConstructLogo,
   DefoldLogo,
   ExcaliburLogo,
+  HaxeLogo,
+  JavascriptLogo,
   NeedleLogo,
   OrillusionLogo,
   PlayCanvasLogo,
@@ -17,33 +19,33 @@ import {
   ThreeLogo,
   ThrelteLogo,
   TresLogo,
+  UnityLogo,
   WasmLogo,
   WebXRLogo,
+  WebGPULogo,
   WonderlandLogo,
 } from 'lib/logos'
 import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
 import { SubTitleDate } from 'components/Date'
 import { FloatLeftImage } from 'components/FloatImage'
 import { PokiLogo, PokiIcon } from 'components/PokiSponsor'
+import { GameRelease } from 'components/GameReleases'
 
 # Newsletter – Issue 022
 
-<SubTitleDate value="2024-06-XX" />
+<SubTitleDate value="2024-06-12" />
 
 <NoBulletListStyles />
 <NewsletterStyles />
 
 ## 🔥 Headlines
 
-Discord Activites
+Discord launched its [**Embedded App SDK**](https://discord.com/build/embedded-app-sdk) for Activities ([NPM package](https://www.npmjs.com/package/@discord/embedded-app-sdk)). This means multiplayer web games can now be played directly within Discord via iframes. Discord Activities are currently primarily for social multiplayer games with users connected via voice chat. The SDK lets you authenticate players and manage how your game interacts with Discord. Check out the [official starter](https://github.com/discord/embedded-app-sdk/tree/a124ae8eaf51c3fc118059e76af89b051c1c6277/examples/discord-activity-starter), [Hugo Duprez](https://x.com/HugoDuprez)'s [starter](https://github.com/Hugo-Dz/discord-activity-starter), and <ColyseusLogo /> [Colyseus](https://colyseus.io/)' [starter](https://github.com/colyseus/discord-embedded-app-sdk) ([article](https://colyseus.io/blog/discord-embedded-sdk/)).
 
-- Discord Activity Starter https://github.com/Hugo-Dz/discord-activity-starter by https://x.com/HugoDuprez -- see also https://x.com/i/bookmarks?post_id=1781112848950722811 -- and colyseus https://colyseus.io/blog/discord-embedded-sdk/ - https://github.com/colyseus/discord-embedded-app-sdk
+Here are the [winners of the Gamedev.js Jam 2024](https://gamedevjs.com/competitions/best-entries-from-all-the-challenges-in-gamedev-js-jam-2024/)! The theme was Power.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenatis ex, quis bibendum lorem condimentum ut. Mauris eget venenatis lectus. Phasellus id pretium ipsum, quis auctor ipsum. Donec aliquet vulputate ante eget vestibulum. Nulla efficitur risus eros, ut interdum leo consectetur in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-https://gamedevjs.com/competitions/best-entries-from-all-the-challenges-in-gamedev-js-jam-2024/
-
-Meta Quest Browser supports WebGPU. https://developer.oculus.com/documentation/web/browser-release-notes/
+<WebXRLogo /> <WebGPULogo /> Meta Quest Browser now [supports
+WebGPU](https://developer.oculus.com/documentation/web/browser-release-notes/)!
 
 ## ⭐️ Sponsors
 
@@ -104,12 +106,14 @@ Meta Quest Browser supports WebGPU. https://developer.oculus.com/documentation/w
   https://x.com/tresjs_dev/status/1796230652704030970 -
   https://x.com/tresjs_dev/status/1792944754923061692
 - <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) – XXX -
-  https://x.com/playcanvas/status/1783125755645350237
+  https://x.com/playcanvas/status/1783125755645350237 -
+  https://x.com/playcanvas/status/1770470245456654361
 - <PlayCanvasLogo /> [**PlayCanvas Engine vXXX**](https://github.com/playcanvas/engine/releases)
   –{' '}
 - <PlayCanvasLogo /> [**PlayCanvas Editor vXXX**](https://github.com/playcanvas/editor/releases)
   –{' '}
-- <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX
+- <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX -
+  https://x.com/phaser_/status/1767677831469736128
 - <AframeLogo /> [**A-Frame vXXX**](https://github.com/aframevr/aframe/releases)
 - <PixiLogo /> [**PixiJS XXX**](https://github.com/pixijs/pixijs/releases)
 - <PixiLogo /> [**Pixi React XXX**](https://github.com/pixijs/pixi-react/releases)
@@ -135,6 +139,7 @@ Meta Quest Browser supports WebGPU. https://developer.oculus.com/documentation/w
 - x
 - <ThreeLogo /> https://github.com/dgreenheck/three-pinata by https://x.com/dangreenheck
 - <ThreeLogo /> https://github.com/sawa-zen/three-fiber-webxr-toolbox by https://x.com/sawa_zen
+- <ThreeLogo /> https://wiggle.three.tools/ by https://x.com/KMkota0
 
 - <R3FLogo /> https://html23.com/ by https://x.com/BelaBohlender demo:
   https://x.com/BelaBohlender/status/1795145140358549909
@@ -144,6 +149,8 @@ Meta Quest Browser supports WebGPU. https://developer.oculus.com/documentation/w
 - https://x.com/jrouwe/status/1776238556400210391
 
 - GLB UV Inspector https://uvchecker.vercel.app/ by https://x.com/SimonHarrisCo
+
+- https://x.com/Poki/status/1768216706353111512
 
 My [Bookmarks](https://x.com/i/bookmarks).
 
@@ -202,7 +209,74 @@ My [Bookmarks](https://x.com/i/bookmarks).
 
 https://www.gamedeveloper.com/business/resilience-and-innovation-on-display-as-the-games-industry-looks-to-bounce-back-at-gdc-2024
 
+- https://x.com/BrianBreiholz/status/1791106284281896999
+
 ## 🎮 Games
+
+- <GameRelease
+    title="Simply Prop Hunt"
+    url="https://poki.com/en/g/simply-prop-hunt"
+    developer="Elanra Studios"
+    developerUrl="https://x.com/ElanraStudios"
+    description="Hide and seek game in which you play as a Hunter or a Prop."
+    EngineIcon={PlayCanvasLogo}
+  />
+- <GameRelease
+    title="Under The Red Sky"
+    url="https://poki.com/en/g/under-the-red-sky"
+    developer="Federico Calchera x Dedra Games"
+    developerUrl="https://x.com/GamesDedra"
+    description="First-person 3D parkour game."
+    EngineIcon={ConstructLogo}
+  />
+- <GameRelease
+    title="Ragdoll Hit"
+    url="https://poki.com/en/g/ragdoll-hit"
+    developer="Ericetto"
+    developerUrl=""
+    description="Control a ragdoll stickman to defeat all kinds of enemies."
+    EngineIcon={UnityLogo}
+  />
+- <GameRelease
+    title="CaptainForever.io"
+    url="https://webgamer.io/en/g/captain-forever-io"
+    developer="Farbs"
+    developerUrl="https://farbs.org/"
+    description="Multiplayer game in which you build and fly a wireframe ship in space."
+    EngineIcon={JavascriptLogo}
+  />
+- <GameRelease
+    title="Chroma"
+    url="https://webgamer.io/en/g/chroma"
+    developer="Logix Indie"
+    developerUrl="https://hynguyen.me/"
+    description=""
+    EngineIcon={JavascriptLogo}
+  />
+- <GameRelease
+    title="Shift"
+    url="https://webgamer.io/en/g/shift"
+    developer="Logix Indie"
+    developerUrl="https://hynguyen.me/"
+    description=""
+    EngineIcon={JavascriptLogo}
+  />
+- <GameRelease
+    title="Eggsolotl"
+    url="https://webgamer.io/en/g/eggsolotl"
+    developer="Axol Studio"
+    developerUrl="https://axolstudio.com/"
+    description=""
+    EngineIcon={HaxeLogo}
+  />
+- <GameRelease
+    title="Monster Match"
+    url="https://webgamer.io/en/g/monster-match"
+    developer="Axol Studio"
+    developerUrl="https://axolstudio.com/"
+    description=""
+    EngineIcon={HaxeLogo}
+  />
 
 https://foodforfish.org/ by https://x.com/NeuroProd source: https://github.com/neuroprod/webgpu
 

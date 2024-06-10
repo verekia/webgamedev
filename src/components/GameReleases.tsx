@@ -56,9 +56,13 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
     {developer && (
       <>
         by{' '}
-        <A href={developerUrl} target="_blank" rel="noopener">
-          {developer}
-        </A>{' '}
+        {developerUrl ? (
+          <A href={developerUrl} target="_blank" rel="noopener">
+            {developer}
+          </A>
+        ) : (
+          developer
+        )}{' '}
       </>
     )}
     – {description}
