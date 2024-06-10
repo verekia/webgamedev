@@ -23,6 +23,7 @@ import {
   UnityLogo,
   WasmLogo,
   WebXRLogo,
+  WebGLLogo,
   WebGPULogo,
   WonderlandLogo,
 } from 'lib/logos'
@@ -41,9 +42,9 @@ import { GameRelease } from 'components/GameReleases'
 
 ## 🔥 Headlines
 
-Discord launched its [**Embedded App SDK**](https://discord.com/build/embedded-app-sdk) for Activities ([NPM package](https://www.npmjs.com/package/@discord/embedded-app-sdk)). This means multiplayer web games can now be played directly within Discord via iframes. Discord Activities are currently primarily for social multiplayer games with users connected via voice chat. The SDK lets you authenticate players and manage how your game interacts with Discord. Check out the [official starter](https://github.com/discord/embedded-app-sdk/tree/a124ae8eaf51c3fc118059e76af89b051c1c6277/examples/discord-activity-starter), [Hugo Duprez](https://x.com/HugoDuprez)'s [starter](https://github.com/Hugo-Dz/discord-activity-starter), and [Colyseus](https://colyseus.io/)' [starter](https://github.com/colyseus/discord-embedded-app-sdk) ([article](https://colyseus.io/blog/discord-embedded-sdk/)).
+Discord shared their plan for the [future](https://discord.com/blog/discords-next-chapter) and launched their [**Embedded App SDK**](https://discord.com/build/embedded-app-sdk) for Activities ([NPM package](https://www.npmjs.com/package/@discord/embedded-app-sdk)). Multiplayer web games can now be played directly within Discord via iframes, with users connected via voice chat. The SDK lets you authenticate players and manage how your game interacts with Discord. Check out the [official starter](https://github.com/discord/embedded-app-sdk/tree/a124ae8eaf51c3fc118059e76af89b051c1c6277/examples/discord-activity-starter), [Hugo Duprez](https://x.com/HugoDuprez)'s [starter](https://github.com/Hugo-Dz/discord-activity-starter), and [Colyseus](https://colyseus.io/)' [starter](https://github.com/colyseus/discord-embedded-app-sdk) ([article](https://colyseus.io/blog/discord-embedded-sdk/)).
 
-Here are the [winners of the Gamedev.js Jam 2024](https://gamedevjs.com/competitions/best-entries-from-all-the-challenges-in-gamedev-js-jam-2024/)! The theme was _Power_.
+Here are the [winners of the Gamedev.js Jam 2024](https://gamedevjs.com/competitions/best-entries-from-all-the-challenges-in-gamedev-js-jam-2024/). The theme was _Power_!
 
 <WebXRLogo /> <WebGPULogo /> Meta Quest Browser now [supports
 WebGPU](https://developer.oculus.com/documentation/web/browser-release-notes/)!
@@ -64,7 +65,7 @@ WebGPU](https://developer.oculus.com/documentation/web/browser-release-notes/)!
     <div>
       [**Poki**](https://poki.com/?utm_source=webgamedev&utm_content=newsletter) is on a mission to create the ultimate online playground – where players and developers come together to play and create! Together with a growing 350+ game developer community and 65 million players each month, we're creating a new standard for web games. Interested in working together? [**Share your game with us**](https://developers.poki.com?utm_source=webgamedev&utm_content=newsletter)!
 
-      Poki will be rolling out its new [playtesting](https://medium.com/poki/higher-success-rates-with-playtests-1e1316dd70fb?utm_source=webgamedev&utm_content=newsletter) flow soon™️, which allows you to get unlimited free playtests of your game with Poki players! Just upload a web build of your game and start watching, no strings to Poki! The official announcement is still to come, but if you have questions, feel free to ping the team on the [Web Game Dev Discord](https://webgamedev.com/discord)!
+      Poki will be rolling out its new [playtesting](https://medium.com/poki/higher-success-rates-with-playtests-1e1316dd70fb?utm_source=webgamedev&utm_content=newsletter) flow soon™️, which allows you to get unlimited free playtests of your game with Poki players! Just upload a web build of your game and start watching, no strings attached! The official announcement is still to come, but if you have questions, feel free to ping the team on the [Web Game Dev Discord](https://webgamedev.com/discord)!
     </div>
 
   </div>
@@ -72,6 +73,10 @@ WebGPU](https://developer.oculus.com/documentation/web/browser-release-notes/)!
 
 ## 🏎 Engines
 
+- <ThreeLogo /> [**Three.js Shading
+  Language**](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language) – First draft of
+  the TSL spec, which allows you to write shaders in JavaScript. Check out [Bruno Simon's
+  timeline](https://x.com/bruno_simon) for examples.
 - <ThreeLogo /> [**Three.js r165**](https://x.com/threejs/status/1796522095721189688),
   [**r164**](https://x.com/threejs/status/1783563640077185362) and
   [**r163**](https://x.com/threejs/status/1773866444763390050) – XXX
@@ -112,6 +117,8 @@ WebGPU](https://developer.oculus.com/documentation/web/browser-release-notes/)!
 - <ExcaliburLogo /> Excalibur
 - <OrillusionLogo /> Orillusion
 - <CocosLogo /> Cocos
+
+- <WebGPULogo /> [**WarmeY2K Engine**](https://warme-engine.com/) by Julien Rongiere
 
 ## 🛠 Tools & Libraries
 
@@ -184,9 +191,12 @@ My [Bookmarks](https://x.com/i/bookmarks).
 
 ## 🎬 Videos
 
+- <WebGLLogo /> <WebGPULogo /> [**WebGL + WebGPU Meetup - March
+  2024**](https://www.youtube.com/watch?v=bxsQMlymLEw) by [Khronos Group](https://www.khronos.org/)
+- 🎓 [**Lerp smoothing is broken**](https://www.youtube.com/watch?v=LSNQuFEDOyQ) by [Freya Holmér](https://x.com/FreyaHolmer)
 - <ThreeLogo /> https://www.youtube.com/watch?v=sxvVV6QPwgg by https://x.com/RobinPayot
-
 - Wonderland: https://www.youtube.com/watch?v=z5RITX-2UOQ
+- 🎙️ <R3FLogo /> [**3D web game dev jam!**](https://changelog.com/jsparty/323) with [Brian Breiholz](https://x.com/BrianBreiholz) on the [JS Party](https://changelog.com/jsparty) podcast
 
 ## ✍️ Articles
 
@@ -194,11 +204,20 @@ My [Bookmarks](https://x.com/i/bookmarks).
 
 https://www.gamedeveloper.com/business/resilience-and-innovation-on-display-as-the-games-industry-looks-to-bounce-back-at-gdc-2024
 
-- https://x.com/BrianBreiholz/status/1791106284281896999
+- 🎾 [**2D Rigid Body Collision Resolution**](https://www.sassnow.ski/rigid-body-collisions/1) by [Kai Sassnowski](https://x.com/warsh33p)
+
+- <UnityLogo /> [**Unity sees WebGPU as a growing
+  market**](https://www.gamedeveloper.com/programming/unity-sees-webgpu-is-a-growing-market-for-game-development)
+  by [Bryant Francis](https://x.com/RBryant2012)
 
 - <JavascriptLogo /> [**Garbage Collection in
   V8**](https://blog.frontend-almanac.com/v8-garbage-collection) by [Roman
   Maksimov](https://blog.frontend-almanac.com/)
+
+- <PokiIcon className="size-5 inline-block" /> [**Choosing your web game engine**](https://developers.poki.com/guide/web-game-engines)
+  by [Poki](https://poki.com/)
+
+- 💰 [**Jamango! web game raises $2.5M**](https://venturebeat.com/games/jamango-raises-2-5m-to-launch-browser-based-game-maker-this-year/) – Co-founded by [Adam Dalton](https://x.com/robotiguy), [Richie Whelan](https://x.com/richiewhelan), and Jeremy Klarenbeek.
 
 ## 🎮 Games
 
