@@ -33,6 +33,7 @@ import { SubTitleDate } from 'components/Date'
 import { FloatLeftImage } from 'components/FloatImage'
 import { PokiLogo, PokiIcon } from 'components/PokiSponsor'
 import { GameRelease } from 'components/GameReleases'
+import { DiscordIcon } from 'lib/icons'
 
 # Newsletter – Issue 022
 
@@ -43,19 +44,31 @@ import { GameRelease } from 'components/GameReleases'
 
 ## 🔥 Headlines
 
-Discord shared their plan for the [future](https://discord.com/blog/discords-next-chapter) and launched their [**Embedded App SDK**](https://discord.com/build/embedded-app-sdk) for Activities ([NPM package](https://www.npmjs.com/package/@discord/embedded-app-sdk)). Multiplayer web games can now be played directly within Discord via iframes, with users connected via voice chat. The SDK lets you authenticate players and manage how your game interacts with Discord. Check out the [official starter](https://github.com/discord/embedded-app-sdk/tree/a124ae8eaf51c3fc118059e76af89b051c1c6277/examples/discord-activity-starter), [Hugo Duprez](https://x.com/HugoDuprez)'s [starter](https://github.com/Hugo-Dz/discord-activity-starter), and [Colyseus](https://colyseus.io/)' [starter](https://github.com/colyseus/discord-embedded-app-sdk) ([article](https://colyseus.io/blog/discord-embedded-sdk/)).
+<DiscordIcon className="size-5 inline-flex align-middle relative -top-[2px]" /> **Discord** shared their
+plan for the [future](https://discord.com/blog/discords-next-chapter) and launched their [**Embedded
+App SDK**](https://discord.com/build/embedded-app-sdk) for Activities ([NPM package](https://www.npmjs.com/package/@discord/embedded-app-sdk)).
+Multiplayer web games can now be played directly within Discord via iframes, with users connected via
+voice chat. The SDK lets you authenticate players and manage how your game interacts with Discord. Check
+out the [official starter](https://github.com/discord/embedded-app-sdk/tree/a124ae8eaf51c3fc118059e76af89b051c1c6277/examples/discord-activity-starter),
+[Hugo Duprez](https://x.com/HugoDuprez)'s [starter](https://github.com/Hugo-Dz/discord-activity-starter),
+and [Colyseus](https://colyseus.io/)' [starter](https://github.com/colyseus/discord-embedded-app-sdk)
+([article](https://colyseus.io/blog/discord-embedded-sdk/)).
 
-Apple's [WWDC](https://developer.apple.com/wwdc24/) developer event is ongoing, where [**Safari 18 beta**](https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/) got announced. Even though WebGPU has been available in the [Technology Preview](https://www.webkit.org/blog/14879/webgpu-now-available-for-testing-in-safari-technology-preview/) since last December, it is unfortunately not part of this release. So you will have to support WebGL for a while if you support Safari. On the Web Apps ("PWAs") front, if a user has your web app installed and they click a link pointing to your domain from _outside of their browser_ (like a link shared on Discord or Slack apps), it will open it the web app instead of the browser. That's cute and all, but there are still no Install Prompts on Safari, so you'll have to keep explaining to your users how to manually install your web app and no one will do it. 🤷‍♂ ️Finally, it has not yet been announced whether **WebXR** will still be behind a feature flag or not.
+🍏 **Apple**'s [WWDC](https://developer.apple.com/wwdc24/) developer event is ongoing, where [**Safari 18 beta**](https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/) got announced. Even though WebGPU has been available in the [Technology Preview](https://www.webkit.org/blog/14879/webgpu-now-available-for-testing-in-safari-technology-preview/) since last December, it is unfortunately not part of this release. So you will have to support WebGL for a while if you support Safari. On the Web Apps ("PWAs") front, if a user has your web app installed and they click a link pointing to your domain from _outside of their browser_ (like a link shared on Discord or Slack apps), it will open it the web app instead of the browser. That's cute and all, but there are still no Install Prompts on Safari, so you'll have to keep explaining to your users how to manually install your web app and no one will do it. 🤷‍♂ ️Finally, it has not yet been announced whether **WebXR** will still be behind a feature flag or not.
 
-<WebXRLogo /> The Meta Quest Browser now [**supports
+<WebXRLogo /> The **Meta Quest** Browser now [**supports
 WebGPU**](https://developer.oculus.com/documentation/web/browser-release-notes/) since version 32.0!
 
-The winners of [**Gamedev.js Jam 2024**](https://gamedevjs.com/competitions/best-entries-from-all-the-challenges-in-gamedev-js-jam-2024/) have been announced. The theme was _Power_!
+<JavascriptLogo /> The winners of [**Gamedev.js Jam
+2024**](https://gamedevjs.com/competitions/best-entries-from-all-the-challenges-in-gamedev-js-jam-2024/)
+have been announced. The theme was _Power_!
 
 <ReactLogo /> [**Athena Crisis**](https://athenacrisis.com/) by [Christoph
-Nakazawa](https://x.com/cpojer) is now [open
-source](https://cpojer.net/posts/athena-crisis-open-source) and funding contributions
-([repo](https://github.com/nkzw-tech/athena-crisis)).
+Nakazawa](https://x.com/cpojer) is now [**open
+source**](https://cpojer.net/posts/athena-crisis-open-source) and funding contributions! Check out
+the [repo](https://github.com/nkzw-tech/athena-crisis).
+
+🥭 [**Jamango! web game raises $2.5M**](https://venturebeat.com/games/jamango-raises-2-5m-to-launch-browser-based-game-maker-this-year/) – Co-founded by [Adam Dalton](https://x.com/robotiguy), [Richie Whelan](https://x.com/richiewhelan), and Jeremy Klarenbeek, Jamango! is a browser-based multiplayer user-generated content platform. It is currently in closed alpha, but you can check out the [homepage](https://jamango.io/) to get an idea of what's coming. I have been working for Jamango for several months and this project is really promising. Remember this name and keep an eye out for the release!
 
 ## ⭐️ Sponsor
 
@@ -212,6 +225,8 @@ My [Bookmarks](https://x.com/i/bookmarks).
 
 https://www.gamedeveloper.com/business/resilience-and-innovation-on-display-as-the-games-industry-looks-to-bounce-back-at-gdc-2024
 
+- ⚡️ [**Optimizing Javascript for fun and for profit**](https://romgrk.com/posts/optimizing-javascript) by [Rom Grk](https://x.com/romgrk)
+
 - 🎾 [**2D Rigid Body Collision Resolution**](https://www.sassnow.ski/rigid-body-collisions/1) by [Kai Sassnowski](https://x.com/warsh33p)
 
 - <UnityLogo /> [**Unity sees WebGPU as a growing
@@ -224,8 +239,6 @@ https://www.gamedeveloper.com/business/resilience-and-innovation-on-display-as-t
 
 - <PokiIcon className="size-5 inline-block" /> [**Choosing your web game engine**](https://developers.poki.com/guide/web-game-engines)
   by [Poki](https://poki.com/)
-
-- 💰 [**Jamango! web game raises $2.5M**](https://venturebeat.com/games/jamango-raises-2-5m-to-launch-browser-based-game-maker-this-year/) – Co-founded by [Adam Dalton](https://x.com/robotiguy), [Richie Whelan](https://x.com/richiewhelan), and Jeremy Klarenbeek.
 
 ## 🎮 Games
 
