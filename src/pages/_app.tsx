@@ -95,7 +95,6 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
           .newsletter-iframe {
             max-width: 338px;
             width: 100% !important;
-            /* height: 220px; */
           }
           .more-tools {
             border: none;
@@ -117,20 +116,6 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
             --tw-text-opacity: 1;
             color: rgba(243, 244, 246, var(--tw-text-opacity));
           }
-          /*
-          ====== This attempt at a lighter BG only worked after HMR, probably SSR problem ======
-          html[class~='dark'] body {
-            background-color: ${darkBg};
-          }
-          html[class~='dark'] .nextra-sidebar-container .contrast-more\:nx-shadow-none {
-            box-shadow: 0 -12px 16px ${darkBg};
-          }
-          @media (max-width: 767px) {
-            html[class~='dark'] .nextra-sidebar-container .contrast-more\:nx-shadow-none {
-              box-shadow: 0 -12px 16px #121212;
-            }
-          }
-          */
           .black-text {
             color: #333;
           }
@@ -144,8 +129,6 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
             color: #00ad00;
           }
 
-          // Rotate logo on hover with transition, and do the animation once on load
-          // spin keyframe
           @keyframes spin {
             from {
               transform: rotate(0deg);
@@ -165,7 +148,6 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
             transition: transform 0.5s ease;
             animation: spin 0.5s ease-in-out;
           }
-          /* https://css-tricks.com/full-width-containers-limited-width-parents/ */
           .callout {
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
@@ -243,7 +225,6 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
               margin-right: -50vw;
             }
             .callout {
-              /* Looks better on Android with those, but worse on desktop, check iOS */
               padding-left: 1.5rem;
               padding-right: 1.5rem;
               border-radius: 0;
@@ -251,7 +232,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
           }
           .support {
             position: relative;
-            top: -1px; /* Looks better on Chrome desktop, worse on mobile */
+            top: -1px;
           }
           .support-img {
             display: inline-block;
