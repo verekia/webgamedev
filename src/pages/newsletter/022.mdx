@@ -57,7 +57,7 @@ out the [official starter](https://github.com/discord/embedded-app-sdk/tree/a124
 and [Colyseus](https://colyseus.io/)' [starter](https://github.com/colyseus/discord-embedded-app-sdk)
 ([article](https://colyseus.io/blog/discord-embedded-sdk/)).
 
-🍏 **Apple**'s [WWDC](https://developer.apple.com/wwdc24/) developer event is ongoing, where [**Safari 18 beta**](https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/) got announced. Even though WebGPU has been available in the [Technology Preview](https://www.webkit.org/blog/14879/webgpu-now-available-for-testing-in-safari-technology-preview/) since last December, it is unfortunately not part of this release. So you will have to support WebGL for a while if you support Safari. On the Web Apps ("PWAs") front, if a user has your web app installed and they click a link pointing to your domain from _outside of their browser_ (like a link shared on Discord or Slack apps), it will open it the web app. There are still no [Install Prompts](https://web.dev/learn/pwa/installation-prompt) on Safari, so you will have to keep explaining to your users how to manually install your web app. ️Finally, <WebXRLogo /> **WebXR** is no longer behind a feature flag, and `immersive-vr` sessions and hand tracking are [available by default](https://x.com/jamesckane/status/1800564251037495352).
+🍏 [**Safari 18 beta**](https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/) got announced at **Apple**'s [WWDC](https://developer.apple.com/wwdc24/) developer event. <WebXRLogo /> **WebXR** is no longer behind a feature flag, and `immersive-vr` sessions and hand tracking are [available by default](https://x.com/jamesckane/status/1800564251037495352). Even though WebGPU has been available in the [Technology Preview](https://www.webkit.org/blog/14879/webgpu-now-available-for-testing-in-safari-technology-preview/) since last December, it is unfortunately not part of this release. So you will have to support WebGL for a while if you support Safari. On the Web Apps (_PWAs_) front, if a user has your web app installed and they click a link pointing to your domain from _outside of their browser_ (like a link shared on Discord or Slack), it will open it the web app. Unfortunately, there are still no [Install Prompts](https://web.dev/learn/pwa/installation-prompt) on Safari, so you will have to keep explaining to your users how to manually install your web app.
 
 <WebGPULogo /> The **Meta Quest Browser** now [**supports
 WebGPU**](https://developer.oculus.com/documentation/web/browser-release-notes/) since version 32.0!
@@ -107,19 +107,25 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
 
 ## 🏎 Engines
 
+- <ThreeLogo /> [**Three.js r165**](https://x.com/threejs/status/1796522095721189688),
+  [**r164**](https://x.com/threejs/status/1783563640077185362) and
+  [**r163**](https://x.com/threejs/status/1773866444763390050)
+  ([changelog](https://github.com/mrdoob/three.js/releases/tag/rXXX), [migration
+  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
 - <ThreeLogo /> [**Three.js Shading
   Language**](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language) – First draft of
   the TSL spec, which allows you to write shaders in JavaScript. Check out [Bruno Simon's
   timeline](https://x.com/bruno_simon) for examples ([portal
   shader](https://x.com/bruno_simon/status/1796174733773250897)).
-- <ThreeLogo /> [**Three.js r165**](https://x.com/threejs/status/1796522095721189688),
-  [**r164**](https://x.com/threejs/status/1783563640077185362) and
-  [**r163**](https://x.com/threejs/status/1773866444763390050) – XXX
-  ([changelog](https://github.com/mrdoob/three.js/releases/tag/rXXX), [migration
-  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
-- <ThreeLogo /> [**Drei Vanilla vXXX**](https://github.com/pmndrs/drei-vanilla/releases) –
-- <R3FLogo /> [**R3F v8.XX**](https://github.com/pmndrs/react-three-fiber/releases) – XXX
-- <R3FLogo /> [**Drei v9.XX**](https://github.com/pmndrs/drei/releases) – XXX
+- <ThreeLogo /> [**Drei Vanilla v1.16.0**](https://github.com/pmndrs/drei-vanilla/releases) –
+  [Cloud](https://github.com/pmndrs/drei-vanilla#cloud), adds `screenspace` to
+  [Outlines](https://github.com/pmndrs/drei-vanilla#outlines).
+- <R3FLogo /> [**Drei v9.106.0**](https://github.com/pmndrs/drei/releases) –
+  [HLS](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) in
+  [useVideoTexture](https://github.com/pmndrs/drei#usevideotexture),
+  [gainmap](https://gregbenzphotography.com/hdr-photos/jpg-hdr-gain-maps-in-adobe-camera-raw/),
+  envmap rotation and intensity, [ScrollControls](https://github.com/pmndrs/drei#scrollcontrols)
+  `prepend`.
 - <ThrelteLogo /> [**@threlte/extras 8.11.0**](https://x.com/threlte) –
   [Outlines](https://threlte.xyz/docs/reference/extras/outlines),
   [Text3DGeometry](https://threlte.xyz/docs/reference/extras/text-3d-geometry),
@@ -128,8 +134,8 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
   [Mask](https://threlte.xyz/docs/reference/extras/mask),
   [ImageMaterial](https://threlte.xyz/docs/reference/extras/image-material).
 - <ThrelteLogo /> [**Threlte Studio**](https://www.youtube.com/watch?v=s7Os874X_BU) is the upcoming
-  editor of Threlte ([sneak
-  peek](https://threlte-git-studio-threlte.vercel.app/docs/reference/studio/getting-started)).
+  editor of Threlte. Here is a [sneak
+  peek](https://threlte-git-studio-threlte.vercel.app/docs/reference/studio/getting-started).
 - <TresLogo /> [**TresJS XXX**](https://github.com/Tresjs/tres/releases) -
   https://x.com/tresjs_dev/status/1796230652704030970 -
   https://x.com/tresjs_dev/status/1792944754923061692
@@ -146,20 +152,17 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
   See live examples and docs side-by-side).
 - <AframeLogo /> [**A-Frame v1.6.0**](https://github.com/aframevr/aframe/releases) – Bug fixes,
   memory management and performance improvements. Execution order API.
-- <PixiLogo /> [**PixiJS 8.1.0**](https://github.com/pixijs/pixijs/releases/tag/v8.1.0)
-- Phaser - https://x.com/phaser_/status/1775197395954938208
-- <NeedleLogo /> [**Needle**](https://needle.tools/)
-  [**3.40.0-exp**](https://github.com/needle-tools/needle-engine-support/releases) – Includes
-  automatic LOD generation to improve performance and loading times.
-- 🤺 [**Rapier 0.20.0**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md)
 - <WonderlandLogo /> [**Wonderland Engine 1.2.0**](https://wonderlandengine.com/news/release-1.2.0/)
   (and [1.2.1](https://wonderlandengine.com/news/release-1.2.1/)) – Includes post-processing like
   Bloom and Tonemapping, HDR environment support, improvements to image-based lighting, animation
-  blending, morph targets, and a JavaScript/TypeScript based editor API to write custom tools. -
-  [Community Reel 2023](https://www.youtube.com/watch?v=3RXQ-qN1IOc)
-- <DefoldLogo /> [**Defold 1.8.0 is
-  out**](https://forum.defold.com/t/defold-1-8-0-has-been-released/76792)
-- <ColyseusLogo /> Colyseus
+  blending, morph targets, and a JavaScript/TypeScript based editor API to write custom tools.
+- <NeedleLogo /> [**Needle**](https://needle.tools/)
+  [**3.40.0-exp**](https://github.com/needle-tools/needle-engine-support/releases) – Includes
+  automatic LOD generation to improve performance and loading times.
+- <PixiLogo /> [**PixiJS 8.1.0**](https://github.com/pixijs/pixijs/releases/tag/v8.1.0)
+- Phaser - https://x.com/phaser_/status/1775197395954938208
+- 🤺 [**Rapier 0.20.0**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md)
+- <DefoldLogo /> [**Defold 1.8.0**](https://forum.defold.com/t/defold-1-8-0-has-been-released/76792)
 - <ConstructLogo /> Construct [releases](https://www.construct.net/en/make-games/releases)
 - <ExcaliburLogo /> Excalibur
 - <OrillusionLogo /> Orillusion
@@ -168,7 +171,7 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
 - <WebGPULogo /> [**WarmeY2K Engine**](https://warme-engine.com/) by Julien Rongiere – PSX-style 3D
   engine.
 
-## 🛠 Tools & Libraries
+## 🛠 Tools
 
 - <ThreeLogo /> [**Tree.js procedural tree generator**](https://dgreenheck.github.io/tree-js/)
   ([repo](https://github.com/dgreenheck/tree-js)) by [Dan Greenheck](https://x.com/dangreenheck)
@@ -189,7 +192,7 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
   [Douges](https://x.com/_douges/status/1800140194521489799) to try it.
 - <TresLogo /> [**tres-fps-controls**](https://github.com/JaimeTorrealba/tres-fps-controls) by
   [Jaime Torrealba](https://x.com/Jaimebboyjt)
-- 🎾 [**Jolt Physics v5.0.0 is out!**](https://x.com/jrouwe/status/1776238556400210391) by [Jorrit Rouwe](https://x.com/jrouwe) – See the list of [new features](https://github.com/jrouwe/JoltPhysics/releases/tag/v5.0.0).
+- 🎾 [**Jolt Physics v5.0.0**](https://x.com/jrouwe/status/1776238556400210391) by [Jorrit Rouwe](https://x.com/jrouwe) – See the list of [new features](https://github.com/jrouwe/JoltPhysics/releases/tag/v5.0.0).
 - <GltfLogo /> [**GLB UV Inspector**](https://uvchecker.vercel.app/) by [Simon
   Harris](https://x.com/SimonHarrisCo)
 - 🎨 [**Khronos PBR Neutral Tone Mapper**](https://www.khronos.org/news/press/khronos-pbr-neutral-tone-mapper-released-for-true-to-life-color-rendering-of-3d-products) – True-to-Life Color Rendering with Three.js and Babylon.js support.
@@ -197,6 +200,7 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
   Pérez](https://x.com/romelperez07)
 - 🎁 [**Crocotile 3D**](https://crocotile3d.com/) by [Alex HW](https://x.com/Crocotile3D) – Tile-based 3D modeling tool for low-poly pixel art.
 - 🎁 [**Smooth Voxels 2.3.0**](https://smoothvoxels.glitch.me/) – Three.js and A-Frame support, save animations from the [Playground](https://smoothvoxels.glitch.me/playground.html), new shapes.
+- <ColyseusLogo /> Colyseus
 - 📡 [**PartyKit**](https://www.partykit.io/) by [Sunil Pai](https://x.com/threepointone) is [joining Cloudflare](https://blog.partykit.io/posts/partykit-is-joining-cloudflare).
 - 📡 [**LootLocker**](https://lootlocker.com/) – Game backend platform.
 - 📡 [**Open Game Backend**](https://opengb.dev/introduction) by [Rivet](https://rivet.gg/)
@@ -206,8 +210,6 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
 - 💰 [**Sanlo**](https://www.sanlo.io/) – Merchant of record and monetization.
 
 **Twitter**:
-[Three.js](https://x.com/threejs),
-[#threejs](https://x.com/hashtag/threejs),
 [R3F](https://x.com/0xca0a),
 [#r3f](https://x.com/hashtag/r3f),
 [Babylon](https://x.com/babylonjs),
@@ -253,6 +255,8 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
   Blender**](https://www.youtube.com/watch?v=MbqaU3A8xrk), [**WebXR in
   Unity**](https://www.youtube.com/watch?v=w3KLKBBwNvo) mini tutorials for [Needle
   Engine](https://needle.tools/)
+- <WonderlandLogo /> [**Community Reel 2023**](https://www.youtube.com/watch?v=3RXQ-qN1IOc) by
+  [Wonderland Engine](https://wonderlandengine.com/)
 - <JavascriptLogo /> [**Build a Virtual World Filled with Self-Driving
   Cars**](https://www.youtube.com/watch?v=5iHejdqYIa8) (with no libraries!) by [Radu
   Mariescu-Istodor](https://x.com/RaduMariescu)
@@ -413,6 +417,10 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
 - <ThreeLogo /> [**BatchedMesh
   Instancing**](https://x.com/garrettkjohnson/status/1795438652459520200)
   ([demo](https://gkjohnson.github.io/batched-instanced-mesh-demo/model.html)) by [Garrett
+  Johnson](https://x.com/garrettkjohnson)
+- <ThreeLogo /> [**Depth peeling
+  transparency**](https://x.com/garrettkjohnson/status/1800092722428260703)
+  ([demo](https://gkjohnson.github.io/depth-peeling-demo/)) by [Garrett
   Johnson](https://x.com/garrettkjohnson)
 - <NeedleLogo /> [**Car Physics mini
   game**](https://uploads.needle.tools/needle-engine/tests/CarPhysics/)
