@@ -56,15 +56,19 @@ out the [official starter](https://github.com/discord/embedded-app-sdk/tree/a124
 and [Colyseus](https://colyseus.io/)' [starter](https://github.com/colyseus/discord-embedded-app-sdk)
 ([article](https://colyseus.io/blog/discord-embedded-sdk/)).
 
-🍏 **Apple**'s [WWDC](https://developer.apple.com/wwdc24/) developer event is ongoing, where [**Safari 18 beta**](https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/) got announced. Even though WebGPU has been available in the [Technology Preview](https://www.webkit.org/blog/14879/webgpu-now-available-for-testing-in-safari-technology-preview/) since last December, it is unfortunately not part of this release. So you will have to support WebGL for a while if you support Safari. On the Web Apps ("PWAs") front, if a user has your web app installed and they click a link pointing to your domain from _outside of their browser_ (like a link shared on Discord or Slack apps), it will open it the web app instead of the browser. There are still no [Install Prompts](https://web.dev/learn/pwa/installation-prompt) on Safari, so you will have to keep explaining to your users how to manually install your web app. ️Finally, **WebXR** is the highlight of this release, but it has not yet been announced whether it will still be behind a feature flag or not.
+🍏 **Apple**'s [WWDC](https://developer.apple.com/wwdc24/) developer event is ongoing, where [**Safari 18 beta**](https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/) got announced. Even though WebGPU has been available in the [Technology Preview](https://www.webkit.org/blog/14879/webgpu-now-available-for-testing-in-safari-technology-preview/) since last December, it is unfortunately not part of this release. So you will have to support WebGL for a while if you support Safari. On the Web Apps ("PWAs") front, if a user has your web app installed and they click a link pointing to your domain from _outside of their browser_ (like a link shared on Discord or Slack apps), it will open it the web app. There are still no [Install Prompts](https://web.dev/learn/pwa/installation-prompt) on Safari, so you will have to keep explaining to your users how to manually install your web app. ️Finally, <WebXRLogo /> **WebXR** is no longer behind a feature flag, and `immersive-vr` sessions and hand tracking are [available by default](https://x.com/jamesckane/status/1800564251037495352).
 
-<WebXRLogo /> The **Meta Quest** Browser now [**supports
+<WebGPULogo /> The **Meta Quest Browser** now [**supports
 WebGPU**](https://developer.oculus.com/documentation/web/browser-release-notes/) since version 32.0!
 
 <BabylonLogo /> [**Babylon.js
 7.0**](https://babylonjs.medium.com/introducing-babylon-js-7-0-a141cd7ede0d) is out! Check out the
-[release video](https://www.youtube.com/watch?v=5V07vm5u74Q). This major version includes
-Procedural/Node Geometry, Global Illumination, Gaussian Splats, Ragdoll Physics and better WebXR
+[release video](https://www.youtube.com/watch?v=5V07vm5u74Q). This major version includes a
+procedural [Node Geometry](https://doc.babylonjs.com/features/featuresDeepDive/mesh/nodeGeometry)
+([live editor](https://nge.babylonjs.com/)), [Global
+Illumination](https://doc.babylonjs.com/features/featuresDeepDive/lights/rsmgi), [Gaussian
+Splats](https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting), [Ragdoll
+Physics](https://doc.babylonjs.com/features/featuresDeepDive/physics/ragdolls) and better WebXR
 support.
 
 <JavascriptLogo /> The winners of [**Gamedev.js Jam
@@ -122,8 +126,10 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
   [InstancedSprite](https://threlte.xyz/docs/reference/extras/instanced-sprite),
   [Stars](https://threlte.xyz/docs/reference/extras/stars),
   [Mask](https://threlte.xyz/docs/reference/extras/mask),
-  [ImageMaterial](https://threlte.xyz/docs/reference/extras/image-material) and the upcoming
-  [**Threlte Studio**](https://www.youtube.com/watch?v=s7Os874X_BU)
+  [ImageMaterial](https://threlte.xyz/docs/reference/extras/image-material).
+- <ThrelteLogo /> [**Threlte Studio**](https://www.youtube.com/watch?v=s7Os874X_BU) is the upcoming
+  editor of Threlte ([sneak
+  peek](https://threlte-git-studio-threlte.vercel.app/docs/reference/studio/getting-started)).
 - <TresLogo /> [**TresJS XXX**](https://github.com/Tresjs/tres/releases) -
   https://x.com/tresjs_dev/status/1796230652704030970 -
   https://x.com/tresjs_dev/status/1792944754923061692
@@ -169,14 +175,18 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
 
 - <ThreeLogo /> [**Tree.js procedural tree generator**](https://dgreenheck.github.io/tree-js/)
   ([repo](https://github.com/dgreenheck/tree-js)) by [Dan Greenheck](https://x.com/dangreenheck)
-- <ThreeLogo /> https://github.com/dgreenheck/three-pinata by https://x.com/dangreenheck
-- <ThreeLogo /> https://github.com/sawa-zen/three-fiber-webxr-toolbox by https://x.com/sawa_zen
-- <ThreeLogo /> https://wiggle.three.tools/ by https://x.com/KMkota0
+- <ThreeLogo /> [**three-pinata**](https://github.com/dgreenheck/three-pinata) by [Dan
+  Greenheck](https://x.com/dangreenheck)
+- <ThreeLogo /> [**Wiggle Bones**](https://wiggle.three.tools/) by [Xavier
+  (Jack)](https://x.com/KMkota0)
 - 🕹️ [**Mana Potion**](https://github.com/verekia/manapotion)
   ([demo](https://manapotion.org/)) by
   [me](https://x.com/verekia) – Now with Vue, Svelte, and vanilla JS support.
-- <R3FLogo /> https://html23.com/ by [Bela Bohlender](https://x.com/BelaBohlender)
-  ([demo](https://x.com/BelaBohlender/status/1795145140358549909))
+- <R3FLogo /> [**HTML23**](https://html23.com/)
+  ([demo](https://x.com/BelaBohlender/status/1795145140358549909)) live editor for
+  [pmndrs/uikit](https://github.com/pmndrs/uikit) by [Bela Bohlender](https://x.com/BelaBohlender)
+- <R3FLogo /> [**three-fiber-webxr-toolbox**](https://github.com/sawa-zen/three-fiber-webxr-toolbox)
+  ([video](https://x.com/sawa_zen/status/1796911546150596764)) by [sawa-zen](https://x.com/sawa_zen)
 - <CssLogo /> [**Arwes**](https://arwes.dev/) Futuristic Sci-Fi UI Web Framework by [Romel
   Pérez](https://x.com/romelperez07)
 - <TresLogo /> [**tres-fps-controls**](https://github.com/JaimeTorrealba/tres-fps-controls) by
@@ -184,8 +194,8 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
 - 🎾 [**Jolt Physics v5.0.0 is out!**](https://x.com/jrouwe/status/1776238556400210391) by [Jorrit Rouwe](https://x.com/jrouwe) – See the list of [new features](https://github.com/jrouwe/JoltPhysics/releases/tag/v5.0.0).
 - <GltfLogo /> [**GLB UV Inspector**](https://uvchecker.vercel.app/) by [Simon
   Harris](https://x.com/SimonHarrisCo)
-- 🎈 [**PartyKit**](https://www.partykit.io/) by [Sunil Pai](https://x.com/threepointone) is [**joining Cloudflare**](https://blog.partykit.io/posts/partykit-is-joining-cloudflare).
-- [**Khronos PBR Neutral Tone Mapper**](https://www.khronos.org/news/press/khronos-pbr-neutral-tone-mapper-released-for-true-to-life-color-rendering-of-3d-products) – True-to-Life Color Rendering with Three.js and Babylon.js support.
+- 🎨 [**Khronos PBR Neutral Tone Mapper**](https://www.khronos.org/news/press/khronos-pbr-neutral-tone-mapper-released-for-true-to-life-color-rendering-of-3d-products) – True-to-Life Color Rendering with Three.js and Babylon.js support.
+- 📡 [**PartyKit**](https://www.partykit.io/) by [Sunil Pai](https://x.com/threepointone) is [joining Cloudflare](https://blog.partykit.io/posts/partykit-is-joining-cloudflare).
 - 📡 [**LootLocker**](https://lootlocker.com/) – Game backend platform.
 - 📡 [**Edgegap**](https://edgegap.com/) – Game server hosting.
 - 📡 [**SpacetimeDB**](https://spacetimedb.com/) ([repo](https://github.com/ClockworkLabs/SpacetimeDB)) – Database with custom logic support for multiplayer games.
@@ -194,17 +204,11 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
 - 🫖 [**Crocotile 3D**](https://crocotile3d.com/) by [Alex HW](https://x.com/Crocotile3D) – Tile-based 3D modeling tool for low-poly pixel art.
 
 **YouTube**:
-[Three.js](https://www.youtube.com/results?search_query=three+js),
-[R3F](https://www.youtube.com/results?search_query=react+three+fiber),
-[Babylon](https://www.youtube.com/results?search_query=babylon+js),
-[PlayCanvas](https://www.youtube.com/results?search_query=playcanvas),
 [Phaser](https://www.youtube.com/results?search_query=phaser+js),
 [Pixi](https://www.youtube.com/results?search_query=pixi+js),
 [A-Frame](https://www.youtube.com/results?search_query=a-frame),
 [Threlte](https://www.youtube.com/results?search_query=threlte),
-[Needle](https://www.youtube.com/results?search_query=needle+tools),
-[WebGL](https://www.youtube.com/results?search_query=webgl),
-[WebGPU](https://www.youtube.com/results?search_query=webgpu)
+[Needle](https://www.youtube.com/results?search_query=needle+tools)
 
 **Twitter**:
 [Three.js](https://x.com/threejs),
@@ -239,13 +243,34 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
   2024**](https://www.youtube.com/watch?v=bxsQMlymLEw) by [Khronos Group](https://www.khronos.org/)
 - 🎓 [**Lerp smoothing is broken**](https://www.youtube.com/watch?v=LSNQuFEDOyQ) by [Freya Holmér](https://x.com/FreyaHolmer)
 - 🎓 [**How do Video Game Graphics Work?**](https://www.youtube.com/watch?v=C8YtdC8mxTU) by [Branch Education](https://www.youtube.com/@BranchEducation)
-- <ThreeLogo /> https://www.youtube.com/watch?v=sxvVV6QPwgg by https://x.com/RobinPayot
-- 🎙️ <R3FLogo /> [**3D web game dev jam!**](https://changelog.com/jsparty/323) with [Brian Breiholz](https://x.com/BrianBreiholz) on the [JS Party](https://changelog.com/jsparty) podcast
+- <ThreeLogo /> [**Zelda Wind Waker in the browser**](https://www.youtube.com/watch?v=sxvVV6QPwgg)
+  by [RobinPayot](https://x.com/RobinPayot)
+- <ThreeLogo /> [**Three.js Raycasting Tutorial for
+  Beginners**](https://www.youtube.com/watch?v=QATefHrO4kg) by [Dan
+  Greenheck](https://x.com/dangreenheck)
+- <R3FLogo /> [**Make Any 3D Model Explode, with R3F and Next
+  14**](https://www.youtube.com/watch?v=hIjUo5NwlPk) by
+  [developedbyed](https://www.youtube.com/@developedbyed)
+- <R3FLogo /> [**Make a Fall Guys Clone for Discord
+  Activity**](https://www.youtube.com/watch?v=_yx2fh8KEak) by [Wawa
+  Sensei](https://x.com/wawasensei)
+- <R3FLogo /> [**Coastal World Aesthetics**](https://www.youtube.com/watch?v=fkxzkcPTDpo) by [Wawa
+  Sensei](https://x.com/wawasensei)
+- <PlayCanvasLogo /> [**Revolutionizing Game
+  Development**](https://www.youtube.com/watch?v=ogDRfkuFfIM)
+  ([transcript](https://www.buildingtheopenmetaverse.org/episodes/revolutionizing-game-development))
+  with [Will Eastcott](https://x.com/willeastcott) from [PlayCanvas](https://playcanvas.com/)
+- <NeedleLogo /> [**Blender**](https://www.youtube.com/watch?v=TXEHR4Cq7iU),
+  [**Unity**](https://www.youtube.com/watch?v=gfslrxhkH3E), [**WebXR in
+  Blender**](https://www.youtube.com/watch?v=MbqaU3A8xrk), [**WebXR in
+  Unity**](https://www.youtube.com/watch?v=w3KLKBBwNvo) mini tutorials for [Needle
+  Engine](https://needle.tools/)
 - <JavascriptLogo /> [**Build a Virtual World Filled with Self-Driving
   Cars**](https://www.youtube.com/watch?v=5iHejdqYIa8) (with no libraries!) by [Radu
   Mariescu-Istodor](https://x.com/RaduMariescu)
 - <KaboomLogo /> [**JavaScript Adventure Platformer Game
   Tutorial**](https://www.youtube.com/watch?v=UWHiMgFjRrU) by [JS Legend](https://x.com/JSLegendDev)
+- 🎙️ <R3FLogo /> [**3D web game dev jam!**](https://changelog.com/jsparty/323) with [Brian Breiholz](https://x.com/BrianBreiholz) on the [JS Party](https://changelog.com/jsparty) podcast
 
 ## ✍️ Articles
 
@@ -375,7 +400,9 @@ the [repo](https://github.com/nkzw-tech/athena-crisis).
 - <ThreeLogo /> [**Equinox**](https://equinox.space/) by [Little
   Workshop](https://x.com/glecollinet) – An impressive 1st-person adventure in a spaceship. You've
   got to try this one!
-- [**Fabled Recipes**](https://fabled-recipes.netlify.app/) ([repo](https://github.com/VincentDouchin/A-Bunny-s-Revenge)) – by [Vincent Douchin](https://github.com/VincentDouchin)
+- <ThreeLogo /> [**Fabled Recipes**](https://fabled-recipes.netlify.app/)
+  ([repo](https://github.com/VincentDouchin/A-Bunny-s-Revenge)) – by [Vincent
+  Douchin](https://github.com/VincentDouchin)
 - <BabylonLogo /> [**Marbe Run Simulator**](https://tiaratum.com/viewer/#home) by [Tiaratum
   Games](https://x.com/tiaratumgames) – A marble machine construction game with great physics.
 - <PhaserLogo /> [**Pixaland**](https://www.pixaland.world/) by [Giorgi
