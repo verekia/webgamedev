@@ -1,7 +1,5 @@
 import A from 'components/A'
 
-const hathoraUrl = 'https://hathora.dev/?utm_source=webgamedev&utm_content=footer'
-
 const pokiMainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=footer'
 const pokiLearnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=footer'
 
@@ -32,18 +30,6 @@ const Footer = () => (
             .footer-promo-block img {
               width: 170px;
               margin-bottom: 10px;
-            }
-            .hathora-white {
-              display: none;
-            }
-            .hathora-black {
-              display: inline-block;
-            }
-            .dark .hathora-white {
-              display: inline-block;
-            }
-            .dark .hathora-black {
-              display: none;
             }
             .poki-white {
               display: none;
@@ -85,31 +71,6 @@ const Footer = () => (
             </A>
           </div>
           <div>The market leader on Web</div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <a href={hathoraUrl} target="_blank" rel="noopener">
-            <img
-              alt="Hathora logo"
-              className="hathora-black"
-              src="/partnerships/hathora-black.png"
-            />
-            <img
-              alt="Hathora logo"
-              className="hathora-white"
-              src="/partnerships/hathora-white.png"
-            />
-          </a>
-        </div>
-        <div>
-          <div>
-            Sponsored by{' '}
-            <A href={hathoraUrl} rel="noopener">
-              <b>Hathora</b>
-            </A>
-          </div>
-          <div>Cloud Hosting for Multiplayer Games</div>
         </div>
       </div>
     </div>
