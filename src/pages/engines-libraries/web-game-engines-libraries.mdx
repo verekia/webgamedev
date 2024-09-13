@@ -12,6 +12,7 @@ import {
   FilamentLogo,
   GDevelopLogo,
   KaboomLogo,
+  KaplayLogo,
   OglLogo,
   OrillusionLogo,
   PhaserLogo,
@@ -98,16 +99,29 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
       description: 'WebGPU 3D engine in beta',
     },
     {
-      ...engines.kaboom,
-      logo: <KaboomLogo />,
-      description: 'Simple 2D engine',
-    },
-    {
       ...engines.two,
       logo: <TwoLogo />,
       description: '2D library',
     },
     { ...engines.excalibur, logo: <ExcaliburLogo />, description: '2D engine' },
+    {
+      ...engines.kaplay,
+      logo: <KaplayLogo />,
+      description: (
+        <>
+          Maintained fork of{' '}
+          <a href="https://kaboomjs.com/" target="_blank">
+            Kaboom.js
+          </a>
+        </>
+      ),
+    },
+    {
+      ...engines.kaboom,
+      logo: <KaboomLogo />,
+      description: 'Simple 2D engine (unmaintained, use Kaplay instead)',
+      collapsed: true,
+    },
     {
       ...hybridEngines.filament,
       logo: <FilamentLogo />,

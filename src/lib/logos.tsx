@@ -23,6 +23,7 @@ import HaxeSrc from '../../public/logos/haxe.png'
 import ImpactSrc from '../../public/logos/impact.png'
 import JavascriptSrc from '../../public/logos/javascript.png'
 import KaboomSrc from '../../public/logos/kaboom.png'
+import KaplaySrc from '../../public/logos/kaplay.png'
 import ModdIoSrc from '../../public/logos/modd-io.png'
 import NeedleSrc from '../../public/logos/needle.png'
 import OglSrc from '../../public/logos/ogl.png'
@@ -251,6 +252,18 @@ export const KaboomLogo = (props: ImageProps) => (
       title="Kaboom"
       src={KaboomSrc}
       style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const KaplayLogo = (props: ImageProps) => (
+  <a href="https://kaplayjs.com/" target="_blank" rel="noopener">
+    <Image
+      alt="Kaplay"
+      title="Kaplay"
+      src={KaplaySrc}
+      style={{ position: 'relative', bottom: 2, ...defaultStyle, ...props.style }}
       {...props}
     />
   </a>

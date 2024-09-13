@@ -82,6 +82,16 @@ export const engines = {
     npm: 'kaboom',
     downloads: 1500,
     ts: 'ts',
+    lastCommitDate: '2024-05-08',
+  },
+  kaplay: {
+    name: 'Kaplay',
+    url: 'https://kaplayjs.com/',
+    repo: 'kaplayjs/kaplay',
+    stars: 400,
+    npm: 'kaplay',
+    downloads: 400,
+    ts: 'ts',
   },
   two: {
     name: 'Two.js',
