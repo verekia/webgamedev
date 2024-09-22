@@ -1,6 +1,6 @@
 {
   "template": { "title": "Issue XXX – New! 🎉", "display": "hidden" },
-  "023": { "title": "Issue 023 – New! 🎉", "display": "hidden" },
+  "023-preview": { "title": "Issue 023 – New! 🎉", "display": "hidden" },
   "022": { "title": "Issue 022" },
   "021": { "title": "Issue 021" },
   "020": { "title": "Issue 020" },
