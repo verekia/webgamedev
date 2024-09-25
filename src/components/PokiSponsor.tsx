@@ -54,7 +54,7 @@ const PokiSponsor = () => (
         <A href={mainUrl} rel="noopener">
           <b>Poki</b>
         </A>
-        . Reaching 50 million monthly users, Poki is on a mission to create the ultimate playground
+        . Reaching 65 million monthly users, Poki is on a mission to create the ultimate playground
         for both players and developers on Web!{' '}
         <A href={learnMoreUrl} rel="noopener">
           <b>Learn more</b>
