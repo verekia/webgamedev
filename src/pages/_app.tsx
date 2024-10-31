@@ -37,7 +37,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
         domain="webgamedev.com"
         trackOutboundLinks
         selfHosted
-        customDomain="https://pl.v1v2.io"
+        customDomain="https://pl2.v1v2.io"
       >
         {/* eslint-disable no-useless-escape */}
         <style global jsx>{`

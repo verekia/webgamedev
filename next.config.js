@@ -1,5 +1,3 @@
-const { withPlausibleProxy } = require('next-plausible')
-
 const withNextra = require('nextra')({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx',
@@ -30,6 +28,4 @@ const config = withNextra({
   ],
 })
 
-module.exports = withPlausibleProxy({ scriptName: 'pl', customDomain: 'https://pl.v1v2.io' })(
-  config,
-)
+module.exports = config
