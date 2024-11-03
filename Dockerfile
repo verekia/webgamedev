@@ -21,4 +21,6 @@ RUN bun run build
 
 RUN curl --request POST --url https://api.bunny.net/pullzone/${BUNNY_PULLZONE_ID}/purgeCache --header "content-type: application/json" --header "AccessKey: ${BUNNY_ACCESS_KEY}"
 
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 CMD curl -f http://localhost:3000/ || exit 1
+
 CMD ["bun", "start"]
