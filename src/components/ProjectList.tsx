@@ -143,12 +143,14 @@ const ProjectList = ({ projects, rust }: Props) => {
                 href={repoUrl}
                 target="_blank"
                 rel="noopener"
+                style={{ textDecoration: 'none' }}
                 className={stars === null ? styles.empty : starsColor}
               >
                 {stars !== null ? stars : 'N/A'}
               </a>
               <a
                 href={project.npm ? npmUrl : project.crate ? crateUrl : ''}
+                style={{ textDecoration: 'none' }}
                 target="_blank"
                 rel="noopener"
                 className={downloads === null ? styles.empty : downloadsColor}
@@ -168,7 +170,7 @@ const ProjectList = ({ projects, rust }: Props) => {
                 </div>
               )}
               <a
-                style={{ textAlign: 'center' }}
+                style={{ textAlign: 'center', textDecoration: 'none' }}
                 href={`${repoUrl}/commits`}
                 target="_blank"
                 rel="noopener"

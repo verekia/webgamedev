@@ -340,6 +340,10 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
             text-decoration: underline;
             text-decoration-thickness: 1px;
           }
+          /* article footer links */
+          main ._mb-8._flex._items-center._border-t._pt-8 a {
+            text-decoration: none;
+          }
         `}</style>
         <Component {...pageProps} />
       </PlausibleProvider>
