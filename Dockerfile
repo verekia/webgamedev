@@ -5,7 +5,7 @@ ARG BUNNY_PULLZONE_ID
 
 WORKDIR /app
 
-RUN apk add --no-cache curl
+# RUN apk add --no-cache curl
 
 COPY bun.lockb package.json .
 
