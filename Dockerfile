@@ -1,11 +1,15 @@
-FROM oven/bun:1.1.34
+FROM oven/bun:1.1.34-slim
+
+# sharp doesn't work on alpine
 
 ARG BUNNY_ACCESS_KEY
 ARG BUNNY_PULLZONE_ID
 
 WORKDIR /app
 
-# RUN apk add --no-cache curl
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends curl ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY bun.lockb package.json .
 
