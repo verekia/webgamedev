@@ -1,11 +1,13 @@
-const withNextra = require('nextra')({
+import nextra from 'nextra'
+
+const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx',
 })
 
 const config = withNextra({
   assetPrefix: process.env.NEXT_PUBLIC_CDN ?? '',
-  redirects: () => [
+  redirects: async () => [
     {
       source: '/discord',
       destination: 'https://discord.gg/5Z28wjTeyh',
@@ -29,4 +31,4 @@ const config = withNextra({
   ],
 })
 
-module.exports = config
+export default config

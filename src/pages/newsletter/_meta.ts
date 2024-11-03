@@ -1,0 +1,28 @@
+const meta = {
+  template: { title: 'Issue XXX – New! 🎉', display: 'hidden' },
+  '023': { title: 'Issue 023 – New! 🎉' },
+  '022': { title: 'Issue 022' },
+  '021': { title: 'Issue 021' },
+  '020': { title: 'Issue 020' },
+  '019': { title: 'Issue 019' },
+  '018': { title: 'Issue 018' },
+  '017': { title: 'Issue 017' },
+  '016': { title: 'Issue 016' },
+  '015': { title: 'Issue 015' },
+  '014': { title: 'Issue 014' },
+  '013': { title: 'Issue 013' },
+  '012': { title: 'Issue 012' },
+  '011': { title: 'Issue 011' },
+  '010': { title: 'Issue 010' },
+  '009': { title: 'Issue 009' },
+  '008': { title: 'Issue 008' },
+  '007': { title: 'Issue 007' },
+  '006': { title: 'Issue 006' },
+  '005': { title: 'Issue 005' },
+  '004': { title: 'Issue 004' },
+  '003': { title: 'Issue 003' },
+  '002': { title: 'Issue 002' },
+  '001': { title: 'Issue 001' },
+}
+
+export default meta

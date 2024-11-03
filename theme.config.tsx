@@ -53,23 +53,50 @@ const config: DocsThemeConfig = {
   },
   chat: { link: 'https://webgamedev.com/discord' },
   sidebar: { defaultMenuCollapseLevel: 1 },
-  useNextSeoProps: () => {
-    const { route, asPath } = useRouter()
-    const { frontMatter } = useConfig()
+  head: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { asPath } = useRouter()
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { title } = useConfig()
+    const url = `https://www.webgamedev.com${asPath}`
 
-    return {
-      ...(route === '/' && { title: '', description }),
-      defaultTitle: `Web Game Dev | ${tagline}`,
-      titleTemplate: '%s | Web Game Dev',
-      ...(frontMatter.description && { description: frontMatter.description }),
-      openGraph: { url: `https://www.webgamedev.com${asPath}`, siteName: 'Web Game Dev' },
-      twitter: {
-        handle: '@verekia',
-        site: '@webgamedevs',
-        // cardType: 'summary_large_image',
-      },
-    }
+    const realTitle =
+      title === 'Index'
+        ? 'Web Game Dev | Learn how to make games in JavaScript'
+        : `${title} | Web Game Dev`
+
+    return (
+      <>
+        <title>{realTitle}</title>
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={realTitle} />
+        {title === 'Index' && <meta property="description" content={description} />}
+        {title === 'Index' && <meta property="og:description" content={description} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={realTitle} />
+        {title === 'Index' && <meta name="twitter:description" content={description} />}
+        <meta name="twitter:site" content="@webgamedevs" />
+        <meta name="twitter:creator" content="@verekia" />
+      </>
+    )
   },
+  // useNextSeoProps: () => {
+  //   const { route, asPath } = useRouter()
+  //   const { frontMatter } = useConfig()
+
+  //   return {
+  //     ...(route === '/' && { title: '', description }),
+  //     defaultTitle: `Web Game Dev | ${tagline}`,
+  //     titleTemplate: '%s | Web Game Dev',
+  //     ...(frontMatter.description && { description: frontMatter.description }),
+  //     openGraph: { url: `https://www.webgamedev.com${asPath}`, siteName: 'Web Game Dev' },
+  //     twitter: {
+  //       handle: '@verekia',
+  //       site: '@webgamedevs',
+  //       // cardType: 'summary_large_image',
+  //     },
+  //   }
+  // },
   // docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master', // base URL for the docs repository
   editLink: {
     component: () => null,
@@ -117,7 +144,6 @@ const config: DocsThemeConfig = {
     </>
   ),
   gitTimestamp: null,
-  head: null,
   // head: () => {
   //   // eslint-disable-next-line react-hooks/rules-of-hooks
   //   const { route, asPath } = useRouter()

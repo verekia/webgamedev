@@ -58,7 +58,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
           html[class~='dark'] .title-container {
             border-right: 1px solid #444;
           }
-          @media (max-width: 900px) {
+          @media (max-width: 950px) {
             .title-container {
               border-width: 0;
               margin-right: 0;
@@ -75,7 +75,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
           {
             font-weight: bold;
           }
-          @media (max-width: 800px) {
+          @media (max-width: 1050px) {
             nav a[href="https://webgamer.io"]
             {
               display: none;
@@ -83,7 +83,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
           }
           .discord-count {
             position: absolute;
-            top: -2px;
+            top: -9px;
             right: 0;
             background-color: #5865f2;
             color: white;
@@ -328,6 +328,17 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
             .jam-slogan {
               font-size: 18px;
             }
+          }
+          footer {
+            background-color: #f1f1f1;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+          }
+          main a,
+          footer a {
+            color: #006be6;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
           }
         `}</style>
         <Component {...pageProps} />
