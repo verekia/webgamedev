@@ -1,4 +1,4 @@
-FROM oven/bun:1.1.34-alpine
+FROM oven/bun:1.1.34
 
 ARG BUNNY_ACCESS_KEY
 ARG BUNNY_PULLZONE_ID

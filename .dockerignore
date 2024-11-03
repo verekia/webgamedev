@@ -2,7 +2,7 @@
 node_modules
 out
 
-.git
+# .git -- nextra seems to use .git
 .gitignore
 
 .github
