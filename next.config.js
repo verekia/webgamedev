@@ -4,6 +4,7 @@ const withNextra = require('nextra')({
 })
 
 const config = withNextra({
+  assetPrefix: process.env.NEXT_PUBLIC_CDN ?? '',
   redirects: () => [
     {
       source: '/discord',
