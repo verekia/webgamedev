@@ -58,7 +58,11 @@ const config: DocsThemeConfig = {
     const { asPath } = useRouter()
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { title } = useConfig()
-    const url = `https://www.webgamedev.com${asPath}`
+    const url = `${process.env.NEXT_PUBLIC_BASE_URL}${asPath}`
+
+    const canonicalUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${asPath === '/' ? '' : asPath}`.split(
+      '?',
+    )[0]
 
     const realTitle =
       title === 'Index'
@@ -68,7 +72,7 @@ const config: DocsThemeConfig = {
     return (
       <>
         <title>{realTitle}</title>
-        <link rel="canonical" href={url} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:url" content={url} />
         <meta property="og:title" content={realTitle} />
         {title === 'Index' && <meta property="description" content={description} />}
