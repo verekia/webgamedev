@@ -68,6 +68,7 @@ const config: DocsThemeConfig = {
     return (
       <>
         <title>{realTitle}</title>
+        <link rel="canonical" href={url} />
         <meta property="og:url" content={url} />
         <meta property="og:title" content={realTitle} />
         {title === 'Index' && <meta property="description" content={description} />}
