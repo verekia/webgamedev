@@ -2,9 +2,6 @@ FROM oven/bun:1.1.34-slim
 
 # sharp doesn't work on alpine
 
-ARG BUNNY_ACCESS_KEY
-ARG BUNNY_PULLZONE_ID
-
 WORKDIR /app
 
 RUN apt-get update && \
@@ -18,6 +15,9 @@ RUN bun i
 COPY . .
 
 RUN bun run build
+
+ARG BUNNY_ACCESS_KEY
+ARG BUNNY_PULLZONE_ID
 
 RUN curl --request POST --url https://api.bunny.net/pullzone/${BUNNY_PULLZONE_ID}/purgeCache --header "content-type: application/json" --header "AccessKey: ${BUNNY_ACCESS_KEY}"
 
