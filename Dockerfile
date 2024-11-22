@@ -1,7 +1,5 @@
 FROM oven/bun:1.1.36-alpine
 
-# sharp doesn't work on alpine?
-
 WORKDIR /app
 
 COPY bun.lockb package.json .
