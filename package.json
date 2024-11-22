@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prestart": "bun purge-cdn.ts",
     "lint": "next lint"
   },
   "prettier": {

@@ -1,12 +1,8 @@
-FROM oven/bun:1.1.34-slim
+FROM oven/bun:1.1.36-alpine
 
-# sharp doesn't work on alpine
+# sharp doesn't work on alpine?
 
 WORKDIR /app
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends curl ca-certificates && \
-    rm -rf /var/lib/apt/lists/*
 
 COPY bun.lockb package.json .
 
@@ -16,9 +12,6 @@ COPY . .
 
 RUN bun run build
 
-ARG BUNNY_ACCESS_KEY
-ARG BUNNY_PULLZONE_ID
-
-RUN curl --request POST --url https://api.bunny.net/pullzone/${BUNNY_PULLZONE_ID}/purgeCache --header "content-type: application/json" --header "AccessKey: ${BUNNY_ACCESS_KEY}"
+EXPOSE 3000
 
 CMD ["bun", "start"]
