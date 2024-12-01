@@ -145,3 +145,5 @@ yarn-error.log*
 # the sitemap in webgamer due to a bug in the sitemap generator
 sitemap.xml
 robots.txt
+
+.env.deploy
