@@ -8,6 +8,8 @@ RUN bun i
 
 COPY . .
 
+RUN mv .env.deploy .env
+
 RUN bun run build
 
 RUN bun purge-cdn.ts
