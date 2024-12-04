@@ -75,7 +75,7 @@ export const engines = {
     ts: 'ts',
   },
   kaboom: {
-    name: 'Kaboom',
+    name: 'Kaboom.js',
     url: 'https://kaboomjs.com',
     repo: 'replit/kaboom',
     stars: 2500,
@@ -85,12 +85,12 @@ export const engines = {
     lastCommitDate: '2024-05-08',
   },
   kaplay: {
-    name: 'Kaplay',
+    name: 'kaplay',
     url: 'https://kaplayjs.com/',
     repo: 'kaplayjs/kaplay',
-    stars: 400,
+    stars: 600,
     npm: 'kaplay',
-    downloads: 400,
+    downloads: 700,
     ts: 'ts',
   },
   two: {
