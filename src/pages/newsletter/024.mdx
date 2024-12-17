@@ -1,0 +1,191 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import MailTo from 'components/MailTo'
+import {
+  AframeLogo,
+  BabylonLogo,
+  ColyseusLogo,
+  ConstructLogo,
+  DefoldLogo,
+  ExcaliburLogo,
+  GltfLogo,
+  GodotLogo,
+  NeedleLogo,
+  KaboomLogo,
+  KaplayLogo,
+  OrillusionLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  R3FLogo,
+  ThreeLogo,
+  TresLogo,
+  RogueLogo,
+  WasmLogo,
+  WebXRLogo,
+  WonderlandLogo,
+  WebGPULogo,
+  UnityLogo,
+  JavascriptLogo,
+  ThrelteLogo,
+  ReactLogo,
+  WGDLogo,
+  WebGLLogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+import { FloatLeftImage } from 'components/FloatImage'
+import { PokiLogo, PokiIcon } from 'components/PokiSponsor'
+import { GameRelease } from 'components/GameReleases'
+import { DiscordIcon } from 'lib/icons'
+
+# Newsletter – Issue 024
+
+<SubTitleDate value="2024-12-XX" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+<WebGPULogo /> [**Three.js r171**](https://github.com/mrdoob/three.js/releases) has been released
+and it's a major milestone for WebGPU integration with third-party libraries such as React Three
+Fiber and bundlers like Vite or Next.js. We can now just do this with **zero configuration**:
+
+<ThreeLogo /> **Vanilla Three.js**
+
+```jsx
+import * as THREE from 'three'
+import { WebGPURenderer } from 'three/webgpu'
+
+const renderer = new WebGPURenderer()
+```
+
+<R3FLogo /> **React Three Fiber**
+
+```jsx
+import { Canvas } from '@react-three/fiber'
+import { WebGPURenderer } from 'three/webgpu'
+
+<Canvas gl={canvas => new WebGPURenderer({ canvas })}>
+```
+
+In practice, there are some minor gotchas to be aware of. I have
+set up a [**repo of test cases**](https://github.com/verekia/three-gpu-ecosystem-tests) with workarounds. React Three Fiber folks who like to live on the bleeding edge can use React 19, R3F 9 RC, Next 15, and even RSCs with Three.js r171, WebGPU, and [TSL](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language) for cross-renderer shaders. It all works! [**Threlte**](https://threlte.xyz/) works too, and [**Tres**](https://tresjs.org/) support for a custom renderer is [coming soon](https://github.com/Tresjs/tres/issues). Now is a great time to jump in and start using WebGPU with Three.js. 🚀
+
+## ⭐️ Sponsor
+
+<div className="flex flex-col gap-5 mt-5">
+  <div className="flex flex-col gap-5 lg:flex-row items-center">
+    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
+      <a
+        href="https://poki.com/?utm_source=webgamedev&utm_content=newsletter"
+        target="_blank"
+        rel="noopener"
+      >
+        <PokiLogo className="w-full max-w-130" />
+      </a>
+    </div>
+    <div>
+      [**Poki**](https://poki.com/?utm_source=webgamedev&utm_content=newsletter) is on a mission to
+      create the ultimate online playground – where players and developers come together to play and
+      create! Together with a growing 400+ game developer community and 65 million players each
+      month, we're creating a new standard for web games. Interested in working together? [**Share
+      your game with
+      us**](https://developers.poki.com?utm_source=webgamedev&utm_content=newsletter)!
+
+      Poki, the market leader on Web, is proud to sponsor Web Game Dev! In the coming month, we will give the community access to our new Playtesting feature - which provides unlimited and free playtesting of your game with our audience! Keep an eye out for more in the [Web Game Dev Discord](https://webgamedev.com/discord) at the beginning of October! [Learn more about Poki in this presentation](https://www.youtube.com/watch?v=SQl6xDVs_Bs).
+    </div>
+
+  </div>
+</div>
+
+## 🏎 Engines
+
+- <ThreeLogo /> [**Three.js rXXX**](https://github.com/mrdoob/three.js/releases) – XXX
+  ([changelog](https://github.com/mrdoob/three.js/releases), [migration
+  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
+- <ThreeLogo /> [**Drei Vanilla vXXX**](https://github.com/pmndrs/drei-vanilla/releases) –
+- <R3FLogo /> [**R3F v8.XX**](https://github.com/pmndrs/react-three-fiber/releases) – XXX
+- <R3FLogo /> [**Drei v9.XX**](https://github.com/pmndrs/drei/releases) – XXX
+- <ThrelteLogo /> [**Threlte vXX**](https://x.com/threlte) – XXX
+- <TresLogo /> [**TresJS XXX**](https://github.com/Tresjs/tres/releases)
+- <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) – XXX
+- <PlayCanvasLogo /> [**PlayCanvas Engine vXXX**](https://github.com/playcanvas/engine/releases)
+  –{' '}
+- <PlayCanvasLogo /> [**PlayCanvas Editor vXXX**](https://github.com/playcanvas/editor/releases)
+  –{' '}
+- <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX
+- <AframeLogo /> [**A-Frame vXXX**](https://github.com/aframevr/aframe/releases)
+- <PixiLogo /> [**PixiJS XXX**](https://github.com/pixijs/pixijs/releases)
+- <PixiLogo /> [**Pixi React XXX**](https://github.com/pixijs/pixi-react/releases)
+- <BabylonLogo /> [**Babylon.js vXXX**](https://github.com/BabylonJS/Babylon.js/releases)
+- <NeedleLogo /> [**Needle**](https://needle.tools/)
+  [**2.XXX**](https://github.com/needle-tools/needle-engine-support/releases)
+- [**Rapier**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md)
+- <WonderlandLogo /> Wonderland Engine
+- <DefoldLogo /> Defold
+- <ConstructLogo /> Construct [releases](https://www.construct.net/en/make-games/releases)
+- <ExcaliburLogo /> Excalibur
+- <OrillusionLogo /> Orillusion
+
+## 🛠 Tools
+
+- x
+- x
+- x
+- <ColyseusLogo /> Colyseus
+
+## 🎬 Videos
+
+## ✍️ Articles
+
+## 🎮 Games
+
+## ✨ Demos
+
+My [Bookmarks](https://x.com/i/bookmarks).
+
+**YouTube**:
+[Three.js](https://www.youtube.com/results?search_query=three+js),
+[R3F](https://www.youtube.com/results?search_query=react+three+fiber),
+[Babylon](https://www.youtube.com/results?search_query=babylon+js),
+[PlayCanvas](https://www.youtube.com/results?search_query=playcanvas),
+[Phaser](https://www.youtube.com/results?search_query=phaser+js),
+[Pixi](https://www.youtube.com/results?search_query=pixi+js),
+[A-Frame](https://www.youtube.com/results?search_query=a-frame),
+[Threlte](https://www.youtube.com/results?search_query=threlte),
+[Needle](https://www.youtube.com/results?search_query=needle+tools),
+[WebGL](https://www.youtube.com/results?search_query=webgl),
+[WebGPU](https://www.youtube.com/results?search_query=webgpu)
+
+**Twitter**:
+[Three.js](https://x.com/threejs),
+[#threejs](https://x.com/hashtag/threejs),
+[R3F](https://x.com/0xca0a),
+[#r3f](https://x.com/hashtag/r3f),
+[Babylon](https://x.com/babylonjs),
+[PlayCanvas](https://x.com/playcanvas),
+[Phaser](https://x.com/phaser_),
+[Pixi](https://x.com/PixiJS),
+[A-Frame](https://x.com/aframevr),
+[Threlte](https://x.com/threlte),
+[Needle](https://x.com/NeedleTools),
+[WebGL](https://x.com/WebGL),
+[WebGPU](https://x.com/WebGPU)
+
+**Reddit**:
+[Three.js](https://www.reddit.com/r/threejs/top/?t=month),
+[WebGL](https://www.reddit.com/r/webgl/top/?t=month),
+[WebGPU](https://www.reddit.com/r/webgpu/top/?t=month),
+[gamedev](https://www.reddit.com/r/gamedev/top/?t=month),
+[WebXR](https://www.reddit.com/r/webxr/top/?t=month)
+
+**Discord**:
+[WGD](https://discord.com/channels/1032873609280106566/1051338271097094165),
+[Three.js](https://discord.com/channels/685241246557667386/1022153550115131473),
+[pmndrs](https://discord.com/channels/740090768164651008/1047453248044412968),
+[Threlte](https://discord.com/channels/985983540804091964/986223463322771487),
+[Phaser](https://discord.com/channels/244245946873937922/1020022549247164466),
+[WebXR](https://discord.com/channels/758943204715659264/759559568321282109)
+
+<NewsletterFooter tweetId="WILL_BE_UPDATED_IN_A_MINUTE" />
