@@ -3,6 +3,7 @@ import MailTo from 'components/MailTo'
 import {
   AframeLogo,
   BabylonLogo,
+  BlenderLogo,
   ColyseusLogo,
   CssLogo,
   ConstructLogo,
@@ -48,10 +49,10 @@ import { DiscordIcon } from 'lib/icons'
 
 ## 🔥 Headlines
 
-<WebGPULogo /> <ThreeLogo /> [**Three.js r171**](https://github.com/mrdoob/three.js/releases) has
-been released and it's a major milestone for WebGPU integration with third-party libraries such as
-React Three Fiber and bundlers like Vite or Next.js. We can now just do this with **zero
-configuration**:
+<WebGPULogo /> <ThreeLogo /> [**Three.js
+r171**](https://github.com/mrdoob/three.js/releases/tag/r171) has been released and it's a major
+milestone for WebGPU integration with third-party libraries such as React Three Fiber and bundlers
+like Vite or Next.js. We can now just do this with **zero configuration**:
 
 <ThreeLogo /> **Vanilla Three.js**
 
@@ -71,13 +72,14 @@ import { WebGPURenderer } from 'three/webgpu'
 <Canvas gl={canvas => new WebGPURenderer({ canvas })}>
 ```
 
-In practice, there are some minor gotchas to be aware of. I have
-set up a [**repo of test cases**](https://github.com/verekia/three-gpu-ecosystem-tests) with workarounds. React Three Fiber folks who like to live on the bleeding edge can use React 19, R3F 9 RC, Next 15, and even RSCs with Three.js r171, WebGPU, and [TSL](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language) for cross-renderer shaders. It all works! [**Threlte**](https://threlte.xyz/) works too, and [**Tres**](https://tresjs.org/) support for a custom renderer is [coming soon](https://github.com/Tresjs/tres/issues/883). Now is a great time to jump in and start using WebGPU with Three.js. 🚀
+It also works with <ThrelteLogo /> [**Threlte**](https://threlte.xyz/) which supports passing a custom renderer to the canvas, and <TresLogo /> [**Tres**](https://tresjs.org/) support is [coming](https://github.com/Tresjs/tres/issues/883) too. In practice, there are some minor gotchas to be aware of. I have set up a [**repo of test cases**](https://github.com/verekia/three-gpu-ecosystem-tests) with workarounds. React Three Fiber folks who like to live on the bleeding edge can use React 19, R3F 9 RC, Next 15, and even RSCs with Three.js r171, WebGPU, and [TSL](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language) for cross-renderer shaders. It all works! Now is a great time to jump in and start using WebGPU with Three.js. 🚀
 
 <WebGPULogo /> The Khronos Group has launched the [**Slang
 Initiative**](https://www.khronos.org/news/press/khronos-group-launches-slang-initiative-hosting-open-source-compiler-contributed-by-nvidia)
 to oversee and advance the open-source [Slang](https://shader-slang.com/) shading language and
 compiler originally developed by NVIDIA. Slang has experimental support for WebGPU (not WebGL).
+
+<JavascriptLogo /> The [**State of JS 2024**](https://2024.stateofjs.com/) results are out!
 
 ## ⭐️ Sponsor
 
@@ -119,24 +121,22 @@ compiler originally developed by NVIDIA. Slang has experimental support for WebG
 - <TresLogo /> [**TresJS XXX**](https://github.com/Tresjs/tres/releases)
 - <TresLogo /> [**TresJS Post-processing v1**](https://tresjs.org/blog/tresjs-post-processing-v1/) –
   Add post-processing to your TresJS scenes.
-- <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) – XXX
-- <PlayCanvasLogo /> [**PlayCanvas Engine vXXX**](https://github.com/playcanvas/engine/releases)
-  –{' '}
-- <PlayCanvasLogo /> [**PlayCanvas Editor vXXX**](https://github.com/playcanvas/editor/releases)
-  –{' '}
+- <PlayCanvasLogo /> [**PlayCanvas Engine
+  v2.3.0**](https://x.com/playcanvas/status/1863977433709379649) and
+  [**v2.1.0**](https://x.com/playcanvas/status/1846581898669183386) – New 3D Gaussian Splat custom
+  shader architecture and RenderPass architecture, glTF exporter enhancements
 - <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX
-- <AframeLogo /> [**A-Frame vXXX**](https://github.com/aframevr/aframe/releases)
 - <PixiLogo /> [**PixiJS XXX**](https://github.com/pixijs/pixijs/releases)
-- <PixiLogo /> [**Pixi React XXX**](https://github.com/pixijs/pixi-react/releases)
-- <BabylonLogo /> [**Babylon.js vXXX**](https://github.com/BabylonJS/Babylon.js/releases)
+- <BabylonLogo /> [**Babylon.js**](https://github.com/BabylonJS/Babylon.js/releases) – Make WGSL
+  materials, particles, post processes, and textures directly with [Node
+  Materials](https://x.com/babylonjs/status/1866181022649635126).
 - <NeedleLogo /> [**Needle**](https://needle.tools/)
   [**2.XXX**](https://github.com/needle-tools/needle-engine-support/releases)
-- [**Rapier**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md)
 - <WonderlandLogo /> Wonderland Engine
-- <DefoldLogo /> Defold
 - <ConstructLogo /> Construct [releases](https://www.construct.net/en/make-games/releases)
-- <ExcaliburLogo /> Excalibur
-- <OrillusionLogo /> Orillusion
+- <ExcaliburLogo /> [**Excalibur
+  v0.30.0**](https://dev.to/excaliburjs/excalibur-v0300-released-3n7m) – Browser extension, new
+  sample games and templates, GPU particles, and a lot more.
 
 ## 🛠 Tools
 
@@ -152,6 +152,11 @@ compiler originally developed by NVIDIA. Slang has experimental support for WebG
 - <ThreeLogo /> [**EZ-tree**](https://github.com/dgreenheck/ez-tree) by [Dan
   Greenheck](https://bsky.app/profile/dangreenheck.bsky.social) – Procedural tree generator.
 - 🤖 [**Trellis**](https://trellis3d.github.io/) by Microsoft ([repo](https://github.com/Microsoft/TRELLIS)) – AI-generated 3D models from images. Try it on [Hugging Face](https://huggingface.co/spaces/JeffreyXiang/TRELLIS).
+- <BlenderLogo /> You can export Blender [**Geometry
+  Nodes**](https://x.com/onirenaud/status/1850778187539833202) as GLTF to Three.js Instanced Mesh.
+- <GltfLogo /> [**glTF Tools VS Code
+  Extension**](https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode) – Preview and
+  debug glTF 3D models from Visual Studio Code.
 - <ColyseusLogo /> Colyseus
 
 ## 🎬 Videos
@@ -165,6 +170,9 @@ compiler originally developed by NVIDIA. Slang has experimental support for WebG
 - <ThreeLogo /> [**New Car - New Portfolio - Devlog
   3**](https://www.youtube.com/watch?v=5i_-p4ET2JE) by [Bruno
   Simon](https://bsky.app/profile/bruno-simon.bsky.social)
+- <BabylonLogo /> [**Beginner Series - AR Portal Pt1: WebXR
+  Introduction**](https://www.youtube.com/watch?v=wmZxBMHWQAs) by
+  [Babylon.js](https://x.com/babylonjs)
 
 ## ✍️ Articles
 
@@ -205,8 +213,34 @@ compiler originally developed by NVIDIA. Slang has experimental support for WebG
 
 ## 🎮 Games
 
+- <GameRelease
+    title="Under the Red Sky"
+    url="https://poki.com/en/g/under-the-red-sky"
+    developer="Dedra Games"
+    developerUrl="https://dedragames.com/"
+    description="3D parkour game with challenges to complete."
+    EngineIcon={ConstructLogo}
+  />
+- <GameRelease
+    title="CombiMon"
+    url="https://poki.com/en/g/combimon"
+    developer="ARF Games"
+    developerUrl="https://x.com/arfgames"
+    description="Game in which you farm and evolve monsters."
+    EngineIcon={ConstructLogo}
+  />
+- <GameRelease
+    title="Jump Only"
+    url="https://poki.com/en/g/jump-only"
+    developer="Kimo"
+    developerUrl="https://bsky.app/profile/kimogames.bsky.social"
+    description="Satisfying puzzle game where you only jump left or right."
+    EngineIcon={ConstructLogo}
+  />
 - <ThreeLogo /> [**Netlify: 5 Million Devs**](https://5-million-devs.netlify.com/) by [Little
   Workshop](https://x.com/glecollinet/) – Marble Madness-inspired promotional game.
+- <BabylonLogo /> [**Carillon**](https://svenfrankson.itch.io/monkeymind) by [Sven
+  Frankson](https://tiaratum.com/) – Crillion-like game made for Revival Jam 2024.
 
 ## ✨ Demos
 
