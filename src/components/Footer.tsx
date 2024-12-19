@@ -4,7 +4,7 @@ const pokiMainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=footer'
 const pokiLearnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=footer'
 
 const Footer = () => (
-  <footer className="nx-bg-gray-100 dark:nx-bg-neutral-900 nx-py-12 nx-text-gray-600">
+  <footer className="_bg-gray-100 dark:_bg-neutral-900 _py-12 _text-gray-600">
     <style>
       {`
           footer {
@@ -80,6 +80,10 @@ const Footer = () => (
         🐦 Verekia
       </A>
       <br />
+      <A href="https://bsky.app/profile/verekia.com" target="_blank" rel="noopener">
+        🦋 Bluesky
+      </A>{' '}
+      •{' '}
       <A href="https://mastodon.gamedev.place/@verekia" target="_blank" rel="noopener">
         🐘 Mastodon
       </A>{' '}

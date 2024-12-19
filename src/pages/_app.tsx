@@ -108,7 +108,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
               margin-left: 1rem !important;
             }
           }
-          html[class~='dark'] .dark\:nx-text-neutral-500 {
+          html[class~='dark'] .dark\:_text-neutral-500 {
             --tw-text-opacity: 1;
             color: rgba(230, 230, 230, var(--tw-text-opacity));
           }
@@ -328,21 +328,6 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
             .jam-slogan {
               font-size: 18px;
             }
-          }
-          footer {
-            background-color: #f1f1f1;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-          }
-          main a,
-          footer a {
-            color: #006be6;
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-          }
-          /* article footer links */
-          main ._mb-8._flex._items-center._border-t._pt-8 a {
-            text-decoration: none;
           }
         `}</style>
         <Component {...pageProps} />

@@ -9,7 +9,7 @@ const MailTo = ({ email, fakeEmail, ...props }: { email: string; fakeEmail: stri
 
   return (
     <a
-      className="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:under]"
+      className="_text-primary-600 _underline _decoration-from-font [text-underline-position:under]"
       href={`mailto:${hasMounted ? email : fakeEmail}`}
       {...props}
     >

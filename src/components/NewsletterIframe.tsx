@@ -26,7 +26,7 @@ export const HomeLabel = () => (
     You can also <b>subscribe</b> to the 💌{' '}
     <Link
       href="/newsletter"
-      className="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:under]"
+      className="_text-primary-600 _underline _decoration-from-font [text-underline-position:under]"
     >
       <b>newsletter</b>
     </Link>{' '}
