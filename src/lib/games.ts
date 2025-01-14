@@ -905,9 +905,6 @@ export const mobileGames = [
 
 // <R3FLogo /> [**Sougen**](https://sougen.co/)
 
-// - <ThreeLogo /> [**Ethereal Engine**](https://www.etherealengine.com/explore)
-//  ([source](https://github.com/XRFoundation/XREngine))
-
 // Wasm games: https://x.com/MartinMagni in C
 // Drive Mad
 // https://www.fancade.com/

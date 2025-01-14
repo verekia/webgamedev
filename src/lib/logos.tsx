@@ -13,7 +13,6 @@ import ConstructSrc from '../../public/logos/construct.png'
 import CssSrc from '../../public/logos/css.png'
 import DefoldSrc from '../../public/logos/defold.png'
 import EaselSrc from '../../public/logos/easel2.png'
-import EtherealSrc from '../../public/logos/ethereal.png'
 import FilamentSrc from '../../public/logos/filament.png'
 import GDevelopSrc from '../../public/logos/gdevelop.png'
 import GameMakerSrc from '../../public/logos/gamemaker.png'
@@ -383,18 +382,6 @@ export const UnityLogo = (props: ImageProps) => (
       alt="Unity"
       title="Unity"
       src={UnitySrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
-  </a>
-)
-
-export const EtherealLogo = (props: ImageProps) => (
-  <a href="https://www.etherealengine.com/" target="_blank" rel="noopener">
-    <Image
-      alt="Ethereal Engine"
-      title="Ethereal Engine"
-      src={EtherealSrc}
       style={{ ...defaultStyle, ...props.style }}
       {...props}
     />
