@@ -1,78 +1,37 @@
 import A from 'components/A'
+import { PokiLogo } from './PokiSponsor'
+import { CGLogo, cgDevelopersUrl, cgMainUrl } from './CGSponsor'
 
 const pokiMainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=footer'
 const pokiLearnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=footer'
 
 const Footer = () => (
-  <footer className="_bg-gray-100 dark:_bg-neutral-900 _py-12 _text-gray-600">
-    <style>
-      {`
-          footer {
-            color: rgb(55, 65, 81);
-          }
-          .dark footer {
-            color: rgb(226, 232, 240);
-          }
-          .footer-promo-block {
-            text-align: center;  
-            margin-bottom: 24px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            gap: 24px;
-          }
-          @media (max-width: 600px) {
-            .footer-promo-block {
-              flex-direction: column;
-            }
-          }
-
-            .footer-promo-block img {
-              width: 170px;
-              margin-bottom: 10px;
-            }
-            .poki-white {
-              display: none;
-            }
-            .poki-black {
-              display: inline-block;
-            }
-            .dark .poki-white {
-              display: inline-block;
-            }
-            .dark .poki-black {
-              display: none;
-            }
-          `}
-    </style>
-    <div className="footer-promo-block">
-      <div>
-        <div>
-          <a href={pokiMainUrl} target="_blank" rel="noopener">
-            <img
-              alt="Poki logo"
-              className="poki-black"
-              src="/partnerships/poki-black.webp"
-              style={{ width: 150, marginTop: -24, marginBottom: -8 }}
-            />
-            <img
-              alt="Poki logo"
-              className="poki-white"
-              src="/partnerships/poki-white.webp"
-              style={{ width: 150, marginTop: -24, marginBottom: -8 }}
-            />
-          </a>
+  <footer className="bg-gray-100 dark:bg-neutral-900 py-10 text-center">
+    <div className="flex flex-col sm:flex-row gap-8 justify-around mb-8 items-center">
+      <div className="flex flex-col items-center">
+        <a href={pokiMainUrl} target="_blank" rel="noopener">
+          <PokiLogo className="h-[56px] scale-[0.95]" />
+        </a>
+        <div className="mt-2">
+          Sponsored by{' '}
+          <A href={pokiLearnMoreUrl} rel="noopener">
+            <b>Poki</b>
+          </A>
         </div>
-        <div>
-          <div>
-            Sponsored by{' '}
-            <A href={pokiLearnMoreUrl} rel="noopener">
-              <b>Poki</b>
-            </A>
-          </div>
-          <div>The market leader on Web</div>
-        </div>
+        <div>The market leader on Web</div>
       </div>
+      {/* <div className="flex flex-col items-center">
+        <a href={cgMainUrl('footer')} target="_blank" rel="noopener">
+          <CGLogo className="h-[56px]" />
+        </a>
+        <div className="mt-2">
+          Sponsored by{' '}
+          <A href={cgDevelopersUrl('footer')} rel="noopener">
+            <b>CrazyGames</b>
+          </A>
+        </div>
+        <div>Lorem ipsum dolor sit amet</div>
+      </div> */}
     </div>
     <div style={{ textAlign: 'center' }}>
       Written by{' '}
