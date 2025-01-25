@@ -17,8 +17,8 @@ const CGSponsor = () => (
       <A href={cgMainUrl('homepage')} rel="noopener">
         <b>CrazyGames</b>
       </A>
-      . Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet purus non leo
-      tempor eleifend vitae vitae ante.{' '}
+      . Be free —CrazyGames empowers game creators with flexible publishing options to maximize your
+      revenue and release the next web hit.{' '}
       <A href={cgDevelopersUrl('homepage')} rel="noopener">
         <b>Learn more</b>
       </A>

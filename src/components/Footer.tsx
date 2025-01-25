@@ -12,7 +12,7 @@ const Footer = () => (
         <a href={pokiMainUrl} target="_blank" rel="noopener">
           <PokiLogo className="h-[56px] scale-[0.95]" />
         </a>
-        <div className="mt-2">
+        <div className="mt-3">
           Sponsored by{' '}
           <A href={pokiLearnMoreUrl} rel="noopener">
             <b>Poki</b>
@@ -20,18 +20,18 @@ const Footer = () => (
         </div>
         <div>The market leader on Web</div>
       </div>
-      {/* <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <a href={cgMainUrl('footer')} target="_blank" rel="noopener">
           <CGLogo className="h-[56px]" />
         </a>
-        <div className="mt-2">
+        <div className="mt-3">
           Sponsored by{' '}
           <A href={cgDevelopersUrl('footer')} rel="noopener">
             <b>CrazyGames</b>
           </A>
         </div>
-        <div>Lorem ipsum dolor sit amet</div>
-      </div> */}
+        <div>The next generation of web games</div>
+      </div>
     </div>
     <div style={{ textAlign: 'center' }}>
       Written by{' '}
