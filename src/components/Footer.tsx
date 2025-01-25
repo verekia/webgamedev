@@ -1,20 +1,17 @@
 import A from 'components/A'
-import { PokiLogo } from './PokiSponsor'
+import { PokiLogo, pokiDevelopersUrl, pokiMainUrl } from './PokiSponsor'
 import { CGLogo, cgDevelopersUrl, cgMainUrl } from './CGSponsor'
-
-const pokiMainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=footer'
-const pokiLearnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=footer'
 
 const Footer = () => (
   <footer className="bg-gray-100 dark:bg-neutral-900 py-10 text-center">
     <div className="flex flex-col sm:flex-row gap-8 justify-around mb-8 items-center">
       <div className="flex flex-col items-center">
-        <a href={pokiMainUrl} target="_blank" rel="noopener">
+        <a href={pokiMainUrl('footer')} target="_blank">
           <PokiLogo className="h-[56px] scale-[0.95]" />
         </a>
         <div className="mt-3">
           Sponsored by{' '}
-          <A href={pokiLearnMoreUrl} rel="noopener">
+          <A href={pokiDevelopersUrl('footer')} rel="noopener">
             <b>Poki</b>
           </A>
         </div>

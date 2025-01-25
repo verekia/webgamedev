@@ -27,6 +27,31 @@ const CGSponsor = () => (
   </div>
 )
 
+export const CGStandaloneSection = ({ content }: { content: string }) => (
+  <div className="flex flex-col gap-5 mt-5">
+    <div className="flex flex-col-reverse gap-5 lg:flex-row items-center">
+      <div className="mx-auto w-full max-w-[130px] h-full max-h-[110px] flex items-center justify-center">
+        <a href={cgMainUrl(content)} target="_blank" rel="noopener">
+          <CGLogo className="w-full" />
+        </a>
+      </div>
+      <p className="leading-7">
+        <A href={cgMainUrl(content)}>
+          <b>CrazyGames</b>
+        </A>
+        , sponsor of this website, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Pellentesque nunc mi, molestie quis sem egestas, feugiat ultrices sapien. Vestibulum blandit
+        fermentum gravida. Curabitur tincidunt interdum arcu, eget rutrum orci. Curabitur tincidunt
+        scelerisque magna, et hendrerit magna iaculis vitae.{' '}
+        <A href={cgDevelopersUrl(content)}>
+          <b>Call to action</b>
+        </A>
+        .
+      </p>
+    </div>
+  </div>
+)
+
 export const CGLogo = props => (
   <svg width="166" height="60" viewBox="0 0 166 60" fill="none" {...props}>
     <path

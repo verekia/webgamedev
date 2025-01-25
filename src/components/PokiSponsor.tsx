@@ -1,26 +1,53 @@
 import A from 'components/A'
 
-const mainUrl = 'https://poki.com/?utm_source=webgamedev&utm_content=homepage'
-const learnMoreUrl = 'https://developers.poki.com/?utm_source=webgamedev&utm_content=homepage'
+export const pokiMainUrl = content =>
+  `https://poki.com/?utm_source=webgamedev&utm_content=${content}`
+export const pokiDevelopersUrl = content =>
+  `https://developers.poki.com/?utm_source=webgamedev&utm_content=${content}`
 
 const PokiSponsor = () => (
   <div className="flex flex-col sm:flex-row gap-4 items-center">
     <div className="w-[160px] shrink-0 flex items-center justify-center">
-      <a href={mainUrl} target="_blank" rel="noopener">
+      <a href={pokiMainUrl('homepage')} target="_blank">
         <PokiLogo className="h-[56px] scale-[0.85]" />
       </a>
     </div>
     <div>
       Sponsored by{' '}
-      <A href={mainUrl} rel="noopener">
+      <A href={pokiMainUrl('homepage')}>
         <b>Poki</b>
       </A>
       . Reaching 65 million monthly users, Poki is on a mission to create the ultimate playground
       for both players and developers on Web!{' '}
-      <A href={learnMoreUrl} rel="noopener">
+      <A href={pokiDevelopersUrl('homepage')}>
         <b>Learn more</b>
       </A>
       .
+    </div>
+  </div>
+)
+
+export const PokiStandaloneSection = ({ content }: { content: string }) => (
+  <div className="flex flex-col gap-5 mt-5">
+    <div className="flex flex-col-reverse gap-5 lg:flex-row items-center">
+      <div className="mx-auto w-full max-w-[130px] h-full max-h-[110px] flex items-center justify-center">
+        <a href={pokiMainUrl(content)} target="_blank" rel="noopener">
+          <PokiLogo className="w-full scale-[0.85]" />
+        </a>
+      </div>
+      <p className="leading-7">
+        <A href={pokiMainUrl(content)}>
+          <b>Poki</b>
+        </A>
+        , sponsor of this website, is on a mission to create the ultimate online playground – where
+        players and developers come together to play and create! Together with a growing 400+ game
+        developer community and 65 million players each month, we're creating a new standard for web
+        games. Interested in working together?{' '}
+        <A href={pokiDevelopersUrl(content)}>
+          <b>Share your game with us</b>
+        </A>
+        !
+      </p>
     </div>
   </div>
 )
