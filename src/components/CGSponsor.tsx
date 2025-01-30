@@ -6,8 +6,8 @@ export const cgDevelopersUrl = content =>
   `https://developer.crazygames.com/?utm_source=webgamedev&utm_content=${content}`
 
 const CGSponsor = () => (
-  <div className="flex flex-col sm:flex-row gap-4 items-center">
-    <div className="w-[160px] shrink-0 flex items-center justify-center">
+  <div className="flex flex-col sm:flex-row gap-4 items-center bg-gray-100 px-5 py-4 rounded-lg">
+    <div className="w-[140px] shrink-0 flex items-center justify-center">
       <a href={cgMainUrl('homepage')} target="_blank" rel="noopener">
         <CGLogo className="h-[50px] relative top-[4px]" />
       </a>
@@ -17,8 +17,8 @@ const CGSponsor = () => (
       <A href={cgMainUrl('homepage')} rel="noopener">
         <b>CrazyGames</b>
       </A>
-      . Be free —CrazyGames empowers game creators with flexible publishing options to maximize your
-      revenue and release the next web hit.{' '}
+      . Be free –We empower game creators with flexible publishing options to maximize your revenue
+      and release the next web hit.{' '}
       <A href={cgDevelopersUrl('homepage')} rel="noopener">
         <b>Learn more</b>
       </A>
@@ -28,7 +28,7 @@ const CGSponsor = () => (
 )
 
 export const CGStandaloneSection = ({ content }: { content: string }) => (
-  <div className="flex flex-col gap-5 mt-5">
+  <div className="flex flex-col gap-5 mt-5 bg-gray-100 px-5 py-4 rounded-lg">
     <div className="flex flex-col-reverse gap-5 lg:flex-row items-center">
       <div className="mx-auto w-full max-w-[130px] h-full max-h-[110px] flex items-center justify-center">
         <a href={cgMainUrl(content)} target="_blank" rel="noopener">
@@ -36,15 +36,16 @@ export const CGStandaloneSection = ({ content }: { content: string }) => (
         </a>
       </div>
       <p className="leading-7">
+        Sponsored by{' '}
         <A href={cgMainUrl(content)}>
           <b>CrazyGames</b>
         </A>
-        , sponsor of this website, lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Pellentesque nunc mi, molestie quis sem egestas, feugiat ultrices sapien. Vestibulum blandit
-        fermentum gravida. Curabitur tincidunt interdum arcu, eget rutrum orci. Curabitur tincidunt
-        scelerisque magna, et hendrerit magna iaculis vitae.{' '}
+        . CrazyGames is revolutionizing web gaming, connecting over 3,000 developers with 40+
+        million players monthly. Our platform supports both ads and in-app purchases, paying out
+        millions in revenue share to developers each year, while fostering one of the most vibrant
+        player communities worldwide. Ready to shape the future of web games?{' '}
         <A href={cgDevelopersUrl(content)}>
-          <b>Call to action</b>
+          <b>Publish your game on CrazyGames</b>
         </A>
         .
       </p>

@@ -1,6 +1,6 @@
 const meta = {
+  portals: { title: '🚀 Portals' },
   pwa: { title: '🌐 PWAs' },
-  'web-game-platforms': { title: '🚀 Game Platforms' },
   desktop: { title: '🖥 Desktop' },
   mobile: { title: '📱 Mobile' },
   vr: { title: '🥽 VR' },
