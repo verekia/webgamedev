@@ -6,7 +6,7 @@ export const pokiDevelopersUrl = content =>
   `https://developers.poki.com/?utm_source=webgamedev&utm_content=${content}`
 
 const PokiSponsor = () => (
-  <div className="flex flex-col sm:flex-row gap-4 items-center bg-gray-100 px-5 py-4 rounded-lg">
+  <div className="flex flex-col sm:flex-row gap-4 items-center bg-gray-100 dark:bg-neutral-900 px-5 py-4 rounded-lg">
     <div className="w-[140px] shrink-0 flex items-center justify-center">
       <a href={pokiMainUrl('homepage')} target="_blank">
         <PokiLogo className="h-[50px] scale-[0.85]" />
@@ -28,7 +28,7 @@ const PokiSponsor = () => (
 )
 
 export const PokiStandaloneSection = ({ content }: { content: string }) => (
-  <div className="flex flex-col gap-5 mt-5 bg-gray-100 px-5 py-4 rounded-lg">
+  <div className="flex flex-col gap-5 mt-5 bg-gray-100 dark:bg-neutral-900 px-5 py-4 rounded-lg">
     <div className="flex flex-col-reverse gap-5 lg:flex-row items-center">
       <div className="mx-auto w-full max-w-[130px] h-full max-h-[110px] flex items-center justify-center">
         <a href={pokiMainUrl(content)} target="_blank" rel="noopener">

@@ -6,7 +6,7 @@ export const cgDevelopersUrl = content =>
   `https://developer.crazygames.com/?utm_source=webgamedev&utm_content=${content}`
 
 const CGSponsor = () => (
-  <div className="flex flex-col sm:flex-row gap-4 items-center bg-gray-100 px-5 py-4 rounded-lg">
+  <div className="flex flex-col sm:flex-row gap-4 items-center bg-gray-100 dark:bg-neutral-900 px-5 py-4 rounded-lg">
     <div className="w-[140px] shrink-0 flex items-center justify-center">
       <a href={cgMainUrl('homepage')} target="_blank" rel="noopener">
         <CGLogo className="h-[50px] relative top-[4px]" />
@@ -28,7 +28,7 @@ const CGSponsor = () => (
 )
 
 export const CGStandaloneSection = ({ content }: { content: string }) => (
-  <div className="flex flex-col gap-5 mt-5 bg-gray-100 px-5 py-4 rounded-lg">
+  <div className="flex flex-col gap-5 mt-5 bg-gray-100 dark:bg-neutral-900 px-5 py-4 rounded-lg">
     <div className="flex flex-col-reverse gap-5 lg:flex-row items-center">
       <div className="mx-auto w-full max-w-[130px] h-full max-h-[110px] flex items-center justify-center">
         <a href={cgMainUrl(content)} target="_blank" rel="noopener">
