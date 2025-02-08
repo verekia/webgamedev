@@ -1,3 +1,4 @@
+import A from 'components/A'
 import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
 import MailTo from 'components/MailTo'
 import {
@@ -25,6 +26,7 @@ import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
 import { SubTitleDate } from 'components/Date'
 import { FloatLeftImage } from 'components/FloatImage'
 import { PokiLogo, PokiIcon } from 'components/PokiSponsor'
+import { cgMainUrl, cgDevelopersUrl, CGLogo } from 'components/CGSponsor'
 
 # Newsletter – Issue XXX
 
@@ -39,7 +41,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
 
 ## ⭐️ Sponsors
 
-<div className="flex flex-col gap-5 mt-5">
+<div className="flex flex-col gap-8 mt-5">
   <div className="flex flex-col gap-5 lg:flex-row items-center">
     <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
       <a
@@ -47,10 +49,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
         target="_blank"
         rel="noopener"
       >
-        <PokiLogo className="w-full max-w-130" />
+        <PokiLogo className="w-full max-w-130 scale-[0.85]" />
       </a>
     </div>
-    <div>
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
       [**Poki**](https://poki.com/?utm_source=webgamedev&utm_content=newsletter) is on a mission to
       create the ultimate online playground – where players and developers come together to play and
       create! Together with a growing 300+ game developer community and 50 million players each
@@ -63,37 +65,57 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
 
   </div>
 
+{' '}
+
+<div className="h-px bg-gray-200 dark:bg-neutral-800" />
+
   <div className="flex flex-col gap-5 lg:flex-row items-center">
     <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
-      <a href="#TODO" target="_blank" rel="noopener">
-        <img src="https://placehold.co/150" className="max-w-[140px] rounded-lg" />
+      <a
+        href="https://www.crazygames.com/?utm_source=webgamedev&utm_content=newsletter"
+        target="_blank"
+        rel="noopener"
+      >
+        <CGLogo className="w-full max-w-130" />
       </a>
     </div>
-    <div>
-      [**Company.com**](#TODO) dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenatis ex,
-      quis bibendum lorem condimentum ut. Mauris eget venenatis lectus. Phasellus id pretium ipsum,
-      quis auctor ipsum. Donec aliquet vulputate ante eget vestibulum. Nulla efficitur risus eros,
-      ut interdum leo consectetur in. Pellentesque habitant morbi tristique senectus et netus et
-      malesuada fames ac turpis egestas. [**Learn more**](#TODO).
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
+        [**CrazyGames**](https://www.crazygames.com/?utm_source=webgamedev&utm_content=newsletter)
+        is revolutionizing web gaming, connecting over 3,000 developers with 40+
+        million players monthly. Our platform supports both ads and in-app purchases, paying out
+        millions in revenue share to developers each year, while fostering one of the most vibrant
+        player communities worldwide. [**Publish your game on CrazyGames**](https://developer.crazygames.com/?utm_source=webgamedev&utm_content=newsletter)!
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenatis ex, quis bibendum lorem condimentum ut. Mauris eget venenatis lectus. Phasellus id pretium ipsum, quis auctor ipsum. Donec aliquet vulputate ante eget vestibulum. Nulla efficitur risus eros, ut interdum leo consectetur in. Pellentesque habitant morbi tristique senectus et netus.
     </div>
+
   </div>
 </div>
 
-## 💼 Jobs <span style={{ color: '#777', fontWeight: 'normal', fontSize: 24, position: 'relative', top: '-2px' }}>(sponsored)</span>
+## 💼 Jobs
 
 <div className="flex flex-col gap-5 mt-5">
   <div className="flex flex-col gap-5 lg:flex-row items-center">
     <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
-      <a href="#TODO" target="_blank" rel="noopener">
-        <img src="https://placehold.co/150" className="max-w-[140px] rounded-lg" />
+      <a
+        href="https://www.creativedevjobs.com/?utm_source=webgamedev&utm_content=newsletter"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="/partnerships/cdj-black.webp" className="dark:hidden max-w-[140px] py-3" />
+        <img src="/partnerships/cdj-white.webp" className="hidden dark:block max-w-[140px] py-3" />
       </a>
     </div>
-    <div>
-      [**Role**](#TODO) dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenatis ex,
-      quis bibendum lorem condimentum ut. Mauris eget venenatis lectus. Phasellus id pretium ipsum,
-      quis auctor ipsum. Donec aliquet vulputate ante eget vestibulum. Nulla efficitur risus eros,
-      ut interdum leo consectetur in. Pellentesque habitant morbi tristique senectus et netus et
-      malesuada fames ac turpis egestas. [**Learn more**](#TODO).
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
+      [**CreativeDevJobs**](https://www.creativedevjobs.com/?utm_source=webgamedev&utm_content=newsletter)
+      is a job board dedicated to connecting talented developers with cutting-edge companies
+      worldwide. Our platform brings profiles such as creative developers, technical artists, game
+      developers, and front-end developers with innovative projects using Three.js, WebGL, React
+      Three Fiber, and other emerging web technologies. We help developers find exciting
+      opportunities at the intersection of creativity and code.
+      {/* <br /> */}
+      Find your next opportunity on
+      [**CreativeDevJobs**](https://www.creativedevjobs.com/?utm_source=webgamedev&utm_content=newsletter).
     </div>
   </div>
 </div>
