@@ -1,5 +1,5 @@
 import ProjectList from 'components/ProjectList'
-import { poimandres as projects } from 'projects'
+import { poimandres as projects, ecs } from 'projects'
 
 # ⚫️ Poimandres Libraries
 
@@ -46,6 +46,10 @@ Three.js and React Three Fiber libraries:
           <code>postprocessing</code> for R3F
         </>
       ),
+    },
+    {
+      ...ecs.koota,
+      description: <>ECS with React bindings</>,
     },
     { ...projects.reactXR, description: 'VR/AR for R3F' },
     {

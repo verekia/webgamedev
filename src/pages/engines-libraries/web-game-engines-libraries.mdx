@@ -75,7 +75,7 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
     {
       ...engines.babylon,
       logo: <BabylonLogo />,
-      description: '3D engine, WebGPU-ready',
+      description: '3D engine',
     },
     {
       ...engines.playcanvas,
@@ -85,7 +85,7 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
       stars: 9100,
       npm: 'playcanvas',
       downloads: 2000,
-      description: '(engine only) 3D engine, WebGPU-ready',
+      description: '(engine only) 3D engine',
     },
     {
       ...engines.ogl,
@@ -95,7 +95,7 @@ Much like any ecosystem of developer tools, there are 2 approaches: the monolith
     {
       ...engines.orillusion,
       logo: <OrillusionLogo />,
-      description: 'WebGPU 3D engine in beta',
+      description: '3D engine in beta',
     },
     {
       ...engines.two,
@@ -302,6 +302,16 @@ You can use any of the previous libraries and engines on their own, but some of 
         </>
       ),
       description: 'PixiJS with Svelte',
+    },
+    {
+      ...wrappers.playcanvasReact,
+      logo: (
+        <>
+          <PlayCanvasLogo />
+          <ReactLogo />
+        </>
+      ),
+      description: 'Wrapper of the engine',
     },
     {
       ...wrappers.phavuer,
