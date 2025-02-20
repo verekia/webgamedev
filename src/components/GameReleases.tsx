@@ -1,4 +1,5 @@
 import A from './A'
+import { CGIcon } from './CGSponsor'
 import { PokiLogo, PokiIcon } from './PokiSponsor'
 import { WebGamerIcon, WebGamerText } from './WebGamer'
 
@@ -36,6 +37,14 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
       >
         <PokiIcon className="size-5 inline-block mr-2" />
       </a>
+    ) : url.startsWith('https://www.crazygames.com') ? (
+      <a
+        href="https://www.crazygames.com/?utm_source=webgamedev&utm_content=newsletter"
+        target="_blank"
+        rel="noopener"
+      >
+        <CGIcon className="size-5 inline-block mr-2" />
+      </a>
     ) : url.startsWith('https://webgamer.io') ? (
       <WebGamerIcon className="size-5 inline-block mr-2" />
     ) : null}
@@ -43,6 +52,8 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
     <A
       href={
         url.startsWith('https://poki.com')
+          ? `${url}?utm_source=webgamedev&utm_content=newsletter`
+          : url.startsWith('https://www.crazygames.com')
           ? `${url}?utm_source=webgamedev&utm_content=newsletter`
           : url
       }
