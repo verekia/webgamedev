@@ -67,7 +67,11 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
       <>
         by{' '}
         {developerUrl ? (
-          <A href={developerUrl} target="_blank" rel="noopener">
+          <A
+            href={`${developerUrl}?utm_source=webgamedev&utm_content=newsletter`}
+            target="_blank"
+            rel="noopener"
+          >
             {developer}
           </A>
         ) : (
