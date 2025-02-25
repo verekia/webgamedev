@@ -5,6 +5,7 @@ import {
   AframeLogo,
   BabylonLogo,
   CocosLogo,
+  CssLogo,
   ConstructLogo,
   DefoldLogo,
   ExcaliburLogo,
@@ -19,6 +20,7 @@ import {
   ThreeLogo,
   ThrelteLogo,
   TresLogo,
+  UnityLogo,
   WasmLogo,
   WebXRLogo,
   WonderlandLogo,
@@ -137,7 +139,7 @@ in!
 
 ## 🏎 Engines
 
-- <ThreeLogo /> [**Three.js rXXX**](https://github.com/mrdoob/three.js/releases) – XXX
+- <ThreeLogo /> [**Three.js r173**](https://bsky.app/profile/threejs.org/post/3lgzfj7swys2a)
   ([changelog](https://github.com/mrdoob/three.js/releases), [migration
   guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
 - <R3FLogo /> [**React Three Fiber
@@ -145,11 +147,10 @@ in!
   for React 19.
 - <R3FLogo /> [**Drei v10.0.0**](https://github.com/pmndrs/drei/releases/tag/v10.0.0) –
   Compatibility release for React 19.
-- <ThrelteLogo /> [**Threlte v8**](https://bsky.app/profile/threlte.xyz/post/3lgbgw6pask2l) –
-  WebGPU-ready, Svelte 5 support, AsciiRenderer, CubeCamera, HUD, Detailed, and a fixed step for
-  physics. They also introduced [Threlte
-  Studio](https://threlte.xyz/docs/reference/studio/getting-started), a browser-based editor that
-  syncs changes to your code.
+- <ThrelteLogo /> [**Threlte v8**](https://threlte.xyz/blog/threlte-8) – WebGPU-ready, Svelte 5
+  support, AsciiRenderer, CubeCamera, HUD, Detailed, and a fixed step for physics. They also
+  introduced [Threlte Studio](https://threlte.xyz/docs/reference/studio/getting-started), a
+  browser-based editor that syncs changes to your code.
 - <TresLogo /> [**TresJS Cientos 4.1.0**](https://github.com/Tresjs/cientos/releases/tag/4.1.0) –
   Align, Billboard, CubeCamera, SoftShadows, MeshDiscardMaterial, Outline, Mask, Image,
   gradientTexture, ScreenSizer, Edges
@@ -179,8 +180,13 @@ in!
 - <ThreeLogo /> [**InstancedMesh2**](https://agargaro.github.io/instanced-mesh/) – Now with skeletal
   animation support ([demo](https://instanced-mesh-skinning-demo.vercel.app/)) – by [Andrea
   Gargaro](https://x.com/agargaro_dev).
+- <ThreeLogo /> [**TSLFX**](https://tslfx.v1v2.io/) ([repo](https://github.com/verekia/tslfx)) –
+  Early-stage library of VFX for TSL (Three.js Shading Language) by
+  [me](https://bsky.app/profile/verekia.com).
+- <ThreeLogo /> [**TSL Textures**](https://boytchev.github.io/tsl-textures/) by [Pavel
+  Boytchev](https://x.com/PavelBoytchev)
 - <R3FLogo /> <WebXRLogo /> [**@react-three/handle**](https://pmndrs.github.io/xr/docs/handles/introduction)
-  ([video](https://bsky.app/profile/belabohlender.bsky.social/post/3lgjqehph2s2u)) – Library For
+  ([video](https://bsky.app/profile/belabohlender.bsky.social/post/3lg7nf5ywbc2z)) – Library For
   React XR to grab objects by [Bela Bohlender](https://bsky.app/profile/belabohlender.bsky.social).
 - <WebGLLogo /> [**Paper Shaders**](https://github.com/paper-design/shaders) – 2D shaders with React
   bindings. See [Smoke Ring](https://shaders.paper.design/smoke-ring), [God
@@ -197,14 +203,13 @@ in!
 - 🎓 [**Post-processing Effects on Mobile: Optimization and Alternatives**](https://community.arm.com/arm-community-blogs/b/mobile-graphics-and-gaming-blog/posts/post-processing-effects-on-mobile-optimization-and-alternatives) (2018) by [Attilio Provenzano](https://x.com/atti_p)
 - 🎓 [**Signed Distance Fields**](https://mini.gmshaders.com/p/sdf) by [Xor](https://bsky.app/profile/xordev.bsky.social)
 - 🎓 [**Post-Processing Shaders as a Creative Medium**](https://blog.maximeheckel.com/posts/post-processing-as-a-creative-medium/) by [Maxime Heckel](https://bsky.app/profile/maxime.bsky.social)
-- <WebGLLogo />
-  [**Learn Shader Programming with Rick and Morty**](https://danielchasehooper.com/posts/code-animated-rick/)
-  by [Daniel Hooper](https://danielchasehooper.com/)
-- <JavascriptLogo />
-  [**OffscreenCanvas - Speed up your canvas operations with a web worker**](https://web.dev/articles/offscreen-canvas)
-  by [Tim Dresser](https://x.com/tdresser)
-- <ThreeLogo />
-  [**Dissolve Effect with Shaders and Particles in Three.js**](https://tympanus.net/codrops/2025/02/17/implementing-a-dissolve-effect-with-shaders-and-particles-in-three-js/)
+- <WebGLLogo /> [**Learn Shader Programming with Rick and
+  Morty**](https://danielchasehooper.com/posts/code-animated-rick/) by [Daniel
+  Hooper](https://danielchasehooper.com/)
+- <JavascriptLogo /> [**OffscreenCanvas - Speed up your canvas operations with a web
+  worker**](https://web.dev/articles/offscreen-canvas) by [Tim Dresser](https://x.com/tdresser)
+- <ThreeLogo /> [**Dissolve Effect with Shaders and Particles in
+  Three.js**](https://tympanus.net/codrops/2025/02/17/implementing-a-dissolve-effect-with-shaders-and-particles-in-three-js/)
   by [Jatin Chopra](https://x.com/0xJatinChopra)
 - <ThreeLogo /> [**Building Efficient Three.js
   Scenes**](https://tympanus.net/codrops/2025/02/11/building-efficient-three-js-scenes-optimize-performance-while-maintaining-quality/)
@@ -292,6 +297,14 @@ in!
     description="Clicker simulation game in which you are a content creator."
     EngineIcon={DefoldLogo}
   />
+- <GameRelease
+    title="Eonfall"
+    url="https://webgamer.io/en/g/eonfall"
+    developer="NeoRelm Game Studios"
+    developerUrl="https://bsky.app/profile/eonfall.com"
+    description="Multiplayer co-op action game with melee combat and magic."
+    EngineIcon={UnityLogo}
+  />
 - <ThreeLogo /> [**Slow Roads 2.0**](https://slowroads.io/) by
   [Anslo](https://bsky.app/profile/anslo.dev) – Procedurally-generated, scenic roads for endless
   driving zen.
@@ -300,6 +313,8 @@ in!
 - <WonderlandLogo /> [**Archery Evolution**](https://archeryevolution.io/) by [Vhite Rabbit
   XR](https://x.com/VhiteRabbitVR) – VR and desktop futuristic archery game (pick Time Trials to
   play solo).
+- <CssLogo /> [**Stimulation Clicker**](https://neal.fun/stimulation-clicker/) by [Neal
+  Agarwal](https://neal.fun/) – A fun and weirdly deep clicker game.
 
 ## ✨ Demos
 
