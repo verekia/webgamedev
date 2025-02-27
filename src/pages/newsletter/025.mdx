@@ -6,10 +6,12 @@ import {
   BabylonLogo,
   CocosLogo,
   CssLogo,
+  ColyseusLogo,
   ConstructLogo,
   DefoldLogo,
   ExcaliburLogo,
   GDevelopLogo,
+  GltfLogo,
   JavascriptLogo,
   NeedleLogo,
   OrillusionLogo,
@@ -31,7 +33,7 @@ import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
 import { SubTitleDate } from 'components/Date'
 import { FloatLeftImage } from 'components/FloatImage'
 import { PokiLogo, PokiIcon } from 'components/PokiSponsor'
-import { cgMainUrl, cgDevelopersUrl, CGLogo } from 'components/CGSponsor'
+import { cgMainUrl, cgDevelopersUrl, CGLogo, CGIcon } from 'components/CGSponsor'
 import { GameRelease } from 'components/GameReleases'
 
 # Newsletter – Issue 025 (preview)
@@ -81,10 +83,7 @@ in!
 
   </div>
 
-{' '}
-
 <div className="h-px bg-gray-200 dark:bg-neutral-800" />
-
   <div className="flex flex-col gap-5 lg:flex-row items-center">
     <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
       <a
@@ -104,7 +103,7 @@ in!
 
         Meet the CrazyGames team at GDC! We’re offering publishing deals and handing out some of the coolest swag in the industry. Whether you want to scale your game or chat about the future of web gaming, we’d love to connect. DM Everton on [Discord](https://discord.com/channels/1032873609280106566/1215742367567712256/1341663876667805801) to set up a meeting!
 
-</div>
+    </div>
 
   </div>
 </div>
@@ -180,11 +179,15 @@ in!
 - <ThreeLogo /> [**InstancedMesh2**](https://agargaro.github.io/instanced-mesh/) – Now with skeletal
   animation support ([demo](https://instanced-mesh-skinning-demo.vercel.app/)) – by [Andrea
   Gargaro](https://x.com/agargaro_dev).
+- <ThreeLogo /> [**Three.js TSL template**](https://github.com/brunosimon/three.js-tsl-template)
+  (Three.js Shading Language) – Starter template by [Bruno
+  Simon](https://bsky.app/profile/bruno-simon.bsky.social).
 - <ThreeLogo /> [**TSLFX**](https://tslfx.v1v2.io/) ([repo](https://github.com/verekia/tslfx)) –
-  Early-stage library of VFX for TSL (Three.js Shading Language) by
-  [me](https://bsky.app/profile/verekia.com).
-- <ThreeLogo /> [**TSL Textures**](https://boytchev.github.io/tsl-textures/) by [Pavel
-  Boytchev](https://x.com/PavelBoytchev)
+  Early-stage library of VFX for TSL by [me](https://bsky.app/profile/verekia.com).
+- <ThreeLogo /> [**TSL Textures**](https://boytchev.github.io/tsl-textures/) – Drop-in textures for
+  TSL by [Pavel Boytchev](https://x.com/PavelBoytchev).
+- <ThreeLogo /> [**vite-plugin-tsl-operator**](https://github.com/makio64/vite-plugin-tsl-operator)
+  – Vite plugin to use normal math operators in TSL by [David Ronai](https://www.makio.io/).
 - <R3FLogo /> <WebXRLogo /> [**@react-three/handle**](https://pmndrs.github.io/xr/docs/handles/introduction)
   ([video](https://bsky.app/profile/belabohlender.bsky.social/post/3lg7nf5ywbc2z)) – Library For
   React XR to grab objects by [Bela Bohlender](https://bsky.app/profile/belabohlender.bsky.social).
@@ -193,16 +196,30 @@ in!
   Rays](https://shaders.paper.design/god-rays), [Neuro
   Noise](https://shaders.paper.design/neuro-noise), [Warp](https://shaders.paper.design/warp),
   [Voronoi](https://shaders.paper.design/voronoi).
+- <GltfLogo /> [**gltf-type-toolkit**](https://github.com/toddeTV/gltf-type-toolkit) – Generates
+  type-safe glTF file representations in TypeScript by [Thorsten Seyschab](https://todde.tv/).
 
 ## 🎬 Videos
 
 - 🎓 [**What Kind of Math Should Game Developers Know?**](https://www.youtube.com/watch?v=eRVRioN4GwA) by [SimonDev](https://bsky.app/profile/simondev.bsky.social)
+- <WebGLLogo />
+  [**Shaderfrog 2.0 Introduction Tutorial**](https://www.youtube.com/watch?v=8u61pXXQaY4) by [Andrew
+  Ray](https://bsky.app/profile/andrewray.me)
+- <ColyseusLogo /> [**Colyseus Reel 2025**](https://www.youtube.com/watch?v=3EEw5Sl93KE) by
+  [Colyseus](https://colyseus.io/)
+- <CGIcon className="size-5 inline-block" /> [**CrazyGames DevTalks**](https://www.youtube.com/@CrazyGamesDevTalks)
+  about [optimization](https://www.youtube.com/watch?v=DlnS53TYJO8), [analytics](https://www.youtube.com/watch?v=hCJq9QN1Ewk),
+  and [in-app purchases](https://www.youtube.com/watch?v=t-82RS6g_tI)
 
 ## ✍️ Articles
 
 - 🎓 [**Post-processing Effects on Mobile: Optimization and Alternatives**](https://community.arm.com/arm-community-blogs/b/mobile-graphics-and-gaming-blog/posts/post-processing-effects-on-mobile-optimization-and-alternatives) (2018) by [Attilio Provenzano](https://x.com/atti_p)
 - 🎓 [**Signed Distance Fields**](https://mini.gmshaders.com/p/sdf) by [Xor](https://bsky.app/profile/xordev.bsky.social)
 - 🎓 [**Post-Processing Shaders as a Creative Medium**](https://blog.maximeheckel.com/posts/post-processing-as-a-creative-medium/) by [Maxime Heckel](https://bsky.app/profile/maxime.bsky.social)
+- 🎓 [**AAA - Analytical Anti-Aliasing**](https://blog.frost.kiwi/analytical-anti-aliasing/) by [Wladislav Artsimovich](https://blog.frost.kiwi/)
+- <GltfLogo /> [**Exploring the glTF External Reference
+  Format**](https://www.khronos.org/blog/exploring-the-gltf-external-reference-format) by [Patrick
+  Härtl](https://github.com/UX3D-haertl)
 - <WebGLLogo /> [**Learn Shader Programming with Rick and
   Morty**](https://danielchasehooper.com/posts/code-animated-rick/) by [Daniel
   Hooper](https://danielchasehooper.com/)
@@ -214,6 +231,7 @@ in!
 - <ThreeLogo /> [**Building Efficient Three.js
   Scenes**](https://tympanus.net/codrops/2025/02/11/building-efficient-three-js-scenes-optimize-performance-while-maintaining-quality/)
   by [Niccolò Fanton](https://x.com/niccolofanton)
+- 🌎 [**Web Gaming Strikes Back**](https://naavik.co/digest/web-gaming-strikes-back/) by [Naavik](https://naavik.co/)
 
 ## 🎮 Games
 
