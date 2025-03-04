@@ -85,7 +85,7 @@ export const engines = {
     lastCommitDate: '2024-05-08',
   },
   kaplay: {
-    name: 'kaplay',
+    name: 'Kaplay',
     url: 'https://kaplayjs.com/',
     repo: 'kaplayjs/kaplay',
     stars: 600,

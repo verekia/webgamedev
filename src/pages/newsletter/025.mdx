@@ -13,8 +13,8 @@ import {
   GDevelopLogo,
   GltfLogo,
   JavascriptLogo,
+  KaplayLogo,
   NeedleLogo,
-  OrillusionLogo,
   PlayCanvasLogo,
   PixiLogo,
   PhaserLogo,
@@ -51,12 +51,18 @@ import { GameRelease } from 'components/GameReleases'
 around the [PlayCanvas Engine](https://github.com/playcanvas/engine). It lets you build scenes declaratively
 and leverage React's state management. It is a code-centric alternative to the [PlayCanvas Editor](https://playcanvas.com/products/editor).
 
+<WebXRLogo /> WebXR [PWAs](https://www.webgamedev.com/publishing/pwa) are now supported on the
+[**Meta Horizon Store**](https://developers.meta.com/horizon/documentation/web/pwa-overview), with
+2D and hybrid apps support coming later.
+
 <WonderlandLogo /> [**Wonderland Engine**](https://wonderlandengine.com/) has merged with [Robot
 Invader](https://robotinvader.com/) to form [**Create
 Worlds**](https://venturebeat.com/games/create-worlds-arises-from-wonderland-and-robot-invader-merger/).
 
 <JavascriptLogo /> The [**Gamedev.js Survey 2024**](https://gamedevjs.com/survey/2024/) results are
-in!
+in.
+
+Not web-related, but Electronic Arts [open sourced Command & Conquer and Red Alert](https://store.steampowered.com/news/app/2229890/view/502818210084553731)!
 
 ## ⭐️ Sponsors
 
@@ -72,14 +78,9 @@ in!
       </a>
     </div>
     <div className="flex flex-col gap-3 [&>*]:!my-0">
-      [**Poki**](https://poki.com/?utm_source=webgamedev&utm_content=newsletter) is on a mission to
-      create the ultimate online playground – where players and developers come together to play and
-      create! Together with a growing 400+ game developer community and 65 million players each
-      month, we're creating a new standard for web games. Interested in working together? [**Share
-      your game with
-      us**](https://developers.poki.com?utm_source=webgamedev&utm_content=newsletter)!
+      [**Poki**](https://poki.com/?utm_source=webgamedev&utm_content=newsletter) serves over 90 million players each month, offering a diverse range of game genres. Poki supports game developers in reaching a wide audience with HTML5 games and is continually evolving the variety of web games available, from casual point-and-click games to multiplayer FPS shooters and everything in between. [**Share your game with us**](https://developers.poki.com?utm_source=webgamedev&utm_content=newsletter)!
 
-      _Web Game Dev!_ Check out the link in this [**#showcase post**](https://discord.com/channels/1032873609280106566/1296492543583719434/1296492543583719434) on [Discord](https://webgamedev.com/discord) to get access to our new **Playtest feature**. This allows you to get free and unlimited playtests of your game with our players! [Learn more about Poki in this presentation](https://www.youtube.com/watch?v=SQl6xDVs_Bs).
+      Heading to GDC this year? Stop by our booth - S0143 - and have a chat with us about how we can help you create the next hit on web! From free unlimited playtesting to full QA to taking care of user acquisition, Poki's got you covered :)
     </div>
 
   </div>
@@ -139,12 +140,13 @@ in!
 
 ## 🏎 Engines
 
-- <ThreeLogo /> [**Three.js r173**](https://bsky.app/profile/threejs.org/post/3lgzfj7swys2a)
+- <ThreeLogo /> [**Three.js r174**](https://bsky.app/profile/threejs.org/post/3lj5qenq5622m)
   ([changelog](https://github.com/mrdoob/three.js/releases), [migration
   guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
 - <R3FLogo /> [**React Three Fiber
   v9.0.0**](https://github.com/pmndrs/react-three-fiber/releases/tag/v9.0.0) – Compatibility release
-  for React 19.
+  for React 19. See the [migration
+  guide](https://github.com/pmndrs/react-three-fiber/blob/c3b1fd277f070da2cd9ab10d855ea978cad6db8b/docs/tutorials/v9-migration-guide.mdx).
 - <R3FLogo /> [**Drei v10.0.0**](https://github.com/pmndrs/drei/releases/tag/v10.0.0) –
   Compatibility release for React 19.
 - <ThrelteLogo /> [**Threlte v8**](https://threlte.xyz/blog/threlte-8) – WebGPU-ready, Svelte 5
@@ -162,22 +164,30 @@ in!
 - <PlayCanvasLogo /> [**PlayCanvas Editor
   v2.0.0**](https://github.com/playcanvas/editor/releases/tag/v2.0.0) – Adds support for [Engine
   v2](https://blog.playcanvas.com/playcanvas-engine-hits-2-0-0/).
-- <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX
+- <BabylonLogo /> [**Babylon.js v7.51.0**](https://github.com/BabylonJS/Babylon.js/releases) –
+  Babylon.js 8 is expected to be released at the end of March.
 - <AframeLogo /> [**A-Frame v1.7.0**](https://github.com/aframevr/aframe/releases) – Three.js r173,
   import maps, experimental post-processing, initial WebGPU support.
+- <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX
 - <PixiLogo /> [**PixiJS 8.7.0**](https://pixijs.com/blog/8.7.0) – Render layers, GIFs, Three.js
   integration. New [PixiJS Userland](https://pixijs.com/blog/intro-userland) community GitHub
   organization.
-- <PixiLogo /> [**Pixi React v8.0.0**](https://github.com/pixijs/pixi-react/releases/tag/v8.0.0)
-- <BabylonLogo /> [**Babylon.js v7.51.0**](https://github.com/BabylonJS/Babylon.js/releases) –
-  Babylon.js 8 is expected to be released at the end of March.
+- <PixiLogo /> [**Pixi React v8.0.0**](https://github.com/pixijs/pixi-react/releases/tag/v8.0.0) –
+- <KaplayLogo /> [**Kaplay
+  4000.0.0-alpha.16**](https://github.com/kaplayjs/kaplay/releases/tag/4000.0.0-alpha.16), [state of
+  Kaplay #4](https://kaplayjs.com/blog/sok4/), and a brand [new website](https://kaplayjs.com/).
+
 - 🤺 [**Rapier 0.23.0**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md)
 - <WonderlandLogo /> Wonderland Engine
 - <DefoldLogo /> Defold
 - <ConstructLogo /> Construct [releases](https://www.construct.net/en/make-games/releases)
 - <ExcaliburLogo /> Excalibur
-- <OrillusionLogo /> Orillusion
-- <CocosLogo /> Cocos
+- <CocosLogo /> [**Cocos Creator 3.8.5**](https://x.com/CocosEngine/status/1872539394273607728) –
+  WASM lazy loading, reduced size for 2D projects, enhanced CRP with improved post-processing,
+  HarmonyOS Next (Huawei) and Google Play support, new Prefab & Spine preview.
+- <ColyseusLogo /> [**Colyseus v0.16**](https://colyseus.io/blog/colyseus-016-is-here/) – StateView,
+  experimental [WebTransport](https://github.com/w3c/webtransport/blob/main/explainer.md) support
+  and encoding/decoding APIs.
 
 ## 🛠 Tools
 
@@ -260,6 +270,7 @@ in!
   by [Niccolò Fanton](https://x.com/niccolofanton)
 - 🌎 [**Web Gaming Strikes Back**](https://naavik.co/digest/web-gaming-strikes-back/) by [Naavik](https://naavik.co/)
 - 🌎 [**The State of Video Gaming in 2025**](https://www.matthewball.co/all/stateofvideogaming2025), slideshow by [Matthew L. Ball](https://www.matthewball.co/)
+- 🌎 [**How one developer (Trezy) is connecting game creators on Bluesky**](https://overkill.wtf/building-a-bluesky-game-developer-network/) by [Chris Brandrick](https://bsky.app/profile/brandrick.bsky.social)
 
 ## 🎮 Games
 
