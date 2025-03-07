@@ -6,6 +6,7 @@ import games, {
   BABYLON,
   CASUAL,
   COCOS,
+  CUSTOM,
   EASEL,
   Genre,
   IMPACT,
@@ -37,6 +38,8 @@ import {
   ThrelteLogo,
   // WasmLogo,
 } from 'lib/logos'
+import { PokiLogo } from 'components/PokiSponsor'
+import { CGLogo } from 'components/CGSponsor'
 
 const Game = ({
   name,
@@ -77,82 +80,100 @@ const Game = ({
           {size}MB
         </div>
       )}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.3)',
-          borderBottomRightRadius: 8,
-          padding: '4px 6px',
-        }}
-      >
-        <span style={{ position: 'relative', top: -2 }}>
-          {engine === THREE ? (
-            // @ts-ignore
-            <ThreeLogo />
-          ) : engine === PLAYCANVAS ? (
-            // @ts-ignore
-            <PlayCanvasLogo />
-          ) : engine === BABYLON ? (
-            // @ts-ignore
-            <BabylonLogo />
-          ) : engine === PHASER ? (
-            // @ts-ignore
-            <PhaserLogo />
-          ) : engine === PIXI ? (
-            // @ts-ignore
-            <PixiLogo />
-          ) : engine === AFRAME ? (
-            // @ts-ignore
-            <AframeLogo />
-          ) : engine === IMPACT ? (
-            // @ts-ignore
-            <ImpactLogo />
-          ) : engine === THRELTE ? (
-            // @ts-ignore
-            <ThrelteLogo />
-          ) : engine === R3F ? (
-            // @ts-ignore
-            <R3FLogo />
-          ) : engine === EASEL ? (
-            // @ts-ignore
-            <EaselLogo />
-          ) : engine === COCOS ? (
-            // @ts-ignore
-            <CocosLogo />
-          ) : engine === OGL ? (
-            // @ts-ignore
-            <OglLogo />
-          ) : null}
-        </span>
-      </div>
+      {engine !== CUSTOM && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            borderBottomRightRadius: 8,
+            padding: '4px 6px',
+          }}
+        >
+          <span style={{ position: 'relative', top: -2 }}>
+            {engine === THREE ? (
+              // @ts-ignore
+              <ThreeLogo />
+            ) : engine === PLAYCANVAS ? (
+              // @ts-ignore
+              <PlayCanvasLogo />
+            ) : engine === BABYLON ? (
+              // @ts-ignore
+              <BabylonLogo />
+            ) : engine === PHASER ? (
+              // @ts-ignore
+              <PhaserLogo />
+            ) : engine === PIXI ? (
+              // @ts-ignore
+              <PixiLogo />
+            ) : engine === AFRAME ? (
+              // @ts-ignore
+              <AframeLogo />
+            ) : engine === IMPACT ? (
+              // @ts-ignore
+              <ImpactLogo />
+            ) : engine === THRELTE ? (
+              // @ts-ignore
+              <ThrelteLogo />
+            ) : engine === R3F ? (
+              // @ts-ignore
+              <R3FLogo />
+            ) : engine === EASEL ? (
+              // @ts-ignore
+              <EaselLogo />
+            ) : engine === COCOS ? (
+              // @ts-ignore
+              <CocosLogo />
+            ) : engine === OGL ? (
+              // @ts-ignore
+              <OglLogo />
+            ) : null}
+          </span>
+        </div>
+      )}
       {externalPlayUrl?.startsWith('https://poki.com') && (
         <div
           style={{
             position: 'absolute',
             top: 0,
             right: 0,
-            background: 'white',
             zIndex: 9,
             width: 70,
             padding: '7px 10px',
             borderBottomLeftRadius: 8,
             boxShadow: '0 2px 2px rgba(0, 0, 0, 0.2)',
           }}
+          className="bg-white dark:bg-neutral-950"
         >
           <a
             href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
             target="_blank"
             rel="noopener"
           >
-            <img
-              src="/partnerships/poki.webp"
-              alt="Poki"
-              width="300"
-              height="142"
-              style={{ width: '100%' }}
-            />
+            <PokiLogo />
+          </a>
+        </div>
+      )}
+      {externalPlayUrl?.startsWith('https://www.crazygames.com') && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            zIndex: 9,
+            padding: '5px 8px',
+            borderBottomLeftRadius: 8,
+            boxShadow: '0 2px 2px rgba(0, 0, 0, 0.2)',
+          }}
+          className="bg-white dark:bg-neutral-950"
+        >
+          <a
+            href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
+            target="_blank"
+            rel="noopener"
+          >
+            <CGLogo width={80} height={30} />
           </a>
         </div>
       )}
@@ -216,47 +237,11 @@ const Game = ({
           )}
         </div>
       )}
-      {false && (
-        <div className="plate">
-          <a
-            href={websiteUrl ?? externalPlayUrl}
-            target="_blank"
-            rel="noopener"
-            style={{ fontWeight: 'bold' }}
-          >
-            {name}
-          </a>{' '}
-          {false && author && authorUrl && (
-            <>
-              by{' '}
-              <a
-                className="game-author"
-                target="_blank"
-                rel="noopener"
-                href={authorUrl}
-                style={{ fontWeight: 'bold' }}
-              >
-                {author}
-              </a>
-            </>
-          )}
-          {/* <button
-            style={{ position: 'absolute', right: 6, top: 6 }}
-            onClick={() => setAreDetailsOpen(true)}
-          >
-            i
-          </button>
-          <dialog open={areDetailsOpen}>
-            <p>Greetings, one and all!</p>
-            <form method="dialog">
-              <button>OK</button>
-            </form>
-          </dialog> */}
-        </div>
-      )}
       <a
         href={
-          websiteUrl ?? externalPlayUrl?.startsWith('https://poki.com')
+          websiteUrl ??
+          (externalPlayUrl?.startsWith('https://poki.com') ||
+            externalPlayUrl?.startsWith('https://www.crazygames.com'))
             ? `${externalPlayUrl}?utm_source=webgamedev&utm_content=games`
             : externalPlayUrl
         }
