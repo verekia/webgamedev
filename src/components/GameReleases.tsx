@@ -59,7 +59,7 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
       }
       target="_blank"
       rel="noopener"
-      className="font-bold ml-2"
+      className="font-bold ml-1.5"
     >
       {title}
     </A>{' '}
