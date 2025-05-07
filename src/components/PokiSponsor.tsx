@@ -17,7 +17,7 @@ const PokiSponsor = () => (
       <A href={pokiMainUrl('homepage')}>
         <b>Poki</b>
       </A>
-      . Reaching 65 million monthly users, Poki is on a mission to create the ultimate playground
+      . Reaching 90 million monthly users, Poki is on a mission to create the ultimate playground
       for both players and developers on Web!{' '}
       <A href={pokiDevelopersUrl('homepage')}>
         <b>Learn more</b>
@@ -42,7 +42,7 @@ export const PokiStandaloneSection = ({ content }: { content: string }) => (
         </A>
         . Poki is on a mission to create the ultimate online playground – where players and
         developers come together to play and create! Together with a growing 400+ game developer
-        community and 65 million players each month, we're creating a new standard for web games.
+        community and 90 million players each month, we're creating a new standard for web games.
         Interested in working together?{' '}
         <A href={pokiDevelopersUrl(content)}>
           <b>Share your game with us</b>
