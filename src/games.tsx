@@ -21,6 +21,7 @@ import games, {
   Game as TGame,
   THREE,
   THRELTE,
+  UNITY,
 } from 'lib/games'
 
 import {
@@ -36,10 +37,12 @@ import {
   R3FLogo,
   ThreeLogo,
   ThrelteLogo,
+  UnityLogo,
   // WasmLogo,
 } from 'lib/logos'
 import { PokiLogo } from 'components/PokiSponsor'
 import { CGLogo } from 'components/CGSponsor'
+import { WebGamerIcon, WebGamerText } from 'components/WebGamer'
 
 const Game = ({
   name,
@@ -128,6 +131,9 @@ const Game = ({
             ) : engine === OGL ? (
               // @ts-ignore
               <OglLogo />
+            ) : engine === UNITY ? (
+              // @ts-ignore
+              <UnityLogo />
             ) : null}
           </span>
         </div>
@@ -174,6 +180,30 @@ const Game = ({
             rel="noopener"
           >
             <CGLogo width={80} height={30} />
+          </a>
+        </div>
+      )}
+      {externalPlayUrl?.startsWith('https://webgamer.io') && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            zIndex: 9,
+            padding: '5px 8px',
+            borderBottomLeftRadius: 8,
+            boxShadow: '0 2px 2px rgba(0, 0, 0, 0.2)',
+          }}
+          className="bg-white"
+        >
+          <a
+            href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-1.5"
+          >
+            <WebGamerIcon className="size-6" />
+            <WebGamerText className="fill-black w-[6.5rem]" />
           </a>
         </div>
       )}
@@ -255,7 +285,7 @@ const Game = ({
 export const Games = () => {
   const [libFilter, setLibFilter] = useState('')
   const [genre, setGenre] = useState('')
-
+  const [portalFilter, setPortalFilter] = useState('')
   const filteredGames = games
     .filter(
       g =>
@@ -279,6 +309,25 @@ export const Games = () => {
           g.genres.includes(genre as Genre)),
     )
     .filter(g => !g.gamerOnly)
+    .filter(g => {
+      if (portalFilter === 'poki') {
+        return g.externalPlayUrl?.startsWith('https://poki.com')
+      }
+      if (portalFilter === 'crazygames') {
+        return g.externalPlayUrl?.startsWith('https://www.crazygames.com')
+      }
+      if (portalFilter === 'webgamer') {
+        return g.externalPlayUrl?.startsWith('https://webgamer.io')
+      }
+      if (portalFilter === 'others') {
+        return (
+          !g.externalPlayUrl?.startsWith('https://poki.com') &&
+          !g.externalPlayUrl?.startsWith('https://www.crazygames.com') &&
+          !g.externalPlayUrl?.startsWith('https://webgamer.io')
+        )
+      }
+      return true
+    })
 
   return (
     <>
@@ -362,7 +411,7 @@ export const Games = () => {
       <select
         value={genre}
         onChange={e => setGenre(e.target.value)}
-        style={{ marginBottom: 20, padding: '3px 6px' }}
+        style={{ marginBottom: 20, padding: '3px 6px', marginRight: 12 }}
       >
         <option value="">All genres</option>
         <option value={SHOOTING}>Shooting</option>
@@ -370,6 +419,17 @@ export const Games = () => {
         <option value={STRATEGY}>Strategy</option>
         <option value={RACING}>Racing</option>
         <option value={CASUAL}>Casual</option>
+        <option value="others">Others</option>
+      </select>
+      <select
+        value={portalFilter}
+        onChange={e => setPortalFilter(e.target.value)}
+        style={{ marginBottom: 20, padding: '3px 6px', marginRight: 12 }}
+      >
+        <option value="">All portals</option>
+        <option value="poki">Poki</option>
+        <option value="crazygames">CrazyGames</option>
+        <option value="webgamer">WebGamer</option>
         <option value="others">Others</option>
       </select>
 

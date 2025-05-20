@@ -23,12 +23,12 @@ const meta = {
     title: '🍓 Open Jam – April 2023',
     theme: { breadcrumb: false },
   },
-  others: {
-    title: '🎮 WebGamer.io',
-    type: 'page',
-    href: 'https://webgamer.io',
-    newWindow: true,
-  },
+  // others: {
+  //   title: '🎮 WebGamer.io',
+  //   type: 'page',
+  //   href: 'https://webgamer.io',
+  //   newWindow: true,
+  // },
 }
 
 export default meta
