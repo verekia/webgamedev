@@ -1,0 +1,40 @@
+import { BlenderLogo, GltfLogo, ThreeLogo, PlayCanvasLogo, WonderlandLogo } from 'lib/logos'
+
+# 🐵 Blender for Web Games
+
+## Why Blender?
+
+While some engines like <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) and <WonderlandLogo /> [**Wonderland Engine**](https://wonderlandengine.com/) do have an integrated 3D editor similar to Unity, Godot, and Unreal Engine, there is no universal full-featured 3D editor for web games. Depending on the type of game you are making, you might be able to get away with using just code to create scenes, but the more complex the game, the more you will need to use a 3D editor of some sort.
+
+<BlenderLogo /> [**Blender**](https://www.blender.org/) is a free and open-source 3D creation suite. You can use it to model, rig, animate, render images, and a lot more. It has a steep learning curve, but if you are willing to put in at least a few weeks of practice, it will feel like you've unlocked a new world of possibilities for your games. It is, in my opinion, the best time investment you can make as a web game developer. There are millions of tutorials on YouTube, so just pick one and start learning.
+
+To use Blender as a game editor, you would typically export your scenes and assets as <GltfLogo /> [**glTF**](https://www.khronos.org/gltf/) files and load them into your game engine or rendering library, such as <ThreeLogo /> [**Three.js**](https://threejs.org/). But unlike Unity or Unreal Engine, Blender data is not directly connected to your engine, so you will need to do some manual plumbing to bridge the gap, which requires familiarity with both Blender and glTF.
+
+This page aims to aggregate tips and tricks, workflow suggestions, and best practices on how to use Blender and glTF for your games. There is no one-size-fits-all approach to this because every game is different and has different needs, so pick whatever makes sense for you. Feel free to [contribute](https://github.com/verekia/webgamedev) to share your own tips!
+
+## Using many small .blend files
+
+If your game contains many assets, one approach can be to create one Blender file per asset. This makes version control easier, and reduces risks of file corruption. The default Blender cube scene weighs about 900KB, which is not a lot, but because it's a binary file, any change you make to it will add the full size to your repository. That can add up quickly. You can use [Git LFS](https://git-lfs.com/), but I find it more comfortable to just reduce the file size and check them into regular Git. You can trim the fat by deleting things you don't need in the Blender File view (right-click, Delete):
+
+<div className="flex flex-wrap gap-4 my-4">
+<img src="/images/blender/blender-file-1.webp" className="max-h-72" />
+<img src="/images/blender/blender-file-2.webp" className="max-h-72" />
+</div>
+
+Final lean default cube project:
+
+<div className="flex flex-wrap gap-4 my-4">
+<img src="/images/blender/blender-file-3.webp" className="max-h-72" />
+</div>
+
+
+I typically delete: **Brushes**, **Line Styles**, unused **Images**, **Materials**, **Palettes**, and all **Workspaces** except Layout. Obviously keep what _you_ need. Screens will update itself to match Workspaces when you re-open the file. You can bring back any workspace by clicking + at the top of Blender. The default cube file is now **275KB**. Much better!
+
+**Extra tip**: Use file linking to bring assets from other files as external libraries without adding weight to your file.
+
+## Blender plugins
+
+- [**SimpleBake**](https://superhivemarket.com/products/simplebake---simple-pbr-and-other-baking-in-blender-2) – Baking
+- [**Geoscatter**](https://geoscatter.com/) – Terrain and vegetation
+- [**Vertex Color Master**](https://github.com/andyp123/blender_vertex_color_master) – Vertex colors
+- [**Vertex Color Tools**](https://github.com/EelisOtsamo/VertexColorTools) – Vertex colors
