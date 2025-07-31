@@ -1,0 +1,188 @@
+import NewsletterIframe, { NewsletterFooter } from 'components/NewsletterIframe'
+import MailTo from 'components/MailTo'
+import {
+  AframeLogo,
+  BabylonLogo,
+  CocosLogo,
+  ConstructLogo,
+  DefoldLogo,
+  ExcaliburLogo,
+  NeedleLogo,
+  KaplayLogo,
+  PlayCanvasLogo,
+  PixiLogo,
+  PhaserLogo,
+  R3FLogo,
+  ThreeLogo,
+  ThrelteLogo,
+  TresLogo,
+  WasmLogo,
+  WebXRLogo,
+  WonderlandLogo,
+} from 'lib/logos'
+import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
+import { SubTitleDate } from 'components/Date'
+import { FloatLeftImage } from 'components/FloatImage'
+import { PokiLogo, PokiIcon } from 'components/PokiSponsor'
+import { cgMainUrl, cgDevelopersUrl, CGLogo, CGIcon } from 'components/CGSponsor'
+
+# Newsletter – Issue 027 (Preview)
+
+<SubTitleDate value="2025-07-06" />
+
+<NoBulletListStyles />
+<NewsletterStyles />
+
+## 🔥 Headlines
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenatis ex, quis bibendum lorem condimentum ut. Mauris eget venenatis lectus. Phasellus id pretium ipsum, quis auctor ipsum. Donec aliquet vulputate ante eget vestibulum. Nulla efficitur risus eros, ut interdum leo consectetur in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+## ⭐️ Sponsors
+
+<div className="flex flex-col gap-8 mt-5">
+  <div className="flex flex-col gap-5 lg:flex-row items-center">
+    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
+      <a
+        href="https://poki.com/?utm_source=webgamedev&utm_content=newsletter"
+        target="_blank"
+        rel="noopener"
+      >
+        <PokiLogo className="w-full max-w-130 scale-[0.85]" />
+      </a>
+    </div>
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
+      [**Poki**](https://poki.com/?utm_source=webgamedev&utm_content=newsletter) serves over 90 million players each month, offering a diverse range of game genres. Poki supports game developers in reaching a wide audience with HTML5 games and is continually evolving the variety of web games available, from casual point-and-click games to multiplayer FPS shooters and everything in between. [**Share your game with us**](https://developers.poki.com?utm_source=webgamedev&utm_content=newsletter)!
+
+      _Web Game Dev!_ Check out the link in this [**#showcase post**](https://discord.com/channels/1032873609280106566/1296492543583719434/1296492543583719434) on [Discord](https://webgamedev.com/discord) to get access to our new **Playtest feature**. This allows you to get free and unlimited playtests of your game with our players! [Learn more about Poki in this presentation](https://www.youtube.com/watch?v=SQl6xDVs_Bs).
+    </div>
+  </div>
+
+  <div className="h-px bg-gray-200 dark:bg-neutral-800" />
+
+  <div className="flex flex-col gap-5 lg:flex-row items-center">
+    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
+      <a
+        href="https://www.crazygames.com/?utm_source=webgamedev&utm_content=newsletter"
+        target="_blank"
+        rel="noopener"
+      >
+        <CGLogo className="w-full max-w-130" />
+      </a>
+    </div>
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
+        [**CrazyGames**](https://www.crazygames.com/?utm_source=webgamedev&utm_content=newsletter)
+        is revolutionizing web gaming, connecting over 3,000 developers with 40+
+        million players monthly. Our platform supports both ads and in-app purchases, paying out
+        millions in revenue share to developers each year while fostering one of the most vibrant
+        player communities worldwide. [**Publish your game on CrazyGames**](https://developer.crazygames.com/?utm_source=webgamedev&utm_content=newsletter)!
+
+        CrazyGames is growing fast, and we're hiring across multiple positions! We're a fully remote company with an international team, and we're looking for passionate people to join us. For more details, [**check out our open roles**](https://crazygames.recruitee.com/?utm_source=webgamedev&utm_content=newsletter).
+
+    </div>
+  </div>
+
+  <div className="h-px bg-gray-200 dark:bg-neutral-800" />
+
+  <div className="flex flex-col gap-5 lg:flex-row items-center">
+    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
+      <a
+        href="https://lab.rosebud.ai/webgamedev"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="/partnerships/rosebud.png" alt="Rosebud AI" className="w-full max-w-36" />
+      </a>
+    </div>
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
+      [**Rosebud AI**](https://lab.rosebud.ai/webgamedev) is transforming game development, turning ideas into playable prototypes in minutes, not months. Our AI-powered platform helps thousands of developers rapidly create 2D and 3D games using frameworks like Three.js and Phaser. With our template library, one-click sharing, and instant deployment, go from concept to playable game faster than ever.
+      
+      [**Join our Discord**](https://discord.com/invite/rosebud-ai) to collaborate, share knowledge, and push the boundaries of AI-assisted game creation. Whether you're a solo dev or in a larger team, Rosebud AI gives you the tools to prototype and iterate at the speed of imagination. Start building your next game today!
+    </div>
+  </div>
+</div>
+
+## 🏎 Engines
+
+- <ThreeLogo /> [**Three.js rXXX**](https://github.com/mrdoob/three.js/releases) – XXX
+  ([changelog](https://github.com/mrdoob/three.js/releases), [migration
+  guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
+- <ThreeLogo /> [**Drei Vanilla vXXX**](https://github.com/pmndrs/drei-vanilla/releases) –
+- <R3FLogo /> [**R3F v8.XX**](https://github.com/pmndrs/react-three-fiber/releases) – XXX
+- <R3FLogo /> [**Drei v9.XX**](https://github.com/pmndrs/drei/releases) – XXX
+- <ThrelteLogo /> [**Threlte vXXX**](https://bsky.app/profile/threlte.xyz) – XXX
+- <TresLogo /> [**TresJS XXX**](https://github.com/Tresjs/tres/releases)
+- <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) – XXX
+- <PlayCanvasLogo /> [**PlayCanvas Engine vXXX**](https://github.com/playcanvas/engine/releases)
+  –{' '}
+- <PlayCanvasLogo /> [**PlayCanvas Editor vXXX**](https://github.com/playcanvas/editor/releases)
+  –{' '}
+- <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX
+- <AframeLogo /> [**A-Frame vXXX**](https://github.com/aframevr/aframe/releases)
+- <PixiLogo /> [**PixiJS XXX**](https://github.com/pixijs/pixijs/releases)
+- <PixiLogo /> [**Pixi React XXX**](https://github.com/pixijs/pixi-react/releases)
+- <KaplayLogo /> Kaplay
+- <BabylonLogo /> [**Babylon.js vXXX**](https://github.com/BabylonJS/Babylon.js/releases) - [what's
+  new](https://doc.babylonjs.com/whats-new/)
+- <NeedleLogo /> [**Needle**](https://needle.tools/)
+  [**2.XXX**](https://github.com/needle-tools/needle-engine-support/releases)
+- [**Rapier**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md)
+- <WonderlandLogo /> Wonderland Engine
+- <DefoldLogo /> Defold
+- <ConstructLogo /> Construct [releases](https://www.construct.net/en/make-games/releases)
+- <ExcaliburLogo /> Excalibur
+- <CocosLogo /> Cocos
+
+## 🛠 Tools
+
+## 🎬 Videos
+
+## ✍️ Articles
+
+## 🎮 Games
+
+## ✨ Demos
+
+My [Bookmarks](https://x.com/i/bookmarks).
+
+[Codrops](https://tympanus.net/codrops/all-posts/)
+
+**YouTube**:
+[Three.js](https://www.youtube.com/results?search_query=three+js),
+[R3F](https://www.youtube.com/results?search_query=react+three+fiber),
+[Babylon](https://www.youtube.com/results?search_query=babylon+js),
+[PlayCanvas](https://www.youtube.com/results?search_query=playcanvas),
+[Phaser](https://www.youtube.com/results?search_query=phaser+js),
+[Pixi](https://www.youtube.com/results?search_query=pixi+js),
+[Threlte](https://www.youtube.com/results?search_query=threlte),
+[Needle](https://www.youtube.com/results?search_query=needle+tools),
+[WebGL](https://www.youtube.com/results?search_query=webgl),
+[WebGPU](https://www.youtube.com/results?search_query=webgpu)
+
+**Twitter**:
+[Three.js](https://x.com/threejs),
+[#threejs](https://x.com/hashtag/threejs),
+[R3F](https://x.com/0xca0a),
+[#r3f](https://x.com/hashtag/r3f),
+[Babylon](https://x.com/babylonjs),
+[PlayCanvas](https://x.com/playcanvas),
+[Phaser](https://x.com/phaser_),
+[Pixi](https://x.com/PixiJS),
+[A-Frame](https://x.com/aframevr),
+[Threlte](https://x.com/threlte),
+[Needle](https://x.com/NeedleTools),
+[WebGL](https://x.com/WebGL),
+[WebGPU](https://x.com/WebGPU)
+
+**Reddit**:
+[Three.js](https://www.reddit.com/r/threejs/top/?t=month),
+[WebGL](https://www.reddit.com/r/webgl/top/?t=month),
+[WebGPU](https://www.reddit.com/r/webgpu/top/?t=month),
+[gamedev](https://www.reddit.com/r/gamedev/top/?t=month)
+
+**Discord**:
+[WGD](https://discord.com/channels/1032873609280106566/1051338271097094165),
+[Three.js](https://discord.com/channels/685241246557667386/1022153550115131473),
+[pmndrs](https://discord.com/channels/740090768164651008/1047453248044412968),
+[Phaser](https://discord.com/channels/244245946873937922/1020022549247164466)
+
+<NewsletterFooter tweetId="WILL_BE_UPDATED_IN_A_MINUTE" />

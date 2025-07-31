@@ -1,6 +1,7 @@
 const meta = {
   template: { title: 'Issue XXX – New! 🎉', display: 'hidden' },
-  '026': { title: 'Issue 026 – New! 🎉' },
+  '027': { title: 'Issue 027 – New! 🎉', display: 'hidden' },
+  '026': { title: 'Issue 026' },
   '025': { title: 'Issue 025' },
   '024': { title: 'Issue 024' },
   '023': { title: 'Issue 023' },
