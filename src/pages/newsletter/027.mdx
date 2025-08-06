@@ -3,10 +3,12 @@ import MailTo from 'components/MailTo'
 import {
   AframeLogo,
   BabylonLogo,
+  BlenderLogo,
   CocosLogo,
   ConstructLogo,
   DefoldLogo,
   ExcaliburLogo,
+  GltfLogo,
   NeedleLogo,
   KaplayLogo,
   PlayCanvasLogo,
@@ -18,6 +20,7 @@ import {
   TresLogo,
   WasmLogo,
   WebXRLogo,
+  WebGPULogo,
   WonderlandLogo,
 } from 'lib/logos'
 import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
@@ -35,7 +38,8 @@ import { cgMainUrl, cgDevelopersUrl, CGLogo, CGIcon } from 'components/CGSponsor
 
 ## 🔥 Headlines
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenatis ex, quis bibendum lorem condimentum ut. Mauris eget venenatis lectus. Phasellus id pretium ipsum, quis auctor ipsum. Donec aliquet vulputate ante eget vestibulum. Nulla efficitur risus eros, ut interdum leo consectetur in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+<WebGPULogo /> Mozilla is shipping [**WebGPU support on Windows in Firefox
+141**](https://mozillagfx.wordpress.com/2025/07/15/shipping-webgpu-on-windows-in-firefox-141/)!
 
 ## ⭐️ Sponsors
 
@@ -55,9 +59,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
 
       _Web Game Dev!_ Check out the link in this [**#showcase post**](https://discord.com/channels/1032873609280106566/1296492543583719434/1296492543583719434) on [Discord](https://webgamedev.com/discord) to get access to our new **Playtest feature**. This allows you to get free and unlimited playtests of your game with our players! [Learn more about Poki in this presentation](https://www.youtube.com/watch?v=SQl6xDVs_Bs).
     </div>
+
   </div>
 
-  <div className="h-px bg-gray-200 dark:bg-neutral-800" />
+<div className="h-px bg-gray-200 dark:bg-neutral-800" />
 
   <div className="flex flex-col gap-5 lg:flex-row items-center">
     <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
@@ -78,9 +83,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
 
         We’re heading to **Gamescom** in Cologne and would love to meet fellow web game devs! Whether you're already publishing with us or curious about how we can help scale your game's reach and revenue, come say hi! Feel free to [**schedule a meeting**](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0KM1KvCV72i9EUWDZ8RwXq4eQmym_K6ZwmAtNCqZ26QLnwzHcdcGVzGVVw4HDRX_lBjQ02eV0Q) with us.
     </div>
+
   </div>
 
-  <div className="h-px bg-gray-200 dark:bg-neutral-800" />
+<div className="h-px bg-gray-200 dark:bg-neutral-800" />
 
   <div className="flex flex-col gap-5 lg:flex-row items-center">
     <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
@@ -102,7 +108,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
 
 ## 🏎 Engines
 
-- <ThreeLogo /> [**Three.js rXXX**](https://github.com/mrdoob/three.js/releases) – XXX
+- <ThreeLogo /> [**Three.js r179**](https://github.com/mrdoob/three.js/releases)
+  ([announcement](https://x.com/threejs/status/1951272304803254698))– XXX
   ([changelog](https://github.com/mrdoob/three.js/releases), [migration
   guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
 - <ThreeLogo /> [**Drei Vanilla vXXX**](https://github.com/pmndrs/drei-vanilla/releases) –
@@ -117,7 +124,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
   –{' '}
 - <PhaserLogo /> [**Phaser XXX**](https://github.com/photonstorm/phaser/releases) – XXX
 - <AframeLogo /> [**A-Frame vXXX**](https://github.com/aframevr/aframe/releases)
-- <PixiLogo /> [**PixiJS XXX**](https://github.com/pixijs/pixijs/releases)
+- <PixiLogo /> [**PixiJS 8.12.0**](https://pixijs.com/blog/8.12.0) – Stability release with bug
+  fixes and a new release of PixiJS Layout v3.1.0.
 - <PixiLogo /> [**Pixi React XXX**](https://github.com/pixijs/pixi-react/releases)
 - <KaplayLogo /> Kaplay
 - <BabylonLogo /> [**Babylon.js vXXX**](https://github.com/BabylonJS/Babylon.js/releases) - [what's
@@ -133,13 +141,41 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
 
 ## 🛠 Tools
 
+- <ThreeLogo /> [**Three.js Cannon-ES
+  Rigger**](https://github.com/bandinopla/threejs-cannones-rigger)
+  ([video](https://x.com/bandinopla/status/1952111165179641900)) – Rig cannon-es physics in Blender,
+  by [Bandinopla](https://x.com/bandinopla).
+- <BlenderLogo />
+  [**MaterialX Export for Blender**](https://github.com/bhouston/blender_materialx_addon) – Add-on to
+  export Blender materials to MaterialX format by [Ben Houston](https://x.com/BenHouston3D).
+- <GltfLogo /> [**glTF Compressor**](https://gltf-compressor.com/)
+  ([announcement](https://x.com/pushmatrix/status/1950974228338975019),
+  [source](https://github.com/shopify/gltf-compressor)) – glTF compression tool by Shopify.
+- 🎨 [**PixiEditor 2.0**](https://pixieditor.net/) ([video](https://www.youtube.com/watch?v=5hmW2ZKO1YY), [source](https://github.com/PixiEditor/PixiEditor)) – Open source 2D graphics editor by [Pixi Labs](https://x.com/PixiEditor).
+
 ## 🎬 Videos
+
+- <BlenderLogo /> [**Blender Low-Poly Map Modeling
+  Tutorial**](https://www.youtube.com/watch?v=XSLshKjvlhk) (Mana Blade-style) by
+  [me](https://x.com/verekia).
 
 ## ✍️ Articles
 
 ## 🎮 Games
 
+- <ThreeLogo /> [**Cube City**](https://cube-city.vercel.app/)
+  ([source](https://github.com/hexianWeb/CubeCity/blob/big-simcity/README.en.md)) by
+  [hexianWeb](https://x.com/hexian37496562)
+- <R3FLogo /> [**Mana Blade**](https://manablade.com/) – Low-poly 3D MMORPG by
+  [me](https://x.com/verekia).
+
 ## ✨ Demos
+
+- <ThreeLogo /> [**Duck Pool**](https://mameson.com/experiment/glsl/aka_15/aka_15.html) – TSL-based
+  demo ([view source](view-source:https://mameson.com/experiment/glsl/aka_15/aka_15.html)) by [Maeda
+  Mameo](https://x.com/mamesoncom)
+- <ThreeLogo /> [**Easy Tomorrow Street**](https://www.easytomorrow.com/en) – Promotional website
+  for hangover relief products.
 
 My [Bookmarks](https://x.com/i/bookmarks).
 
