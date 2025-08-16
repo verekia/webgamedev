@@ -4,7 +4,7 @@ import { CGLogo, cgDevelopersUrl, cgMainUrl } from './CGSponsor'
 
 const Footer = () => (
   <footer className="bg-gray-100 dark:bg-neutral-900 py-10 text-center">
-    <div className="flex flex-col-reverse sm:flex-row-reverse gap-8 justify-around mb-8 items-center">
+    <div className="flex flex-col-reverse sm:flex-row gap-8 justify-around mb-8 items-center">
       <div className="flex flex-col items-center">
         <a href={cgMainUrl('footer')} target="_blank" rel="noopener">
           <CGLogo className="h-[56px]" />
