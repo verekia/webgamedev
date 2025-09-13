@@ -17,6 +17,10 @@ To use Blender as a game editor, you would typically export your scenes and asse
 
 This page aims to aggregate tips and tricks, workflow suggestions, and best practices on how to use Blender and glTF for your games. There is no one-size-fits-all approach to this because every game is different and has different needs, so pick whatever makes sense for you. Feel free to [contribute](https://github.com/verekia/webgamedev) to share your own tips!
 
+## Blender to R3F
+
+This [**blender-r3f**](https://github.com/verekia/blender-r3f) repo shows how to set up a Blender to React Three Fiber pipeline with hot reload.
+
 ## Using many small .blend files
 
 If your game contains many assets, one approach can be to create one Blender file per asset. This makes version control easier, and reduces risks of file corruption. The default Blender cube scene weighs about 900KB, which is not a lot, but because it's a binary file, any change you make to it will add the full size to your repository. That can add up quickly. You can use [Git LFS](https://git-lfs.com/), but I find it more comfortable to just reduce the file size and check them into regular Git. You can trim the fat by deleting things you don't need in the Blender File view (right-click, Delete):
