@@ -9,7 +9,7 @@ const PokiSponsor = () => (
   <div className="flex flex-col sm:flex-row gap-4 items-center bg-gray-100 dark:bg-neutral-900 px-5 py-4 rounded-lg">
     <div className="w-[140px] shrink-0 flex items-center justify-center">
       <a href={pokiMainUrl('homepage')} target="_blank">
-        <PokiLogo className="h-[50px] scale-[0.85]" />
+        <PokiLogo className="h-[50px] scale-[0.8]" />
       </a>
     </div>
     <div>

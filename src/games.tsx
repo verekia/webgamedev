@@ -43,6 +43,7 @@ import {
 import { PokiLogo } from 'components/PokiSponsor'
 import { CGLogo } from 'components/CGSponsor'
 import { WebGamerIcon, WebGamerText } from 'components/WebGamer'
+import { ViverseLogo } from 'components/ViverseSponsor'
 
 const Game = ({
   name,
@@ -194,7 +195,7 @@ const Game = ({
             borderBottomLeftRadius: 8,
             boxShadow: '0 2px 2px rgba(0, 0, 0, 0.2)',
           }}
-          className="bg-white"
+          className="bg-white dark:bg-neutral-950"
         >
           <a
             href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
@@ -203,7 +204,29 @@ const Game = ({
             className="flex items-center gap-1.5"
           >
             <WebGamerIcon className="size-6" />
-            <WebGamerText className="fill-black w-[6.5rem]" />
+            <WebGamerText className="fill-black w-[6.5rem] dark:fill-white" />
+          </a>
+        </div>
+      )}
+      {externalPlayUrl?.startsWith('https://worlds.viverse.com') && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            zIndex: 9,
+            borderBottomLeftRadius: 8,
+            boxShadow: '0 2px 2px rgba(0, 0, 0, 0.2)',
+            padding: '5px 12px',
+          }}
+          className="bg-white dark:bg-neutral-950"
+        >
+          <a
+            href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
+            target="_blank"
+            rel="noopener"
+          >
+            <ViverseLogo className="w-10 scale-[1.05]" />
           </a>
         </div>
       )}
@@ -271,7 +294,8 @@ const Game = ({
         href={
           websiteUrl ??
           (externalPlayUrl?.startsWith('https://poki.com') ||
-            externalPlayUrl?.startsWith('https://www.crazygames.com'))
+            externalPlayUrl?.startsWith('https://www.crazygames.com') ||
+            externalPlayUrl?.startsWith('https://worlds.viverse.com'))
             ? `${externalPlayUrl}?utm_source=webgamedev&utm_content=games`
             : externalPlayUrl
         }
@@ -319,11 +343,15 @@ export const Games = () => {
       if (portalFilter === 'webgamer') {
         return g.externalPlayUrl?.startsWith('https://webgamer.io')
       }
+      if (portalFilter === 'viverse') {
+        return g.externalPlayUrl?.startsWith('https://worlds.viverse.com')
+      }
       if (portalFilter === 'others') {
         return (
           !g.externalPlayUrl?.startsWith('https://poki.com') &&
           !g.externalPlayUrl?.startsWith('https://www.crazygames.com') &&
-          !g.externalPlayUrl?.startsWith('https://webgamer.io')
+          !g.externalPlayUrl?.startsWith('https://webgamer.io') &&
+          !g.externalPlayUrl?.startsWith('https://worlds.viverse.com')
         )
       }
       return true
@@ -342,7 +370,7 @@ export const Games = () => {
         .grid-container > div {
           background-color: #eee;
           height: 142px;
-          border-radius: 12px;
+          border-radius: 8px;
           text-align: center;
           background-position: center center;
           background-size: cover;
@@ -429,6 +457,7 @@ export const Games = () => {
         <option value="">All portals</option>
         <option value="poki">Poki</option>
         <option value="crazygames">CrazyGames</option>
+        <option value="viverse">VIVERSE</option>
         <option value="webgamer">WebGamer</option>
         <option value="others">Others</option>
       </select>

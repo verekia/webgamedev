@@ -9,7 +9,7 @@ const CGSponsor = () => (
   <div className="flex flex-col sm:flex-row gap-4 items-center bg-gray-100 dark:bg-neutral-900 px-5 py-4 rounded-lg">
     <div className="w-[140px] shrink-0 flex items-center justify-center">
       <a href={cgMainUrl('homepage')} target="_blank" rel="noopener">
-        <CGLogo className="h-[50px] relative top-[4px]" />
+        <CGLogo className="h-[50px] relative top-[4px] scale-[0.9]" />
       </a>
     </div>
     <div>
