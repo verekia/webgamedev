@@ -22,7 +22,8 @@ const ViverseSponsor = () => (
       <A href={viverseMainUrl('homepage')} rel="noopener">
         <b>VIVERSE</b>
       </A>
-      . We invest in creators pushing the boundaries of what’s possible in the browser.{' '}
+      . We invest in the next generation of creators that are pushing the boundaries of what's
+      possible in the browser.{' '}
       <A href={viverseDevelopersUrl('homepage')} rel="noopener">
         <b>Learn more</b>
       </A>
