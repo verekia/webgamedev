@@ -7,6 +7,7 @@ import {
   ConstructLogo,
   DefoldLogo,
   ExcaliburLogo,
+  GodotLogo,
   NeedleLogo,
   KaplayLogo,
   PlayCanvasLogo,
@@ -42,7 +43,7 @@ import { ViverseLogo, viverseMainUrl } from 'components/ViverseSponsor'
 
 <WebGPULogo /> **WebGPU** support landed in [**Safari 26.0**](https://webkit.org/blog/17333/webkit-features-in-safari-26-0/#webgpu)! And any site can be [installed as a web app](https://webkit.org/blog/17333/webkit-features-in-safari-26-0/#every-site-can-be-a-web-app-on-ios-and-ipados) on iOS and iPadOS.
 
-😺 [**Navcat**](https://github.com/isaac-mason/navcat/) by [Isaac Mason](https://x.com/isaac_mason_) (who made [recast-navigation-js](https://github.com/isaac-mason/recast-navigation-js)) is a new full-featured **navmesh** and **pathfinding** library for your game AI agent needs. Check out the [examples](https://navcat.dev/). Navcat is already used in production in Mana Blade! Isaac is also cooking up an ecosystem of cat-themed libraries for games, with [packcat](https://github.com/isaac-mason/packcat) and [mathcat](https://github.com/isaac-mason/mathcat).
+😺 [**Navcat**](https://navcat.dev/) ([repo](https://github.com/isaac-mason/navcat/)) by [Isaac Mason](https://x.com/isaac_mason_) (who made [recast-navigation-js](https://github.com/isaac-mason/recast-navigation-js)) is a new full-featured **navmesh** and **pathfinding** library for your game AI agent needs. Check out the [examples](https://navcat.dev/). Navcat is already used in production in Mana Blade! Isaac is also cooking up an ecosystem of cat-themed libraries for games, with [packcat](https://github.com/isaac-mason/packcat) and [mathcat](https://github.com/isaac-mason/mathcat).
 
 🎾 [**Bounce**](https://perplex.gg/bounce/) ([repo](https://codeberg.org/perplexdotgg/bounce)) by [Perplex](https://x.com/perplexdotgg) (our dear HamzaKubba on [Discord](https://webgamedev.com/discord)) is a new **physics library**. Weighing only 60kb gzipped, it's a batteries-included library with spatial queries, fast raycasting, sweep and intersection tests. It is renderer-agnostic, 100% deterministic, and does not require WebAssembly. Check out the [demos](https://perplex.gg/bounce/#demos) and [API](https://perplex.gg/bounce/#api).
 
@@ -67,7 +68,7 @@ import { ViverseLogo, viverseMainUrl } from 'components/ViverseSponsor'
         millions in revenue share to developers each year while fostering one of the most vibrant
         player communities worldwide. [**Publish your game on CrazyGames**](https://developer.crazygames.com/?utm_source=webgamedev&utm_content=newsletter)!
 
-        We’re heading to **Gamescom** in Cologne and would love to meet fellow web game devs! Whether you're already publishing with us or curious about how we can help scale your game's reach and revenue, come say hi! Feel free to [**schedule a meeting**](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0KM1KvCV72i9EUWDZ8RwXq4eQmym_K6ZwmAtNCqZ26QLnwzHcdcGVzGVVw4HDRX_lBjQ02eV0Q) with us.
+        Our latest feature, CrazyGames Leaderboards, is now live in a select group of titles. The platform leaderboards give players new reasons to return, compete, and stay engaged. Discover the first leaderboard-enabled games in our [Climb the Ranks](https://www.crazygames.com/t/climb-the-ranks?utm_source=webgamedev&utm_content=newsletter) tag.
     </div>
 
   </div>
@@ -139,10 +140,10 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
 
 - <R3FLogo /> [**Triplex**](https://triplex.dev/) – The React Three Fiber editor by [Douges](https://x.com/dougesdev) went fully [open source and moved to the pmndrs](https://triplex.dev/blog/triplex-moves-to-pmndrs) collective!
 - <R3FLogo /> [**@react-three/timeline**](https://pmndrs.github.io/timeline/getting-started/0-introduction) ([demo](https://react-three-timeline-lambo.vercel.app/), [repo](https://github.com/pmndrs/timeline)) – Write composable 3D behaviors like a story, by [Bela Bohlender](https://x.com/BelaBohlender).
+- 👾 [**bitECS v0.4.0**](https://github.com/NateTheGreatt/bitECS/blob/main/docs/RELEASE_NOTES_0.4.0.md) – Complete TS rewrite, relationships, prefabs, advanced queries, observers, by [Nate Martin](https://github.com/NateTheGreatt).
 - 〰️ [**Dot Noise**](https://mini.gmshaders.com/p/dot-noise) ([demo](https://www.shadertoy.com/view/wfsyRX)) – A cheap new alternative to 3D simplex noise by [Xor](https://x.com/XorDev). I implemented it for TSL in [TSLFX](https://tslfx.v1v2.io/misc/dot-noise).
 - 🎮 [**BandiJoystick.js**](https://bandijoystickjs.web.app/) – Turn a phone into a remote controller, by [Bandinopla](https://x.com/bandinopla).
-- 👾 [**bitECS v0.4.0**](https://github.com/NateTheGreatt/bitECS)
-- 🌎 [**Discord’s Cross-Platform Chat**](https://discord.com/blog/discords-powerful-cross-platform-chat-ready-for-your-game) by [Discord](https://discord.com/category/engineering)
+- 💬 [**Discord’s Cross-Platform Chat**](https://discord.com/blog/discords-powerful-cross-platform-chat-ready-for-your-game) by [Discord](https://discord.com/category/engineering)
 
 ## 🎬 Videos
 
@@ -167,51 +168,53 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
 ## 🎮 Games
 
 - <GameRelease
-    title="Lorem Ipsum"
-    url="https://www.crazygames.com/game/lorem-ipsum"
-    developer="Lorem Ipsum"
-    developerUrl="https://loremipsum.com/"
-    description="Lorem ipsum dolor sit amet"
-    EngineIcon={ThreeLogo}
+    title="Killover"
+    url="https://www.crazygames.com/game/killover-qjn"
+    developer="Quentin Delvallet"
+    developerUrl="https://x.com/QDelvallet"
+    description="Stylish third-person shooter challenges with an increasing difficulty."
+    EngineIcon={GodotLogo}
   />
 - <GameRelease
-    title="Lorem Ipsum"
-    url="https://www.crazygames.com/game/lorem-ipsum"
-    developer="Lorem Ipsum"
-    developerUrl="https://loremipsum.com/"
-    description="Lorem ipsum dolor sit amet"
-    EngineIcon={ThreeLogo}
+    title="Crazy Dummy Swing Multiplayer"
+    url="https://www.crazygames.com/game/crazy-dummy-swing-multiplayer"
+    developer="Dinobros"
+    developerUrl="https://dinobros.com/"
+    description="Fast-paced swinging rope multiplayer game."
+    EngineIcon={ConstructLogo}
   />
 - <GameRelease
-    title="Lorem Ipsum"
-    url="https://www.crazygames.com/game/lorem-ipsum"
-    developer="Lorem Ipsum"
-    developerUrl="https://loremipsum.com/"
-    description="Lorem ipsum dolor sit amet"
-    EngineIcon={BabylonLogo}
+    title="Supermarket Together"
+    url="https://www.crazygames.com/game/supermarket-together"
+    developer="Yerma Games"
+    description="Fun and in-depth convenience store management game."
+    EngineIcon={UnityLogo}
   />
 - <GameRelease
-    title="Lorem Ipsum"
-    url="https://www.crazygames.com/game/lorem-ipsum"
-    developer="Lorem Ipsum"
-    developerUrl="https://loremipsum.com/"
-    description="Lorem ipsum dolor sit amet"
-    EngineIcon={PlayCanvasLogo}
+    title="Cozy Golf"
+    url="https://www.crazygames.com/game/cozy-golf"
+    developer="supernice.games"
+    developerUrl="https://supernice.games/"
+    description="A relaxing golfing game with soothing music."
+    EngineIcon={R3FLogo}
   />
 - <GameRelease
-    title="Lorem Ipsum"
-    url="https://www.crazygames.com/game/lorem-ipsum"
-    developer="Lorem Ipsum"
-    developerUrl="https://loremipsum.com/"
-    description="Lorem ipsum dolor sit amet"
-    EngineIcon={PlayCanvasLogo}
+    title="Imagine Island"
+    url="https://www.crazygames.com/game/imagine-island"
+    developer="Magic Potion Games"
+    developerUrl="https://magicpotiongames.com/"
+    description="A virtual world of fun, friends, fishing and fashion."
+    EngineIcon={UnityLogo}
   />
+
+<div />
+
 - <GameRelease
     title="In Tirol"
     url="https://worlds.viverse.com/qj4Fjpg"
     developer="James C. Kane"
     developerUrl="https://jamesckane.com/"
-    description="Escape the storm across the strange manor grounds near Salzburg, 1914"
+    description="Escape the storm across the strange manor grounds near Salzburg, 1914."
     EngineIcon={PlayCanvasLogo}
   />
 - <GameRelease
@@ -219,7 +222,7 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
     url="https://worlds.viverse.com/LJxPNPP"
     developer="Cause + Christi"
     developerUrl="https://causechristi.com/"
-    description="You're an engineer on a ship tasked with looting Earth's final remains"
+    description="You're an engineer on a ship tasked with looting Earth's final remains."
     EngineIcon={PlayCanvasLogo}
   />
 - <GameRelease
@@ -227,7 +230,7 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
     url="https://worlds.viverse.com/jtrJ9az"
     developer="A Number From the Ghost"
     developerUrl="https://www.anumberfromtheghost.com/"
-    description="Wander and explore a surreal world and its interactive music"
+    description="Wander and explore a surreal world and its interactive music."
     EngineIcon={ThreeLogo}
   />
 - <GameRelease
@@ -235,7 +238,7 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
     url="https://worlds.viverse.com/EcxNxwe"
     developer="Brian Breiholz"
     developerUrl="https://x.com/BrianBreiholz"
-    description="A classic jump-and-run platformer where you fight the Vespoids"
+    description="A classic jump-and-run platformer where you fight the Vespoids."
     EngineIcon={ThreeLogo}
   />
 - <GameRelease
@@ -243,15 +246,18 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
     url="https://worlds.viverse.com/KG6XZmH"
     developer="Alastair Low"
     developerUrl="https://x.com/Wallmasterr"
-    description="Save your grandad and the world with the power of art"
+    description="Save your grandad and the world with the power of art."
     EngineIcon={PlayCanvasLogo}
   />
+
+<div />
+
 - <GameRelease
     title="Squid Dash"
     url="https://poki.com/en/g/squid-dash"
     developer="Redox Interactive"
     developerUrl="https://redox-interactive.com/"
-    description="Throw a squid as far as you can, unlock upgrades to go even further"
+    description="Throw a squid as far as you can, unlock upgrades to go even further."
     EngineIcon={PlayCanvasLogo}
   />
 - <GameRelease
@@ -259,7 +265,7 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
     url="https://poki.com/en/g/build-league"
     developer="OnRush Studio"
     developerUrl="https://onrush.studio/"
-    description="Design, build, and upgrade your airplane to fly as far as you can"
+    description="Design, build, and upgrade your airplane to fly as far as you can."
     EngineIcon={PlayCanvasLogo}
   />
 - <GameRelease
@@ -267,7 +273,7 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
     url="https://poki.com/en/g/merge-monster-battles"
     developer="ARF Games"
     developerUrl="https://x.com/arfgames"
-    description="Combine cute monsters to fight against waves of enemies"
+    description="Combine cute monsters to fight against waves of enemies."
     EngineIcon={ConstructLogo}
   />
 - <GameRelease
@@ -275,7 +281,7 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
     url="https://poki.com/en/g/porki-poke"
     developer="Dinobros"
     developerUrl="https://www.dinobros.com/"
-    description="Manage and optimize your poke bowl restaurant to serve customers"
+    description="Manage and optimize your poke bowl restaurant to serve customers."
     EngineIcon={ConstructLogo}
   />
 - <GameRelease
@@ -283,34 +289,13 @@ We are rolling out Beta one-time payments and subscriptions. Our new monetizatio
     url="https://poki.com/en/g/pocket-car-city"
     developer="Nineties Games"
     developerUrl="https://nineties-games.odoo.com/"
-    description="A driving game where the whole city is your playground"
+    description="A driving game where the whole city is your playground."
     EngineIcon={UnityLogo}
   />
-- <GameRelease
-    title="Lorem Ipsum"
-    url="https://webgamer.io/en/g/lorem-ipsum"
-    developer="Lorem Ipsum"
-    developerUrl="https://loremipsum.com/"
-    description="Lorem ipsum dolor sit amet"
-    EngineIcon={ThreeLogo}
-  />
-- <GameRelease
-    title="Lorem Ipsum"
-    url="https://webgamer.io/en/g/lorem-ipsum"
-    developer="Lorem Ipsum"
-    developerUrl="https://loremipsum.com/"
-    description="Lorem ipsum dolor sit amet"
-    EngineIcon={ThreeLogo}
-  />
-- <GameRelease
-    title="Lorem Ipsum"
-    url="https://webgamer.io/en/g/lorem-ipsum"
-    developer="Lorem Ipsum"
-    developerUrl="https://loremipsum.com/"
-    description="Lorem ipsum dolor sit amet"
-    EngineIcon={ThreeLogo}
-  />
-- <ThreeLogo />[**Messenger**](https://messenger.abeto.co/) by [Abeto](https://abeto.co/) – Deliver mail on a tiny, beautifully stylized world. Must try.
+
+<div />
+
+- <ThreeLogo />[**Messenger**](https://messenger.abeto.co/) by [Abeto](https://abeto.co/) – Deliver mail on a tiny, beautifully stylized world. _Must try._
 
 ## ✨ Demos
 
