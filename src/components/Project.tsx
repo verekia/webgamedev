@@ -83,7 +83,7 @@ const Project = ({
 
   return (
     <span style={{ opacity: hide ? '0.6' : '1' }} {...props}>
-      <A href={url ?? repoUrl} style={{ fontWeight: 'bold' }}>
+      <A href={url ?? (repo ? repoUrl : undefined)} style={{ fontWeight: 'bold' }}>
         {name}
       </A>
       {(repo || npm || description || isNew || lastCommitDate || ts) && (
@@ -124,7 +124,7 @@ const Project = ({
           )}
           {stars && (
             <A
-              href={repoUrl}
+              href={repo ? repoUrl : undefined}
               className={starsColorClassName}
               style={{ marginLeft: 8, whiteSpace: 'nowrap' }}
             >
