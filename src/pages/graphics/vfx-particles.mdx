@@ -1,10 +1,21 @@
 import ProjectList from 'components/ProjectList'
-import Todo from 'components/Todo'
 import { particles as projects } from 'projects'
 
 # ✨ VFX & Particles
 
-There are a few VFX and particles libraries for Three.js:
+A **particle system** emits many small elements (sprites, points, or meshes) to simulate effects like fire, smoke, sparks, rain, explosions, and magic. Each particle typically has a **lifetime**, **velocity**, **color**, and **size** that evolve over time.
+
+## Key Concepts
+
+- **Emitter** — the source that spawns particles. It defines the spawn rate, initial position, direction, and spread.
+- **Lifetime** — how long each particle lives before being removed or recycled. Short lifetimes give snappy effects (sparks); long lifetimes give lingering ones (smoke).
+- **Forces** — gravity, wind, turbulence, and attraction/repulsion that affect particle movement over time.
+- **Billboarding** — rotating flat sprites to always face the camera, so they appear as volumetric elements rather than flat planes.
+- **GPU particles** — for large particle counts, storing particle data in textures or buffer attributes and updating them in shaders is far more efficient than CPU-side updates.
+
+For GPU-driven particles in Three.js, the underlying primitives are `BufferGeometry` with `Float32Array`-backed `BufferAttribute` and `Points` / `PointsMaterial`.
+
+## Libraries
 
 <ProjectList
   projects={[
@@ -16,19 +27,7 @@ There are a few VFX and particles libraries for Three.js:
   ]}
 />
 
-<Todo>
-`BufferGeometry`
+## Resources
 
-`Float32Array`
-
-`BufferAttribute`
-
-`Points`
-
-`PointsMaterial`
-
-[The art of screenshake](https://www.youtube.com/watch?v=AJdEqssNZ-U)
-
-[League of Legends VFX styleguide](https://nexus.leagueoflegends.com/wp-content/uploads/2017/10/VFX_Styleguide_final_public_hidpjqwx7lqyx0pjj3ss.pdf)
-
-</Todo>
+- [The art of screenshake](https://www.youtube.com/watch?v=AJdEqssNZ-U)
+- [League of Legends VFX styleguide](https://nexus.leagueoflegends.com/wp-content/uploads/2017/10/VFX_Styleguide_final_public_hidpjqwx7lqyx0pjj3ss.pdf)

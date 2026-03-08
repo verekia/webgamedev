@@ -1,6 +1,5 @@
 import StatsComparison from 'components/StatsComparison'
 import ProjectList from 'components/ProjectList'
-import Todo from 'components/Todo'
 import A from 'components/A'
 import { webWorkers as projects } from 'projects'
 
@@ -33,15 +32,10 @@ Note that you can use [`import.meta.url`](https://developer.mozilla.org/en-US/do
 const worker = new Worker(new URL('./worker.ts', import.meta.url))
 ```
 
-<Todo
-  children={
-    <>
-      Add an example with Comlink, serialization, passing references,{' '}
-      <A href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker">Shared Workers</A>,{' '}
-      <A href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects">
-        Transferable objects
-      </A>
-      .
-    </>
-  }
-/>
+## Data Transfer
+
+By default, data sent via `postMessage` is **copied** (structured clone), which is fine for small payloads but expensive for large arrays. [Transferable objects](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) (like `ArrayBuffer`) can be transferred to the worker with zero copy cost — but the main thread loses access to that data.
+
+## Shared Workers
+
+A [Shared Worker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) can be accessed by multiple browser tabs or iframes from the same origin. This is useful for sharing a single connection (e.g., a WebSocket) across multiple tabs of the same game.

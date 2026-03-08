@@ -1,5 +1,3 @@
-import Todo from 'components/Todo'
-
 # 📋 Instanced Meshes
 
 If you have multiple identical meshes in your scene, use instanced meshes to reduce the number of draw calls. This is especially useful for large scenes with many trees, rocks, or other objects that are repeated many times.
@@ -57,56 +55,17 @@ const Trees = () => (
 )
 ```
 
-<Todo>Test this code.</Todo>
-
 This works great for static meshes, but not for animated skinned meshes.
 
 ## Instanced Skinned Meshes
 
-<Todo
-  children={
-    <>
-      🤔 From my understanding, instanced skinned meshes are not supported by Three.js with WebGL,
-      only WebGPU, and without Drei helper. Relevant links:
-      <p>
-        <a href="https://github.com/wizgrav/three.js/blob/dev/examples/webgl_instancing_skinning.html">
-          WebGL
-        </a>{' '}
-        (
-        <a href="https://wizgrav.github.io/three.js/examples/webgl_instancing_skinning.html">
-          demo
-        </a>{' '}
-        – <a href="https://github.com/mrdoob/three.js/pull/22667">closed unmerged PR</a>),{' '}
-        <a href="https://github.com/mrdoob/three.js/blob/dev/examples/webgpu_skinning_instancing.html">
-          WebGPU
-        </a>{' '}
-        (<a href="https://threejs.org/examples/webgpu_skinning_instancing.html">demo</a> – requires
-        WebGPU enabled).{' '}
-        <a href="https://codesandbox.io/s/three-js-instanced-skinned-mesh-2yfgiu">
-          Cody Bennett's implementation
-        </a>
-        . <a href="https://112ka.github.io/sketches/instanced_skinned_mesh/">
-          iizuka masayuki's demo
-        </a> (<a href="https://github.com/112KA/Sketches/tree/main/apps/sketches/src/instanced_skinned_mesh">
-          source
-        </a>).
-      </p>
-      <p>
-        <a href="https://discourse.threejs.org/t/optimization-of-large-amounts-100-1000-of-skinned-meshes-cpu-bottlenecks/58196">
-          Discussion on Three.js forum
-        </a>
-      </p>
-      <p>
-        <a href="https://developer.nvidia.com/gpugems/gpugems3/part-i-geometry/chapter-2-animated-crowd-rendering">
-          Animated Crowd Rendering technique in NVIDIA GPU Gems
-        </a>{' '}
-        (encoding all frames of all animations into a texture and look up the bone matrices from
-        that texture in the vertex shader)
-      </p>
-      <p>
-        <a href="https://jsfiddle.net/cbenn/Las0poyu">InstancedBatchedSkinnedMesh</a> by Cody
-        Bennett
-      </p>
-    </>
-  }
-/>
+Instanced skinned meshes (animated characters rendered via instancing) are not straightforward in Three.js. WebGPU has native support, while WebGL requires workarounds. One technique from [NVIDIA GPU Gems](https://developer.nvidia.com/gpugems/gpugems3/part-i-geometry/chapter-2-animated-crowd-rendering) encodes all frames of all animations into a texture and looks up bone matrices from that texture in the vertex shader.
+
+### Resources
+
+- [WebGL instanced skinning example](https://github.com/wizgrav/three.js/blob/dev/examples/webgl_instancing_skinning.html) ([demo](https://wizgrav.github.io/three.js/examples/webgl_instancing_skinning.html), [closed unmerged PR](https://github.com/mrdoob/three.js/pull/22667))
+- [WebGPU skinning instancing example](https://github.com/mrdoob/three.js/blob/dev/examples/webgpu_skinning_instancing.html) ([demo](https://threejs.org/examples/webgpu_skinning_instancing.html) — requires WebGPU enabled)
+- [Cody Bennett's implementation](https://codesandbox.io/s/three-js-instanced-skinned-mesh-2yfgiu)
+- [InstancedBatchedSkinnedMesh](https://jsfiddle.net/cbenn/Las0poyu) by Cody Bennett
+- [iizuka masayuki's demo](https://112ka.github.io/sketches/instanced_skinned_mesh/) ([source](https://github.com/112KA/Sketches/tree/main/apps/sketches/src/instanced_skinned_mesh))
+- [Three.js forum discussion on optimizing large amounts of skinned meshes](https://discourse.threejs.org/t/optimization-of-large-amounts-100-1000-of-skinned-meshes-cpu-bottlenecks/58196)

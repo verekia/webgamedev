@@ -1,29 +1,36 @@
 {/* Doesn't seem to work when coming from an other page */}
 
-import Todo from 'components/Todo'
 import YouTube from 'components/YouTube'
 
 # 🤝 Client-Side Prediction and Server Reconciliation
 
-<Todo>
+In multiplayer games, the **server is often authoritative** — it is the single source of truth for game state. But network latency means players would feel a noticeable delay between pressing a key and seeing the result if they waited for the server's response. Client-side prediction and server reconciliation solve this.
 
-Authoritative server
+## Client-Side Prediction
 
-Input validation
+The client doesn't wait for the server. When a player presses "move forward", the client immediately simulates the result locally using the same game logic as the server. The player sees instant feedback. In the background, the input is sent to the server for validation.
 
-Running a server-side simulation
+## Server Reconciliation
 
-[What is Rollback Netcode?](https://bymuno.com/post/rollback) by
-[Muno](https://x.com/munosnail)
+When the server processes an input and sends back the authoritative state, the client compares it to its prediction. If they match, nothing happens. If they diverge (because of lag, cheating, or conflicting actions), the client **corrects** its state to match the server's version and replays any inputs that happened since then.
 
-Optimistic UI
+## Input Validation
 
-[Snapshot Interpolation library](https://github.com/geckosio/snapshot-interpolation)
+The server must validate every input it receives. Never trust the client — a modified client could send impossible inputs (teleporting, moving too fast, firing without ammo). The server runs its own simulation and rejects invalid actions.
 
-</Todo>
+## Dead Reckoning
+
+For other players' characters (that you don't control), you don't have future inputs to predict. Instead, you extrapolate their position based on their last known velocity and direction. This is **[dead reckoning](https://en.wikipedia.org/wiki/Dead_reckoning)** — it keeps movement looking smooth between network updates, though it can cause snapping when corrections arrive.
+
+## Rollback Netcode
+
+In fast-paced games (especially fighting games), **rollback netcode** takes prediction further. The game predicts the opponent's inputs, and if the prediction was wrong, it rolls back the game state and resimulates forward with the correct inputs — all within a few frames. This produces much smoother gameplay than waiting for input confirmation.
 
 <YouTube id="_8A2gzRrWLk" />
 
-Wikipedia: [Dead reckoning](https://en.wikipedia.org/wiki/Dead_reckoning)
-
 <YouTube id="zrIY0eIyqmI" />
+
+## Resources
+
+- [What is Rollback Netcode?](https://bymuno.com/post/rollback) by [Muno](https://x.com/munosnail)
+- [Snapshot Interpolation library](https://github.com/geckosio/snapshot-interpolation)

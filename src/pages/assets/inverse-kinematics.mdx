@@ -1,21 +1,28 @@
-import Todo from 'components/Todo'
-
 # 🦴 Inverse Kinematics
 
-Inverse Kinematics (IK) is the process of calculating the position of the _bones_ of a mesh based on constraints. A way to define constraints is by using _joints_.
+**Inverse Kinematics** (IK) is the process of calculating the position of the _bones_ of a mesh based on constraints. A way to define constraints is by using _joints_.
 
-<Todo>
+In **forward kinematics**, you set each bone's rotation directly — rotate the shoulder, then the elbow, then the wrist. In **inverse kinematics**, you specify where the _end_ should be (e.g., "the hand should be on this ledge") and the algorithm calculates the rotations for all bones in the chain to reach that target.
 
-[Three.IK](https://github.com/jsantell/THREE.IK)
+## Common Use Cases
 
-[fullik](https://github.com/lo-th/fullik)
+- **Foot placement** — adjusting a character's legs so feet land correctly on uneven terrain rather than clipping through slopes or floating above stairs.
+- **Reaching and grabbing** — making a character's hand reach toward a door handle, weapon pickup, or another character.
+- **Look-at** — rotating a character's head and spine to look at a target naturally.
+- **Procedural animation** — spider legs, tentacles, and robotic arms that adapt dynamically to the environment rather than relying on pre-baked animations.
 
-[closed-chain-ik-js](https://github.com/gkjohnson/closed-chain-ik-js)
+## Algorithms
 
-[Three.js CCDIKSolver](https://threejs.org/docs/#examples/en/animations/CCDIKSolver)
+- **CCD** (Cyclic Coordinate Descent) — iteratively adjusts each joint from the end of the chain to the root, rotating each one to bring the end effector closer to the target. Simple and fast.
+- **FABRIK** (Forward And Backward Reaching Inverse Kinematics) — works by alternately reaching from the end to the target and then correcting from the root. Handles chains and constraints well.
+- **Closed-chain IK** — handles loops in the bone structure (e.g., two hands holding the same object), which is more complex than simple open chains.
 
-[Rapier Joints](https://rapier.rs/docs/user_guides/javascript/joints/)
+## Resources
 
-[WIP Free ebook](https://sketchpunklabs.github.io/ikwonderland) by [VoR / SketchpunkLabs](https://x.com/sketchpunklabs) [YouTube](https://www.youtube.com/c/SketchpunkLabs), [Ossos library](https://github.com/sketchpunklabs/ossos)
-
-</Todo>
+- [Three.IK](https://github.com/jsantell/THREE.IK)
+- [fullik](https://github.com/lo-th/fullik)
+- [closed-chain-ik-js](https://github.com/gkjohnson/closed-chain-ik-js)
+- [Three.js CCDIKSolver](https://threejs.org/docs/#examples/en/animations/CCDIKSolver)
+- [Rapier Joints](https://rapier.rs/docs/user_guides/javascript/joints/)
+- [IK Wonderland ebook (WIP)](https://sketchpunklabs.github.io/ikwonderland) by [VoR / SketchpunkLabs](https://x.com/sketchpunklabs) ([YouTube](https://www.youtube.com/c/SketchpunkLabs))
+- [Ossos library](https://github.com/sketchpunklabs/ossos)

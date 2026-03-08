@@ -1,14 +1,23 @@
-import Todo from 'components/Todo'
 import ProjectList from 'components/ProjectList'
 import { audio as projects } from 'projects'
 
 # 🔈 Audio
 
+Audio is essential to game feel — sound effects provide feedback for player actions, ambient sounds build atmosphere, and music sets the emotional tone.
+
+## Web Audio API
+
+The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is the browser's built-in system for playing and processing audio. It provides a node-based graph where you connect sources, effects, and outputs. For games, the key features are low-latency playback, volume control, and **spatial/positional audio** — sounds that get louder or quieter based on the listener's distance and direction, with panning between left and right channels.
+
+Note that browsers require a user interaction (click, tap) before audio can play — you can't autoplay sounds on page load.
+
+For heavy audio processing, [Audio Worklets](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet) let you run custom audio code in a dedicated thread.
+
 ## Toolkits
 
 <ProjectList projects={[projects.howler, projects.soundJs]} />
 
-## Music production, effects
+## Music Production and Effects
 
 <ProjectList
   projects={[
@@ -22,14 +31,6 @@ import { audio as projects } from 'projects'
   ]}
 />
 
-<Todo>
-  Positional audio / spatial audio
-  
-[Web Audio
-  API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+## Resources
 
-[soundraw.io](https://soundraw.io/)
-
-[Audio Worklets](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet)
-
-</Todo>
+- [soundraw.io](https://soundraw.io/)

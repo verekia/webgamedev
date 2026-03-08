@@ -1,4 +1,3 @@
-import Todo from 'components/Todo'
 import YouTube from 'components/YouTube'
 
 # 📐 Fundamental Math
@@ -29,8 +28,17 @@ Game development involves a lot of math, so you might want to dust off your high
 
 {/* <YouTube id="UG530eh8q4A" /> */}
 
-<Todo>
-  Vectors, matrices, [Lerp](https://www.youtube.com/watch?v=YJB1QnEmlTs), smoothstep, damp,
-  Projections, sin, cos, atan2, Rotations, quaternions, raycasting,
-  [quadtrees](https://news.ycombinator.com/item?id=34786075)
-</Todo>
+## Core Concepts
+
+- **Vectors** — the fundamental building block. A vector represents a direction and magnitude (e.g., velocity, force, position offset). Operations like addition, subtraction, dot product, and cross product are used constantly.
+- **Matrices** — used to represent transformations (translation, rotation, scale) and combine them efficiently. A 4x4 matrix can encode an object's entire transform.
+- **Quaternions** — the preferred way to represent rotations in 3D. Unlike Euler angles, they don't suffer from gimbal lock and interpolate smoothly.
+- **Lerp** (linear interpolation) — smoothly blends between two values. `lerp(a, b, t)` returns a value between `a` and `b` based on `t` (0 to 1). Used everywhere: movement smoothing, color transitions, camera follow.
+- **Smoothstep and damp** — non-linear interpolation for smoother, more natural transitions than raw lerp.
+- **Trigonometry** — `sin`, `cos`, and `atan2` are essential for circular motion, rotations, angle calculations, and wave-based animations.
+- **Projections** — converting between 3D world space and 2D screen space (and back).
+
+## Resources
+
+- [Lerp video](https://www.youtube.com/watch?v=YJB1QnEmlTs)
+- [Quadtrees discussion](https://news.ycombinator.com/item?id=34786075)

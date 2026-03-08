@@ -1,37 +1,29 @@
-import Todo from 'components/Todo'
-
 # 🖥️ User Interface (UI)
 
-<Todo>
+## HTML Overlay vs. In-World UI
 
-[Billboards](https://github.com/pmndrs/drei#billboard)
+The most common approach for game UI on the web is to render HTML/CSS on top of the 3D canvas. This gives you the full power of the browser's layout engine — text, flexbox, inputs, accessibility — while keeping the 3D scene underneath. Most UI frameworks (React, Vue, etc.) work naturally with this approach.
 
-[Drei Html](https://github.com/pmndrs/drei#html) (+ add React providers)
+For UI that exists inside the 3D scene (floating health bars, name tags, interaction prompts), you project HTML elements to follow 3D positions, or render UI directly onto textures in the scene.
 
-[Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)
+## Billboards
 
-[screenfull](https://www.npmjs.com/package/screenfull)
+A **billboard** is a plane that always faces the camera. It's used for in-world labels, health bars, damage numbers, and other elements that need to be readable regardless of camera angle.
 
-[Better full screen mode with the Keyboard Lock API](https://developer.chrome.com/blog/better-full-screen-mode/)
+## Fullscreen and Orientation
 
-[Screen orientation lock API](https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/lock)
+The [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) lets your game take over the entire screen. Combined with the [Keyboard Lock API](https://developer.chrome.com/blog/better-full-screen-mode/), you can prevent the browser from capturing keys like Escape or F-keys. The [Screen Orientation Lock API](https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/lock) forces landscape or portrait mode on mobile devices.
 
-[RequestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
+## Canvas Responsiveness
 
-Throttle
+Unlike HTML, a 3D canvas doesn't automatically resize with the browser window. You need to listen for resize events and update the canvas size, camera aspect ratio, and renderer viewport accordingly. Throttling resize handlers avoids excessive recalculation during drag-resizing.
 
-Canvas responsiveness
+## Resources
 
-Syncing with ECS
-
-Chakra, Mantine, Material UI, Tailwind, Sass, etc
-
-[r3f-form](https://github.com/JMBeresford/r3f-form) ([@react-three/xr compatibility](https://github.com/JMBeresford/r3f-form/issues/13))
-
-[@14islands/r3f-scroll-rig](https://www.npmjs.com/package/@14islands/r3f-scroll-rig) (should be open-source Q1 2023)
-
-[Satori](https://github.com/vercel/satori) - [demo](https://codesandbox.io/s/satori-html-tailwind-in-threejs-forked-l9250f)
-
-[**Game UI Database**](https://gameuidatabase.com/) – A collection of game UIs for inspiration and references.
-
-</Todo>
+- [Drei Billboard](https://github.com/pmndrs/drei#billboard)
+- [Drei Html](https://github.com/pmndrs/drei#html)
+- [screenfull](https://www.npmjs.com/package/screenfull)
+- [r3f-form](https://github.com/JMBeresford/r3f-form) ([@react-three/xr compatibility](https://github.com/JMBeresford/r3f-form/issues/13))
+- [@14islands/r3f-scroll-rig](https://www.npmjs.com/package/@14islands/r3f-scroll-rig)
+- [Satori](https://github.com/vercel/satori) ([demo](https://codesandbox.io/s/satori-html-tailwind-in-threejs-forked-l9250f))
+- [Game UI Database](https://gameuidatabase.com/)
