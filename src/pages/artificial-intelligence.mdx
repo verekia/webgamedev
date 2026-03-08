@@ -1,51 +1,51 @@
-import Todo from 'components/Todo'
 import YouTube from 'components/YouTube'
 
-# 🤖 Artificial Intelligence
+# 🤖 Artificial Intelligence
 
-<Todo>
+Game AI refers to the techniques used to make NPCs (non-player characters) and other game entities behave in believable and engaging ways. Unlike research AI (machine learning, neural networks), game AI is typically focused on creating the _illusion_ of intelligence efficiently and predictably.
 
-[**Navcat**](https://navcat.dev/)
+## Behavior Patterns
 
-<YouTube id="G5A0-_4dFLg" />
+### Finite State Machines (FSM)
 
-[Yuka](https://github.com/Mugen87/yuka)
+A Finite State Machine is one of the simplest and most widely-used patterns in game AI. An entity has a set of discrete **states** (e.g., `idle`, `patrol`, `chase`, `attack`), and **transitions** between them triggered by conditions (e.g., "player spotted" transitions from `patrol` to `chase`). FSMs are easy to implement, debug, and reason about — but can become unwieldy with many states and complex transitions.
 
-[React three NPC](https://github.com/ssethsara/react-three-npc) by [Supun Sethsara](https://x.com/Sethsara)
+### Behavior Trees
 
-Decision tree, FSM
+Behavior trees are a more scalable alternative to FSMs for complex AI. They organize actions into a tree of **nodes**: selectors (try each child until one succeeds), sequences (run children in order), decorators (modify child behavior), and leaf nodes (actual actions).
 
-Agents
+### Steering Behaviors
 
-</Todo>
+Steering behaviors describe how autonomous agents move through a scene — seeking a target, fleeing from a threat, wandering randomly, or flocking with a group. Individual behaviors can be combined to produce complex emergent movement. Craig Reynolds' [original paper](https://www.red3d.com/cwr/steer/) is the seminal resource on the topic.
 
 ## Pathfinding
 
-<Todo>
-Dijkstra, [A\*](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
+Pathfinding determines how an agent navigates from point A to point B while avoiding obstacles.
 
-[three-pathfinding](https://github.com/donmccurdy/three-pathfinding)
+### Algorithms
 
-[easystarjs](https://github.com/prettymuchbryce/easystarjs)
+- **A\*** (A-star) is the most commonly used pathfinding algorithm in games. It finds the shortest path between two nodes on a graph by combining an actual cost function with a heuristic estimate of the remaining distance to the goal.
+- **Dijkstra** is similar to A\* but without the heuristic. It explores more nodes and is slower, but is guaranteed to find the optimal path in any graph.
 
-[Navigation Meshes](https://github.com/donmccurdy/three-pathfinding)
+### Navigation Meshes
 
-[ngraph.path](https://github.com/anvaka/ngraph.path)
+For 3D games, grid-based pathfinding is rarely practical. Instead, a **navigation mesh** (navmesh) defines the walkable surfaces of your scene as a polygon mesh. Agents pathfind across the navmesh, which is far more memory-efficient than a voxel grid and handles complex geometry naturally. **Recast & Detour** is the industry-standard C++ navmesh toolkit (used internally by Unity, Unreal Engine, and Godot). Several JavaScript ports and other options exist (see Resources below).
 
-[PathFinding.js](https://github.com/qiao/PathFinding.js)
+## Resources
 
-[recastjs](https://github.com/BabylonJS/Extensions/tree/master/recastjs) (recast-detour on NPM)
+- [Navcat](https://navcat.dev/)
+- [Yuka](https://github.com/Mugen87/yuka)
+- [react-three-npc](https://github.com/ssethsara/react-three-npc) by [Supun Sethsara](https://x.com/Sethsara)
+- [A\* introduction](https://www.redblobgames.com/pathfinding/a-star/introduction.html) by Red Blob Games
+- [three-pathfinding](https://github.com/donmccurdy/three-pathfinding)
+- [easystarjs](https://github.com/prettymuchbryce/easystarjs)
+- [ngraph.path](https://github.com/anvaka/ngraph.path)
+- [PathFinding.js](https://github.com/qiao/PathFinding.js)
+- [recastjs](https://github.com/BabylonJS/Extensions/tree/master/recastjs) (recast-detour on NPM)
+- [recast-detour](https://github.com/crowdedjs/recast-detour)
+- [Yuka route planning and collision avoidance](https://x.com/WillMaddicott/status/1593346452574670849)
+- [AI and Games YouTube channel](https://www.youtube.com/@AIandGames)
+- [The Total Beginner's Guide to Game AI](https://www.gamedev.net/articles/programming/artificial-intelligence/the-totalbeginners-guide-to-game-ai-r4942/)
+- [Game AI Pro](https://www.gameaipro.com/)
 
-[recast-detour](https://github.com/crowdedjs/recast-detour) (unrelated to recastjs' recast-detour NPM package)
-
-Those libraries are JavaScript ports of Recast, a C++ navigation mesh construction toolset. Detour is a path-finding and spatial reasoning toolkit that can be used with Recast.
-
-[Yuka route planning and collision avoidance](https://x.com/WillMaddicott/status/1593346452574670849)
-
-[AI and Games YouTube channel](https://www.youtube.com/@AIandGames)
-
-[The Total Beginner's Guide to Game AI](https://www.gamedev.net/articles/programming/artificial-intelligence/the-totalbeginners-guide-to-game-ai-r4942/)
-
-[Game AI Pro](https://www.gameaipro.com/)
-
-</Todo>
+<YouTube id="G5A0-_4dFLg" />

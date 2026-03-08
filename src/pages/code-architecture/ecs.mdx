@@ -1,6 +1,5 @@
 import ProjectList from 'components/ProjectList'
 import StatsComparison from 'components/StatsComparison'
-import Todo from 'components/Todo'
 import { ecs as projects } from 'projects'
 
 # 👾 Entity - Component - System (ECS)
@@ -10,11 +9,11 @@ import { ecs as projects } from 'projects'
 <ProjectList
   projects={[
     projects.bitecs,
+    { ...projects.koota, description: '🌱 New - Has React bindings' },
     { ...projects.miniplex, description: 'Has React bindings' },
-    { ...projects.koota, description: '(New!) Has React bindings' },
     projects.becsy,
-    { ...projects.javelin, description: 'Includes networking' },
-    projects.ecsy,
+    { ...projects.ecsy, collapsed: true },
+    { ...projects.javelin, description: 'Includes networking', collapsed: true },
     { ...projects.thyseus, collapsed: true },
     { ...projects.tickKnock, collapsed: true },
     { ...projects.ecsLib, collapsed: true },
@@ -44,41 +43,35 @@ import { ecs as projects } from 'projects'
   ]}
 />
 
-<Todo>
+## What is ECS?
 
-What ECS is and how it compares to other paradigms.
+ECS stands for **Entity-Component-System**, an architectural pattern widely used in game development that prioritizes performance and composability.
 
-[js-ecs-benchmarks](https://github.com/ddmills/js-ecs-benchmarks)
+- **Entities** are just unique identifiers (IDs) — they have no data or behavior of their own
+- **Components** are plain data containers attached to entities (e.g., `Position`, `Velocity`, `Health`)
+- **Systems** are functions that query and process all entities matching a set of components (e.g., a movement system reads `Velocity` and writes `Position` every frame)
 
-[noctjs/ecs-benchmark](https://github.com/noctjs/ecs-benchmark)
+### Why ECS for games?
 
-[ECS FAQ](https://github.com/SanderMertens/ecs-faq)
+**Performance**: Traditional OOP stores object data across scattered heap allocations. ECS stores component data in tightly packed typed arrays, maximizing CPU cache efficiency — especially important when updating thousands of entities per frame.
 
-[ECS vs OOP](https://flamendless.github.io/ecs-vs-oop/)
+**Composability**: Instead of deep inheritance hierarchies, you build behavior by combining components. A `Projectile` is just an entity with `Position`, `Velocity`, and `Damage` components. Add a `HomingTarget` component and it becomes a homing missile, no new class required.
 
-[Overwatch GDC](https://youtu.be/W3aieHjyNvw) ([reupload](https://www.youtube.com/watch?v=zrIY0eIyqmI))
+**Separation of concerns**: Systems are pure data processors with no coupling to each other, making individual behaviors easy to test and reuse across different entity types.
 
-[Game Engine Entity/Object Models](https://www.youtube.com/watch?v=jjEsB611kxs)
+### ECS vs. OOP
 
-Using functions for derivations / computations if possible
+Traditional OOP inheritance (a `Player` extends `Character` extends `Entity`) becomes brittle as game complexity grows. ECS composition handles the same combinations without the diamond inheritance problem. [This comparison](https://flamendless.github.io/ecs-vs-oop/) walks through how the same game entities map to each paradigm.
 
-Reactivity with Zustand
+The Overwatch team gave a [famous GDC talk](https://youtu.be/W3aieHjyNvw) on how ECS shaped their game's architecture. [Game Engine Entity/Object Models](https://www.youtube.com/watch?v=jjEsB611kxs) is another great breakdown of different approaches.
 
-Systems dependencies
+## Resources
 
-Singleton entities (and enforcing them)
-
-Filters
-
-Side effects / Events vs calling functions directly
-
-Using callbacks on entities (onFreeze…)
-
-Saving the entity to Object3D, in userData directly on the object, or in a WeakMap.
-Useful for raycasting for instance.
-
-[Entity Relationships](https://ajmmertens.medium.com/building-games-in-ecs-with-entity-relationships-657275ba2c6c)
-
-[ECS Architecture and Data Oriented Programming Deep-Dive](https://prdeving.wordpress.com/2023/12/14/deep-diving-into-entity-component-system-ecs-architecture-and-data-oriented-programming/)
-
-</Todo>
+- [ECS FAQ](https://github.com/SanderMertens/ecs-faq)
+- [ECS vs OOP](https://flamendless.github.io/ecs-vs-oop/)
+- [Overwatch GDC talk](https://youtu.be/W3aieHjyNvw) ([reupload](https://www.youtube.com/watch?v=zrIY0eIyqmI))
+- [Game Engine Entity/Object Models](https://www.youtube.com/watch?v=jjEsB611kxs)
+- [Entity Relationships](https://ajmmertens.medium.com/building-games-in-ecs-with-entity-relationships-657275ba2c6c)
+- [ECS Architecture and Data Oriented Programming Deep-Dive](https://prdeving.wordpress.com/2023/12/14/deep-diving-into-entity-component-system-ecs-architecture-and-data-oriented-programming/)
+- [js-ecs-benchmarks](https://github.com/ddmills/js-ecs-benchmarks)
+- [noctjs/ecs-benchmark](https://github.com/noctjs/ecs-benchmark)

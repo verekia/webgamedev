@@ -1126,7 +1126,7 @@ export const physics = {
     ts: 'ts',
   },
   crashcat: {
-    name: 'Crashcat',
+    name: 'crashcat',
     url: 'https://crashcat.dev/',
     npm: 'crashcat',
     repo: 'isaac-mason/crashcat',
@@ -1310,7 +1310,7 @@ export const ecs = {
     repo: 'hmans/miniplex',
     stars: 1000,
     npm: 'miniplex',
-    downloads: 1300,
+    downloads: 2000,
     ts: 'ts',
     lastCommitDate: '2023-07-16',
   },
@@ -1319,7 +1319,7 @@ export const ecs = {
     repo: 'pmndrs/koota',
     stars: 600,
     npm: 'koota',
-    downloads: 900,
+    downloads: 2000,
     ts: 'ts',
   },
   becsy: {
@@ -1329,6 +1329,7 @@ export const ecs = {
     npm: '@lastolivegames/becsy',
     downloads: 500,
     ts: 'ts',
+    lastCommitDate: '2025-05-20',
   },
   ape: {
     name: 'Ape-ECS',

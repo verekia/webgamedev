@@ -1,72 +1,36 @@
 import { ManapotionLogo } from 'lib/logos'
 
-import Todo from 'components/Todo'
-
 # 🕹️ Controls
 
 ## Keyboard
 
-<Todo>
-<ManapotionLogo /> [Mana Potion](https://manapotion.org)
+The browser's `keydown` and `keyup` events let you track which keys are pressed. For movement, games typically maintain a set of currently held keys and poll it each frame rather than responding to individual events.
 
-[Ecctrl Floating Capsule Character Controller](https://github.com/pmndrs/ecctrl)
-
-Keyboard, keypress
-
-[Drei KeyboardControls](https://github.com/pmndrs/drei#keyboardcontrols)
-
-[i18n (AZERTY support)](https://hacks.mozilla.org/2017/03/internationalize-your-keyboard-controls/)
-
-[getLayoutMap](https://developer.mozilla.org/en-US/docs/Web/API/Keyboard/getLayoutMap)
-
-</Todo>
+Using `event.code` (e.g., `"KeyW"`, `"Space"`) instead of `event.key` avoids layout issues — a player on an AZERTY keyboard won't have `W` where you expect it. See the [i18n keyboard controls guide](https://hacks.mozilla.org/2017/03/internationalize-your-keyboard-controls/) and the [Keyboard.getLayoutMap()](https://developer.mozilla.org/en-US/docs/Web/API/Keyboard/getLayoutMap) API for remapping support.
 
 ## Mouse
 
-<Todo>
-[Pointer lock API](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API)
+For first-person or camera-rotation controls, the [Pointer Lock API](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API) captures the cursor and provides raw delta values (`movementX`, `movementY`) — the cursor no longer hits the screen edge.
 
-[Drei PointerLockControls](https://github.com/pmndrs/drei#controls)
-
-Scroll normalization
-
-[ScrollControls](https://github.com/pmndrs/drei#scrollcontrols)
-
-[normalize-wheel](https://github.com/basilfx/normalize-wheel)
-
-</Todo>
+Scroll events are inconsistent across browsers and devices (trackpads vs. mouse wheels produce wildly different delta values), so normalization is often needed.
 
 ## Gamepad
 
-<Todo>
-[Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-
-[joypad.js](https://github.com/ArunMichaelDsouza/joypad.js)
-
-</Todo>
+The [Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) provides access to connected controllers, exposing analog stick values and button states. It is a **polling** API — you read `navigator.getGamepads()` each frame rather than listening to events. Analog sticks have natural drift and need a deadzone threshold applied before use.
 
 ## Mobile
 
-<Todo>[Nipple](https://www.npmjs.com/package/nipplejs)</Todo>
+On touchscreens, virtual joysticks are the most common control scheme. They handle touch events and return normalized direction vectors and force values.
 
-## Speech
+## Resources
 
-<Todo>
-
-[Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
-
-[SEPIA SpeechRecognition Polyfill by m₂](https://github.com/msub2/sepia-speechrecognition-polyfill)
-
-[Wonderland Engine Web Speech demo by m₂](https://youtu.be/9g584Q0w1t0?t=1311)
-
-</Todo>
-
-## Libraries
-
-<Todo>
-
-[meshwalk](https://github.com/yomotsu/meshwalk)
-
-[Rapier's Character Controller](https://rapier.rs/docs/user_guides/javascript/character_controller)
-
-</Todo>
+- <ManapotionLogo /> [Mana Potion](https://manapotion.org)
+- [Ecctrl](https://github.com/pmndrs/ecctrl)
+- [Drei KeyboardControls](https://github.com/pmndrs/drei#keyboardcontrols)
+- [Drei PointerLockControls](https://github.com/pmndrs/drei#controls)
+- [Drei ScrollControls](https://github.com/pmndrs/drei#scrollcontrols)
+- [normalize-wheel](https://github.com/basilfx/normalize-wheel)
+- [joypad.js](https://github.com/ArunMichaelDsouza/joypad.js)
+- [nipplejs](https://www.npmjs.com/package/nipplejs)
+- [Rapier's Character Controller](https://rapier.rs/docs/user_guides/javascript/character_controller)
+- [meshwalk](https://github.com/yomotsu/meshwalk)
