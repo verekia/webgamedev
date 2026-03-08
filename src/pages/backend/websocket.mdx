@@ -1,24 +1,33 @@
-import Todo from 'components/Todo'
-
 # 🐇 WebSocket
 
-<Todo>
-[uWebSocket](https://github.com/uNetworking/uWebSockets.js)
+**WebSocket** provides a persistent, bidirectional communication channel between a client and a server over a single TCP connection. Unlike HTTP (request-response), a WebSocket connection stays open, allowing both sides to send messages at any time with minimal overhead.
 
-[socket.io](https://socket.io/)
+## Why WebSocket for Games
 
-[Pusher](https://pusher.com/)
+For multiplayer games, you need to send frequent, small updates (player positions, actions, state changes) with low latency. HTTP polling adds unnecessary overhead per request. Server-Sent Events (SSE) only support one-way server-to-client communication. WebSocket gives you two-way, low-latency messaging — the standard choice for real-time multiplayer.
 
-[Soketi](https://docs.soketi.app/)
+## Connection Lifecycle
 
-[SocketCluster](https://socketcluster.io/)
+1. **Handshake** — the client sends an HTTP upgrade request; the server responds with a 101 status code to switch protocols
+2. **Open** — messages flow freely in both directions
+3. **Close** — either side can close the connection with a close frame
 
-[SocketStream](https://github.com/socketstream/socketstream)
+## Binary vs. Text
 
-[Authentication](https://websockets.readthedocs.io/en/stable/topics/authentication.html)
+WebSocket supports both text (JSON strings) and binary (ArrayBuffer) messages. For games, binary is often preferred — it's smaller and faster to parse. Serialization formats like Protocol Buffers or FlatBuffers are common for binary game messages (see [Protobuf](/backend/protobuf)).
 
-[Security](https://devcenter.heroku.com/articles/websocket-security)
+## Scaling
 
-[Hathora's article on scaling](https://blog.hathora.dev/scalable-websocket-architecture/)
+A single server process has limits on how many concurrent connections it can handle. Scaling WebSocket requires sticky sessions (routing the same client to the same server), a pub/sub layer (like Redis) for cross-server messaging, and strategies for horizontal scaling.
 
-</Todo>
+## Resources
+
+- [uWebSockets.js](https://github.com/uNetworking/uWebSockets.js)
+- [socket.io](https://socket.io/)
+- [Pusher](https://pusher.com/)
+- [Soketi](https://docs.soketi.app/)
+- [SocketCluster](https://socketcluster.io/)
+- [SocketStream](https://github.com/socketstream/socketstream)
+- [WebSocket Authentication](https://websockets.readthedocs.io/en/stable/topics/authentication.html)
+- [WebSocket Security](https://devcenter.heroku.com/articles/websocket-security)
+- [Hathora's article on scaling WebSockets](https://blog.hathora.dev/scalable-websocket-architecture/)

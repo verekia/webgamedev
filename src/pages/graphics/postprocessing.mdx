@@ -1,20 +1,29 @@
 import Project from 'components/Project'
-import Todo from 'components/Todo'
 import { poimandres } from 'projects'
 
 # 🌈 Postprocessing
 
-<Todo>
-[Three.js EffectComposer](https://threejs.org/docs/#manual/en/introduction/How-to-use-post-processing)
+Post-processing effects are applied to the fully rendered frame as a series of 2D image operations. Instead of modifying the 3D scene directly, you render the scene to a texture, then pass that texture through one or more **effect passes** that modify the final image.
 
-You can use <Project {...poimandres.postprocessing} /> with vanilla Three.js and optionally <Project {...poimandres.reactPostprocessing} /> for a React Three Fiber integration.
+## Common Effects
 
-Examples of effects, such as Bloom or Outline
+- **Bloom** — makes bright areas glow by blurring and adding them back to the image
+- **Ambient Occlusion** (SSAO) — darkens creases and corners where ambient light would be occluded, adding depth
+- **Depth of Field** — blurs objects outside a focal distance, simulating camera focus
+- **Tone Mapping** — maps HDR (high dynamic range) values to the displayable range, affecting overall look and contrast
+- **Outline** — highlights selected objects or interactive elements with an edge effect
+- **Motion Blur** — blurs in the direction of movement for a sense of speed
+- **Vignette** — darkens the edges of the screen for a cinematic look
 
-[5 ways to draw an outline](https://alexanderameye.github.io/notes/rendering-outlines/) (Unity) by [Alex Ameye](https://x.com/alexanderameye)
+## Effect Pipeline
 
-[three-good-godrays](https://github.com/Ameobea/three-good-godrays)
+Effects are chained together in a **composer** — each pass reads the output of the previous one and writes its result. Order matters: applying tone mapping before bloom gives different results than the reverse.
 
-[realism-effects](https://github.com/0beqz/realism-effects)
+<Project {...poimandres.postprocessing} /> can be used with vanilla Three.js and optionally <Project {...poimandres.reactPostprocessing} /> for a React Three Fiber integration.
 
-</Todo>
+## Resources
+
+- [Three.js EffectComposer](https://threejs.org/docs/#manual/en/introduction/How-to-use-post-processing)
+- [5 ways to draw an outline](https://alexanderameye.github.io/notes/rendering-outlines/) (Unity) by [Alex Ameye](https://x.com/alexanderameye)
+- [three-good-godrays](https://github.com/Ameobea/three-good-godrays)
+- [realism-effects](https://github.com/0beqz/realism-effects)

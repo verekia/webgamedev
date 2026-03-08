@@ -1,54 +1,58 @@
-import Todo from 'components/Todo'
-
 # 🪩 3D Essentials
 
-<Todo>
-Meshes
+## Meshes
 
-Geometries, BufferGeometry, [Drei shapes](https://github.com/pmndrs/drei#shapes)
+A mesh is the combination of a **geometry** (the shape — a collection of vertices and faces) and a **material** (the appearance — color, shininess, texture). Everything visible in a 3D scene is typically a mesh.
 
-Materials (PBR, [glTF 2.0 extensions](https://github.com/KhronosGroup/glTF/blob/main/extensions/README.md))
+## Geometries
 
-Textures (KTX2)
+Geometries define the shape of a mesh as a set of vertices, faces, and associated data (normals, UV coordinates). Most engines provide primitives (box, sphere, plane, cylinder) for quick prototyping. Custom geometries can be loaded from 3D model files or built programmatically via buffer geometry, where you define vertex data directly in typed arrays.
 
-Lighting and shadows, ([PCSS](https://threejs.org/examples/#webgl_shadowmap_pcss))
+## Materials
 
-[Shadowmaps]([Shadow mapping](https://en.wikipedia.org/wiki/Shadow_mapping))
+Materials control how a mesh's surface reacts to light. **PBR** (Physically-Based Rendering) materials are the modern standard — they use properties like roughness, metalness, and albedo to simulate real-world surfaces. Simpler unlit or basic materials are cheaper and useful when you don't need realistic lighting.
 
-Lightmaps
+## Textures
 
-Cameras
+Textures are images mapped onto geometry surfaces using **UV coordinates**. Common types include albedo (color), normal maps (fake surface detail), roughness, metalness, and emissive maps. **KTX2** is a GPU-compressed texture format that reduces VRAM usage and improves loading times compared to PNG/JPEG.
 
-Helpers
+## Lighting and Shadows
 
-Delta time
+Common light types: **ambient** (uniform, everywhere), **directional** (sun-like, parallel rays), **point** (emits in all directions from a position), and **spot** (cone-shaped). Shadows are computed using **shadow maps** — the scene is rendered from the light's perspective to determine which surfaces are in shadow. Shadow mapping is expensive, so limit the number of shadow-casting lights and consider baking static shadows into **lightmaps**.
 
-Text, [Troika](https://protectwise.github.io/troika/troika-three-text/)
+## Cameras
 
-[Color management](https://threejs.org/docs/#manual/en/introduction/Color-management) ([article](https://www.donmccurdy.com/2020/06/17/color-management-in-threejs/))
+A **perspective** camera mimics human vision — objects get smaller with distance. An **orthographic** camera has no perspective distortion — useful for 2D games, UI overlays, and some stylized 3D games. Camera work is critical to game feel — side-scrollers, third-person, and first-person cameras each have specific challenges around following, framing, and smoothing.
 
-Foliage, [MeshSurfaceSampler](https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler)
+## Raycasting
 
-Screen space, world space
+Raycasting shoots an invisible ray from a point in a direction and reports what it hits. It's used for mouse picking (clicking on 3D objects), line-of-sight checks, ground detection, and more. A **BVH** (Bounding Volume Hierarchy) accelerates raycasting by organizing geometry into a spatial tree, avoiding the need to test every triangle.
 
-[Cameras in Side-Scrollers](https://www.gamedeveloper.com/design/scroll-back-the-theory-and-practice-of-cameras-in-side-scrollers)
+## Text
 
-[Third Person Cameras in Games](https://blog.littlepolygon.com/posts/cameras/) (Unity)
+Rendering text in 3D is non-trivial. Unlike HTML, 3D engines don't have built-in text layout. Common approaches include SDF (Signed Distance Field) fonts for sharp text at any scale, and MSDF for multi-channel precision. Bitmap fonts are simpler but don't scale well.
 
-[Is in mesh](https://stackoverflow.com/questions/16361327/check-if-point-is-inside-a-custom-mesh-geometry)
+## Other Concepts
 
-[Is grounded](https://www.youtube.com/watch?v=c3iEl5AwUF8)
+- **Delta time** — the time elapsed since the last frame. Multiply movement and animations by delta time to make them frame-rate independent.
+- **Screen space vs. world space** — screen space is 2D pixel coordinates; world space is the 3D coordinate system of your scene. Converting between them is needed for UI positioning, mouse picking, and HUD elements.
+- **Color management** — ensuring colors look correct across the pipeline (sRGB for textures, linear for lighting calculations).
+- **CSG** (Constructive Solid Geometry) — combining geometries with boolean operations (union, subtract, intersect) to create complex shapes from simple ones.
 
-[BVH](https://www.npmjs.com/package/three-mesh-bvh)
+## Resources
 
-[Drei Bvh](https://github.com/pmndrs/drei#bvh)
-
-Solving [ray-box intersection](https://github.com/mrdoob/three.js/blob/dev/src/math/Ray.js#L323) directly
-
-⚠️ 2D Raycasting with Flatten.js
-
-CSG - constructive solid geometry (combining geometries) - [react-three-csg](https://github.com/pmndrs/react-three-csg)
-
-[three-meshline](https://github.com/spite/THREE.MeshLine)
-
-</Todo>
+- [Drei shapes](https://github.com/pmndrs/drei#shapes)
+- [glTF 2.0 extensions](https://github.com/KhronosGroup/glTF/blob/main/extensions/README.md)
+- [PCSS shadow example](https://threejs.org/examples/#webgl_shadowmap_pcss)
+- [Shadow mapping](https://en.wikipedia.org/wiki/Shadow_mapping)
+- [Color management](https://threejs.org/docs/#manual/en/introduction/Color-management) ([article](https://www.donmccurdy.com/2020/06/17/color-management-in-threejs/))
+- [Troika 3D text](https://protectwise.github.io/troika/troika-three-text/)
+- [MeshSurfaceSampler](https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler) (foliage, scattering)
+- [Cameras in Side-Scrollers](https://www.gamedeveloper.com/design/scroll-back-the-theory-and-practice-of-cameras-in-side-scrollers)
+- [Third Person Cameras in Games](https://blog.littlepolygon.com/posts/cameras/) (Unity)
+- [three-mesh-bvh](https://www.npmjs.com/package/three-mesh-bvh) (Drei [Bvh](https://github.com/pmndrs/drei#bvh))
+- [Is point in mesh](https://stackoverflow.com/questions/16361327/check-if-point-is-inside-a-custom-mesh-geometry)
+- [Is grounded](https://www.youtube.com/watch?v=c3iEl5AwUF8)
+- [Ray-box intersection source](https://github.com/mrdoob/three.js/blob/dev/src/math/Ray.js#L323)
+- [react-three-csg](https://github.com/pmndrs/react-three-csg)
+- [three-meshline](https://github.com/spite/THREE.MeshLine)

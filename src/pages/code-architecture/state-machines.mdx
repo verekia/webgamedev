@@ -1,5 +1,18 @@
-import Todo from 'components/Todo'
-
 # 🚦 State Machines
 
-<Todo>FSM ([XState](https://xstate.js.org/docs/))</Todo>
+A **Finite State Machine** (FSM) models something that can be in exactly one of a finite number of **states** at a time. Transitions between states are triggered by events or conditions.
+
+In games, state machines are everywhere:
+
+- **Character states** — `idle`, `running`, `jumping`, `falling`, `attacking`. Each state has its own animation, physics, and input handling. Transitions define what's possible (you can't attack while falling, you can only jump from the ground).
+- **Game flow** — `menu`, `loading`, `playing`, `paused`, `game-over`. Each state renders different UI and handles input differently.
+- **AI behavior** — `patrol`, `chase`, `attack`, `flee`. NPCs transition between behaviors based on conditions (see [Artificial Intelligence](/artificial-intelligence)).
+- **UI elements** — buttons (`idle`, `hovered`, `pressed`, `disabled`), modals (`closed`, `opening`, `open`, `closing`).
+
+## Hierarchical State Machines
+
+As the number of states grows, flat FSMs become hard to manage. **Hierarchical** (or nested) state machines let you group related states — for example, a `grounded` parent state containing `idle`, `running`, and `crouching`, sharing common transitions like "fall off ledge".
+
+## Resources
+
+- [XState](https://xstate.js.org/docs/)

@@ -1,42 +1,47 @@
-import Todo from 'components/Todo'
 import YouTube from 'components/YouTube'
 
 # 👻 Shaders
 
-<Todo>
-Vertex shader
+Shaders are small programs that run on the GPU. In a typical rendering pipeline, two shaders work together for each draw call:
 
-Fragment shader
+## Vertex Shader
 
-Drei [`shaderMaterial`](https://github.com/pmndrs/drei#shadermaterial)
+The vertex shader runs once per vertex of a mesh. Its job is to transform vertex positions from 3D world space to 2D screen space. It can also pass data (like UV coordinates or normals) to the fragment shader. Custom vertex shaders can deform geometry — waving flags, terrain displacement, or morphing shapes.
 
-[Book of Shaders](https://thebookofshaders.com/)
+## Fragment Shader
 
-[SimonDev's course](https://simondev.teachable.com/p/glsl-shaders-from-scratch)
+The fragment shader (also called a pixel shader) runs once per pixel fragment and determines the final color of each pixel. This is where lighting calculations, texture sampling, and visual effects happen. The fragment shader receives interpolated data from the vertex shader.
 
-[gl-react](https://github.com/gre/gl-react)
+## Key Concepts
 
-[glsl-noise](https://www.npmjs.com/package/glsl-noise)
+- **Uniforms** — values passed from your JavaScript code to the shader (e.g., time, mouse position, colors). They're constant for all vertices/fragments in a single draw call.
+- **Attributes** — per-vertex data like position, normal, and UV coordinates.
+- **Varyings** — values passed from the vertex shader to the fragment shader, automatically interpolated across the surface.
 
-[THREE-CustomShaderMaterial](https://github.com/FarazzShaikh/THREE-CustomShaderMaterial) – Extend Three.js materials with custom shaders
+## Shader Languages
 
-[Shader Composer](https://github.com/hmans/composer-suite/tree/main/packages/shader-composer)
+**GLSL** (OpenGL Shading Language) is the shader language for WebGL. **WGSL** is the newer language for WebGPU. Both are C-like languages with built-in vector and matrix math.
 
-[NodeToy](https://nodetoy.co/)
+## Visual Shader Editors
 
-[Alma](https://www.alma.sh/)
+Node-based editors let you build shaders visually by connecting inputs and outputs, without writing code directly. This is especially useful for artists or for prototyping effects.
 
-[ShaderFrog](https://shaderfrog.com/)
+## Resources
 
-[Lettier shader GitHub tutorial](https://github.com/lettier/3d-game-shaders-for-beginners)
-
-[Freya Holmér flame effect Twitter thread](https://x.com/FreyaHolmer/status/1107042445462831104)
-
-[Toon Material Color Ramp](https://x.com/CantBeFaraz/status/1640351567323774976)
-
-[Three.js Shaders (GLSL) Crash Course](https://www.youtube.com/watch?v=oKbCaj1J6EI) by [Visionary 3D](https://x.com/3d_visionary)
-
-</Todo>
+- [Book of Shaders](https://thebookofshaders.com/)
+- [SimonDev's GLSL course](https://simondev.teachable.com/p/glsl-shaders-from-scratch)
+- [Lettier's 3D game shaders for beginners](https://github.com/lettier/3d-game-shaders-for-beginners)
+- [Three.js Shaders (GLSL) Crash Course](https://www.youtube.com/watch?v=oKbCaj1J6EI) by [Visionary 3D](https://x.com/3d_visionary)
+- [Freya Holmér flame effect thread](https://x.com/FreyaHolmer/status/1107042445462831104)
+- [Toon Material Color Ramp](https://x.com/CantBeFaraz/status/1640351567323774976)
+- Drei [shaderMaterial](https://github.com/pmndrs/drei#shadermaterial)
+- [THREE-CustomShaderMaterial](https://github.com/FarazzShaikh/THREE-CustomShaderMaterial)
+- [Shader Composer](https://github.com/hmans/composer-suite/tree/main/packages/shader-composer)
+- [gl-react](https://github.com/gre/gl-react)
+- [glsl-noise](https://www.npmjs.com/package/glsl-noise)
+- [NodeToy](https://nodetoy.co/)
+- [Alma](https://www.alma.sh/)
+- [ShaderFrog](https://shaderfrog.com/)
 
 [**Shader Basics, Blending & Textures**](https://www.youtube.com/watch?v=kfM-yu0iQBk) (Unity)
 
