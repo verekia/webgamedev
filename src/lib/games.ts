@@ -884,11 +884,24 @@ Select a song and hit the right keys at the right time!`,
   // },
 ]
 
+// Column order for the first 18 portal games (6 rows × 3 columns)
+// 0 = Poki, 1 = CrazyGames, 2 = Viverse
+const portalColumnOrder = [2, 0, 1]
+
+const reorderedGames: Game[] = [
+  ...Array.from({ length: 18 }, (_, i) => {
+    const row = Math.floor(i / 3)
+    const col = portalColumnOrder[i % 3]
+    return games[row * 3 + col]
+  }),
+  ...games.slice(18),
+]
+
 // Create a new list of the same games, but move the ones with mobile=0 to the end on the array
 
 export const mobileGames = [
-  ...games.filter(g => g.mobile !== 0),
-  ...games.filter(g => g.mobile === 0),
+  ...reorderedGames.filter(g => g.mobile !== 0),
+  ...reorderedGames.filter(g => g.mobile === 0),
 ]
 
 // <R3FLogo /> [**Sougen**](https://sougen.co/)
@@ -897,4 +910,4 @@ export const mobileGames = [
 // Drive Mad
 // https://www.fancade.com/
 
-export default games
+export default reorderedGames

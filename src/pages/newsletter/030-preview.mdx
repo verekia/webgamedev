@@ -22,12 +22,14 @@ import {
 import { NewsletterStyles, NoBulletListStyles } from 'styles/pages'
 import { SubTitleDate } from 'components/Date'
 import { FloatLeftImage } from 'components/FloatImage'
-import { PokiLogo, PokiIcon } from 'components/PokiSponsor'
+import { PokiLogo, PokiIcon, pokiMainUrl } from 'components/PokiSponsor'
 import { GameRelease } from 'components/GameReleases'
+import { CGLogo, cgMainUrl } from 'components/CGSponsor'
+import { ViverseLogo, viverseMainUrl } from 'components/ViverseSponsor'
 
-# Newsletter – Issue XXX
+# Newsletter – Issue 030
 
-<SubTitleDate value="2025-XX-XX" />
+<SubTitleDate value="2026-03-17" />
 
 <NoBulletListStyles />
 <NewsletterStyles />
@@ -39,60 +41,97 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenati
 ## ⭐️ Sponsors
 
 <div className="flex flex-col gap-5 mt-5">
-  <div className="flex flex-col gap-5 lg:flex-row items-center">
-    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
-      <a
-        href="https://poki.com/?utm_source=webgamedev&utm_content=newsletter"
-        target="_blank"
-        rel="noopener"
-      >
-        <PokiLogo className="w-full max-w-130" />
-      </a>
-    </div>
-    <div>
-      [**Poki**](https://poki.com/?utm_source=webgamedev&utm_content=newsletter) is on a mission to
-      create the ultimate online playground – where players and developers come together to play and
-      create! Together with a growing 300+ game developer community and 50 million players each
-      month, we're creating a new standard for web games. Interested in working together? [**Share
-      your game with
-      us**](https://developers.poki.com?utm_source=webgamedev&utm_content=newsletter)!
 
-      Poki, the market leader on Web, is proud to sponsor Web Game Dev, and we will be working closely over the coming months to share more about how to make the best web games possible. If there's any specific content you'd like to see from Poki, get in touch with us at <MailTo email="developersupport@poki.com" fakeEmail="dovelepersoppurt@piko.com" /> or in the [Web Game Dev Discord](https://webgamedev.com/discord)!
-    </div>
-
+<div className="flex flex-col gap-5 lg:flex-row items-center">
+  <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
+    <a href={viverseMainUrl('newsletter')} target="_blank" rel="noopener">
+      <ViverseLogo className="w-full max-w-36 scale-[0.9]" />
+    </a>
   </div>
+  <div className="flex flex-col gap-3 [&>*]:!my-0">
+[**VIVERSE**](https://worlds.viverse.com/?utm_source=webgamedev&utm_content=newsletter) gives developers powerful tools to bring interactive 3D and XR experiences to life directly in the browser, with free hosting, multi-engine support, and monetization tools. With our [**Creator Program**](https://create.viverse.com/creator-program?utm_source=webgamedev&utm_content=newsletter), we’re investing in the next generation of creators who are pushing the boundaries of what’s possible in the browser. Join the [**VIVERSE Discord**](https://discord.gg/viversecreators).
 
-  <div className="flex flex-col gap-5 lg:flex-row items-center">
-    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
-      <a href="#TODO" target="_blank" rel="noopener">
-        <img src="https://placehold.co/150" className="max-w-[140px] rounded-lg" />
-      </a>
-    </div>
-    <div>
-      [**Company.com**](#TODO) dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenatis ex,
-      quis bibendum lorem condimentum ut. Mauris eget venenatis lectus. Phasellus id pretium ipsum,
-      quis auctor ipsum. Donec aliquet vulputate ante eget vestibulum. Nulla efficitur risus eros,
-      ut interdum leo consectetur in. Pellentesque habitant morbi tristique senectus et netus et
-      malesuada fames ac turpis egestas. [**Learn more**](#TODO).
-    </div>
+We are rolling out Beta one-time payments and subscriptions. Our new monetization tools represent VIVERSE’s mission to become the most developer-friendly platform, with revenue splits between 80% and 90% for creators. [Email us](mailto:michael_morran@htc.com) or message us on [Discord](https://discord.gg/viversecreators) for more info!
+
   </div>
 </div>
 
-## 💼 Jobs <span style={{ color: '#777', fontWeight: 'normal', fontSize: 24, position: 'relative', top: '-2px' }}>(sponsored)</span>
+<div className="h-px bg-gray-200 dark:bg-neutral-800" />
+
+    <div className="flex flex-col gap-5 lg:flex-row items-center">
+    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
+      <a
+        href={pokiMainUrl('newsletter')}
+        target="_blank"
+        rel="noopener"
+      >
+        <PokiLogo className="w-full max-w-130 scale-[0.85]" />
+      </a>
+    </div>
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
+
+[**Poki**](https://poki.com/?utm_source=webgamedev&utm_content=newsletter) makes the best web games shine! With 90M+ players and 1B+ monthly gameplays, we focus on games that load instantly, feel great to play, and work seamlessly on any device. We believe the beauty of the web is simplicity, so we offer a frictionless experience players love coming back to, built to grow games for the long run and earn more across their full lifetime.
+
+<ul className="list-outside !list-disc pl-4 relative -top-1">
+<li>[**Share your game**](https://developers.poki.com/?utm_source=webgamedev&utm_content=newsletter) to get free, unlimited playtests with real players.</li>
+<li>Start play testing on Poki with the [**#showcase post**](https://discord.com/channels/1032873609280106566/1296492543583719434/1296492543583719434) on [Discord](https://webgamedev.com/discord).</li>
+<li>Learn more about Poki in [**this video**](https://www.youtube.com/watch?v=SQl6xDVs_Bs).</li>
+</ul>
+</div>
+
+  </div>
+
+<div className="h-px bg-gray-200 dark:bg-neutral-800" />
+
+  <div className="flex flex-col gap-5 lg:flex-row items-center">
+    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
+      <a
+        href={cgMainUrl('newsletter')}
+        target="_blank"
+        rel="noopener"
+      >
+        <CGLogo className="w-full max-w-130 scale-[0.95]" />
+      </a>
+    </div>
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
+        [**CrazyGames**](https://www.crazygames.com/?utm_source=webgamedev&utm_content=newsletter)
+        is revolutionizing web gaming, connecting over 3,000 developers with 40+
+        million players monthly. Our platform supports both ads and in-app purchases, paying out
+        millions in revenue share to developers each year while fostering one of the most vibrant
+        player communities worldwide. [**Publish your game on CrazyGames**](https://developer.crazygames.com/?utm_source=webgamedev&utm_content=newsletter)!
+
+        Benchmarks are now live in the Developer Portal! Visualise your performance in key areas against the Top 20%. Check the new charts on the developer dashboard to understand your metrics and drive improvement.
+    </div>
+
+  </div>
+
+</div>
+
+## 💼 Jobs
 
 <div className="flex flex-col gap-5 mt-5">
   <div className="flex flex-col gap-5 lg:flex-row items-center">
-    <div className="mx-auto w-full max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
-      <a href="#TODO" target="_blank" rel="noopener">
-        <img src="https://placehold.co/150" className="max-w-[140px] rounded-lg" />
+    <div className="mx-auto w-full max-w-[200px] lg:max-w-[140px] h-full max-h-[140px] flex items-center justify-center">
+      <a
+        href="https://www.softgames.com/?utm_source=webgamedev&utm_content=newsletter"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="/partnerships/softgames.png"
+          className="w-full max-w-[200px] lg:max-w-[140px] py-3"
+        />
       </a>
     </div>
-    <div>
-      [**Role**](#TODO) dolor sit amet, consectetur adipiscing elit. Ut ullamcorper venenatis ex,
-      quis bibendum lorem condimentum ut. Mauris eget venenatis lectus. Phasellus id pretium ipsum,
-      quis auctor ipsum. Donec aliquet vulputate ante eget vestibulum. Nulla efficitur risus eros,
-      ut interdum leo consectetur in. Pellentesque habitant morbi tristique senectus et netus et
-      malesuada fames ac turpis egestas. [**Learn more**](#TODO).
+    <div className="flex flex-col gap-3 [&>*]:!my-0">
+      <b>Ready to build Instant Games at massive scale?</b>{' '}
+      <div>
+        [**SOFTGAMES**](https://www.softgames.com/?utm_source=webgamedev&utm_content=newsletter) is
+        hiring a **Senior HTML5 Games Developer** to push TypeScript and PixiJS to their limits. You
+        will profile, optimize, and scale Instant Games played by millions daily across global
+        platforms.Remote-first. High ownership. No crunch. [**Take the
+        lead**](https://jobs.softgames.de/o/senior-html5-game-developer-fully-remote?source=webgamedev.com).
+      </div>
     </div>
   </div>
 </div>

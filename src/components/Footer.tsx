@@ -6,7 +6,19 @@ import { ViverseLogo, viverseDevelopersUrl, viverseMainUrl } from './ViverseSpon
 const Footer = () => (
   <footer className="bg-gray-100 dark:bg-neutral-900 py-12 text-center">
     <div className="flex flex-col sm:flex-row gap-10 justify-around mb-14 items-center">
-    <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mt-2 sm:mt-0">
+        <a href={viverseMainUrl('footer')} target="_blank" rel="noopener">
+          <ViverseLogo className="w-[76px] scale-[1.23] relative bottom-[7px] mx-auto block" />
+        </a>
+        <div className="mt-3">
+          Sponsored by{' '}
+          <A href={viverseDevelopersUrl('footer')} rel="noopener">
+            <b>VIVERSE</b>
+          </A>
+        </div>
+        <div>Create. Publish. Earn.</div>
+      </div>
+      <div className="flex flex-col items-center">
         <a href={pokiMainUrl('footer')} target="_blank">
           <PokiLogo className="h-[56px] scale-[0.78]" />
         </a>
@@ -29,18 +41,6 @@ const Footer = () => (
           </A>
         </div>
         <div>The next generation of web games</div>
-      </div>
-      <div className="flex flex-col items-center mt-2 sm:mt-0">
-        <a href={viverseMainUrl('footer')} target="_blank" rel="noopener">
-          <ViverseLogo className="w-[76px] scale-[1.23] relative bottom-[7px] mx-auto block" />
-        </a>
-        <div className="mt-3">
-          Sponsored by{' '}
-          <A href={viverseDevelopersUrl('footer')} rel="noopener">
-            <b>VIVERSE</b>
-          </A>
-        </div>
-        <div>Create. Publish. Earn.</div>
       </div>
     </div>
     <div style={{ textAlign: 'center' }}>
