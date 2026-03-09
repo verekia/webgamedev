@@ -1,4 +1,3 @@
-import Todo from 'components/Todo'
 import YouTube from 'components/YouTube'
 
 # 🏃 Model Animations
@@ -19,20 +18,11 @@ Animating is done by positioning and rotating the bones of your model and taking
 
 <YouTube id="yjjLD3h3yRc" />
 
-<Todo>
+## Playing Animations
 
-[Cascadeur](https://cascadeur.com/)
-[Ready Player Me Animation Library](https://github.com/readyplayerme/animation-library)
-[Anything World](https://anything.world/)
+Most 3D engines use an **animation mixer** — it manages playback of multiple animation clips on a model, handling play, pause, crossfade, blending, and looping. **Crossfading** smoothly transitions between two animations (e.g., walk to run) by blending them over a short duration. **Additive blending** layers an animation on top of another (e.g., a breathing animation layered on any pose).
 
-</Todo>
-
-## Three.js
-
-<Todo>
-  [Three.js animation system](https://threejs.org/docs/#manual/en/introduction/Animation-system),
-  [AnimationMixer](https://threejs.org/docs/#api/en/animation/AnimationMixer)
-</Todo>
+In Three.js, the [animation system](https://threejs.org/docs/#manual/en/introduction/Animation-system) is built around [AnimationMixer](https://threejs.org/docs/#api/en/animation/AnimationMixer).
 
 ## React Three Fiber
 
@@ -55,3 +45,9 @@ const MyCharacter = () => {
 
 <YouTube id="mdj7Z3PCxRg" />
 <YouTube id="q7yH_ajINpA" />
+
+## Resources
+
+- [Cascadeur](https://cascadeur.com/)
+- [Ready Player Me Animation Library](https://github.com/readyplayerme/animation-library)
+- [Anything World](https://anything.world/)

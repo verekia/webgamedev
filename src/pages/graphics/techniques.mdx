@@ -1,5 +1,3 @@
-import Todo from 'components/Todo'
-
 # 🔮 Techniques
 
 ## Triplanar mapping
@@ -18,25 +16,18 @@ More information: [Inigo Quilez article](https://iquilezles.org/articles/texture
 
 ## Clouds
 
-<Todo>
+Rendering realistic clouds in real-time is a classic graphics challenge. Volumetric clouds are typically rendered using **ray marching** through 3D noise textures — sampling density along each ray to determine opacity and lighting. Cheaper approaches include billboard sprites, particle-based clouds, or skydome textures for static cloud layers.
 
-[SimonDev's Clouds video](https://www.youtube.com/watch?v=Qj_tK_mdRcA)
-
-[Cody Bennett's implementation](https://codesandbox.io/s/rn9kfx)
-
-</Todo>
+- [SimonDev's Clouds video](https://www.youtube.com/watch?v=Qj_tK_mdRcA)
+- [Cody Bennett's implementation](https://codesandbox.io/s/rn9kfx)
 
 ## Fog
 
-<Todo>
+Fog hides distant geometry (useful for distance culling) and adds atmosphere. **Linear fog** fades uniformly with distance. **Exponential fog** is denser and more natural-looking. **Height fog** varies by altitude, pooling in valleys. Fog can also be computed per-pixel in a shader for more control — using depth, height, and noise to create effects like volumetric mist.
 
-[Fog (SimonDev)](https://www.youtube.com/watch?v=k1zGz55EqfU)
-
-[Inigo Quilez article](https://iquilezles.org/articles/fog/)
-
-[Fog for Top-Down Games](https://kvachev.com/blog/posts/fog-for-topdown-games/) (Unreal Engine)
-
-</Todo>
+- [Fog (SimonDev)](https://www.youtube.com/watch?v=k1zGz55EqfU)
+- [Inigo Quilez article](https://iquilezles.org/articles/fog/)
+- [Fog for Top-Down Games](https://kvachev.com/blog/posts/fog-for-topdown-games/) (Unreal Engine)
 
 ## Ray Marching
 

@@ -1,4 +1,3 @@
-import Todo from 'components/Todo'
 import Project from 'components/Project'
 import ProjectList from 'components/ProjectList'
 import {
@@ -14,7 +13,7 @@ import {
 import { engines, wrappers, poimandres, hybridEngines } from 'projects'
 import { ViverseStandaloneSection } from 'components/ViverseSponsor'
 
-# 🥽 WebXR (VR, AR)
+# 🥽 WebXR (VR, AR)
 
 <ViverseStandaloneSection content="webxr" />
 
@@ -91,75 +90,50 @@ Most WebGL 3D libraries and engines support [WebXR](https://developer.mozilla.or
 
 WebXR is [**not supported in Safari**](https://caniuse.com/webxr).
 
-<Todo>
-[WebXR Layers](https://developer.oculus.com/documentation/web/webxr-layers/) (for skyboxes, and more?) - [Rik Cabanier's explainer](https://github.com/cabanier/layers/blob/dom-layers/explainer.md)
+## Hand Tracking
 
-- <Project {...poimandres.reactXR} />
+- [Hand tracking with @react-three/xr](https://github.com/pmndrs/react-xr#controllers)
+- [handy.js](https://stewartsmith.io/handy/) ([GitHub](https://github.com/stewdio/handy.js))
+- [handy-work](https://github.com/AdaRoseCannon/handy-work)
+- [webxr-hand-input explainer](https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md)
+- [Project Flowerbed Hand Animations](https://github.com/meta-quest/ProjectFlowerbed/blob/main/src/js/systems/hands/HandAnimationSystem.js)
 
-Gestures
+## Controls and Emulators
 
-[Hand tracking](https://github.com/pmndrs/react-xr#controllers)
+- [WebXR browser extension](https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje?hl=en)
+- [Immersive Web Emulator by Meta](https://chrome.google.com/webstore/detail/immersive-web-emulator/cgffilbpcibhmcfbgggfhfolhkfbhmik)
+- [WebXRQuestEmulator](https://github.com/felixtrz/WebXRQuestEmulator)
+- [WebXR Input Profiles](https://github.com/immersive-web/webxr-input-profiles)
 
-[handy.js](https://stewartsmith.io/handy/) ([GH](https://github.com/stewdio/handy.js))
+## UI in VR
 
-[webxr-hand-input explanation](https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md)
+- [uikit](https://github.com/pmndrs/uikit) (R3F)
+- [three-mesh-ui](https://github.com/felixmariotto/three-mesh-ui)
+- [react-xr-ui](https://github.com/Enijar/react-xr-ui)
+- [Ethereal](https://github.com/aelatgt/ethereal), [HTMLMesh](https://github.com/mrdoob/three.js/blob/dev/examples/jsm/interactive/HTMLMesh.js), [Satori](https://github.com/vercel/satori) ([Tweet](https://x.com/0xca0a/status/1581751380339232768), [R3F](https://codesandbox.io/s/stupefied-panini-wmgnzu?file=/src/App.js)), [HTML2Canvas](https://html2canvas.hertzen.com/)
 
-[Project Flowerbed Hand animations](https://github.com/meta-quest/ProjectFlowerbed/blob/main/src/js/systems/hands/HandAnimationSystem.js)
+## Performance
 
-Controls
-
-[WebXR browser extention](https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje?hl=en)
-
-[Immersive Web Emulator by Meta](https://chrome.google.com/webstore/detail/immersive-web-emulator/cgffilbpcibhmcfbgggfhfolhkfbhmik)
-
-[WebXR Input Profiles](https://github.com/immersive-web/webxr-input-profiles)
-
-[three-mesh-ui](https://github.com/felixmariotto/three-mesh-ui)
-
-[@coconut-xr/natuerlich](https://github.com/coconut-xr/natuerlich)
-
-[@coconut-xr/koestlich](https://github.com/coconut-xr/koestlich)
-
-[handy-work](https://github.com/AdaRoseCannon/handy-work)
-
-[WebXRQuestEmulator](https://github.com/felixtrz/WebXRQuestEmulator)
-
-[OVR Metrics Tool](https://developer.oculus.com/documentation/unity/ts-ovrmetricstool/)
-
-Fixed Foveated Rendering
-
-[Oculus Perf docs](https://developer.oculus.com/documentation/web/webxr-perf/)
-
-HTML UI inside VR ([Ethereal](https://github.com/aelatgt/ethereal), [HTMLMesh](https://github.com/mrdoob/three.js/blob/dev/examples/jsm/interactive/HTMLMesh.js), [Satori](https://github.com/vercel/satori) - [Tweet](https://x.com/0xca0a/status/1581751380339232768) - [R3F](https://codesandbox.io/s/stupefied-panini-wmgnzu?file=/src/App.js), [HTML2Canvas](https://html2canvas.hertzen.com/))
-
-[react-xr-ui](https://github.com/Enijar/react-xr-ui)
-
-[WebXR Awesome list](https://github.com/msub2/awesome-webxr)
-
-[Wonderland Engine](https://wonderlandengine.com/)
-
-[LogXR](https://github.com/felixtrz/logxr)
-
-[Experimental WebXR keyboard on Meta Quest](https://developer.oculus.com/documentation/web/webxr-keyboard/)
-
-[Two open-source demos show WebXR could be used to make full-fledged games](https://uploadvr.com/project-flowerbed-webxr-minigolf-open-source-demos/)
-
-[Ready Player Me](https://readyplayer.me/)
-
-[RATK (Reality Accelerator Tool Kit)](https://github.com/meta-quest/reality-accelerator-toolkit)
-
-[Volu.dev](https://volu.dev/) pairing companion via VS Code extension
+- [OVR Metrics Tool](https://developer.oculus.com/documentation/unity/ts-ovrmetricstool/)
+- [Oculus Perf docs](https://developer.oculus.com/documentation/web/webxr-perf/)
+- Fixed Foveated Rendering
 
 ## AR
 
-Plane detection
+AR on the web uses plane detection to place virtual objects on real-world surfaces.
 
-[8th Wall WebAR](https://www.8thwall.com/)
+- [8th Wall WebAR](https://www.8thwall.com/)
+- [AR.js](https://github.com/AR-js-org/AR.js)
+- [MindAR](https://github.com/hiukim/mind-ar-js)
+- [@coconut-xr/natuerlich](https://github.com/coconut-xr/natuerlich) ([announcement](https://x.com/coconut_xr/status/1689600319259357184))
 
-[AR.js](https://github.com/AR-js-org/AR.js)
+## Other Resources
 
-[MindAR](https://github.com/hiukim/mind-ar-js)
-
-[natuerlich](https://github.com/coconut-xr/natuerlich) ([announcement](https://x.com/coconut_xr/status/1689600319259357184))
-
-</Todo>
+- [WebXR Layers](https://developer.oculus.com/documentation/web/webxr-layers/) — [Rik Cabanier's explainer](https://github.com/cabanier/layers/blob/dom-layers/explainer.md)
+- [WebXR Awesome list](https://github.com/msub2/awesome-webxr)
+- [RATK (Reality Accelerator Tool Kit)](https://github.com/meta-quest/reality-accelerator-toolkit)
+- [Volu.dev](https://volu.dev/) — pairing companion via VS Code extension
+- [LogXR](https://github.com/felixtrz/logxr)
+- [Experimental WebXR keyboard on Meta Quest](https://developer.oculus.com/documentation/web/webxr-keyboard/)
+- [Ready Player Me](https://readyplayer.me/)
+- [Two open-source demos show WebXR could be used to make full-fledged games](https://uploadvr.com/project-flowerbed-webxr-minigolf-open-source-demos/)

@@ -1,54 +1,40 @@
-import Todo from 'components/Todo'
-
 # 🏺 Modeling
 
-<Todo>
-[Blender](https://www.blender.org/)
+3D modeling is the process of creating the geometry, textures, and materials that make up your game's visual assets. Most web game developers use **Blender** (free, open-source) as their primary modeling tool.
 
-[Blender donut tutorial](https://www.youtube.com/watch?v=nIoXOplUvAw)
+## Modeling Tools
 
-[Blender low-poly tutorial](https://www.youtube.com/watch?v=1jHUY3qoBu8)
+For detailed 3D modeling, sculpting, and scene composition, Blender is the industry standard for indie developers. For voxel and low-poly block-style assets, Blockbench is a lightweight alternative. Spline offers a more design-oriented 3D editing experience in the browser.
 
-[Blockbench](https://www.blockbench.net/)
+You can use **custom properties** on objects in Blender to pass metadata into your game (e.g., marking objects as colliders, spawn points, or triggers).
 
-[Blockbench tutorial](https://www.youtube.com/watch?v=WbyCbA1c8BM)
+## Painting and UV Mapping
 
-Bake lighting, bake shadows
+**UV mapping** defines how a 2D texture wraps around a 3D surface. Each vertex of the mesh gets a 2D coordinate (U, V) that maps it to a position on the texture image. Good UV unwrapping avoids stretching and makes hand-painting or baking textures much easier.
 
-[Spline](https://spline.design/)
+For 2D texture painting and creation, Krita is a free, professional-grade option. For pixel art and spritesheets, Aseprite is the go-to tool.
 
-[Using custom properties](https://x.com/etthugo/status/1625534672791912459)
+## Baking
 
-[Silo](https://nevercenter.com/silo/)
-
-2D, textures: [Krita](https://krita.org/en/)
-
-Spritesheets, pixel art: [Aseprite](https://www.aseprite.org/)
-
-[2EZ GLTFJSX](https://abdel369.gumroad.com/l/2EZgltfjsx) Blender
-add-on ([demo](https://x.com/0xca0a/status/1756318335816335794)) by
-[abdel369](https://x.com/abdel369hady)
-
-[Export_Vertices_To_JSON](https://github.com/ClassOutside/Export_Vertices_To_JSON/)
-Blender add-on by [ClassOutside](https://github.com/ClassOutside)
-
-</Todo>
-
-## Painting
-
-<Todo>UV</Todo>
+**Baking** pre-computes expensive effects (lighting, shadows, ambient occlusion) into textures. This trades texture memory for runtime performance — baked lighting looks great and costs almost nothing to render.
 
 ## Exporting
 
-<Todo>
-GLTF, GLB
+**glTF** (GL Transmission Format) is the standard format for web 3D assets. It comes in two forms: `.gltf` (JSON + separate binary/texture files) and `.glb` (single binary file). glTF supports PBR materials, animations, skinning, and morph targets out of the box.
 
-[gltfviewer](https://gltf-viewer.donmccurdy.com/)
+## Resources
 
-[GLTF to JSX](https://github.com/pmndrs/gltfjsx)
-
-Pixel art
-
-[Pixelicious](https://www.pixelicious.xyz/)
-
-</Todo>
+- [Blender](https://www.blender.org/)
+- [Blender donut tutorial](https://www.youtube.com/watch?v=nIoXOplUvAw)
+- [Blender low-poly tutorial](https://www.youtube.com/watch?v=1jHUY3qoBu8)
+- [Blockbench](https://www.blockbench.net/) ([tutorial](https://www.youtube.com/watch?v=WbyCbA1c8BM))
+- [Spline](https://spline.design/)
+- [Using custom properties](https://x.com/etthugo/status/1625534672791912459)
+- [Silo](https://nevercenter.com/silo/)
+- [Krita](https://krita.org/en/)
+- [Aseprite](https://www.aseprite.org/)
+- [2EZ GLTFJSX](https://abdel369.gumroad.com/l/2EZgltfjsx) Blender add-on ([demo](https://x.com/0xca0a/status/1756318335816335794)) by [abdel369](https://x.com/abdel369hady)
+- [Export_Vertices_To_JSON](https://github.com/ClassOutside/Export_Vertices_To_JSON/) Blender add-on by [ClassOutside](https://github.com/ClassOutside)
+- [gltfviewer](https://gltf-viewer.donmccurdy.com/)
+- [GLTF to JSX](https://github.com/pmndrs/gltfjsx)
+- [Pixelicious](https://www.pixelicious.xyz/)

@@ -1,4 +1,3 @@
-import Todo from 'components/Todo'
 import Project from 'components/Project'
 import ProjectList from 'components/ProjectList'
 import { desktop, steam } from 'projects'
@@ -31,25 +30,20 @@ Tauri, Neutralino, and Wails use lightweight OS web views that have a small memo
 
 ## Electron
 
-<Todo>
+Electron bundles Chromium and Node.js into a single executable — your web game runs in its own browser window with full access to the filesystem, native menus, and OS integration. It produces the largest builds (100MB+) but offers the most complete and battle-tested platform.
 
-[Electron](https://www.electronjs.org/) – [Electron Packager](https://github.com/electron/electron-packager) – [Electron Forge](https://www.electronforge.io/) – [electron-builder](https://www.electron.build/) – [Electron Fiddle](https://www.electronjs.org/fiddle) – [Nextron](https://github.com/saltyshiomix/nextron)
+To package your Electron app for distribution, you'll use a build tool like Electron Forge or electron-builder, which handle code signing, auto-updates, and platform-specific installers.
 
-[How to package your web project for platforms like Steam](https://codepen.io/punkydrewster713/post/package-web-project-for-steam)
+### Electron Resources
 
-[Automating Steam releases with Electron Forge and Github Actions](https://trashmoon.com/blog/2022/automating-steam-releases-for-html-games-with-electron-forge-and-github-actions/)
-
-[Notes on getting electron html5 apps working with Steamworks, Greenworks, Overlay, etc](https://github.com/JamesMoulang/electron-steam-notes)
-
-[How to integrate an HTML5 Electron based game with the Steam API](https://liana.one/integrate-electron-steam-api-steamworks)
-
-[Trezy's Electron Steam app template](https://github.com/trezy-studios/electron-steam-app-template)
-
-[cpojer's tweet on getting Athena Crisis to Steam on Mac](https://x.com/cpojer/status/1760657576625385965)
-
-[ToDesktop](https://www.todesktop.com/)
-
-</Todo>
+- [Electron](https://www.electronjs.org/) – [Electron Packager](https://github.com/electron/electron-packager) – [Electron Forge](https://www.electronforge.io/) – [electron-builder](https://www.electron.build/) – [Electron Fiddle](https://www.electronjs.org/fiddle) – [Nextron](https://github.com/saltyshiomix/nextron)
+- [How to package your web project for platforms like Steam](https://codepen.io/punkydrewster713/post/package-web-project-for-steam)
+- [Automating Steam releases with Electron Forge and Github Actions](https://trashmoon.com/blog/2022/automating-steam-releases-for-html-games-with-electron-forge-and-github-actions/)
+- [Notes on getting electron html5 apps working with Steamworks, Greenworks, Overlay, etc](https://github.com/JamesMoulang/electron-steam-notes)
+- [How to integrate an HTML5 Electron based game with the Steam API](https://liana.one/integrate-electron-steam-api-steamworks)
+- [Trezy's Electron Steam app template](https://github.com/trezy-studios/electron-steam-app-template)
+- [cpojer's tweet on getting Athena Crisis to Steam on Mac](https://x.com/cpojer/status/1760657576625385965)
+- [ToDesktop](https://www.todesktop.com/)
 
 ## Steam
 
@@ -57,10 +51,8 @@ Tauri, Neutralino, and Wails use lightweight OS web views that have a small memo
 
 {/* Prepare your app for Steam distribution: You will need to create a [Steamworks](https://partner.steamgames.com/) account, set up your app on Steam, and obtain a Steam App ID. You will also need to package your Electron app using Electron Packager or a similar tool to create a distributable package for your game. Integrate Steam features: To integrate Steam features such as achievements, leaderboards, and cloud saves, you will need to use the Steamworks SDK and Steam API. Test and submit your app: Once your app is ready, test it thoroughly to ensure that it works properly. Submit your app to Steam for review and approval. Once your app is approved, it will be available for users to download and play on Steam. */}
 
-<Todo>
+{/* Trezy about Gluon and Neutralino: I think you probably can, but they're built with Electron in mind so I'd be surprised if there weren't any issues. At the very least, those 2 libs only support Electron for enabling the Steam overlay, so you'd need to build your own support if you wanted to leverage the Steam overlay. 
 
-Epic Games Store
+Epic Games store
 
-</Todo>
-
-{/* Trezy about Gluon and Neutralino: I think you probably can, but they’re built with Electron in mind so I’d be surprised if there weren’t any issues. At the very least, those 2 libs only support Electron for enabling the Steam overlay, so you’d need to build your own support if you wanted to leverage the Steam overlay. */}
+*/}

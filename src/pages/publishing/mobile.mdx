@@ -1,18 +1,18 @@
-import Todo from 'components/Todo'
-
 # 📱 Mobile
 
-<Todo>
-[PWABuilder](https://www.pwabuilder.com/), VS Code extension
+There are several approaches to getting your web game onto mobile devices, ranging from simple PWAs to full native wrappers.
 
-Android - Trusted Web Activity
+## Progressive Web Apps
 
-Meta Quest
+The simplest path is making your game a **PWA** (Progressive Web App) — it can be installed to the home screen and run fullscreen with no app store needed. For app store distribution, [PWABuilder](https://www.pwabuilder.com/) can package your PWA for the Microsoft Store and Google Play (via Trusted Web Activity).
 
-Going native with [React Native](https://reactnative.dev/), [Expo](https://expo.dev/), [R3F Native](https://docs.pmnd.rs/react-three-fiber/getting-started/installation#react-native), [Expo GL View](https://docs.expo.dev/versions/latest/sdk/gl-view/)
+## Native Wrappers
 
-Capacitor, Cordova
+If you need deeper native integration (push notifications, in-app purchases, Game Center/Google Play Games), you can wrap your web game in a native shell:
 
-[Capacitor Game Connect](https://www.npmjs.com/package/@openforge/capacitor-game-connect)
+- **Capacitor** and **Cordova** wrap your web app in a native WebView with access to native plugins.
+- [Capacitor Game Connect](https://www.npmjs.com/package/@openforge/capacitor-game-connect) adds Game Center and Google Play Games support.
 
-</Todo>
+## React Native
+
+For a more native approach, [React Native](https://reactnative.dev/) with [Expo](https://expo.dev/) can run React Three Fiber scenes via [R3F Native](https://docs.pmnd.rs/react-three-fiber/getting-started/installation#react-native) and [Expo GL View](https://docs.expo.dev/versions/latest/sdk/gl-view/).
