@@ -4,11 +4,11 @@ import { CGLogo, cgDevelopersUrl, cgMainUrl } from './CGSponsor'
 import { ViverseLogo, viverseDevelopersUrl, viverseMainUrl } from './ViverseSponsor'
 
 const Footer = () => (
-  <footer className="bg-gray-100 dark:bg-neutral-900 py-12 text-center">
-    <div className="flex flex-col sm:flex-row gap-10 justify-around mb-14 items-center">
-      <div className="flex flex-col items-center mt-2 sm:mt-0">
+  <footer className="bg-gray-100 py-12 text-center dark:bg-neutral-900">
+    <div className="mb-14 flex flex-col items-center justify-around gap-10 sm:flex-row">
+      <div className="mt-2 flex flex-col items-center sm:mt-0">
         <a href={viverseMainUrl('footer')} target="_blank" rel="noopener">
-          <ViverseLogo className="w-[76px] scale-[1.23] relative bottom-[7px] mx-auto block" />
+          <ViverseLogo className="relative bottom-[7px] mx-auto block w-[76px] scale-[1.23]" />
         </a>
         <div className="mt-3">
           Sponsored by{' '}

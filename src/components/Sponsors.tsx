@@ -27,12 +27,7 @@ const Sponsors = () => {
     >
       {sponsors.map(s => (
         <a href={s.profile} key={s.handle} target="_blank" rel="noopener">
-          <img
-            src={s.avatar}
-            alt={s.handle}
-            title={s.handle}
-            style={{ borderRadius: 999, height: 48, margin: 2 }}
-          />
+          <img src={s.avatar} alt={s.handle} title={s.handle} style={{ borderRadius: 999, height: 48, margin: 2 }} />
         </a>
       ))}
     </div>

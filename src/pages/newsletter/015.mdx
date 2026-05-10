@@ -35,73 +35,64 @@ import { SubTitleDate } from 'components/Date'
 
 🎙 The [**Interview with Steven Yau**](https://www.webgamedev.com/interviews/steven-yau) ([_yaustar_](https://x.com/yaustar)) is out! Learn about the games industry from a veteran game developer who has worked for EA, King, and <PlayCanvasLogo /> PlayCanvas at Snapchat. Steven shared his thoughts on the web games ecosystem, monetization, web engines, and more. Come find Steven and the rest of us on [Discord](https://webgamedev.com/discord)!
 
-<BabylonLogo /> Microsoft released [**Babylon.js 6.0**](https://www.babylonjs.com/)! See the
-announcement [article](https://babylonjs.medium.com/announcing-babylon-js-6-0-dcb5f1662e3a) and
-[video](https://www.youtube.com/watch?v=nsqpuRCQV28). The release includes Performance Priority
-modes that can produce up to 50x faster rendering and performance, fluid rendering, improved
-screen-space reflections, texture decals, new glTF extensions support, Node Material Ray Marching,
-new Tri-Planar and Bi-Planar nodes, and the v1 of the GUI Editor. But the feature that is getting
-the most attention is the integration of [**Havok**](https://www.havok.com/), a physics engine that
-powers [numerous AAA games](https://www.havok.com/havok-powered/#section-portfolio). This Havok
-integration comes with a complete overhaul of the Babylon.js Physics API with Physics V2. Physics V2
-performs up to 20x faster than V1, which is based on either Cannon.js, Oimo.js, or Ammo.js. Try
-Havok in the [Playroom demo](https://theplayroom.babylonjs.com/)!
+<BabylonLogo /> Microsoft released [**Babylon.js 6.0**](https://www.babylonjs.com/)! See the announcement
+[article](https://babylonjs.medium.com/announcing-babylon-js-6-0-dcb5f1662e3a) and
+[video](https://www.youtube.com/watch?v=nsqpuRCQV28). The release includes Performance Priority modes that can produce
+up to 50x faster rendering and performance, fluid rendering, improved screen-space reflections, texture decals, new glTF
+extensions support, Node Material Ray Marching, new Tri-Planar and Bi-Planar nodes, and the v1 of the GUI Editor. But
+the feature that is getting the most attention is the integration of [**Havok**](https://www.havok.com/), a physics
+engine that powers [numerous AAA games](https://www.havok.com/havok-powered/#section-portfolio). This Havok integration
+comes with a complete overhaul of the Babylon.js Physics API with Physics V2. Physics V2 performs up to 20x faster than
+V1, which is based on either Cannon.js, Oimo.js, or Ammo.js. Try Havok in the [Playroom
+demo](https://theplayroom.babylonjs.com/)!
 
 This is all fantastic news for Babylon.js users, but that doesn't end there. **Havok for the Web** is also available as an MIT-licensed standalone [Wasm library](https://github.com/BabylonJS/Babylon.js/tree/master/packages/tools/babylonServer/public/havok) that can be used with any engine and is [available on NPM](https://www.npmjs.com/package/@babylonjs/havok) with TypeScript typings! 😍 [N8](https://x.com/N8Programs) already created a [Three.js integration demo](https://n8python.github.io/havokDemo/) ([repo](https://github.com/N8python/havokDemo)) with 10.000 rigid bodies.
 
 <WebGPULogo /> [**Chrome 113 is out of the beta channel and rolling out to
-stable**](https://x.com/Tojiro/status/1653504985488068608), so WebGPU is now available to up-to-date
-Chrome users without any flag. Let the revolution begin! 🎉
+stable**](https://x.com/Tojiro/status/1653504985488068608), so WebGPU is now available to up-to-date Chrome users
+without any flag. Let the revolution begin! 🎉
 
 ## 🛠 Tools & Updates
 
 - <ThreeLogo /> [**Three.js r152**](https://x.com/threejs/status/1651531663778942977) – Includes the
-  [ColorManagement](https://discourse.threejs.org/t/updates-to-color-management-in-three-js-r152/50791)
-  API enabled by default, a Rapier physics instancing
-  [example](https://threejs.org/examples/?q=rapier#physics_rapier_instancing), and Node-based WebGPU
-  [backdrop](https://github.com/mrdoob/three.js/pull/25903) and
+  [ColorManagement](https://discourse.threejs.org/t/updates-to-color-management-in-three-js-r152/50791) API enabled by
+  default, a Rapier physics instancing [example](https://threejs.org/examples/?q=rapier#physics_rapier_instancing), and
+  Node-based WebGPU [backdrop](https://github.com/mrdoob/three.js/pull/25903) and
   [shadows](https://github.com/mrdoob/three.js/pull/25822).
   ([changelog](https://github.com/mrdoob/three.js/releases/tag/r152), [migration
   guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide)).
 - <R3FLogo /> [**Drei v9.66**](https://github.com/pmndrs/drei/releases) – Adds
-  [**&lt;Resize&gt;**](https://github.com/pmndrs/drei#resize) by [Antoine
-  Bernier](https://x.com/abernier_), which resizes your meshes to 1 via a boundary box while
-  preserving proportions. It makes it easier to size models in your scene
-  ([demo](https://codesandbox.io/s/6yg0i3?file=/src/App.js)).
+  [**&lt;Resize&gt;**](https://github.com/pmndrs/drei#resize) by [Antoine Bernier](https://x.com/abernier_), which
+  resizes your meshes to 1 via a boundary box while preserving proportions. It makes it easier to size models in your
+  scene ([demo](https://codesandbox.io/s/6yg0i3?file=/src/App.js)).
 - <R3FLogo /> [**react-three-offscreen**](https://x.com/0xca0a/status/1649387930450894850)
   ([repo](https://github.com/pmndrs/react-three-offscreen)) – Offscreen worker canvas for R3F by
   [0xca0a](https://x.com/0xca0a).
 - <R3FLogo /> [**react-three-next v2**](https://x.com/onirenaud/status/1646139899291254786) by
-  [Renaud](https://x.com/onirenaud) – Adds portal divs, synced DOM/3D views and events, App Router
-  support.
-- <R3FLogo /> [**AutoFocusDOF**](https://github.com/ektogamat/AutoFocusDOF)
-  ([demo](https://autofocusdof.vercel.app/)) for R3F by [Anderson
-  Mancini](https://x.com/Andersonmancini). Available in [react-postprocessing
+  [Renaud](https://x.com/onirenaud) – Adds portal divs, synced DOM/3D views and events, App Router support.
+- <R3FLogo /> [**AutoFocusDOF**](https://github.com/ektogamat/AutoFocusDOF) ([demo](https://autofocusdof.vercel.app/))
+  for R3F by [Anderson Mancini](https://x.com/Andersonmancini). Available in [react-postprocessing
   2.10.0](https://github.com/pmndrs/react-postprocessing/pull/192).
-- <R3FLogo /> [**control-kit**](https://github.com/garbo-succus/control-kit) – Composable camera
-  controls by [Neftaly](https://github.com/neftaly).
-- <TresLogo /> [**TresJS 2.0.0-beta.11**](https://x.com/alvarosabu/status/1649049355922587651) –
-  Adds abstractions like [Levioso](https://cientos.tresjs.org/guide/abstractions/levioso.html) and
+- <R3FLogo /> [**control-kit**](https://github.com/garbo-succus/control-kit) – Composable camera controls by
+  [Neftaly](https://github.com/neftaly).
+- <TresLogo /> [**TresJS 2.0.0-beta.11**](https://x.com/alvarosabu/status/1649049355922587651) – Adds abstractions like
+  [Levioso](https://cientos.tresjs.org/guide/abstractions/levioso.html) and
   [Smoke](https://x.com/alvarosabu/status/1649049360930570244). There is now a TresJS [Twitter
   account](https://x.com/tresjs_dev).
 - <PlayCanvasLogo /> [**PlayCanvas**](https://playcanvas.com/) – A brand new in-editor [**Asset
-  Store**](https://blog.playcanvas.com/announcing-the-new-playcanvas-asset-store/) with real-time
-  previews.
-- <PhaserLogo /> [**Phaser 3.60**](https://github.com/photonstorm/phaser/releases) – The last
-  newsletter went out right before the [**announcement
-  post**](https://www.patreon.com/posts/phaser-3-60-on-81470366) was published!
-- <PhaserLogo /> [**Phaser Editor 2D
-  v3.60**](https://phasereditor2d.com/blog/2023/04/phaser-editor-2d-v360-is-ready) is now out of
-  beta.
-- <AframeLogo /> [**A-Frame v1.4.2**](https://github.com/aframevr/aframe/releases) – Bug fixes and
-  improvements.
+  Store**](https://blog.playcanvas.com/announcing-the-new-playcanvas-asset-store/) with real-time previews.
+- <PhaserLogo /> [**Phaser 3.60**](https://github.com/photonstorm/phaser/releases) – The last newsletter went out right
+  before the [**announcement post**](https://www.patreon.com/posts/phaser-3-60-on-81470366) was published!
+- <PhaserLogo /> [**Phaser Editor 2D v3.60**](https://phasereditor2d.com/blog/2023/04/phaser-editor-2d-v360-is-ready) is
+  now out of beta.
+- <AframeLogo /> [**A-Frame v1.4.2**](https://github.com/aframevr/aframe/releases) – Bug fixes and improvements.
 - <NeedleLogo /> [**Needle**](https://needle.tools/)
   [**3.3.x**](https://github.com/needle-tools/needle-engine-support/releases) – [Screenspace
   UI](https://x.com/marcel_wiessler/status/1653401224962555905) and improved RectTransform support.
 
-<ThreeLogo /> <WebXRLogo /> [**ion 3D Engine**](https://ion-3d-engine.io/) by
-[Samrun](https://x.com/samrun0) – A new library for building 3D websites and VR experiences, powered
-by Three.js. It seems particularly useful to create 3D UIs for VR.
+<ThreeLogo /> <WebXRLogo /> [**ion 3D Engine**](https://ion-3d-engine.io/) by [Samrun](https://x.com/samrun0) – A new
+library for building 3D websites and VR experiences, powered by Three.js. It seems particularly useful to create 3D UIs
+for VR.
 
 🤖 [**recast-navigation-js**](https://github.com/isaac-mason/recast-navigation-js) – A WebAssembly port of [**Recast Navigation**](https://github.com/recastnavigation/recastnavigation) with [Three.js integration](https://github.com/isaac-mason/recast-navigation-js/tree/main/packages/recast-navigation-three#recast-navigationthree) by [Isaac Mason](https://x.com/isaac_mason_), bringing Recast's navmesh generation, pathfinding, and crowd simulation to JavaScript ([demo 1](https://x.com/isaac_mason_/status/1647979252569243648), [demo 2](https://x.com/yomotsu/status/1648326941362237440)).
 
@@ -109,95 +100,83 @@ by Three.js. It seems particularly useful to create 3D UIs for VR.
 
 📡 [**PartyKit**](https://partykit.io/), an early-access platform to build real-time apps and games deployed at the edge by [Sunil Pai](https://x.com/threepointone) (creator of Glamor, ex-React core team), went open source.
 
-<WebGPULogo /> And last but not least, [**WebGPU
-devtools**](https://x.com/superhoge/status/1650000134594523136)
+<WebGPULogo /> And last but not least, [**WebGPU devtools**](https://x.com/superhoge/status/1650000134594523136)
 ([repo](https://github.com/takahirox/webgpu-devtools), [Chrome
-extension](https://chrome.google.com/webstore/detail/webgpu-devtools/ckabpgjkjmbkfmichbbgcgbelkbbpopi))
-by [takahiro](https://x.com/superhoge).
+extension](https://chrome.google.com/webstore/detail/webgpu-devtools/ckabpgjkjmbkfmichbbgcgbelkbbpopi)) by
+[takahiro](https://x.com/superhoge).
 
 ## 🎬 Videos
 
 - <ThreeLogo /> [**Build SimCity with
-  Three.js**](https://www.youtube.com/watch?v=DBX4ReeH6R8&list=PLtzt35QOXmkJ9unmoeA5gXHcscQHJVQpW)
-  (playlist) by [Dan Does Dev](https://www.youtube.com/@dandoesdev)
-- <ThreeLogo /> [**Three.js Optimization - Best Practices and
-  Techniques**](https://www.youtube.com/watch?v=dc5iJVInpPY) by [Valentin
-  Vannay](https://x.com/valentin_vannay)
-- <ThreeLogo /> [**How to Learn Three.js in 2023**](https://www.youtube.com/watch?v=Xu6oHc_20ow) by
-  [Visionary 3D](https://x.com/3d_visionary)
-- <ThreeLogo /> [**Dynamic Character Controller With Three.js +
-  Rapier**](https://www.youtube.com/watch?v=ipW-DUyPYlk) by [Visionary
+  Three.js**](https://www.youtube.com/watch?v=DBX4ReeH6R8&list=PLtzt35QOXmkJ9unmoeA5gXHcscQHJVQpW) (playlist) by [Dan
+  Does Dev](https://www.youtube.com/@dandoesdev)
+- <ThreeLogo /> [**Three.js Optimization - Best Practices and Techniques**](https://www.youtube.com/watch?v=dc5iJVInpPY)
+  by [Valentin Vannay](https://x.com/valentin_vannay)
+- <ThreeLogo /> [**How to Learn Three.js in 2023**](https://www.youtube.com/watch?v=Xu6oHc_20ow) by [Visionary
   3D](https://x.com/3d_visionary)
-- <ThreeLogo /> [**Slider with masked images in
-  Three.js**](https://www.youtube.com/watch?v=Doh-DkzPr3I) by [akella](https://x.com/akella), based
-  on [this portfolio](https://icantcontrolmyego.net/)
-- <R3FLogo /> [**React Three Fiber Tutorial - Rapier Physics
-  Engine**](https://www.youtube.com/watch?v=OpYtwrtpePY) by [Wawa Sensei](https://x.com/wawasensei)
-- <TresLogo /> [**TresJS v2 beta - What's hot?**](https://www.youtube.com/watch?v=vRSg2p_Oce0) by
-  [Alvaro Sabu](https://x.com/alvarosabu)
-- <BabylonLogo /> [**Babylon 6 Engine - Massive
-  Update**](https://www.youtube.com/watch?v=KCFlZtu0ftw) by [Game From
+- <ThreeLogo /> [**Dynamic Character Controller With Three.js + Rapier**](https://www.youtube.com/watch?v=ipW-DUyPYlk)
+  by [Visionary 3D](https://x.com/3d_visionary)
+- <ThreeLogo /> [**Slider with masked images in Three.js**](https://www.youtube.com/watch?v=Doh-DkzPr3I) by
+  [akella](https://x.com/akella), based on [this portfolio](https://icantcontrolmyego.net/)
+- <R3FLogo /> [**React Three Fiber Tutorial - Rapier Physics Engine**](https://www.youtube.com/watch?v=OpYtwrtpePY) by
+  [Wawa Sensei](https://x.com/wawasensei)
+- <TresLogo /> [**TresJS v2 beta - What's hot?**](https://www.youtube.com/watch?v=vRSg2p_Oce0) by [Alvaro
+  Sabu](https://x.com/alvarosabu)
+- <BabylonLogo /> [**Babylon 6 Engine - Massive Update**](https://www.youtube.com/watch?v=KCFlZtu0ftw) by [Game From
   Scratch](https://x.com/gamefromscratch)
-- <PhaserLogo /> [**Phaser April 2023 Games Showcase**](https://www.youtube.com/watch?v=gnfgwkVg7vc)
-  by [Richard Davey](https://x.com/photonstorm)
+- <PhaserLogo /> [**Phaser April 2023 Games Showcase**](https://www.youtube.com/watch?v=gnfgwkVg7vc) by [Richard
+  Davey](https://x.com/photonstorm)
 
 ## ✍️ Content
 
-- <R3FLogo /> [**How we built the Storybook Day 3D animation**](https://varun.ca/storybook-day/) by
-  [Varun Vachhar](https://x.com/winkerVSbecks)
-- <ThreeLogo /> 🎙 [**Three.js Monthly Talk - April 2023**](https://x.com/i/spaces/1ynJOaOgvDAKR)
-  with [Anderson Mancini](https://x.com/Andersonmancini), [N8](https://x.com/N8Programs), [Palash
-  Bansal](https://x.com/repalash) and [Prashant Sharma](https://x.com/spidersharma)
+- <R3FLogo /> [**How we built the Storybook Day 3D animation**](https://varun.ca/storybook-day/) by [Varun
+  Vachhar](https://x.com/winkerVSbecks)
+- <ThreeLogo /> 🎙 [**Three.js Monthly Talk - April 2023**](https://x.com/i/spaces/1ynJOaOgvDAKR) with [Anderson
+  Mancini](https://x.com/Andersonmancini), [N8](https://x.com/N8Programs), [Palash Bansal](https://x.com/repalash) and
+  [Prashant Sharma](https://x.com/spidersharma)
 
 ## 🎮 Games
 
 - <UnityLogo /> [**BAPBAP**](https://webgamer.io/en/g/bapbap) by [BAP
-  HQ](https://store.steampowered.com/app/2226280/BAPBAP/) – A very polished MOBA Battle Royale game
-  ⚔️
+  HQ](https://store.steampowered.com/app/2226280/BAPBAP/) – A very polished MOBA Battle Royale game ⚔️
 - <ThreeLogo /> [**Raccoon Retail**](https://webgamer.io/en/g/raccoon-retail) by [Pelican
   Party](https://x.com/pelican_party) – Shoppers are making a mess in your raccoon supermarket! 🦝
 - <ThreeLogo /> [**Nugget Royale**](https://webgamer.io/en/g/nugget-royale) by [Pelican
   Party](https://x.com/pelican_party) – Fight against other chickens to survive! 🐓
 - <PlayCanvasLogo /> [**Enion Online**](https://webgamer.io/en/g/enion-online) by [Ertuğrul
   Çetin](https://x.com/ertuctn) – Orcs vs Humans MMORPG in early access 🧙
-- <ThrelteLogo /> [**Threltemania**](https://webgamer.io/en/g/threltemania) by [Grischa
-  Erbe](https://legrisch.com/) – TrackMania-inspired game to showcase the upcoming [Threlte
-  6](https://next.threlte.xyz/) 🏎
+- <ThrelteLogo /> [**Threltemania**](https://webgamer.io/en/g/threltemania) by [Grischa Erbe](https://legrisch.com/) –
+  TrackMania-inspired game to showcase the upcoming [Threlte 6](https://next.threlte.xyz/) 🏎
 - <GodotLogo /> [**Rocket Bot Royale**](https://webgamer.io/en/g/rocket-bot-royale) by [Winter Pixel
   Games](https://x.com/winterpixelco) – A tank battle royale 2D game on Worms-like maps 🚀
 - <CssLogo /> <ReactLogo /> [**Ciabatta's Revenge**](https://drewconley.itch.io/ciabattas-revenge)
-  ([video](https://www.youtube.com/watch?v=4UiwfGaQGFA)) by [Drew
-  Conley](https://x.com/drewconley13) – DOM-based puzzle game about a bread corporation! 🥖
+  ([video](https://www.youtube.com/watch?v=4UiwfGaQGFA)) by [Drew Conley](https://x.com/drewconley13) – DOM-based puzzle
+  game about a bread corporation! 🥖
 
 ## ✨ Demos
 
-- <OglLogo /> [**Hordes.io's new login screen**](https://ptr.hordes.io/) by
-  [dek](https://x.com/shatterspine) (this is a test server, the live game is
-  [here](https://hordes.io/)) and [map
+- <OglLogo /> [**Hordes.io's new login screen**](https://ptr.hordes.io/) by [dek](https://x.com/shatterspine) (this is a
+  test server, the live game is [here](https://hordes.io/)) and [map
   editor](https://x.com/shatterspine/status/1650849287767572483).
-- <ThreeLogo /> [**Conundrum**](https://conundrum.gatunes.com/) by [Daniel
-  Esteban](https://x.com/DaniGatunes)
+- <ThreeLogo /> [**Conundrum**](https://conundrum.gatunes.com/) by [Daniel Esteban](https://x.com/DaniGatunes)
 - <ThreeLogo /> [**Skydiving**](https://x.com/s_lempens/status/1646609282064961579)
-  ([demo](https://webgl-skydiving.vercel.app/)) by [Sébastien Lempens](https://x.com/s_lempens),
-  uses a [Blockade Labs skybox](https://x.com/BlockadeLabs)
-- <ThreeLogo /> [**One, Stop**](https://www.anumberfromtheghost.com/one-stop), a new musical
-  experience from [A Number From the Ghost](https://www.anumberfromtheghost.com/) by [Peter
-  Adams](https://x.com/jittercub)
+  ([demo](https://webgl-skydiving.vercel.app/)) by [Sébastien Lempens](https://x.com/s_lempens), uses a [Blockade Labs
+  skybox](https://x.com/BlockadeLabs)
+- <ThreeLogo /> [**One, Stop**](https://www.anumberfromtheghost.com/one-stop), a new musical experience from [A Number
+  From the Ghost](https://www.anumberfromtheghost.com/) by [Peter Adams](https://x.com/jittercub)
 - <R3FLogo /> [**Hand-drawn**](https://x.com/WillMaddicott/status/1648791950894432259) and
   [**pencil**](https://x.com/WillMaddicott/status/1650596978936487937) shaders by [Will
   Maddicott](https://x.com/WillMaddicott)
-- <R3FLogo /> <WebGPULogo /> [**WebGPU with React Three
-  Fiber**](https://x.com/CantBeFaraz/status/1647811509014216710) by
-  [Faraz](https://x.com/CantBeFaraz)
-- <CocosLogo /> [**Cyberpunk example project**](https://preview.cocos.com/cyberpunk/), available for
-  free in the [Cocos Store](https://store.cocos.com/app/en/detail/4543)
-- <CssLogo /> [**CSS-only checkbox games
-  demo**](https://x.com/jamiecoulter89/status/1652361344933408769) by [Jamie
+- <R3FLogo /> <WebGPULogo /> [**WebGPU with React Three Fiber**](https://x.com/CantBeFaraz/status/1647811509014216710)
+  by [Faraz](https://x.com/CantBeFaraz)
+- <CocosLogo /> [**Cyberpunk example project**](https://preview.cocos.com/cyberpunk/), available for free in the [Cocos
+  Store](https://store.cocos.com/app/en/detail/4543)
+- <CssLogo /> [**CSS-only checkbox games demo**](https://x.com/jamiecoulter89/status/1652361344933408769) by [Jamie
   Coulter](https://x.com/jamiecoulter89) – Check out his [DOM-based
   games](https://www.webgamedev.com/games-demos#dom-based-games).
 - <UnityLogo /> [**Prototyping hex grids with line of
-  sight**](https://www.reddit.com/r/gamedev/comments/12odhir/prototyping_hex_grids_with_line_of_sight/)
-  by [u/coque](https://www.reddit.com/user/coque/)
+  sight**](https://www.reddit.com/r/gamedev/comments/12odhir/prototyping_hex_grids_with_line_of_sight/) by
+  [u/coque](https://www.reddit.com/user/coque/)
 - 🤖 [**Visualization of implementing bot AI**](https://www.reddit.com/r/IndieDev/comments/12vetnw/building_the_bot_ai_for_my_game_has_been_quite_a/) by [Rémi Vansteelandt](https://x.com/remvst) for [Earth's Greatest Defender](https://webgamer.io/en/g/earths-greatest-defender)
 
 <NewsletterFooter tweetId="1653816392519680000" />

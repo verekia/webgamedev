@@ -49,25 +49,23 @@ const Project = ({
   const npmUrl = `https://www.npmjs.com/package/${npm}`
   const crateUrl = `https://crates.io/crates/${crate}`
   const lastCommitYearsAgo =
-    lastCommitDate &&
-    Math.round((Date.now() - new Date(lastCommitDate).getTime()) / 1000 / 60 / 60 / 24 / 365)
+    lastCommitDate && Math.round((Date.now() - new Date(lastCommitDate).getTime()) / 1000 / 60 / 60 / 24 / 365)
   // Format star using decimal if more than 1000
   const starsStr = stars >= 1000 ? `${Math.round(stars / 1000)}k` : stars
-  const starsColorClassName =
-    stars >= 10_000 ? green : stars < 100 ? red : stars < 1000 ? orange : black
+  const starsColorClassName = stars >= 10_000 ? green : stars < 100 ? red : stars < 1000 ? orange : black
   const lastCommitColorClassName = lastCommitYearsAgo >= 2 ? red : orange
   const downloadsStr =
     downloads >= 1_000_000
       ? `${Math.round(downloads / 1_000_000)}M`
       : downloads >= 1000
-      ? `${Math.round(downloads / 1000)}k`
-      : downloads
+        ? `${Math.round(downloads / 1000)}k`
+        : downloads
   const crateDownloadsStr = crateDownloads
     ? crateDownloads >= 1_000_000
       ? `${Math.round(crateDownloads / 1_000_000)}M`
       : crateDownloads >= 1000
-      ? `${Math.round(crateDownloads / 1000)}k`
-      : crateDownloads
+        ? `${Math.round(crateDownloads / 1000)}k`
+        : crateDownloads
     : ''
   const downloadsColorClassName =
     downloads >= 100_000 ? green : downloads < 1000 ? red : downloads < 10000 ? orange : black
@@ -75,10 +73,10 @@ const Project = ({
     ? crateDownloads >= 1_000_000
       ? green
       : crateDownloads < 10000
-      ? red
-      : crateDownloads < 100_000
-      ? orange
-      : black
+        ? red
+        : crateDownloads < 100_000
+          ? orange
+          : black
     : ''
 
   return (
@@ -188,10 +186,7 @@ const Project = ({
               >
                 {lastCommitYearsAgo}
                 {shortenYears && <span className="short-years">y</span>}
-                <span className={shortenYears ? 'long-years' : ''}>
-                  {' '}
-                  year{lastCommitYearsAgo === 1 ? '' : 's'}
-                </span>
+                <span className={shortenYears ? 'long-years' : ''}> year{lastCommitYearsAgo === 1 ? '' : 's'}</span>
                 {lastCommitYearsAgo >= 2 ? (
                   <DeadIcon
                     style={{
@@ -224,9 +219,7 @@ const Project = ({
                 {' '}
                 – {description}
               </span>
-              {withNewlineDescription && (
-                <div className="project-description-mobile">{description}</div>
-              )}
+              {withNewlineDescription && <div className="project-description-mobile">{description}</div>}
             </>
           )}
         </>

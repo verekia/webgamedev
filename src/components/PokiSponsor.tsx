@@ -1,13 +1,11 @@
 import A from 'components/A'
 
-export const pokiMainUrl = content =>
-  `https://poki.com/?utm_source=webgamedev&utm_content=${content}`
-export const pokiDevelopersUrl = content =>
-  `https://developers.poki.com/?utm_source=webgamedev&utm_content=${content}`
+export const pokiMainUrl = content => `https://poki.com/?utm_source=webgamedev&utm_content=${content}`
+export const pokiDevelopersUrl = content => `https://developers.poki.com/?utm_source=webgamedev&utm_content=${content}`
 
 const PokiSponsor = () => (
-  <div className="flex flex-col sm:flex-row gap-4 items-center bg-gray-100 dark:bg-neutral-900 px-5 py-4 rounded-lg">
-    <div className="w-[140px] shrink-0 flex items-center justify-center">
+  <div className="flex flex-col items-center gap-4 rounded-lg bg-gray-100 px-5 py-4 dark:bg-neutral-900 sm:flex-row">
+    <div className="flex w-[140px] shrink-0 items-center justify-center">
       <a href={pokiMainUrl('homepage')} target="_blank">
         <PokiLogo className="h-[50px] scale-[0.8]" />
       </a>
@@ -17,8 +15,8 @@ const PokiSponsor = () => (
       <A href={pokiMainUrl('homepage')}>
         <b>Poki</b>
       </A>
-      . Reaching 90 million monthly users, Poki is on a mission to create the ultimate playground
-      for both players and developers on Web!{' '}
+      . Reaching 90 million monthly users, Poki is on a mission to create the ultimate playground for both players and
+      developers on Web!{' '}
       <A href={pokiDevelopersUrl('homepage')}>
         <b>Learn more</b>
       </A>
@@ -28,9 +26,9 @@ const PokiSponsor = () => (
 )
 
 export const PokiStandaloneSection = ({ content }: { content: string }) => (
-  <div className="flex flex-col gap-5 mt-5 bg-gray-100 dark:bg-neutral-900 px-5 py-4 rounded-lg">
-    <div className="flex flex-col-reverse gap-5 lg:flex-row items-center">
-      <div className="mx-auto w-full max-w-[130px] h-full max-h-[110px] flex items-center justify-center">
+  <div className="mt-5 flex flex-col gap-5 rounded-lg bg-gray-100 px-5 py-4 dark:bg-neutral-900">
+    <div className="flex flex-col-reverse items-center gap-5 lg:flex-row">
+      <div className="mx-auto flex h-full max-h-[110px] w-full max-w-[130px] items-center justify-center">
         <a href={pokiMainUrl(content)} target="_blank" rel="noopener">
           <PokiLogo className="w-full scale-[0.80]" />
         </a>
@@ -40,10 +38,9 @@ export const PokiStandaloneSection = ({ content }: { content: string }) => (
         <A href={pokiMainUrl(content)}>
           <b>Poki</b>
         </A>
-        . Poki is on a mission to create the ultimate online playground – where players and
-        developers come together to play and create! Together with a growing 400+ game developer
-        community and 90 million players each month, we're creating a new standard for web games.
-        Interested in working together?{' '}
+        . Poki is on a mission to create the ultimate online playground – where players and developers come together to
+        play and create! Together with a growing 400+ game developer community and 90 million players each month, we're
+        creating a new standard for web games. Interested in working together?{' '}
         <A href={pokiDevelopersUrl(content)}>
           <b>Share your game with us</b>
         </A>
@@ -60,11 +57,11 @@ export const PokiLogo = props => (
         <path
           d="M541.13,85.77 C561.94,85.77 578.88,68.42 578.88,47.1 C578.88,26.63 561.59,9.35 541.13,9.35 C520.67,9.35 503.38,26.64 503.38,47.1 C503.38,68.42 520.31,85.77 541.13,85.77 L541.13,85.77 Z"
           fill="#112C4F"
-          className="dark:fill-[white] fill-[#002B50]"
+          className="fill-[#002B50] dark:fill-[white]"
         />
         <path
           d="M504.06,99.34 L504.06,209.79 L470.06,135.95 C485.43,116.72 491.69,89.59 492.39,70.08 L492.39,54.08 L432.16,54.08 L432.16,69.48 C431.32,89.12 424.94,98.28 407.38,103.99 L407.38,-0.01 L346.11,0.05 L346.11,44.36 C323.78,21.58 292.97,9.58 256.55,9.58 C216.68,9.58 183.65,23.39 161.05,49.49 C154.196106,57.4649955 148.438498,66.3200074 143.93,75.82 C129.12,60.61 108.51,54.12 84.04,54.12 L0.04,54.12 L0.04,273.16 L56.04,273.16 L56.04,220.88 L84.04,220.88 C108.43,220.88 129.04,212.74 143.92,197.34 C148.531041,207.154811 154.492113,216.276497 161.63,224.44 C184.25,250.07 217.07,263.58 256.55,263.58 C295.19,263.58 327.55,250.08 350.16,224.52 C351.73,222.75 353.22,220.9 354.67,219.04 L407.38,219.04 L407.38,164.69 L415.46,162.83 L441.46,219.07 L578.2,219.07 L578.2,99.34 L504.06,99.34 L504.06,99.34 Z M86.06,163.15 L55.98,163.15 L55.98,110.43 L85.23,110.43 C92.81,110.43 105.46,115.54 105.46,135.75 C105.51,148.76 100.13,163.15 86.1,163.15 L86.06,163.15 Z M255.98,223.29 C208.75,223.29 170.33,183.92 170.33,135.54 C170.33,89.12 209.54,49.89 255.98,49.89 C302.42,49.89 341.63,89.12 341.63,135.54 C341.63,183.92 303.21,223.29 255.98,223.29 L255.98,223.29 Z"
-          className="dark:fill-[white] fill-[#002B50]"
+          className="fill-[#002B50] dark:fill-[white]"
         />
         <path
           d="M255.97,141.88 C218.09,141.88 198.97,148.53 191.04,150.57 C197.66,181.06 224.25,203.93 255.97,203.93 C287.69,203.93 314.29,181.06 320.9,150.57 C313.01,148.53 293.85,141.88 255.97,141.88 L255.97,141.88 Z"

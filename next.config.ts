@@ -8,6 +8,8 @@ const withNextra = nextra({
 const config = withNextra({
   assetPrefix: process.env.NEXT_PUBLIC_CDN ?? '',
   output: 'export',
+  reactStrictMode: true,
+  reactCompiler: true,
   images: { unoptimized: true },
 })
 
