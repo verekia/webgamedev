@@ -17,10 +17,7 @@ I worked as a 3D artist for an indie studio for a while, which taught me how sma
 
 Working on small projects, I learned all sorts of things over the course of ~4 years, but nothing I released was successful. I was getting by with very little resources, doing contract work occasionally to keep myself afloat. That's when I started working on Hordes.io, around July 2016.
 
-<Streamable
-  id="im3r7x?autoplay=1&nocontrols=1"
-  style={{ aspectRatio: '1170/798', maxWidth: '500px' }}
-/>
+<Streamable id="im3r7x?autoplay=1&nocontrols=1" style={{ aspectRatio: '1170/798', maxWidth: '500px' }} />
 
 _**Let's start from the very beginning. What were your initial intention and goals for Hordes? How long did it take to reach the first alpha and have the game up for people to play?**_
 
@@ -52,10 +49,7 @@ _**Let's talk graphics. Hordes' engine is based on the [OGL](https://github.com/
 
 When I rewrote the game in 2018/2019, I decided that I had to focus on making things highly performant in order to increase the scope of the project. Back then, Three.js had some performance issues primarily related to rendering many dynamically moving meshes with unique properties. The results of my benchmarks suggested that batching a lot of draw calls together could be massive. Three.js was also rather big with many features I did not use, and tree shaking support was minimal, so I looked for something that was lightweight and easy to extend. I found [Nathan Gordon](https://x.com/gordonnl)’s OGL, which was perfect in that regard. I ended up rewriting most of it to suit my own needs though. At this point I'd generally say it's a custom renderer for the project.
 
-<Streamable
-  id="k8vcgn?autoplay=1&nocontrols=1"
-  style={{ aspectRatio: '16/9', maxWidth: '650px' }}
-/>
+<Streamable id="k8vcgn?autoplay=1&nocontrols=1" style={{ aspectRatio: '16/9', maxWidth: '650px' }} />
 
 Three.js has improved massively in this regard, resolving many issues. I would absolutely recommend it to anyone that wants to get a project in the browser started effectively and quickly. Hordes would have never happened without it!
 

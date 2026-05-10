@@ -13,11 +13,7 @@ const NewsletterIframe = () => (
       justifyContent: 'center',
     }}
   >
-    <iframe
-      className="newsletter-iframe"
-      scrolling="no"
-      src="https://buttondown.email/webgamedev?as_embed=true"
-    />
+    <iframe className="newsletter-iframe" scrolling="no" src="https://buttondown.email/webgamedev?as_embed=true" />
   </div>
 )
 
@@ -34,13 +30,7 @@ export const HomeLabel = () => (
   </p>
 )
 
-export const NewsletterFooter = ({
-  tweetId,
-  blueskyUrl,
-}: {
-  tweetId?: string
-  blueskyUrl?: string
-}) => (
+export const NewsletterFooter = ({ tweetId, blueskyUrl }: { tweetId?: string; blueskyUrl?: string }) => (
   <>
     <p style={{ textAlign: 'center', marginTop: 30, marginBottom: 0 }}>
       Liked this issue? 🐦{' '}

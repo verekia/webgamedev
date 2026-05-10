@@ -46,12 +46,12 @@ import { WebGamerIcon, WebGamerText } from 'components/WebGamer'
 import { ViverseLogo } from 'components/ViverseSponsor'
 
 const Game = ({
-  name,
+  name: _name,
   img,
   images,
   engine,
-  author,
-  authorUrl,
+  author: _author,
+  authorUrl: _authorUrl,
   infoUrl,
   sourceUrl,
   websiteUrl,
@@ -61,9 +61,7 @@ const Game = ({
   <>
     <div
       style={{
-        backgroundImage: images?.[0]?.thumbnail
-          ? `url("/games/${images?.[0].thumbnail}`
-          : `url("/games-logos/${img}")`,
+        backgroundImage: images?.[0]?.thumbnail ? `url("/games/${images?.[0].thumbnail}` : `url("/games-logos/${img}")`,
       }}
     >
       {false && size && (
@@ -153,11 +151,7 @@ const Game = ({
           }}
           className="bg-white dark:bg-neutral-950"
         >
-          <a
-            href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
-            target="_blank"
-            rel="noopener"
-          >
+          <a href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`} target="_blank" rel="noopener">
             <PokiLogo />
           </a>
         </div>
@@ -175,11 +169,7 @@ const Game = ({
           }}
           className="bg-white dark:bg-neutral-950"
         >
-          <a
-            href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
-            target="_blank"
-            rel="noopener"
-          >
+          <a href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`} target="_blank" rel="noopener">
             <CGLogo width={80} height={30} />
           </a>
         </div>
@@ -204,7 +194,7 @@ const Game = ({
             className="flex items-center gap-1.5"
           >
             <WebGamerIcon className="size-6" />
-            <WebGamerText className="fill-black w-[6.5rem] dark:fill-white" />
+            <WebGamerText className="w-[6.5rem] fill-black dark:fill-white" />
           </a>
         </div>
       )}
@@ -221,11 +211,7 @@ const Game = ({
           }}
           className="bg-white dark:bg-neutral-950"
         >
-          <a
-            href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`}
-            target="_blank"
-            rel="noopener"
-          >
+          <a href={`${externalPlayUrl}?utm_source=webgamedev&utm_content=games`} target="_blank" rel="noopener">
             <ViverseLogo className="w-10 scale-[1.05]" />
           </a>
         </div>
@@ -247,12 +233,7 @@ const Game = ({
         >
           {sourceUrl && (
             <a href={sourceUrl} target="_blank" rel="noopener">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 98 96"
-                width="18px"
-                height="18px"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96" width="18px" height="18px">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -292,10 +273,10 @@ const Game = ({
       )}
       <a
         href={
-          websiteUrl ??
+          (websiteUrl ??
           (externalPlayUrl?.startsWith('https://poki.com') ||
             externalPlayUrl?.startsWith('https://www.crazygames.com') ||
-            externalPlayUrl?.startsWith('https://worlds.viverse.com'))
+            externalPlayUrl?.startsWith('https://worlds.viverse.com')))
             ? `${externalPlayUrl}?utm_source=webgamedev&utm_content=games`
             : externalPlayUrl
         }
@@ -320,8 +301,7 @@ export const Games = () => {
             g.engine !== R3F &&
             g.engine !== THRELTE &&
             g.engine !== PLAYCANVAS) ||
-          (libFilter === THREE &&
-            (g.engine === R3F || g.engine === THREE || g.engine === THRELTE)) ||
+          (libFilter === THREE && (g.engine === R3F || g.engine === THREE || g.engine === THRELTE)) ||
           g.engine === libFilter) &&
         (!genre ||
           (genre === 'others' &&

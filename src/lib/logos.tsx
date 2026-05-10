@@ -89,13 +89,7 @@ export const WGDLogo = style => (
 
 export const ThreeLogo = (props: ImageProps) => (
   <a href="https://threejs.org/" target="_blank" rel="noopener">
-    <Image
-      alt="Three.js"
-      title="Three.js"
-      src={ThreeSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Three.js" title="Three.js" src={ThreeSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
@@ -113,49 +107,25 @@ export const R3FLogo = (props: ImageProps) => (
 
 export const ImpactLogo = (props: ImageProps) => (
   <a href="https://impactjs.com/" target="_blank" rel="noopener">
-    <Image
-      alt="Impact.js"
-      title="Impact.js"
-      src={ImpactSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Impact.js" title="Impact.js" src={ImpactSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const WasmLogo = (props: ImageProps) => (
   <a href="https://webassembly.org/" target="_blank" rel="noopener">
-    <Image
-      alt="WebAssembly"
-      title="WebAssembly"
-      src={WasmSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="WebAssembly" title="WebAssembly" src={WasmSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const AframeLogo = (props: ImageProps) => (
   <a href="https://aframe.io/" target="_blank" rel="noopener">
-    <Image
-      alt="A-Frame"
-      title="A-Frame"
-      src={AframeSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="A-Frame" title="A-Frame" src={AframeSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const EaselLogo = (props: ImageProps) => (
   <a href="https://createjs.com/easeljs" target="_blank" rel="noopener">
-    <Image
-      alt="Easel.js"
-      title="Easel.js"
-      src={EaselSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Easel.js" title="Easel.js" src={EaselSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
@@ -185,25 +155,13 @@ export const BabylonLogo = (props: ImageProps) => (
 
 export const WebXRLogo = (props: ImageProps) => (
   <a href="https://immersiveweb.dev/" target="_blank" rel="noopener">
-    <Image
-      alt="WebXR"
-      title="WebXR"
-      src={WebXRSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="WebXR" title="WebXR" src={WebXRSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const ThrelteLogo = (props: ImageProps) => (
   <a href="https://threlte.xyz/" target="_blank" rel="noopener">
-    <Image
-      alt="Threlte"
-      title="Threlte"
-      src={ThrelteSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Threlte" title="Threlte" src={ThrelteSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
@@ -234,25 +192,13 @@ export const OglLogo = (props: ImageProps) => (
 
 export const PhaserLogo = (props: ImageProps) => (
   <a href="https://phaser.io/" target="_blank" rel="noopener">
-    <Image
-      alt="Phaser"
-      title="Phaser"
-      src={PhaserSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Phaser" title="Phaser" src={PhaserSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const KaboomLogo = (props: ImageProps) => (
   <a href="https://kaboomjs.com/" target="_blank" rel="noopener">
-    <Image
-      alt="Kaboom"
-      title="Kaboom"
-      src={KaboomSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Kaboom" title="Kaboom" src={KaboomSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
@@ -306,49 +252,25 @@ export const AngularThreeLogo = (props: ImageProps) => (
 
 export const VueLogo = (props: ImageProps) => (
   <a href="https://vuejs.org/" target="_blank" rel="noopener">
-    <Image
-      alt="Trois"
-      title="Trois"
-      src={VueSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Trois" title="Trois" src={VueSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const ReactLogo = (props: ImageProps) => (
   <a href="https://reactjs.org/" target="_blank" rel="noopener">
-    <Image
-      alt="React"
-      title="React"
-      src={ReactSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="React" title="React" src={ReactSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const SvelteLogo = (props: ImageProps) => (
   <a href="https://svelte.dev/" target="_blank" rel="noopener">
-    <Image
-      alt="Svelte"
-      title="Svelte"
-      src={SvelteSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Svelte" title="Svelte" src={SvelteSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const CocosLogo = (props: ImageProps) => (
   <a href="https://www.cocos.com/en" target="_blank" rel="noopener">
-    <Image
-      alt="Cocos"
-      title="Cocos"
-      src={CocosSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Cocos" title="Cocos" src={CocosSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
@@ -366,73 +288,37 @@ export const ConstructLogo = (props: ImageProps) => (
 
 export const NeedleLogo = (props: ImageProps) => (
   <a href="https://needle.tools/" target="_blank" rel="noopener">
-    <Image
-      alt="Needle"
-      title="Needle"
-      src={NeedleSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Needle" title="Needle" src={NeedleSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const UnityLogo = (props: ImageProps) => (
   <a href="https://unity.com/" target="_blank" rel="noopener">
-    <Image
-      alt="Unity"
-      title="Unity"
-      src={UnitySrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Unity" title="Unity" src={UnitySrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const TwoLogo = (props: ImageProps) => (
   <a href="https://two.js.org/" target="_blank" rel="noopener">
-    <Image
-      alt="Two.js"
-      title="Two.js"
-      src={TwoSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Two.js" title="Two.js" src={TwoSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const FilamentLogo = (props: ImageProps) => (
   <a href="https://google.github.io/filament/" target="_blank" rel="noopener">
-    <Image
-      alt="Filament"
-      title="Filament"
-      src={FilamentSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Filament" title="Filament" src={FilamentSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const GDevelopLogo = (props: ImageProps) => (
   <a href="https://gdevelop.io/" target="_blank" rel="noopener">
-    <Image
-      alt="GDevelop"
-      title="GDevelop"
-      src={GDevelopSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="GDevelop" title="GDevelop" src={GDevelopSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const GodotLogo = (props: ImageProps) => (
   <a href="https://godotengine.org/" target="_blank" rel="noopener">
-    <Image
-      alt="Godot"
-      title="Godot"
-      src={GodotSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Godot" title="Godot" src={GodotSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
@@ -498,13 +384,7 @@ export const WebGLLogo = (props: ImageProps) => (
 
 export const WebGPULogo = (props: ImageProps) => (
   <a href="https://en.wikipedia.org/wiki/WebGPU" target="_blank" rel="noopener">
-    <Image
-      alt="WebGPU"
-      title="WebGPU"
-      src={WebGPUSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="WebGPU" title="WebGPU" src={WebGPUSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
@@ -522,49 +402,25 @@ export const GltfLogo = (props: ImageProps) => (
 
 export const CssLogo = (props: ImageProps) => (
   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">
-    <Image
-      alt="CSS"
-      title="CSS"
-      src={CssSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="CSS" title="CSS" src={CssSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const SplineLogo = (props: ImageProps) => (
   <a href="https://spline.design/" target="_blank" rel="noopener">
-    <Image
-      alt="Spline"
-      title="Spline"
-      src={SplineSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Spline" title="Spline" src={SplineSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const ColyseusLogo = (props: ImageProps) => (
   <a href="https://colyseus.io/" target="_blank" rel="noopener">
-    <Image
-      alt="Colyseus"
-      title="Colyseus"
-      src={Colyseus}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Colyseus" title="Colyseus" src={Colyseus} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const DefoldLogo = (props: ImageProps) => (
   <a href="https://defold.com/" target="_blank" rel="noopener">
-    <Image
-      alt="Defold"
-      title="Defold"
-      src={DefoldSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Defold" title="Defold" src={DefoldSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
@@ -582,61 +438,31 @@ export const DTLogo = (props: ImageProps) => (
 
 export const ModdIoLogo = (props: ImageProps) => (
   <a href="https://modd.io/" target="_blank" rel="noopener">
-    <Image
-      alt="Modd.io"
-      title="Modd.io"
-      src={ModdIoSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Modd.io" title="Modd.io" src={ModdIoSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const HaxeLogo = (props: ImageProps) => (
   <a href="https://haxe.org/" target="_blank" rel="noopener">
-    <Image
-      alt="Haxe"
-      title="Haxe"
-      src={HaxeSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Haxe" title="Haxe" src={HaxeSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const StencylLogo = (props: ImageProps) => (
   <a href="https://www.stencyl.com/" target="_blank" rel="noopener">
-    <Image
-      alt="Stencyl"
-      title="Stencyl"
-      src={StencylSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Stencyl" title="Stencyl" src={StencylSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const BlenderLogo = (props: ImageProps) => (
   <a href="https://www.blender.org/" target="_blank" rel="noopener">
-    <Image
-      alt="Blender"
-      title="Blender"
-      src={BlenderSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Blender" title="Blender" src={BlenderSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 
 export const AngularLogo = (props: ImageProps) => (
   <a href="https://angular.io/" target="_blank" rel="noopener">
-    <Image
-      alt="Angular"
-      title="Angular"
-      src={AngularSrc}
-      style={{ ...defaultStyle, ...props.style }}
-      {...props}
-    />
+    <Image alt="Angular" title="Angular" src={AngularSrc} style={{ ...defaultStyle, ...props.style }} {...props} />
   </a>
 )
 

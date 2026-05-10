@@ -39,8 +39,7 @@ const config: DocsThemeConfig = {
   toc: {
     extraContent: () => (
       <p style={{ textAlign: 'center' }}>
-        <span style={{ fontSize: '1.5rem', position: 'relative', top: '4px' }}>💌</span> Check out
-        the{' '}
+        <span style={{ fontSize: '1.5rem', position: 'relative', top: '4px' }}>💌</span> Check out the{' '}
         <Link
           href="/newsletter"
           className="_text-primary-600 _underline _decoration-from-font [text-underline-position:under]"
@@ -60,14 +59,10 @@ const config: DocsThemeConfig = {
     const { title } = useConfig()
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}${asPath}`
 
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${asPath === '/' ? '' : asPath}`.split(
-      '?',
-    )[0]
+    const canonicalUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${asPath === '/' ? '' : asPath}`.split('?')[0]
 
     const realTitle =
-      title === 'Index'
-        ? 'Web Game Dev | Learn how to make games in JavaScript'
-        : `${title} | Web Game Dev`
+      title === 'Index' ? 'Web Game Dev | Learn how to make games in JavaScript' : `${title} | Web Game Dev`
 
     return (
       <>

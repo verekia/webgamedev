@@ -47,10 +47,9 @@ Usually, you also want to apply all modifiers on export:
 
 ## A-Frame Hello World
 
-<AframeLogo /> [**A-Frame**](https://aframe.io/) is a web framework for building virtual reality
-experiences maintained by [Diego Marcos](https://x.com/dmarcos). It is a wrapper around the
-popular <ThreeLogo /> [**Three.js**](https://threejs.org/) library. A-Frame's _Hello World_ looks
-like this:
+<AframeLogo /> [**A-Frame**](https://aframe.io/) is a web framework for building virtual reality experiences maintained
+by [Diego Marcos](https://x.com/dmarcos). It is a wrapper around the popular <ThreeLogo />
+[**Three.js**](https://threejs.org/) library. A-Frame's _Hello World_ looks like this:
 
 ```html
 <html>
@@ -61,21 +60,8 @@ like this:
     <a-scene background="color: #FAFAFA">
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
-      <a-cylinder
-        position="1 0.75 -3"
-        radius="0.5"
-        height="1.5"
-        color="#FFC65D"
-        shadow
-      ></a-cylinder>
-      <a-plane
-        position="0 0 -4"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-        shadow
-      ></a-plane>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
     </a-scene>
   </body>
 </html>
@@ -141,12 +127,7 @@ Having it walk in a circle requires adding a second entity that offsets the mode
 </a-entity>
 ```
 
-<video
-  autoPlay
-  loop
-  muted
-  style={{ margin: 'auto', maxWidth: 500, borderRadius: 6, width: '100%' }}
->
+<video autoPlay loop muted style={{ margin: 'auto', maxWidth: 500, borderRadius: 6, width: '100%' }}>
   <source src="/blog/walker/walk.mp4" type="video/mp4" />
 </video>
 
@@ -195,13 +176,7 @@ Then, we add shadows and prevent double lighting:
 And add the `shadow` property to the model:
 
 ```html
-<a-entity
-  shadow="cast: true; receive: true"
-  scale="0.5 0.5 0.5"
-  gltf-model="mech.gltf"
-  animation-mixer
->
-</a-entity>
+<a-entity shadow="cast: true; receive: true" scale="0.5 0.5 0.5" gltf-model="mech.gltf" animation-mixer> </a-entity>
 ```
 
 ## Result
@@ -209,12 +184,7 @@ And add the `shadow` property to the model:
 See and remix the final result here:
 https://mech-walker.glitch.me/
 
-<video
-  autoPlay
-  loop
-  muted
-  style={{ margin: '24px auto 16px', maxWidth: 500, borderRadius: 6, width: '100%' }}
->
+<video autoPlay loop muted style={{ margin: '24px auto 16px', maxWidth: 500, borderRadius: 6, width: '100%' }}>
   <source src="/blog/walker/desert.mp4" type="video/mp4" />
 </video>
 
@@ -234,12 +204,7 @@ Final code:
         animation="property: rotation.y; to: 0; from: 360; dur: 18000; loop: true; autoplay: true; easing: linear;"
       >
         <a-entity position="8 0 0">
-          <a-entity
-            shadow="cast: true; receive: true"
-            scale="0.5 0.5 0.5"
-            gltf-model="mech.gltf"
-            animation-mixer
-          >
+          <a-entity shadow="cast: true; receive: true" scale="0.5 0.5 0.5" gltf-model="mech.gltf" animation-mixer>
           </a-entity>
         </a-entity>
       </a-entity>

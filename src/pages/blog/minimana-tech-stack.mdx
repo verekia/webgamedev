@@ -35,11 +35,15 @@ import BlogStyles from 'components/BlogStyles'
       <a href="https://minimana.v1v2.io/" target="_blank">
         Mini Mana
       </a>
-      , the <a href="https://polydraw.v1v2.io/" target="_blank">
+      , the{' '}
+      <a href="https://polydraw.v1v2.io/" target="_blank">
         PolyDraw
-      </a> app, and the <a href="https://manapotion.org/" target="_blank">
+      </a>{' '}
+      app, and the{' '}
+      <a href="https://manapotion.org/" target="_blank">
         Mana Potion
-      </a> library.
+      </a>{' '}
+      library.
     </>
   }
 />
@@ -155,9 +159,7 @@ type Entity = {
 Then, you grab entities based on a subset of components:
 
 ```ts
-const enemies = world
-  .with('transform', 'model', 'animation', 'rigidBody', 'health')
-  .where(e => e.faction === 'enemies')
+const enemies = world.with('transform', 'model', 'animation', 'rigidBody', 'health').where(e => e.faction === 'enemies')
 ```
 
 Finally, to render your enemies as a React component:

@@ -4,21 +4,15 @@ import PlausibleProvider from 'next-plausible'
 import 'nextra-theme-docs/style.css'
 import '../styles/global.css'
 
-const darkBg = '#1c1c1c'
-
 const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
   useEffect(() => {
     const gamerEl: HTMLAnchorElement = document.querySelector('nav a[href="https://webgamer.io"]')
     gamerEl?.setAttribute('rel', 'noopener')
 
     const fn = async () => {
-      const res = await fetch(
-        'https://discord.com/api/v9/invites/5Z28wjTeyh?with_counts=true&with_expiration=true',
-      )
+      const res = await fetch('https://discord.com/api/v9/invites/5Z28wjTeyh?with_counts=true&with_expiration=true')
       const data = await res.json()
-      const el: HTMLAnchorElement = document.querySelector(
-        'nav a[href="https://webgamedev.com/discord"]',
-      )
+      const el: HTMLAnchorElement = document.querySelector('nav a[href="https://webgamedev.com/discord"]')
       el.style.top = '4px'
 
       if (!document.querySelector('.discord-count')) {
@@ -33,19 +27,13 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
 
   return (
     <>
-      <PlausibleProvider
-        domain="webgamedev.com"
-        trackOutboundLinks
-        selfHosted
-        customDomain="https://pl.v1v2.io"
-      >
+      <PlausibleProvider domain="webgamedev.com" trackOutboundLinks selfHosted customDomain="https://pl.v1v2.io">
         {/* eslint-disable no-useless-escape */}
         <style global jsx>{`
           html[class~='dark'] .dark-invert-filter {
             filter: invert(100%);
           }
-          nav a[href="https://webgamedev.com/discord"]
-          {
+          nav a[href='https://webgamedev.com/discord'] {
             position: relative;
             top: 0px;
             transition: all 0.15s ease-in-out;
@@ -71,13 +59,11 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
               display: none;
             }
           }
-          nav a[href="https://webgamer.io"]
-          {
+          nav a[href='https://webgamer.io'] {
             font-weight: bold;
           }
           @media (max-width: 1050px) {
-            nav a[href="https://webgamer.io"]
-            {
+            nav a[href='https://webgamer.io'] {
               display: none;
             }
           }
@@ -278,14 +264,12 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
             }
           }
           @media (max-width: 315px) {
-            nav a[href="https://webgamedev.com/discord"]
-            {
+            nav a[href='https://webgamedev.com/discord'] {
               display: none;
             }
           }
           @media (max-width: 425px) {
-            nav a[href="https://github.com/verekia/webgamedev"]
-            {
+            nav a[href='https://github.com/verekia/webgamedev'] {
               display: none;
             }
           }

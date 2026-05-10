@@ -105,8 +105,7 @@ const games: Game[] = [
     infoUrl: 'https://medium.com/poki/meet-onrush-studio-3053ba5be600',
     genres: [SHOOTING],
     mobile: 2,
-    description:
-      'Venge.io is a fast-paced online multiplayer FPS game with capture-the-flag mechanics.',
+    description: 'Venge.io is a fast-paced online multiplayer FPS game with capture-the-flag mechanics.',
     size: 30,
     allowIframe: true,
     graphics: 10,
@@ -504,8 +503,7 @@ const games: Game[] = [
     genres: [ADVENTURE],
     author: 'Merci Michel',
     authorUrl: 'https://www.merci-michel.com/projects/',
-    infoUrl:
-      'https://www.awwwards.com/coastal-world-by-merci-michel-wins-site-of-the-month-august-2022.html',
+    infoUrl: 'https://www.awwwards.com/coastal-world-by-merci-michel-wins-site-of-the-month-august-2022.html',
     wgdOnly: true,
     mobile: 2,
     size: 9,

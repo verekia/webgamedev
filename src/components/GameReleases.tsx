@@ -7,25 +7,17 @@ import { WebGamerIcon } from './WebGamer'
 export const GameRelease = ({ title, url, description, developer, developerUrl, EngineIcon }) => (
   <span>
     {url.startsWith('https://poki.com') ? (
-      <a
-        href="https://poki.com/?utm_source=webgamedev&utm_content=newsletter"
-        target="_blank"
-        rel="noopener"
-      >
-        <PokiIcon className="size-5 inline-block mr-2" />
+      <a href="https://poki.com/?utm_source=webgamedev&utm_content=newsletter" target="_blank" rel="noopener">
+        <PokiIcon className="mr-2 inline-block size-5" />
       </a>
     ) : url.startsWith('https://www.crazygames.com') ? (
-      <a
-        href="https://www.crazygames.com/?utm_source=webgamedev&utm_content=newsletter"
-        target="_blank"
-        rel="noopener"
-      >
-        <CGIcon className="size-5 inline-block mr-2" />
+      <a href="https://www.crazygames.com/?utm_source=webgamedev&utm_content=newsletter" target="_blank" rel="noopener">
+        <CGIcon className="mr-2 inline-block size-5" />
       </a>
     ) : url.startsWith('https://webgamer.io') ? (
-      <WebGamerIcon className="size-5 inline-block mr-2" />
+      <WebGamerIcon className="mr-2 inline-block size-5" />
     ) : url.startsWith('https://worlds.viverse.com') ? (
-      <ViverseIcon className="size-5 inline-block mr-2 scale-110" />
+      <ViverseIcon className="mr-2 inline-block size-5 scale-110" />
     ) : null}
     <EngineIcon />
     <A
@@ -33,14 +25,14 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
         url.startsWith('https://poki.com')
           ? `${url}?utm_source=webgamedev&utm_content=newsletter`
           : url.startsWith('https://www.crazygames.com')
-          ? `${url}?utm_source=webgamedev&utm_content=newsletter`
-          : url.startsWith('https://worlds.viverse.com')
-          ? `${url}?utm_source=webgamedev&utm_content=newsletter`
-          : url
+            ? `${url}?utm_source=webgamedev&utm_content=newsletter`
+            : url.startsWith('https://worlds.viverse.com')
+              ? `${url}?utm_source=webgamedev&utm_content=newsletter`
+              : url
       }
       target="_blank"
       rel="noopener"
-      className="font-bold ml-1.5"
+      className="ml-1.5 font-bold"
     >
       {title}
     </A>{' '}
@@ -48,11 +40,7 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
       <>
         by{' '}
         {developerUrl ? (
-          <A
-            href={`${developerUrl}?utm_source=webgamedev&utm_content=newsletter`}
-            target="_blank"
-            rel="noopener"
-          >
+          <A href={`${developerUrl}?utm_source=webgamedev&utm_content=newsletter`} target="_blank" rel="noopener">
             {developer}
           </A>
         ) : (

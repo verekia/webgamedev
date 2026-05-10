@@ -55,14 +55,7 @@ const ProjectList = ({ projects, rust }: Props) => {
 
         {visibleProjects.map(project => {
           const lastCommit = project.lastCommitDate
-            ? Math.round(
-                (Date.now() - new Date(project.lastCommitDate).getTime()) /
-                  1000 /
-                  60 /
-                  60 /
-                  24 /
-                  365,
-              )
+            ? Math.round((Date.now() - new Date(project.lastCommitDate).getTime()) / 1000 / 60 / 60 / 24 / 365)
             : null
           const lastCommitColor = lastCommit >= 2 ? red : orange
 
@@ -72,17 +65,11 @@ const ProjectList = ({ projects, rust }: Props) => {
             ? downloadCount >= 1_000_000
               ? `${Math.round(downloadCount / 1_000_000)}M`
               : downloadCount >= 1000
-              ? `${Math.round(downloadCount / 1000)}k`
-              : downloadCount
+                ? `${Math.round(downloadCount / 1000)}k`
+                : downloadCount
             : null
           const downloadsColor =
-            downloadCount >= 100_000
-              ? green
-              : downloadCount < 1000
-              ? red
-              : downloadCount < 10000
-              ? orange
-              : black
+            downloadCount >= 100_000 ? green : downloadCount < 1000 ? red : downloadCount < 10000 ? orange : black
 
           const stars = project.stars
             ? project.stars >= 1000
@@ -90,13 +77,7 @@ const ProjectList = ({ projects, rust }: Props) => {
               : project.stars
             : null
           const starsColor =
-            project.stars >= 10_000
-              ? green
-              : project.stars < 100
-              ? red
-              : project.stars < 1000
-              ? orange
-              : black
+            project.stars >= 10_000 ? green : project.stars < 100 ? red : project.stars < 1000 ? orange : black
 
           const repoUrl = `https://github.com/${project.repo}`
           const npmUrl = `https://www.npmjs.com/package/${project.npm}`

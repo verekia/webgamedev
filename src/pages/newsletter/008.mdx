@@ -37,15 +37,13 @@ import { SubTitleDate } from 'components/Date'
 My main personal takeaway from the meetup is that Three.js' [mrdoob](https://x.com/mrdoob) thinks the way forward for writing shaders is node-based solutions that provide a compatibility abstraction layer over WebGL Shader Language (GLSL) and WebGPU Shader Language (WGSL). In Three.js, that would be the [**NodeMaterial**](https://www.donmccurdy.com/2019/03/17/three-nodematerial-introduction/), which has a [visual editor](https://threejs.org/examples/webgl_nodes_playground.html). Three.js is working on aligning with the [**MaterialX**](https://materialx.org/) open standard for node-based materials and already has a [MaterialXLoader](https://threejs.org/examples/?q=materialx#webgl_nodes_loader_materialx). [Sunag](https://github.com/sunag) does the heavy lifting on that front. You can also check out [Hendrik Mans](https://www.webgamedev.com/interviews/hendrik-mans)' [**Shader Composer**](https://github.com/hmans/composer-suite/tree/main/packages/shader-composer), which has React Three Fiber bindings but currently only supports GLSL.
 
 <TresLogo /> [Alvaro Sabu released](https://x.com/alvarosabu/status/1620836387925925890)
-[**TresJS**](https://tresjs.org/), a library to create Three.js scenes declaratively with
-[**Vue**](https://vuejs.org/). Read the [Motivation](https://tresjs.org/guide/#motivation) section
-to see how it relates to [**TroisJS**](https://troisjs.github.io/) and
-[**Lunchbox**](https://github.com/breakfast-studio/lunchboxjs), which are similar Vue wrappers for
-Three.js.
+[**TresJS**](https://tresjs.org/), a library to create Three.js scenes declaratively with [**Vue**](https://vuejs.org/).
+Read the [Motivation](https://tresjs.org/guide/#motivation) section to see how it relates to
+[**TroisJS**](https://troisjs.github.io/) and [**Lunchbox**](https://github.com/breakfast-studio/lunchboxjs), which are
+similar Vue wrappers for Three.js.
 
-<WebXRLogo /> Meta released the [**Immersive Web
-Emulator**](https://x.com/Oculus_Dev/status/1622672216348573697) to easily test WebXR experiences on
-desktop ([Chrome
+<WebXRLogo /> Meta released the [**Immersive Web Emulator**](https://x.com/Oculus_Dev/status/1622672216348573697) to
+easily test WebXR experiences on desktop ([Chrome
 Store](https://chrome.google.com/webstore/detail/immersive-web-emulator/cgffilbpcibhmcfbgggfhfolhkfbhmik)).
 
 ## 🛠 Tools & Updates
@@ -55,24 +53,20 @@ Store](https://chrome.google.com/webstore/detail/immersive-web-emulator/cgffilbp
   Bennett](https://x.com/Cody_J_Bennett) wrote a user-land port of the [unmerged
   PR](https://github.com/mrdoob/three.js/pull/22667) for **InstancedSkinnedMesh** in a
   [CodeSandbox](https://codesandbox.io/s/three-js-instanced-skinned-mesh-2yfgiu).
-- <ThreeLogo /> [**Editor and code generator**](https://x.com/a_warnes/status/1620664524591472641)
-  for **MeshTransmissionMaterial** by [Alex Warnes](https://x.com/a_warnes). Works for R3F and
-  Threlte.
-- <ThrelteLogo /> [**@threlte/gltf**](https://github.com/threlte/threlte/tree/main/packages/gltf) is
-  an experimental fork of [gltfjsx](https://github.com/pmndrs/gltfjsx) for Threlte by [Grischa
-  Erbe](https://x.com/threlte) to transform gLTF and GLB files into declarative Threlte components
+- <ThreeLogo /> [**Editor and code generator**](https://x.com/a_warnes/status/1620664524591472641) for
+  **MeshTransmissionMaterial** by [Alex Warnes](https://x.com/a_warnes). Works for R3F and Threlte.
+- <ThrelteLogo /> [**@threlte/gltf**](https://github.com/threlte/threlte/tree/main/packages/gltf) is an experimental
+  fork of [gltfjsx](https://github.com/pmndrs/gltfjsx) for Threlte by [Grischa Erbe](https://x.com/threlte) to transform
+  gLTF and GLB files into declarative Threlte components
   ([demo](https://stackblitz.com/edit/test-threlte-gltf?file=src%2Flib%2FGameboy.svelte)).
-- <ThreeLogo /> [**Phy**](https://github.com/lo-th/phy), [3TH](https://x.com/3dflashlo)'s game
-  engine to add physics to Three.js, now supports [NVIDIA
-  PhysX](https://developer.nvidia.com/physx-sdk) 5.1 via
-  [physx-js-webidl](https://github.com/fabmax/physx-js-webidl) JavaScript / Wasm bindings. See the
-  [other new features](https://x.com/3dflashlo/status/1621576273100242944) and [live
-  demo](https://lo-th.github.io/phy/). 3TH also created [Oimo.js](https://github.com/lo-th/Oimo.js)
-  and [Full IK](https://github.com/lo-th/fullik).
-- <PlayCanvasLogo /> [**PlayCanvas v1.61.0**](https://github.com/playcanvas/engine/releases) –
-  PlayCanvas now supports Microsoft's [**Volumetric
-  Videos**](https://x.com/playcanvas/status/1620795982337421312). All PlayCanvas builds now include
-  **WebGPU support** (it was previously only included in debug builds), adding only
+- <ThreeLogo /> [**Phy**](https://github.com/lo-th/phy), [3TH](https://x.com/3dflashlo)'s game engine to add physics to
+  Three.js, now supports [NVIDIA PhysX](https://developer.nvidia.com/physx-sdk) 5.1 via
+  [physx-js-webidl](https://github.com/fabmax/physx-js-webidl) JavaScript / Wasm bindings. See the [other new
+  features](https://x.com/3dflashlo/status/1621576273100242944) and [live demo](https://lo-th.github.io/phy/). 3TH also
+  created [Oimo.js](https://github.com/lo-th/Oimo.js) and [Full IK](https://github.com/lo-th/fullik).
+- <PlayCanvasLogo /> [**PlayCanvas v1.61.0**](https://github.com/playcanvas/engine/releases) – PlayCanvas now supports
+  Microsoft's [**Volumetric Videos**](https://x.com/playcanvas/status/1620795982337421312). All PlayCanvas builds now
+  include **WebGPU support** (it was previously only included in debug builds), adding only
   [9kb](https://github.com/playcanvas/engine/pull/5030) to the engine!
 - <BabylonLogo /> [**Babylon.js v5.45.0**](https://github.com/BabylonJS/Babylon.js/releases)
 
