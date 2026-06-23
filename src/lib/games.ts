@@ -886,7 +886,7 @@ Select a song and hit the right keys at the right time!`,
 
 // Column order for the first 18 portal games (6 rows × 3 columns)
 // 0 = Poki, 1 = CrazyGames, 2 = Viverse
-const portalColumnOrder = [2, 0, 1]
+const portalColumnOrder = [1, 2, 0]
 
 const reorderedGames: Game[] = [
   ...Array.from({ length: 18 }, (_, i) => {
