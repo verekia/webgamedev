@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
       )
       const data = await res.json()
       const el: HTMLAnchorElement = document.querySelector(
-        'nav a[href="https://webgamedev.com/discord"]',
+        'nav a[href="https://www.webgamedev.com/discord"]',
       )
       el.style.top = '4px'
 
@@ -44,7 +44,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
           html[class~='dark'] .dark-invert-filter {
             filter: invert(100%);
           }
-          nav a[href="https://webgamedev.com/discord"]
+          nav a[href="https://www.webgamedev.com/discord"]
           {
             position: relative;
             top: 0px;
@@ -278,7 +278,7 @@ const App = ({ Component, pageProps }: { Component: any; pageProps: any }) => {
             }
           }
           @media (max-width: 315px) {
-            nav a[href="https://webgamedev.com/discord"]
+            nav a[href="https://www.webgamedev.com/discord"]
             {
               display: none;
             }

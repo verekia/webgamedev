@@ -57,7 +57,7 @@ export const NewsletterFooter = ({
         </>
       )}
       join our{' '}
-      <A href="https://webgamedev.com/discord">
+      <A href="https://www.webgamedev.com/discord">
         <b>Discord</b>
       </A>
       , and <b>Subscribe</b> below!
@@ -84,7 +84,7 @@ export const RSSLabel = () => (
 )
 
 export const Discord = () => (
-  <A href="https://webgamedev.com/discord" target="_blank" rel="noopener">
+  <A href="https://www.webgamedev.com/discord" target="_blank" rel="noopener">
     <b>Discord</b>
   </A>
 )

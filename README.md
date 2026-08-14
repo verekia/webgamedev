@@ -4,7 +4,7 @@ This is the repository of [WebGameDev.com](https://www.webgamedev.com)
 
 The site is built with [Nextra](https://nextra.site/).
 
-Join our [Discord](https://webgamedev.com/discord).
+Join our [Discord](https://www.webgamedev.com/discord).
 
 ## Setup
 

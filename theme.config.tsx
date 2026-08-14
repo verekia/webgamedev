@@ -51,7 +51,7 @@ const config: DocsThemeConfig = {
       </p>
     ),
   },
-  chat: { link: 'https://webgamedev.com/discord' },
+  chat: { link: 'https://www.webgamedev.com/discord' },
   sidebar: { defaultMenuCollapseLevel: 1 },
   head: () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
