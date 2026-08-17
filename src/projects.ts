@@ -399,6 +399,15 @@ export const particles = {
     downloads: 1500,
     ts: 'ts',
   },
+  nixieFx: {
+    name: 'NixieFX',
+    url: 'https://nixiefx.com/',
+    repo: 'azakhary/nixie-fx',
+    stars: 4,
+    npm: 'nixie-fx',
+    downloads: 262,
+    ts: 'ts',
+  },
   nebula: {
     url: 'https://three-nebula.org/',
     name: 'Nebula',
