@@ -2,11 +2,24 @@ import A from 'components/A'
 import { PokiLogo, pokiDevelopersUrl, pokiMainUrl } from './PokiSponsor'
 import { CGLogo, cgDevelopersUrl, cgMainUrl } from './CGSponsor'
 import { ViverseLogo, viverseDevelopersUrl, viverseMainUrl } from './ViverseSponsor'
+import { XsollaLogo, xsollaMainUrl } from './XsollaSponsor'
 
 const Footer = () => (
   <footer className="bg-gray-100 dark:bg-neutral-900 py-12 text-center">
-    <div className="flex flex-col sm:flex-row gap-10 justify-around mb-14 items-center">
-    <div className="flex flex-col items-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-0 justify-items-center items-start mb-14">
+      <div className="flex flex-col items-center">
+        <a href={pokiMainUrl('footer')} target="_blank">
+          <PokiLogo className="h-[56px] scale-[0.78]" />
+        </a>
+        <div className="mt-3">
+          Sponsored by{' '}
+          <A href={pokiDevelopersUrl('footer')} rel="noopener">
+            <b>Poki</b>
+          </A>
+        </div>
+        <div>The market leader on Web</div>
+      </div>
+      <div className="flex flex-col items-center">
         <a href={cgMainUrl('footer')} target="_blank" rel="noopener">
           <CGLogo className="h-[56px] scale-[0.85]" />
         </a>
@@ -31,16 +44,16 @@ const Footer = () => (
         <div>Create. Publish. Earn.</div>
       </div>
       <div className="flex flex-col items-center">
-        <a href={pokiMainUrl('footer')} target="_blank">
-          <PokiLogo className="h-[56px] scale-[0.78]" />
+        <a href={xsollaMainUrl('footer-slogan')} target="_blank" rel="noopener">
+          <XsollaLogo className="h-[56px] scale-[0.7]" />
         </a>
         <div className="mt-3">
           Sponsored by{' '}
-          <A href={pokiDevelopersUrl('footer')} rel="noopener">
-            <b>Poki</b>
+          <A href={xsollaMainUrl('footer-slogan')} rel="noopener">
+            <b>Xsolla</b>
           </A>
         </div>
-        <div>The market leader on Web</div>
+        <div>Monetize on your own terms</div>
       </div>
     </div>
     <div style={{ textAlign: 'center' }}>
