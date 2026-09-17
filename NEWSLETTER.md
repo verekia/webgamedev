@@ -7,3 +7,7 @@ For the Games section, sponsors have provided links. The author name are usually
 Articles and Videos: don't write descriptions, just the title + author. If there are any, remove clickbait, all caps titles, simplify if the title is a bit long.
 
 Tools descriptions should be short 1 liners, never 2 lines, and we put the by at the end of the line
+
+Engines:
+
+If asked, for all the engines we usually cover (Three, Tres, Babylon, Playcanvas, Pixi, etc) fill the engines sections by going through their official website, github changelog, or official Twitter, find the most recent important version announcements. Similarly to how we do it in previous issues.
