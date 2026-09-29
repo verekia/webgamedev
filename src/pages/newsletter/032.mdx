@@ -134,7 +134,7 @@ are heading.
     </a>
   </div>
   <div className="flex flex-col gap-3 [&>*]:!my-0">
-[**VIVERSE**](https://worlds.viverse.com/?utm_source=webgamedev&utm_content=newsletter) gives developers powerful tools to bring interactive 3D and XR experiences to life directly in the browser, with free hosting, multi-engine support, and monetization tools. With our [Creator Program](https://create.viverse.com/creator-program?utm_source=webgamedev&utm_content=newsletter), we're investing in the next generation of creators who are pushing the boundaries of what's possible in the browser. Join the [**VIVERSE Discord**](https://discord.gg/viversecreators).
+[**VIVERSE**](https://www.viverse.com/?utm_source=webgamedev&utm_content=newsletter) gives developers powerful tools to bring interactive 3D and XR experiences to life directly in the browser, with free hosting, multi-engine support, and monetization tools. With our [Creator Program](https://create.viverse.com/creator-program?utm_source=webgamedev&utm_content=newsletter), we're investing in the next generation of creators who are pushing the boundaries of what's possible in the browser. Join the [**VIVERSE Discord**](https://discord.gg/viversecreators).
 
 The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=webgamedev&utm_content=newsletter) is live! In addition to our Creator Grants, any developer can now earn on VIVERSE based on engagement. No ads, no rev shares, no exclusive contracts, just generous compensation well above competitor rates!
 
@@ -233,7 +233,19 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
   ([demo](https://three-avbd.vercel.app/)) – GPU rigid-body physics on WebGPU with the AVBD solver
   (SIGGRAPH 2025) by [sbobyn](https://github.com/sbobyn)
 - <ColyseusLogo /> [**Colyseus 0.18**](https://colyseus.io/blog/colyseus-018-is-here/) –
-  Client-side prediction and lag compensation, faster encoder, database, and admin console
+- <ThreeLogo /> [**N8AO 2.0**](https://github.com/N8python/n8ao)
+  ([announcement](https://x.com/N8Programs/status/2076099177906339951),
+  [demo](https://n8python.github.io/n8ao/example/)) – Neural denoiser for sharper, temporally
+  stable AO from as few as 4 samples by [N8](https://x.com/N8Programs)
+- 📡 [**gatho**](https://github.com/isaac-mason/gatho) ([site](https://gatho.dev),
+  [thread](https://x.com/isaac_mason_/status/2076482019023008109)) – Self-hostable multiplayer
+  toolkit with WebSocket rooms, reconnection, a process per room, and Redis scaling by [Isaac
+  Mason](https://x.com/isaac_mason_)
+- <ThreeLogo /> [**Silhouette POM for
+  Three.js**](https://github.com/SkyeShark/threejs-silhouette-pom)
+  ([demo](https://skyeshark.github.io/threejs-silhouette-pom/),
+  [post](https://x.com/SkyeSharkie/status/2073273893117460754)) – Parallax occlusion mapping that
+  carves mesh silhouettes, in TSL for WebGPU by [SkyeShark](https://x.com/SkyeSharkie)
 
 ## 🎬 Videos
 
@@ -241,6 +253,11 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
   [Krispy](https://github.com/krispya) and [Dennis Smolek](https://x.com/DennisSmolek)
 - 🎓 [**How to Blur Images at 20,000 FPS**](https://www.youtube.com/watch?v=YJVYX8tllj4) by
   [Acerola](https://x.com/Acerola_t)
+- <ThreeLogo /> [**I Built a GPU Grass System in
+  Three.js**](https://www.youtube.com/watch?v=Pqyu7-DDmOM) by [Cortiz](https://x.com/cortiz2894)
+- <ThreeLogo /> [**Zephyria Devlog #5: Making It More
+  Fun**](https://www.youtube.com/watch?v=fUeWbJlMfd4) and [**#6: A Cave Full of
+  Enemies**](https://www.youtube.com/watch?v=jnDukbY1eHs) by [Cortiz](https://x.com/cortiz2894)
 
 ## ✍️ Articles
 
@@ -258,7 +275,7 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
 - 📡 [**128-Ticks Per Second Multiplayer in a Web
   Browser**](https://x.com/i/article/2093051948387766272) by
   [GuavaGuy](https://x.com/0xGuavaGuy) from [SuperTripLand](https://supertrip.land/)
-- <OglLogo /> [**Hordes.io Journal – Part 1:
+- ❤️ [**Hordes.io Journal – Part 1:
   Alpha**](https://dek.engineer/blog/hordes-io-journal-alpha) by [dek](https://x.com/shatterspine)
 
 ## 🎮 Games
@@ -369,7 +386,7 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
   />
 - <GameRelease
     title="Back to Bed"
-    url="https://worlds.viverse.com/uzMBdJh"
+    url="https://www.viverse.com/uzMBdJh"
     developer="Bedtime Digital Games"
     developerUrl="https://x.com/bedtimedg"
     description="Guide the sleepwalker in a surreal world."
@@ -377,7 +394,7 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
   />
 - <GameRelease
     title="Kickshot"
-    url="https://worlds.viverse.com/c5nRiSV"
+    url="https://www.viverse.com/c5nRiSV"
     developer="Fer Factor"
     developerUrl="https://ferfactor.com/"
     description="Kick down doors and clear rooms in a fast, on-rails shooter."
@@ -387,22 +404,18 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
 ## ✨ Demos
 
 - <TypeGPULogo /> [**Bone Tide**](https://reczkok.github.io/typegpu-adventure/)
-  ([thread](https://x.com/reczko_konrad/status/2077395085986017370)) – Horde survival game written
-  from scratch in TypeGPU with no engine: game logic and shaders are all TypeScript, and it runs on
-  the web and in React Native by [Konrad Reczko](https://x.com/reczko_konrad)
+  ([thread](https://x.com/reczko_konrad/status/2077395085986017370)) – Horde survival game on the
+  web and React Native by [Konrad Reczko](https://x.com/reczko_konrad)
 - <R3FLogo /> [**Utanomori**](https://mesq.me/utanomori/)
   ([repo](https://github.com/mesqme/utanomori),
   [breakdown](https://x.com/mesqme/status/2089144338697834727)) by [mesq](https://x.com/mesqme)
 - <WebGPULogo /> [**Tidewater**](https://dgreenheck.github.io/tidewater/)
   ([repo](https://github.com/dgreenheck/tidewater),
   [post](https://x.com/dangreenheck/status/2102878171796222160)) – Island fishing game on raw WebGPU
-  and WGSL, with an FFT ocean, breaking waves, and a physically based sky by [Dan
-  Greenheck](https://x.com/dangreenheck)
+  by [Dan Greenheck](https://x.com/dangreenheck)
 - 💡 [**Radiance Cascades**](https://shadertoy.com/view/scy3Dd)
   ([post](https://x.com/CodyBennett/status/2088606415246033222)) – Real-time 3D global illumination
   on ShaderToy by [Cody Bennett](https://x.com/CodyBennett)
-
-My [Bookmarks](https://x.com/i/bookmarks).
 
 [Codrops](https://tympanus.net/codrops/all-posts/)
 

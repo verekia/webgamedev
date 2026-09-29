@@ -6,7 +6,7 @@ import ViverseWhiteSrc from '../../public/partnerships/viverse-white.webp'
 import ViverseIconSrc from '../../public/partnerships/viverse-icon.png'
 
 export const viverseMainUrl = content =>
-  `https://worlds.viverse.com/?utm_source=webgamedev&utm_content=${content}`
+  `https://www.viverse.com/?utm_source=webgamedev&utm_content=${content}`
 export const viverseDevelopersUrl = content =>
   `https://create.viverse.com/creator-program?utm_source=webgamedev&utm_content=${content}`
 

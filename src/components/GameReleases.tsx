@@ -24,7 +24,7 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
       </a>
     ) : url.startsWith('https://webgamer.io') ? (
       <WebGamerIcon className="size-5 inline-block mr-2" />
-    ) : url.startsWith('https://worlds.viverse.com') ? (
+    ) : url.startsWith('https://www.viverse.com') ? (
       <ViverseIcon className="size-5 inline-block mr-2 scale-110" />
     ) : null}
     <EngineIcon />
@@ -34,7 +34,7 @@ export const GameRelease = ({ title, url, description, developer, developerUrl, 
           ? `${url}?utm_source=webgamedev&utm_content=newsletter`
           : url.startsWith('https://www.crazygames.com')
           ? `${url}?utm_source=webgamedev&utm_content=newsletter`
-          : url.startsWith('https://worlds.viverse.com')
+          : url.startsWith('https://www.viverse.com')
           ? `${url}?utm_source=webgamedev&utm_content=newsletter`
           : url
       }

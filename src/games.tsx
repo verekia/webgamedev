@@ -208,7 +208,7 @@ const Game = ({
           </a>
         </div>
       )}
-      {externalPlayUrl?.startsWith('https://worlds.viverse.com') && (
+      {externalPlayUrl?.startsWith('https://www.viverse.com') && (
         <div
           style={{
             position: 'absolute',
@@ -295,7 +295,7 @@ const Game = ({
           websiteUrl ??
           (externalPlayUrl?.startsWith('https://poki.com') ||
             externalPlayUrl?.startsWith('https://www.crazygames.com') ||
-            externalPlayUrl?.startsWith('https://worlds.viverse.com'))
+            externalPlayUrl?.startsWith('https://www.viverse.com'))
             ? `${externalPlayUrl}?utm_source=webgamedev&utm_content=games`
             : externalPlayUrl
         }
@@ -344,14 +344,14 @@ export const Games = () => {
         return g.externalPlayUrl?.startsWith('https://webgamer.io')
       }
       if (portalFilter === 'viverse') {
-        return g.externalPlayUrl?.startsWith('https://worlds.viverse.com')
+        return g.externalPlayUrl?.startsWith('https://www.viverse.com')
       }
       if (portalFilter === 'others') {
         return (
           !g.externalPlayUrl?.startsWith('https://poki.com') &&
           !g.externalPlayUrl?.startsWith('https://www.crazygames.com') &&
           !g.externalPlayUrl?.startsWith('https://webgamer.io') &&
-          !g.externalPlayUrl?.startsWith('https://worlds.viverse.com')
+          !g.externalPlayUrl?.startsWith('https://www.viverse.com')
         )
       }
       return true

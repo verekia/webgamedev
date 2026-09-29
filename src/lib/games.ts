@@ -131,7 +131,7 @@ const games: Game[] = [
   {
     id: 'in-tirol',
     name: 'In Tirol',
-    externalPlayUrl: 'https://worlds.viverse.com/qj4Fjpg',
+    externalPlayUrl: 'https://www.viverse.com/qj4Fjpg',
     images: makeStandardImages('in-tirol'),
     engine: PLAYCANVAS,
     genres: [ADVENTURE, PUZZLE],
@@ -183,7 +183,7 @@ const games: Game[] = [
   {
     id: 'ship-happens',
     name: 'Ship Happens VR',
-    externalPlayUrl: 'https://worlds.viverse.com/LJxPNPP',
+    externalPlayUrl: 'https://www.viverse.com/LJxPNPP',
     images: makeStandardImages('ship-happens'),
     engine: PLAYCANVAS,
     genres: [ADVENTURE, PUZZLE],
@@ -230,7 +230,7 @@ const games: Game[] = [
   {
     id: 'to-the-limbs',
     name: 'to the Limbs',
-    externalPlayUrl: 'https://worlds.viverse.com/jtrJ9az',
+    externalPlayUrl: 'https://www.viverse.com/jtrJ9az',
     images: makeStandardImages('to-the-limbs'),
     engine: THREE,
     genres: [MUSIC],
@@ -267,7 +267,7 @@ const games: Game[] = [
   {
     id: 'alfi-s-adventures',
     name: "Alfi's Adventures",
-    externalPlayUrl: 'https://worlds.viverse.com/EcxNxwe',
+    externalPlayUrl: 'https://www.viverse.com/EcxNxwe',
     images: makeStandardImages('alfis-adventures'),
     engine: THREE,
     genres: [PLATFORMER],
@@ -311,7 +311,7 @@ const games: Game[] = [
   {
     id: 'the-art-collector',
     name: 'The Art Collector',
-    externalPlayUrl: 'https://worlds.viverse.com/KG6XZmH',
+    externalPlayUrl: 'https://www.viverse.com/KG6XZmH',
     images: makeStandardImages('the-art-collector'),
     author: 'Alastair Low',
     authorUrl: 'https://x.com/Wallmasterr',
@@ -347,7 +347,7 @@ const games: Game[] = [
   {
     id: 'mutiny-and-meetings',
     name: 'Mutiny & Meetings',
-    externalPlayUrl: 'https://worlds.viverse.com/3EKMHXt',
+    externalPlayUrl: 'https://www.viverse.com/3EKMHXt',
     images: makeStandardImages('mutiny-and-meetings'),
     author: 'Raildo',
     authorUrl: 'https://x.com/RaildoGameart',
