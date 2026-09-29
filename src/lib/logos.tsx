@@ -49,6 +49,7 @@ import WebGPUSrc from '../../public/logos/webgpu.png'
 import WebXRSrc from '../../public/logos/webxr.png'
 import WonderlandSrc from '../../public/logos/wonderland.png'
 import DTSrc from '../../public/logos/dt.svg'
+import TypeGPUSrc from '../../public/logos/typegpu.svg'
 import ManapotionSrc from '../../public/logos/manapotion.png'
 import ExcaliburSrc from '../../public/logos/excalibur.png'
 import OrillusionSrc from '../../public/logos/orillusion.png'
@@ -575,6 +576,18 @@ export const DTLogo = (props: ImageProps) => (
       title="Definitely Typed"
       src={DTSrc}
       style={{ ...defaultStyle, ...props.style }}
+      {...props}
+    />
+  </a>
+)
+
+export const TypeGPULogo = (props: ImageProps) => (
+  <a href="https://docs.swmansion.com/TypeGPU/" target="_blank" rel="noopener">
+    <Image
+      alt="TypeGPU"
+      title="TypeGPU"
+      src={TypeGPUSrc}
+      style={{ ...defaultStyle, position: 'relative', top: -2, right: -2, ...props.style }}
       {...props}
     />
   </a>

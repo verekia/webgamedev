@@ -3,11 +3,13 @@ import MailTo from 'components/MailTo'
 import {
   BabylonLogo,
   CocosLogo,
+  ColyseusLogo,
   ConstructLogo,
   DefoldLogo,
   ExcaliburLogo,
   NeedleLogo,
   GameMakerLogo,
+  GltfLogo,
   KaplayLogo,
   JavascriptLogo,
   OglLogo,
@@ -20,6 +22,7 @@ import {
   TresLogo,
   WasmLogo,
   WebGPULogo,
+  TypeGPULogo,
   WebXRLogo,
   WonderlandLogo,
   UnityLogo,
@@ -33,16 +36,43 @@ import { ViverseLogo, viverseMainUrl } from 'components/ViverseSponsor'
 import { XsollaLogo, xsollaNewsletterUrl } from 'components/XsollaSponsor'
 import { GameRelease } from 'components/GameReleases'
 
-# Newsletter – Issue 032 (Preview)
+# Newsletter – Issue 032
 
-<SubTitleDate value="2026-09-XX" />
+<SubTitleDate value="2026-09-30" />
 
 <NoBulletListStyles />
 <NewsletterStyles />
 
 ## 🔥 Headlines
 
-📦 [**Box3D**](https://box2d.org/posts/2026/06/announcing-box3d/) ([video](https://www.youtube.com/watch?v=jr_Fzl2XwKU), [repo](https://github.com/erincatto/box3d), [docs](https://box2d.org/documentation3d/)) is the new 3D physics engine by [Erin Catto](https://x.com/erin_catto), the creator of Box2D. It brings the Box2D architecture to three dimensions: a plain C API, a sub-stepping soft-constraint solver, continuous collision detection, triangle mesh and height field collision, baked compound shapes, multi-threading, and cross-platform determinism. Erin wrote it while working on [The Legend of California](https://www.kintsugiyama.com/game) at [Kintsugiyama](https://www.kintsugiyama.com/), where the game needs to simulate hundreds of thousands of server-side entities. Being a small C library, it travels to the web well: [**box3d.js**](https://isaac-mason.github.io/box3d.js/) ([repo](https://github.com/isaac-mason/box3d.js)) by [Isaac Mason](https://x.com/isaac_mason_) already ships WASM bindings with TypeScript types and a nice set of examples.
+🎾 [**Box3D**](https://box2d.org/posts/2026/06/announcing-box3d/)
+([video](https://www.youtube.com/watch?v=jr_Fzl2XwKU), [repo](https://github.com/erincatto/box3d),
+[docs](https://box2d.org/documentation3d/)) is the new 3D physics engine by [Erin
+Catto](https://x.com/erin_catto), the creator of Box2D. It brings the Box2D architecture to three
+dimensions with a C API, continuous collision detection, multi-threading, and cross-platform determinism.
+[**box3d.js**](https://isaac-mason.github.io/box3d.js/) ([repo](https://github.com/isaac-mason/box3d.js))
+by [Isaac Mason](https://x.com/isaac_mason_) already ships WASM bindings with TypeScript types.
+
+🔠 [**Glyph**](https://github.com/pmndrs/glyph)
+([announcement](https://x.com/pmndrs/status/2100980802091708818)) is a GPU-first typography engine
+for the web by [Justin Walsh](https://x.com/thejustinwalsh) from
+[Poimandres](https://github.com/pmndrs). Bitmap, MSDF, and Slug fonts in one engine, correct
+multilingual shaping with bidi, CJK, ligatures, paragraphs that wrap around shapes, justify, and a lot more. It integrates with Three.js, R3F, TresJS, TypeGPU, or your own renderer.
+
+🧮 [**math**](https://github.com/pmndrs/math) ([docs](https://pmndrs.github.io/math/docs/),
+[examples](https://pmndrs.github.io/math/examples/),
+[announcement](https://x.com/pmndrs/status/2103487633502474300)) is Poimandres' new math engine by [Isaac Mason](https://x.com/isaac_mason_). Allocation-free, monomorphic,
+tree-shakable, and renderer-agnostic, it covers vectors, quaternions, and matrices, shapes and
+spatial queries, noise, easing and springs, IK, colors, and seeded RNGs. And it's simply
+`npm i math`!
+
+🎓 [**NoGraphicsAPI**](https://github.com/sebbbi/NoGraphicsAPI)
+([announcement](https://x.com/SebAaltonen/status/2096312811743740178)) by [Sebastian
+Aaltonen](https://x.com/SebAaltonen) implements his [No Graphics
+API](https://www.sebastianaaltonen.com/blog/no-graphics-api) blog post as an MIT-licensed C++20
+library on Vulkan 1.4 and Metal 4: buffer objects, descriptor sets, and vertex layouts give way to
+GPU pointers and bindless heap indices. Not for the browser, but a clear picture of where GPU APIs
+are heading.
 
 ## ⭐️ Sponsors
 
@@ -140,53 +170,49 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
 
 ## 🏎 Engines
 
-- <ThreeLogo /> [**Three.js r186**](https://x.com/threejs/status/2097463284001563125) – SunLight
-  with cascaded shadow maps, a TSL Gaussian Splat renderer and loader, and retroreflective materials
-  ([changelog](https://github.com/mrdoob/three.js/releases), [migration
+- <ThreeLogo /> [**Three.js r186**](https://x.com/threejs/status/2097463284001563125) ([changelog](https://github.com/mrdoob/three.js/releases), [migration
   guide](https://github.com/mrdoob/three.js/wiki/Migration-Guide))
+- <R3FLogo /> [**R3F v9.8.0**](https://github.com/pmndrs/react-three-fiber/releases/tag/v9.8.0)
+  and [**v9.8.1**](https://github.com/pmndrs/react-three-fiber/releases/tag/v9.8.1) – React 19.3
+  compatibility, Activity support, Strict Mode fixes, synchronous root config
 - <R3FLogo /> [**R3F v10
-  Alpha**](https://github.com/pmndrs/react-three-fiber/releases/tag/v10.0.0-alpha.4) – The march
-  toward first-class WebGPU and TSL support: new TSL hooks, multiple canvases sharing one renderer
-  and GPU context, and a standalone [scheduler](https://github.com/pmndrs/scheduler) with named
-  phases and FPS limits
-- <R3FLogo /> [**Drei v11 Alpha**](https://github.com/pmndrs/drei/releases) – WebGPU groundwork,
-  MeshDiscardMaterial, BlurPass converted to TSL, and pixel-perfect Html
+  Alpha 4**](https://github.com/pmndrs/react-three-fiber/releases/tag/v10.0.0-alpha.4) – New TSL hooks,
+  multiple canvases sharing one renderer, and a standalone
+  [scheduler](https://github.com/pmndrs/scheduler) repo
+- <R3FLogo /> [**Drei v11 Alpha 7**](https://github.com/pmndrs/drei/releases) – More fixes and features have been ported to WebGPU
 - <ThrelteLogo /> [**Threlte Core
-  8.6.0**](https://github.com/threlte/threlte/releases/tag/%40threlte%2Fcore%408.6.0) – New
+  8.6.0**](https://threlte.xyz/docs/reference/extras/webgpu/) – New
   `@threlte/core/webgpu` export
 - <TresLogo /> [**TresJS**](https://tresjs.org/) –
-  [@tresjs/rapier](https://github.com/Tresjs/tres/releases/tag/%40tresjs%2Frapier%401.0.0) is out of
-  alpha, and [1.1.0](https://github.com/Tresjs/tres/releases/tag/%40tresjs%2Frapier%401.1.0) imports
-  glTF physics colliders from node names. [core
-  5.9.0](https://github.com/Tresjs/tres/releases/tag/%40tresjs%2Fcore%405.9.0) adds
-  MeshPortalMaterial and TresPortal, and [cientos
-  5.9.0](https://github.com/Tresjs/tres/releases/tag/%40tresjs%2Fcientos%405.9.0) adds Instances,
-  Merged, and Refractor
+  [Rapier Physics v1](https://tresjs.org/blog/tresjs-rapier-v1), [core 5.9.0](https://github.com/Tresjs/tres/releases/tag/%40tresjs%2Fcore%405.9.0) adds
+  MeshPortalMaterial, and [cientos
+  5.9.0](https://github.com/Tresjs/tres/releases/tag/%40tresjs%2Fcientos%405.9.0) adds Instances and Merged
 - <PlayCanvasLogo /> [**PlayCanvas Engine
   v2.21**](https://x.com/playcanvas/status/2079571937303445761) and
-  [**v2.22**](https://x.com/playcanvas/status/2095840316389466186) – Gaussian splat refraction and
-  depth effects, water rendering, volumetric fog and light shafts, parallax occlusion mapping, and
-  vertex animation textures
+  [**v2.22**](https://x.com/playcanvas/status/2095840316389466186) – Splat refraction, water,
+  volumetric fog, and parallax occlusion mapping
 - <PhaserLogo /> [**Phaser 4.2.1**](https://github.com/phaserjs/phaser/releases/tag/v4.2.1) –
   Stencil, ScaleManager, and ESM build fixes
 - <PixiLogo /> [**PixiJS v8.20**](https://github.com/pixijs/pixijs/releases/tag/v8.20.0) and
   [**v8.21**](https://github.com/pixijs/pixijs/releases/tag/v8.21.0) – WGSL shader overrides, WebGPU
-  render bundles, depth texture copies, lazy backend imports, and TypeScript 6 and 7 support
+  render bundles, and TypeScript 6 and 7 support
+- <PixiLogo /> [**PixiJS 3D**](https://pixijs.com/3d) – 2D and 3D in one place, the PixiJS way.
+  Sign up for the closed beta to get early access
 - <BabylonLogo /> [**Babylon.js 9.27**](https://github.com/BabylonJS/Babylon.js/releases) – OpenUSD
-  WebAssembly scene loader, object ID geometry textures, IBL shadows on ShadowOnlyMaterial, and a
-  GUI FlexPanel ([what's new](https://doc.babylonjs.com/whats-new/))
+  scene loader, object ID geometry textures, and a GUI FlexPanel ([what's
+  new](https://doc.babylonjs.com/whats-new/))
 - <NeedleLogo /> [**Needle Engine 6.0
-  Alpha**](https://github.com/needle-tools/needle-engine-support/releases) – Experimental
-  GaussianSplat component powered by Spark, WebXR anchors enabled by default, and Three.js r185
+  Alpha**](https://github.com/needle-tools/needle-engine-support/releases) – Spark-powered
+  GaussianSplat component, WebXR anchors, and Three.js r185
 - 🤺 [**Rapier
-  0.35**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md#v0350-08-august-2026) – SIMD
-  always on, sleeping rewritten around persistent islands, and a broad phase that no longer floods
-  the narrow phase (up to 90x faster on collider-heavy bodies)
+  0.35**](https://github.com/dimforge/rapier/blob/master/CHANGELOG.md#v0350-08-august-2026) and
+  [**0.36**](https://dimforge.com/blog/2026/09/25/advanced-soft-bodies-for-games-in-the-rapier-physics-engine/)
+  – SIMD always on, island-based sleeping, faster broad phase, and soft bodies
+  ([demos](https://rapier.rs/demos))
 - <ConstructLogo /> [**Construct
-  r495**](https://www.construct.net/en/make-games/releases/stable/r495) – 3D rotation for 3D shapes
-  and 2D objects, a Billboard behavior, and scale editing in the 3D editor. Beta
-  [r502](https://www.construct.net/en/make-games/releases/beta/r502) adds PBR 3D lighting and light
-  attenuation
+  r495**](https://www.construct.net/en/make-games/releases/stable/r495) – 3D rotation and a
+  Billboard behavior. Beta [r502](https://www.construct.net/en/make-games/releases/beta/r502) adds
+  PBR 3D lighting
 
 ## 🛠 Tools
 
@@ -200,11 +226,21 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
 - ⚡️ [**hyperpointer**](https://github.com/verekia/hyperpointer)
   ([demo](https://hyperpointer.verekia.com/)) – Lossless pointer input collection and motion
   prediction to hide camera latency by [me](https://x.com/verekia)
+- <GltfLogo /> [**meshoptimizer 1.3**](https://github.com/zeux/meshoptimizer/releases/tag/v1.3) –
+  Voxel remesher, normal generation, and simplification improvements by [Arseny
+  Kapoulkine](https://x.com/zeuxcg)
+- <ThreeLogo /> [**three-avbd**](https://github.com/sbobyn/three-avbd)
+  ([demo](https://three-avbd.vercel.app/)) – GPU rigid-body physics on WebGPU with the AVBD solver
+  (SIGGRAPH 2025) by [sbobyn](https://github.com/sbobyn)
+- <ColyseusLogo /> [**Colyseus 0.18**](https://colyseus.io/blog/colyseus-018-is-here/) –
+  Client-side prediction and lag compensation, faster encoder, database, and admin console
 
 ## 🎬 Videos
 
 - <R3FLogo /> [**pmndrs at Three.js Conf**](https://x.com/pmndrs/status/2099452238569570549) by
   [Krispy](https://github.com/krispya) and [Dennis Smolek](https://x.com/DennisSmolek)
+- 🎓 [**How to Blur Images at 20,000 FPS**](https://www.youtube.com/watch?v=YJVYX8tllj4) by
+  [Acerola](https://x.com/Acerola_t)
 
 ## ✍️ Articles
 
@@ -348,18 +384,23 @@ The VIVERSE [**Partner Program**](https://create.viverse.com/partner?utm_source=
     EngineIcon={UnityLogo}
   />
 
-<div />
-
-- <WebGPULogo /> [**Bone Tide**](https://reczkok.github.io/typegpu-adventure/) by [Konrad
-  Reczko](https://x.com/reczko_konrad) – Horde survival game written from scratch in TypeGPU, with
-  no engine: game logic and shaders are all TypeScript, and the same engine runs on the web and in
-  React Native ([thread](https://x.com/reczko_konrad/status/2077395085986017370)).
-
 ## ✨ Demos
 
+- <TypeGPULogo /> [**Bone Tide**](https://reczkok.github.io/typegpu-adventure/)
+  ([thread](https://x.com/reczko_konrad/status/2077395085986017370)) – Horde survival game written
+  from scratch in TypeGPU with no engine: game logic and shaders are all TypeScript, and it runs on
+  the web and in React Native by [Konrad Reczko](https://x.com/reczko_konrad)
 - <R3FLogo /> [**Utanomori**](https://mesq.me/utanomori/)
   ([repo](https://github.com/mesqme/utanomori),
   [breakdown](https://x.com/mesqme/status/2089144338697834727)) by [mesq](https://x.com/mesqme)
+- <WebGPULogo /> [**Tidewater**](https://dgreenheck.github.io/tidewater/)
+  ([repo](https://github.com/dgreenheck/tidewater),
+  [post](https://x.com/dangreenheck/status/2102878171796222160)) – Island fishing game on raw WebGPU
+  and WGSL, with an FFT ocean, breaking waves, and a physically based sky by [Dan
+  Greenheck](https://x.com/dangreenheck)
+- 💡 [**Radiance Cascades**](https://shadertoy.com/view/scy3Dd)
+  ([post](https://x.com/CodyBennett/status/2088606415246033222)) – Real-time 3D global illumination
+  on ShaderToy by [Cody Bennett](https://x.com/CodyBennett)
 
 My [Bookmarks](https://x.com/i/bookmarks).
 
