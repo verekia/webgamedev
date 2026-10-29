@@ -95,6 +95,23 @@ const makeStandardImages = (id: string) => [
 
 const games: Game[] = [
   {
+    id: 'trick-or-take',
+    name: 'Trick or Take',
+    externalPlayUrl: 'https://trickortake.com',
+    websiteUrl: 'https://trickortake.com',
+    engine: CUSTOM,
+    author: 'Zico',
+    authorUrl: 'https://github.com/zicojiao/trick-or-take',
+    genres: [CASUAL],
+    mobile: 2,
+    size: 1,
+    allowIframe: true,
+    players: [SINGLEPLAYER, MULTIPLAYER],
+    description:
+      'Fast-paced open-source multiplayer Halloween candy heist party game built with pure vanilla Canvas 2D and real-time Agora RTC voice chat.',
+  },
+
+  {
     id: 'venge',
     name: 'Venge',
     externalPlayUrl: 'https://poki.com/en/g/venge-io',
