@@ -16,7 +16,7 @@ RUN bun purge-cdn.ts
 
 # Production stage
 
-FROM nginx:1.26.2-alpine3.20-slim
+FROM verekia/nginx-brotli:1.30.7
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
